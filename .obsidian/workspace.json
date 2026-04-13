@@ -11,14 +11,12 @@
             "id": "fca35acf7363bb63",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "projects/clinicalhours/overview.md",
-                "mode": "source",
-                "source": false
+                "file": "documents/ClinicalHours Pitch (2).pdf"
               },
-              "icon": "lucide-file",
-              "title": "overview"
+              "icon": "lucide-file-text",
+              "title": "ClinicalHours Pitch (2)"
             }
           }
         ]
@@ -181,13 +179,18 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "links.md",
     "inbox/README.md",
+    "documents/ClinicalHours Pitch (2).pdf",
+    "ClinicalHours Pitch (2).pdf",
+    "projects/clinicalhours/overview.md",
+    "Untitled.canvas",
     "academics/phys206",
     "career/programs/overview.md",
     "dashboard.md",
@@ -195,7 +198,6 @@
     "Paper Outline - Feedlot Economics and Management.docx (1).pdf",
     "career/internships/overview.md",
     "documents/ShivamKanodiaResume (20).pdf",
-    "projects/clinicalhours/overview.md",
     "research/fedvt/overview.md",
     "CLAUDE.md",
     "sessions/2026-04-13.md",
@@ -204,8 +206,6 @@
     "CLAUDE.md.tmp.16576.1776114238531",
     "projects/clinicalhours/overview.md.tmp.16576.1776114233925",
     "inbox/Untitled.md",
-    "ShivamKanodiaResume (20).pdf",
-    "CLAUDE.md.tmp.16576.1776113132989",
     "2026-04-13.md",
     "academics.md",
     "projects.canvas",
