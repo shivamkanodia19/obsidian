@@ -114,4 +114,4 @@ Solution: Centralized "Command Center" with:
 - Placement insights
 
 ## Links
-- [[overview]] — ClinicalHours project overview
+- [[platform-status]] — ClinicalHours project overview

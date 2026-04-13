@@ -97,4 +97,4 @@ LSTM R² = 0.975 proves high-accuracy cattle futures prediction is achievable. N
 
 ## Links
 - [[excel-model]] — FEDVT Excel cost model inputs
-- [[overview]] — FedVT research overview
+- [[research-tracker]] — FedVT research overview

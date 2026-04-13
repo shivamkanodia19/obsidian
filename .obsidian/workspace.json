@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "documents/ClinicalHours Pitch (2).pdf"
+                "file": "documents/Literature Summaries.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "ClinicalHours Pitch (2)"
+              "title": "Literature Summaries"
             }
           }
         ]
@@ -183,18 +183,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffbefc36a646e71b",
+  "active": "fca35acf7363bb63",
   "lastOpenFiles": [
+    "projects/clinicalhours/platform-status.md",
+    "documents/Literature Summaries.pdf",
+    "documents/ShivamKanodiaResume (20).pdf",
+    "career/internships/summer-2026-search.md",
+    "career/programs/fellowships-tracker.md",
     "career/resume/resume-current.md",
     "projects/clinicalhours/pitch-deck.md",
+    "projects/clinicalhours/overview.md",
+    "research/fedvt/research-tracker.md",
+    "documents/ClinicalHours Pitch (2).pdf",
     "projects/clinicalhours/pitch-deck.md.tmp.4656.1776120544490",
     "research/fedvt/paper-outline.md",
     "research/fedvt/working-paper.md",
     "links.md",
     "inbox/README.md",
-    "documents/ClinicalHours Pitch (2).pdf",
     "ClinicalHours Pitch (2).pdf",
-    "projects/clinicalhours/overview.md",
     "Untitled.canvas",
     "academics/phys206",
     "career/programs/overview.md",
@@ -202,13 +208,11 @@
     "documents/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
     "Paper Outline - Feedlot Economics and Management.docx (1).pdf",
     "career/internships/overview.md",
-    "documents/ShivamKanodiaResume (20).pdf",
     "research/fedvt/overview.md",
     "CLAUDE.md",
     "sessions/2026-04-13.md",
     "sessions/2026-04-13.md.tmp.16576.1776114332379",
     "sessions",
-    "CLAUDE.md.tmp.16576.1776114238531",
     "inbox/Untitled.md",
     "2026-04-13.md",
     "academics.md",
