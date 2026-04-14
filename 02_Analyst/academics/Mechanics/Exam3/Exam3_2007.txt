@@ -1,0 +1,139 @@
+Physics 218: Mechanics Exam 3, 20 November 2007
+Print your name neatly:
+
+Last name:
+
+First name:
+
+Sign your name:
+
+Your instructor:                              Your section:
+
+Please fill in your Student ID number (UIN):     ญญ
+
+                             IMPORTANT
+
+                         Read these directions carefully:
+
+ท There are 4 problems totalling 100 points. Check your exam to make sure you have all
+  the pages. Work each problem on the page the problem is on. You may use the back.
+  If you need extra pages, I have plenty up front.
+
+ท Each problem with its associated figure is self explanatory. If you must ask a question,
+  then come to the front, being as discrete as possible so as not to disturb others.
+
+ท Indicate what you are doing! We cannot give full credit for merely writing down
+  the answer. Neatness counts! I will give generous partial credit if I can tell that you
+  are on the right track. This means you must be neat and organized.
+
+ท There is potentially useful information on the last page. Do not waste time on complex
+  algebra or arithmetic.
+
+Grading:                                                     TOTAL
+               Problem 1 Problem 2 Problem 3 Problem 4
+1a. (20 points) Derive the expressions for the ir and i components of the velocity and
+     acceleration.
+
+1b. (5 points) An object of mass m is moving in the x, y plane. Its position varies with
+     time so that a vector from the origin to the object has a length given by kt2 where k
+     is a known constant and t is the time in seconds. The vector points at an angle with
+     the x axis that varies according to bt2 where b is a known constant.
+     What is the force, as a function of time, acting on the object?
+2. (25 points) In an experiment a small ball with            S
+
+   mass mb hangs from a massless rod of length S. It      0                                mb
+   starts at rest in the position shown, swings down
+                                                      m1
+   and strikes a small object, mass m1, which is at
+   rest on a frictionless surface.
+
+a. If the object sticks to the ball, how high will the ball go after striking the object?
+
+b. If instead of sticking to the ball the object bounces off it, so that the collision is
+   perfectly elastic, write down the equations that could be solved for how high will the
+   ball go. DO NOT SOLVE THE EQUATIONS
+                                                                               S            S
+
+3. (25 points) A man stands on a massless platform                                                 m
+   that is free to rotate in the horizontal plane. He                                          0
+   holds a weight in each hand that has mass m. He
+
+   has his arms extended so that they have length S. m
+
+   The system is set into rotation so that the angular
+   velocity of the platform is 0.
+
+a. Assume the man's mass can be neglected compared to the weights. What force would
+
+   have to be applied to one of the weights at the distance S so that in t0 seconds the
+   platform, which is initially at rest, is rotating with angular velocity 0?
+
+b. Assuming the man's mass can be neglected compared to the weights, what would be
+
+the angular velocity of the system if he starts with angular velocity 0 and then brings
+                                                                                      S
+his  arms  in  so  that  the  distance   from  his  center  is  reduced  from  S  to  4  ?
+
+c. If instead of being massless assume the man can be considered to be a cylinder with
+
+moment of inertia Iman about an axis through his center. He is again set spinning with
+his arms, considered massless, extended a distance S and still holding the masses, m.
+
+His initial angular velocity is again 0 and he brings his arms in as before so that the
+                                   S
+distance   is  again  reduced  to  4  .  What  will  the  new   angular  velocity  be?
+4. (25 points) A rod of mass M length S is free to rotate in the vertical plane about a
+   frictionless pin through one end. The moment of inertia about the end is I. The rod
+   is uniform so that the force of gravity acts at its center.
+                   Frictionless
+                   Hinge
+               Uniform Rod, Length S Mass M
+
+                                                                                                          X
+
+                                                           Point c
+a. What is the torque exerted on the rod by gravity about the pin when the rod is
+
+   horizontal?
+
+b. If the right end of the rod is released from rest find the acceleration a of the point
+   marked c at the right end when the rod is horizontal.
+
+c. What is the torque exerted on the rod by gravity about the pin when the rod is vertical?
+
+d. If the right end of the rod is released from rest find the acceleration a of the point
+   marked c at the right end when the rod is vertical, in terms of f , its angular velocity.
+                 You may remove this page
+If you do remove this page, then do not turn it in!
+
+                       USEFUL INFORMATION
+
+                       If f (x) = kxn                 df    =  nkxn-1
+                                                      dx
+
+If f (x) = kxn                            B  f (x)dx  =    n  1  1 k(Bn+1  -  An+1)
+                                         A                    +
+
+                        r2  Ftot  ท  dr  =   1  mv2  (r2)  -  1  mv2(r1)
+                       r1                    2                2
+
+If F is conservative:
+
+                                                         r2
+
+                                        F ท dr = -[U (r2) - U (r1)]
+
+                                                       r1
+
+and
+
+                            Fx    =  -   U           Fy  =  -  U
+                                         x                     y
+
+                       L = r ื p  = r ื F I = miri2
+
+DO NOT WASTE TIME DOING ARITHMETIC
+
+                 You may remove this page
+If you do remove this page, then do not turn it in!
+

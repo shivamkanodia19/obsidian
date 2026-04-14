@@ -12,15 +12,13 @@ tags: [etam, isen, essay, application]
 
 # Industrial and Systems Engineering Essay
 
-## Final Version (210 words)
+## Final Version (215 words)
 
-I chose Industrial and Systems Engineering because I solve problems the same way every time: identify constraints, model interdependencies, optimize outcomes.
+I built ClinicalHours to provide a two-sided marketplace connecting pre-meds with volunteer opportunities at hospitals and clinics. The constraint I ran into was operational: how do you reduce admin overhead when clinics depend on human judgment to match the right volunteer to the right department? I spent my time on that problem (product-market fit and operational design) more than on developing the platform itself.
 
-When I built ClinicalHours, a two-sided marketplace connecting pre-meds with volunteer opportunities, I could have focused on elegant code. Instead, I spent my time on product-market fit and operational design. The core question was systems thinking, not implementation: How do I reduce clinic admin overhead without removing the human judgment they depend on? That question guided every technical decision I made.
+My research with Dr. Kaniyamttam follows the same pattern. I work on a system dynamics model mapping the water-food-energy nexus in dairy farming, testing extreme scenarios. I also work on a futures forecasting dashboard for cattle operators to improve financial decision-making. Both projects hit different constraints, but I approach them the same way: identify what's actually limiting the system, model how the pieces interact, find the optimization that works within real operational limits.
 
-My research with Dr. Kaniyamttam deepened this conviction. I work on two projects: a system dynamics model mapping the water-food-energy nexus in dairy farming under extreme scenarios, and a futures forecasting dashboard for cattle operators. Both tackle complex systems problems, but I solve them identically. Identify constraints, model how they interact, find the optimization that works within real operational limits.
-
-ISEN is where this approach becomes rigorous. The program teaches me to formalize what I already do: operations research, systems design, human factors engineering. I don't want to choose between technical depth and systems thinking. ISEN teaches both. That's why this major reflects how I naturally approach problems.
+Operations research and systems design are what I'm already doing. ISEN formalizes that. The program teaches me to think systematically about the intersection where people, processes, and data converge. That's where ClinicalHours lives, that's what the FEDVT research requires, and that's the kind of work I want to do long-term. ISEN is built for that.
 
 ---
 

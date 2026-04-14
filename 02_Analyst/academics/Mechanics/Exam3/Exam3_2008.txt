@@ -1,0 +1,92 @@
+     Name                      EXAM III Physics 218
+                                               Section Number
+
+                            USEFUL INFORMATION
+
+                            If f(x) = kx  = nkx'
+
+           If f(x) = kx                     1                  -- A')
+                            f(x)dx
+              2f
+                                              =
+
+                            4 P 0 d= mv2(2) -- mv2(i)
+                                                   .
+
+     If P is conservative:
+
+                            P. d= --[U(i) -- U 1 )J(
+
+and                         9U
+
+                            F= ôx                y 9 `
+
+                            =xF I=>mjr
+
+           DO NOT WASTE TIME DOING ARITHMETIC
+
+                                                               /
+
+                                                               3
+1. (25 points)Derive the expressions for the and g components of the velocity and
+   acceleration.
+ 2. (25 points)A man of mass m 1 sits on a sled, mass 2 m on the top of a frictionless hill
+     of height H. The sled starts down the hill with an initial velocity vO directed towards
+     the North.
+
+                                                                                                                              JciTE4
+
+a. What is the man's velocity at the bottom of the hill? Call it vB.
+
+b. At the bottom of the hill the surface is solid ice so that there is no friction. The
+    man jumps off the sled onto another sled, mass 3 m which is at rest. The empty sled
+    goes off at an angle 9 with velocity of magnitude . v 1 Obtain the necessary equations
+    to determine the position of the man T seconds after he jumps from one sled to the
+   other? DO NOT SOLVE THE EQUATIONS!
+
+                    1I
+
+    ;c
+
+      Top V;j
+3. (25 points)A massless rod can rotate without friction about a vertical axle. A small
+   mass m 1 is fixed to the rod a distance H from the axle. A second small mass m2 is
+   initially a distance S from the first mass, as shown.
+
+4..
+
+     (4  S
+
+            `"a
+
+      The rod and the masses are set into motion rotating about the axle with angular
+velocity 0 w . At t = 0 m2 begins to move towards ml so that the distance between them is
+S -- ct where c is a known constant.
+
+  a. What will be the angular velocity of the rod as a function of time while m2 is moving
+      towards 1 ? m
+
+b. What is the force that the rod exerts on m2 while it is moving?
+
+c. If the rod were not massless but instead had a moment of inertia `rod about the axle,
+   what would be the angular velocity of the rod as a function of time while 2 m is moving
+   towards ? 1 m
+    4.  (25 points)An electron with mass m and charge of magnitude                  qi  is  attracted  to    a
+        proton, which is fixed at the origin, by a force of magnitude
+
+                                               F=-yq-q-
+                                                         r
+
+        where -y is a known constant,  q   is  the  charge  of  the  proton    and  r   is  the  distance  of
+        the electron from the origin.
+
+a.      If the electron moves in the x, y  plane    in  a  circle  of  radius  R,   what    is   its  angular
+        momentum about the origin?
+
+b.  If instead of moving in a circle the electron's     position was   given   by r(t) =        r(O) + cit,
+    (t) = 8(0) + 2 t c where r(0), , 1 c 8(0), and C2    are known,    what    would be         the kinetic
+    energy of the electron?
+
+c. Calculate the work done by the force exerted by the proton if the electron moves from
+   the point r = R,8 = 0 to the point r = 2R,9 =
+

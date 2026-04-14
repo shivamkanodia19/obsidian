@@ -1,0 +1,88 @@
+Name                             EXAM III Physics 218
+                                                 Section Number
+
+                              USEFUL INFORMATION
+
+                           If f(x) = kx          = n 1 kx
+                                             dx
+
+      If f(x) = kTx1                   f(x)dx =   1
+
+                                                                 --
+
+                           J  d= Po .  m ) 2 v2( -- mv2(i)
+
+    P If is conservative:        cr2
+
+and                           J F. d= 2 ) -[U( -
+                                 r 1
+
+                                        3(1            3U
+                              F= 3x          F = 9
+
+                                                                                I rnr
+
+      DO NOT WASTE TIME DOING ARITHMETIC
+
+                                                                 2
+                                                                 3,
+
+                                                                  L1U
+1. (25 points)Derive the expressions for the z and components of the velocity and
+   acceleration.
+2. (25 points)A block of mass 1 M is at rest on a frictionless table. It is attached to a
+    spring with known spring constant k. It is struck by an object of mass m traveling
+    horizontally in the +x direction with velocity Vi. (Neglect gravity.)
+
+                  · 1 y
+
+a. If the incoming object bounces off the block and goes in the --x direction find the
+    maximum amount the spring will be compressed assuming there is no loss of kinetic
+    energy (perfectly elastic) when the object bounces off the block. Also assume that
+    the collision takes place in a very short time so that during the collision there is not
+    enough time for the spring to be compressed. (NO ALGEBRA PLEASE! Stop when
+    you have as many equations as needed to solve for the maximum amount the spring
+    is compressed.)
+
+b. If the incoming object sticks (perfectly inelastic) to the block find the maximum
+    amount the spring will be compressed. Here assume again that the collision takes
+    place in a very short time so that during the collision there is not enough time for the
+    spring to be compressed.
+3. (25 points)In a manufacturing facility boxes are placed , at rest, on a conveyor belt
+   which carries them around a circular path of radius R. After traveling a quarter of
+   a circle, radians, they slide down a chute. The conveyor belt starts at rest and
+   when a box is placed on it a motor supplies a torque so that the belt ha an angular
+   acceleration  = 1 c t.
+
+h  /
+
+                                                   T? VieW
+
+a. What will be the velocity of the box when it reaches the chute?
+
+b. What will be the force exerted by the belt on the box as a function of time, starting
+    when the box is placed on the belt, assuming the box does not slip?
+
+c. If the coefficient of friction between the box and the belt is i, what is the largest value
+   that 1c can have for this device to work? (No algebra please.)
+4. (Part 1)(1O points) A very small plane of mass m is flying horizontally with a constant
+    velocity of magnitude v. Given the origin shown in the picture below
+
+                                                   4 (y)
+
+a. What is the plane's angular momentum about the origin when it is at the point (x, y)
+    as shown?
+
+b. What is the torque, g, exerted on the plane by gravity about the origin when the
+    plane is at the point (x, y)?
+4. (Part 2) (15 points) A vertical axle is free to rotate. A massless rod is attached to the
+   axle, as shown, and there are two masses, m 1 and 2 m attached to the rod. The axle is
+    given an angular velocity wo. Some internal spring-like force ejects mass m 2 so that it
+   leaves the rod perpendicular to the rod, horizontally, with velocity of magnitude v 1 .
+   Neglect gravity.
+
+a. What will be the angular velocity of the rod after the mass is ejected?
+
+b. What would the angular momentum of the rod be if instead of being massless it had
+    a moment of inertia I, about the axle?
+

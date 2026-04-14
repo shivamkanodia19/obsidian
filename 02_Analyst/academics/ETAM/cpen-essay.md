@@ -12,17 +12,15 @@ tags: [etam, cpen, essay, application]
 
 # Computer Engineering Essay
 
-## Final Version (215 words)
+## Final Version (220 words)
 
-I chose Computer Engineering because technical depth requires understanding both the constraints that bind you and the abstractions that free you.
+I built ClinicalHours as a two-sided marketplace, but the real work was architectural. How do you design a system where data flows from clinics to volunteers and back? Where can computation happen without overloading the clinics' infrastructure? How do services talk to each other? These aren't just code questions. They're design questions. Get the architecture right and the platform scales to thousands of clinics. Get it wrong and it fails at fifty.
 
-When I built ClinicalHours, I made a deliberate choice: instead of optimizing the code, I optimized the system. But this choice itself was technical. A platform's architecture—how data flows, where computation happens, how services communicate—determines whether it scales to thousands of clinics or struggles at fifty. Good architecture removes limitations; bad architecture creates them.
+My FEDVT research hits the same architectural constraints. I work on a futures forecasting dashboard for cattle operators. It's not just a model. It's a data pipeline that handles real-time market streams, a frontend that surfaces uncertainty clearly, and backend systems managing the computational load. Every piece depends on how hardware and software talk to each other.
 
-Computer Engineering teaches that bridge: how electrical design principles inform software architecture, how embedded systems thinking applies to cloud infrastructure, how low-level optimization enables high-level functionality. All three shape what's actually buildable.
+Computer Engineering is the bridge between these layers. Not just software optimization or just electronics, but understanding how they interact: how design at the circuit level shapes what's possible at the system level, how embedded systems thinking applies to cloud infrastructure, how you build architecture that actually works in production.
 
-In my FEDVT research, this is evident. The futures forecasting dashboard isn't just an algorithm; it's a data pipeline handling real-time market streams, a frontend that communicates uncertainty effectively to cattle operators, and backend systems managing computational load. Every component depends on understanding how hardware and software constraints interact.
-
-CPEN appeals because I don't want to choose between systems thinking and technical sophistication. The program's curriculum—circuits, architecture, operating systems, embedded design, software engineering—teaches me to architect systems that work in reality, not just theory. I want to build products where operational rigor meets technical excellence. ClinicalHours showed me the operational need. CPEN will teach me to deliver it at scale.
+That's what I need to do this work well. ClinicalHours showed me what operational rigor requires. CPEN teaches me the technical foundation to build systems that scale.
 
 ---
 

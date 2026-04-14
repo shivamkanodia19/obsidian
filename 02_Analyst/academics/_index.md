@@ -2,25 +2,45 @@
 
 Course materials, study guides, exam prep, and academic resources.
 
-## 📁 Folders
+## 📁 Main Folders
 
-### [[Physics/|Physics]]
-Study guides for mechanics, circular motion, energy, and oscillations
-- Main Resource: [[Exam3_Question_Types_Guide|Exam 3 Question Types Guide]]
-- Past Exams: 5 exams (2015-2019) in `Physics/pdfs/`
+### [[Mechanics/|Mechanics]] (ACTIVE - May 2026 Exam)
+Comprehensive Exam 3 study materials
+- **Main Study Guide:** [[Mechanics/Exam3_Deep_Analysis|Exam 3 Deep Analysis & Question Mapping]]
+  - 6 question types with detailed analysis
+  - Problem-solving framework & strategy
+  - 4-week study schedule
+  - Key equations & concepts
+- **Past Exams:** 15 exams (2005-2019) in `Exam3/` folder
+  - 150+ practice problems
+  - All years available for targeted practice
+
+### [[ETAM/|ETAM]]
+Transfer/Pre-Major materials
+- Engineering essays and preparation
+
+### [[Physics 1/|Physics 1]]
+Introductory physics materials
 
 ## 📊 Organization
 
 Study materials organized by:
-- **Course** (Physics, etc.)
-- **Topic** (Exam 3 Mechanics, etc.)
-- **Type** (Study Guides, Practice Problems, PDFs)
+- **Topic** (Mechanics, ETAM, etc.)
+- **Content Type** (Study Guides, Analysis, Past Exams)
 
-## Quick Links
+## Quick Access - May Exam
 
-- **Active Study:** [[Exam3_Question_Types_Guide|Exam 3 Study Guide]]
-- **Past Papers:** See `Physics/pdfs/` folder
+**If studying for Exam 3:**
+1. Start: [[Mechanics/Exam3_Deep_Analysis|Exam 3 Deep Analysis]] (overview + strategy)
+2. Practice: `/02_Analyst/academics/Mechanics/Exam3/` (15 past exams)
+3. Reference: Key equations section in Deep Analysis
+
+**Study Timeline:** 4 weeks (April 14 - May 10)
+- Week 1: Foundation + easy problems
+- Week 2: Medium difficulty + application
+- Week 3: Hard problems + full exams
+- Week 4: Polish + confidence
 
 ---
 
-Last Updated: April 2026
+Last Updated: April 14, 2026

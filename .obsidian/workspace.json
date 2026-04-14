@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/academics/ETAM/isen-essay.md",
+                "file": "02_Analyst/academics/ETAM/cpen-essay.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "isen-essay"
+              "title": "cpen-essay"
             }
           }
         ],
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/academics/ETAM/isen-essay.md",
+                "file": "02_Analyst/academics/ETAM/cpen-essay.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of isen-essay"
+              "title": "Outline of cpen-essay"
             }
           }
         ],
@@ -202,27 +202,31 @@
   },
   "active": "d50010cceb07363c",
   "lastOpenFiles": [
-    "CLAUDE.md.tmp.15200.1776204841635",
-    "CLAUDE.md.tmp.15200.1776204836858",
+    "02_Analyst/academics/Mechanics/START_HERE.md",
+    "02_Analyst/academics/Mechanics/_index.md",
+    "02_Analyst/academics/Mechanics/_index.md.tmp.11776.1776205430457",
+    "02_Analyst/academics/Mechanics/Exam3_Deep_Analysis.md",
+    "02_Analyst/academics/Mechanics/Exam3_Deep_Analysis.md.tmp.11776.1776205423956",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2019.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2018.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2017.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2016.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2015.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2014.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2013.txt",
+    "02_Analyst/academics/Mechanics/Exam3/Exam3_2012.txt",
     "02_Analyst/academics/ETAM/daen-essay.md",
-    "02_Analyst/academics/ETAM/cpen-essay.md",
-    "02_Analyst/academics/ETAM/_index.md",
     "02_Analyst/academics/Physics 1/_index.md",
-    "CLAUDE.md.tmp.15200.1776204828874",
-    "02_Analyst/academics/Physics 1/pdfs/Exam3_2019.pdf",
-    "02_Analyst/academics/Physics 1/pdfs/Exam3_2005.pdf",
-    "01_Source/internships/ShivamKanodiaResume (20).pdf",
-    "02_Analyst/academics/ETAM/daen-essay.md.tmp.25384.1776204707122",
+    "Exam3_Question_Types_Guide.md",
+    "02_Analyst/academics/_index.md",
     "02_Analyst/academics/ETAM/isen-essay.md",
-    "02_Analyst/academics/ETAM/isen-essay.md.tmp.25384.1776204692236",
-    "02_Analyst/academics/ETAM/_index.md.tmp.25384.1776204683360",
-    "02_Analyst/academics/ETAM",
-    "01_Source/academics",
+    "02_Analyst/academics/ETAM/cpen-essay.md",
     "01_Source/internships/Internship goal.md",
+    "03_References/Voice-Style/Shivam-Voice-Pattern.md",
+    "02_Analyst/academics/ETAM/_index.md",
     "02_Analyst/academics/Physics/Exam3_Question_Types_Guide.md",
     "02_Analyst/academics/Physics/_index.md",
     "02_Analyst/research/FEDVT/paper-draft-v1.md",
-    "02_Analyst/academics/_index.md",
     "02_Analyst/research/FEDVT/paper-structure-outline.md",
     "02_Analyst/research/FEDVT/literature-summaries-annotated.md",
     "02_Analyst/career/internships/outreach/wave-3/draft-emails.md",
@@ -234,10 +238,6 @@
     "02_Analyst/career/internships/strategy/_index.md",
     "02_Analyst/career/internships/contacts/verified-contacts.md",
     "02_Analyst/career/internships/contacts/_index.md",
-    "02_Analyst/career/internships/research/verified-research.md",
-    "02_Analyst/career/internships/research/flower-mound-targets.md",
-    "02_Analyst/career/internships/research/_index.md",
-    "02_Analyst/career/internships/wave-3-draft-emails.md",
     "Untitled.canvas",
     "projects.canvas"
   ]
