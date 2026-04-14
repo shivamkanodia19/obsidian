@@ -25,12 +25,14 @@
             "id": "d50010cceb07363c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Source/internships/ShivamKanodiaResume (20).pdf"
+                "file": "CLAUDE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ShivamKanodiaResume (20)"
+              "icon": "lucide-file",
+              "title": "CLAUDE"
             }
           }
         ],
@@ -169,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Source/internships/ShivamKanodiaResume (20).pdf",
+                "file": "CLAUDE.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ShivamKanodiaResume (20)"
+              "title": "Outline of CLAUDE"
             }
           }
         ],
@@ -200,42 +202,42 @@
   },
   "active": "d50010cceb07363c",
   "lastOpenFiles": [
-    "02_Analyst/_index.md.tmp.15200.1776198730296",
-    "02_Analyst/_index.md.tmp.15200.1776198725054",
+    "CLAUDE.md.tmp.15200.1776199557128",
+    "CLAUDE.md.tmp.15200.1776199552914",
+    "CLAUDE.md.tmp.15200.1776199535035",
+    "CLAUDE.md.tmp.15200.1776199528844",
+    "CLAUDE.md.tmp.15200.1776199524088",
+    "CLAUDE.md.tmp.15200.1776199517044",
+    "CLAUDE.md.tmp.15200.1776199509401",
+    "CLAUDE.md.tmp.15200.1776199504852",
+    "02_Analyst/career/internships/flower-mound-verified-research.md",
+    "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
     "01_Source/internships/Internship goal.md",
+    "02_Analyst/research/FEDVT/paper-draft-v1.md",
+    "CLAUDE.md",
+    "02_Analyst/_index.md.tmp.15200.1776199134991",
+    "02_Analyst/VAULT-STRUCTURE.md",
+    "02_Analyst/VAULT-STRUCTURE.md.tmp.15200.1776199129681",
+    "03_References/_index.md.tmp.15200.1776199107958",
+    "03_References/Tools/Email-Verification.md",
+    "02_Analyst/_index.md",
+    "02_Analyst/research/FEDVT/literature-summaries-annotated.md",
+    "02_Analyst/research/FEDVT/_index.md",
+    "03_References/Patterns/Recipient-Psychology.md",
+    "02_Analyst/projects/_index.md",
+    "02_Analyst/career/internships/email-optimization-strategy.md",
+    "03_References/Frameworks/Cold-Email-Optimization.md",
     "02_Analyst/career/internships/_index.md",
-    "02_Analyst/career/_index.md.tmp.15200.1776198407645",
-    "02_Analyst/career/_index.md.tmp.15200.1776198402657",
-    "02_Analyst/career/internships/_index.md.tmp.15200.1776198395645",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776198391431",
-    "02_Analyst/career/internships/email-optimization-strategy.md.tmp.15200.1776198387979",
-    "02_Analyst/career/internships/verified-contacts-all-20.md.tmp.15200.1776198384043",
-    "02_Analyst/career/internships/wave-3-draft-emails.md.tmp.15200.1776198380673",
-    "02_Analyst/projects/FEDVT/research/paper-structure-outline.md",
-    "02_Analyst/projects/FEDVT/research/paper-draft-v1.md",
-    "02_Analyst/projects/FEDVT/research/literature-summaries-annotated.md",
-    "02_Analyst/projects/FEDVT/research",
-    "02_Analyst/projects/FEDVT",
+    "03_References/_index.md",
+    "02_Analyst/research/FEDVT/paper-structure-outline.md",
     "02_Analyst/career/internships/wave-3-draft-emails.md",
     "02_Analyst/career/internships/wave-3-optimized-emails.md",
-    "02_Analyst/career/internships/email-optimization-strategy.md",
     "01_Source/FEDVT/research/paper-structure-outline.md",
     "01_Source/FEDVT/research/literature-summaries-annotated.md",
     "02_Analyst/career/_index.md",
-    "02_Analyst/career/internships/flower-mound-verified-research.md",
-    "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
     "02_Analyst/career/internships/verified-contacts-all-20.md",
     "01_Source/FEDVT/research/paper-draft-v1.md",
-    "02_Analyst/research/FEDVT/_index.md",
     "02_Analyst/projects/ClinicalHours/_index.md",
-    "02_Analyst/projects/_index.md",
-    "02_Analyst/_index.md",
-    "02_Analyst/career/internships.md",
-    "01_Source/Dumps/2026-04-14_internships-baseline.md",
-    "01_Source/Dumps/2026-04-14_fedvt-baseline.md",
-    "01_Source/Dumps/2026-04-14_csce120-baseline.md",
-    "02_Analyst/academics/csce120.md",
-    "CLAUDE.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

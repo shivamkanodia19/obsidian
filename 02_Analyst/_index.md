@@ -15,11 +15,17 @@ unreviewed_conflicts: []
 
 Your living knowledge base. Built from Source files, evolves with your decisions.
 
+## 🏗️ Vault Structure
+
+**[[VAULT-STRUCTURE]]** — How Source, Analyst, and References layers work together (start here for orientation)
+
+---
+
 ## 🎯 Projects
 
 - **ClinicalHours** — Clinical hours marketplace (Strategy, Sales, Operations, Market Research)
 - **FEDVT** — Feedlot economics research (Paper, Analysis)
-- **Internships** — Summer 2026 internship search (Strategy, Execution)
+- **Internships** — Summer 2026 internship search (Strategy, Execution) [[career/internships/_index]]
 
 ## 📚 Knowledge
 

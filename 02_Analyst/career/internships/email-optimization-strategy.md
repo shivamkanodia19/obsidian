@@ -5,6 +5,9 @@ strategic: true
 status: active
 origin_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
 last_synced_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
+references:
+  - "[[03_References/Frameworks/Cold-Email-Optimization]]"
+  - "[[03_References/Patterns/Recipient-Psychology]]"
 conflict_detected: false
 last_updated: 2026-04-14
 tags: [internship, cold-email, optimization, strategy, copywriting, recipient-focused]
@@ -329,6 +332,15 @@ For initial 20 emails: Just use Gmail + manual tracking (simpler).
 
 ---
 
+## Related Shared References
+
+For deeper framework + pattern details, see:
+- **[[03_References/Frameworks/Cold-Email-Optimization]]** — Full framework with subject line formulas, response rate expectations
+- **[[03_References/Patterns/Recipient-Psychology]]** — Why recipients respond, the 20-second scan rule, self-focus trap
+- **[[03_References/Tools/Email-Verification]]** — Email finder workflow (Hunter, Tomba, RocketReach)
+
+---
+
 ## History
 
-[2026-04-14] Developed cold email optimization strategy based on copywriting principles. Applied to Wave 3 targets. Key insight: cut emails in half, lead with value, use specific CTAs.
+[2026-04-14] Developed cold email optimization strategy based on copywriting principles. Applied to Wave 3 targets. Key insight: cut emails in half, lead with value, use specific CTAs. Frameworks + learnings saved to shared References layer.

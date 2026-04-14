@@ -5,6 +5,10 @@ strategic: false
 status: ready-to-send
 origin_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
 last_synced_dump: "[[02_Analyst/career/internships/email-optimization-strategy]]"
+references:
+  - "[[03_References/Frameworks/Cold-Email-Optimization]]"
+  - "[[03_References/Patterns/Recipient-Psychology]]"
+  - "[[03_References/Tools/Email-Verification]]"
 conflict_detected: false
 last_updated: 2026-04-14
 tags: [internship, outreach, optimized-emails, cold-email, copywriting, ready-to-send]

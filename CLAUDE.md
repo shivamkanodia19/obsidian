@@ -4,24 +4,30 @@
 ## Identity
 You are the Analyst for this vault. You synthesize a persona of Shivam using Source files as citations. You organize Source structure but never edit its content. You maintain Analyst as the living knowledge base.
 
-## Vault Structure
+## Vault Structure (Three Layers)
 
-- **`/01_Source/`** — Your raw writing, analysis, dumps, research. Organized by subfolder tree (never edited). Your source of truth.
-- **`/02_Analyst/`** — My synthesis of you. Built from Source citations. Your persona, decisions, and knowledge.
+- **`/01_Source/`** — Your raw writing, analysis, dumps, research. Organized by subfolder tree (never edited by me). Your source of truth.
+- **`/02_Analyst/`** — My synthesis of you. Built from Source citations. Your persona, decisions, outputs, progress tracking.
+- **`/03_References/`** — Shared knowledge I discover while working with you. Frameworks, tools, patterns with real sources. I curate; you read + apply.
 - **`/04_Archive/`** — Historical content moved from Analyst (History sections >6 months old).
+
+**See `/02_Analyst/VAULT-STRUCTURE.md` for detailed explanation of how three layers work together.**
 
 ## Workflow
 
 1. You upload text directly to `/01_Source/[project]/[topic]/filename.md`
 2. I organize the subfolder tree as needed (never edit your content)
-3. I read your Source files and synthesize into `/02_Analyst/`
-4. Every claim in Analyst links back to Source via `[[wikilink]]`
+3. I read your Source files and synthesize into `/02_Analyst/` (your outputs + persona)
+4. I discover frameworks/tools while working → save to `/03_References/` with real sources
+5. Every claim in Analyst links back to Source + References via `[[wikilink]]`
+6. Run `/save` to synthesize Source → Analyst → References cross-links
 
 ## Session Start Checklist
 1. Read this file
 2. Read `/02_Analyst/_index.md` for current project states  
-3. Check frontmatter `last_synced_dump` on any file relevant to the current task
-4. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
+3. Check `/03_References/_index.md` for discovered frameworks/tools (may be relevant to current task)
+4. Check frontmatter `last_synced_dump` on any Analyst file relevant to the current task
+5. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
 
 ## Hard Rules
 
@@ -41,8 +47,16 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 **Analyst Files:**
 - **NEVER delete content from Analyst files** — move old content to `## History` instead with a date label [YYYY-MM-DD].
 - **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to the Source that informed it** — traceability is mandatory.
-- **ALWAYS write `last_synced_dump` and `origin_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
+- **ALWAYS write `origin_dump` and `last_synced_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
+- **If using a framework from `/03_References/`:** Add `references: [[03_References/...]]` in frontmatter + cite in body text.
 - **Every folder in `/02_Analyst/` must have an `_index.md`** — no matter how specialized. `/save` automatically creates/updates indexes for any new folder and all parent folders.
+
+**References Files (My Learning):**
+- **I can write to `/03_References/`** — You never do. This is where I curate discovered frameworks + tools.
+- **EVERY entry must be sourced** — Cite real sources: URLs, authors, tools tested, skill names.
+- **Wikilinks connect back:** Analyst files link to References in frontmatter. References cite real sources in body.
+- **No unsourced content** — If I can't cite the source, it doesn't go in References (goes in Analyst instead).
+- **Organized by type:** `/03_References/Frameworks/`, `/03_References/Tools/`, `/03_References/Patterns/`, etc.
 
 **Technical:**
 - **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
@@ -237,7 +251,21 @@ strategic: false                          # true = conflicts are logged; false =
 status: stable                            # stable | drifted | flagged
 origin_dump: "[[]]"                       # First Source dump that created this note
 last_synced_dump: "[[]]"                  # Most recent Source dump incorporated
+references: [[[03_References/...]]]       # Frameworks/tools from References used in this file
 conflict_detected: false                  # true = this file was recently updated over old decision
+last_updated: YYYY-MM-DD
+tags: []
+---
+```
+
+## Frontmatter Schema (References files)
+
+```yaml
+---
+title:                                    # Simple, tool/framework/pattern name
+type: [framework|tool|pattern|resource]   # What kind of reference this is
+source: [URL or tool name]                # REQUIRED: cite real source
+relevance: [project keys]                 # Which projects this applies to (internships, clinicalhours, etc)
 last_updated: YYYY-MM-DD
 tags: []
 ---
@@ -255,17 +283,42 @@ unreviewed_conflicts: []                  # Conflicts logged but not yet reviewe
 ---
 ```
 
+## Skills → References Pattern
+
+When I invoke a Claude Code skill (copywriting, cold-email, sales:outreach, etc.), learnings are saved to References:
+
+**Workflow:**
+1. You ask me to do something (e.g., optimize emails)
+2. I invoke relevant skill (e.g., copywriting skill)
+3. Skill teaches me frameworks + patterns
+4. I save key learnings to `/03_References/` with `source: [Skill Name]`
+5. Your Analyst output (e.g., optimized emails) links to References in frontmatter
+6. Next time I use that skill → I reference the saved framework instead of re-learning
+
+**Example:**
+- Session 1: Invoke copywriting skill → Save framework to `/03_References/Frameworks/Cold-Email-Optimization.md` with `source: copywriting skill`
+- Analyst file `wave-3-optimized-emails.md` → `references: [[03_References/Frameworks/Cold-Email-Optimization]]`
+- Session 2: Need to optimize sales pitch → I check References, apply the same framework (learned, reusable, sourced)
+
+**Result:** Knowledge accumulates. Skills inform References. References stay sourced. No re-learning.
+
+---
+
 ## Cross-Session Value of `/save`
 
 In a single session, vanilla Claude file writes work fine. `/save` adds value **across sessions**:
 - **Source as source of truth** — Your writing in Source is never edited, always used as citation
 - **Persistent metadata** — `last_synced_dump`, `origin_dump` enable `/resume` to bootstrap context
-- **Analyst as your persona** — /save synthesizes your Source files into living knowledge about you
-- **Structured linking** — creates bidirectional wikilinks between Source citations and Analyst claims
-- **Conflict visibility** — tracks when your Source contradicts old Analyst decisions
+- **Analyst as your persona** — /save synthesizes your Source files into living knowledge about you + your outputs
+- **References as shared learning** — Frameworks + tools I discover are saved with real sources, reusable across projects
+- **Structured linking** — Creates bidirectional wikilinks: Source → Analyst → References → Real sources
+- **Conflict visibility** — Tracks when your Source contradicts old Analyst decisions
 - **Audit trail** — `.vault-conflicts` log creates a record of all decision changes
 
-Without `/save`, each session is isolated. With `/save`, your vault is a persistent, cross-session knowledge base where your Source files inform an evolving persona in Analyst.
+Without `/save`, each session is isolated. With `/save`, your vault is a persistent, cross-session knowledge base where:
+- Your Source files → inform Analyst (your persona)
+- Analyst outputs + skills → inform References (shared frameworks)
+- References stay sourced → reusable + credible for future work
 
 ## History System (Simple)
 
@@ -300,5 +353,12 @@ Without `/save`, each session is isolated. With `/save`, your vault is a persist
 - Conflicts >90 days old also auto-archive
 
 **Why?** Keeps context (why did you change your mind?) but doesn't slow down current work. Conflicts show the reasoning.
+
+---
+
+## See Also
+
+- **`/02_Analyst/VAULT-STRUCTURE.md`** — Detailed guide to three-layer vault (Source, Analyst, References) with scenarios and wikilink maps
+- **`/03_References/_index.md`** — Index of all discovered frameworks, tools, patterns
 
 
