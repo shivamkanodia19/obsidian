@@ -14,13 +14,13 @@ tags: [etam, isen, essay, application]
 
 ## Source Version (from /01_Source/)
 
-I want to major in Industrial and Systems Engineering because it provides the formal methodology for the way I naturally approach the world. While building ClinicalHours, a two-sided platform connecting pre-med students with clinical opportunities, I found myself drawn less to the code's syntax and more to the ecosystem's architecture. 
+I want to major in Industrial and Systems Engineering because I solve problems by identifying constraints, modeling how they interact, and finding optimizations that work within real limits. While building ClinicalHours, a two-sided platform connecting pre-med students with clinical opportunities, I found myself drawn less to the code's syntax and more to understanding which constraints actually limited our growth. 
 
-My primary challenges were optimization problems, not technical. How can we minimize administrative overhead for clinics without compromising the human judgment essential to healthcare volunteering? How can we maximize our market expansion through both clinical growth and student marketing, and how can we expand our reach around A&M itself? These experiences made me realize that I am not just interested in building the tool but also in optimizing the system it inhabits.
+My primary challenges were optimization problems, not technical. How do we minimize administrative overhead without compromising human judgment? How do we expand our market reach? These aren't code problems—they're constraint problems. I modeled our growth constraints and tested solutions. These experiences made me realize that I'm not just interested in building the tool but in optimizing the system it inhabits.
 
-This systems-centric mentality is the thread that connects my diverse interests in venture capital, product management, and undergraduate research. Working with Dr. Kaniyamattam, I apply system dynamics modeling to map the Water-Energy-Food (WEF) nexus in dairy farming. Simultaneously, I am developing a futures-forecasting dashboard to help cattle operators navigate financial volatility and make informed hedging decisions. These are both unique system problems, and have further driven me to pursue ISEN.
+This systems-thinking mentality connects all my work. Venture capital is capital allocation within constraints. Product management is optimizing for competing objectives. And my undergraduate research with Dr. Kaniyamattam is modeling natural systems. Working on the WEF nexus in dairy farming, I map how water availability limits feed production, which limits cattle weight gain, which affects cash flow. I model how changing one variable cascades through the system and test which constraints are actually load-bearing. I'm also developing a futures-forecasting dashboard for cattle operators—the core problem is market volatility, the optimization is hedging decisions. Both are constraint-modeling problems.
 
-Long-term, I want to work at the intersection of operations research and technical product development. A degree in ISEN will provide me with the frameworks necessary to work with businesses and transform them into high-functioning systems.
+Long-term, I want to work at the intersection of operations research and technical product development. ISEN provides the frameworks to identify constraints, model system dynamics, and optimize real-world systems. That's what I want to do.
 
 ---
 

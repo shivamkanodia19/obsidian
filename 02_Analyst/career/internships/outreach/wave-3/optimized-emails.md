@@ -48,7 +48,7 @@ Hi Mike,
 
 Your 120-day credentialing cycle is a revenue bottleneck. I can automate intake and validation (emails to database auto-population, zero manual screening). We'll measure actual cycle reduction over 8 weeks on your real data.
 
-Call Wednesday or Thursday; 10-minute overview of the automation setup.
+Can you call Wednesday or Thursday for a 10-minute overview of the automation setup?
 
 Shivam Kanodia
 214-470-0598
@@ -74,7 +74,7 @@ Your CMS findings flag RN coverage gaps. The bottleneck is reactive scheduling. 
 
 Pilot runs parallel to your current system with your floor managers.
 
-Call Wednesday or Thursday this week; I'll walk you through the pilot in 10 minutes.
+Would you be open to calling Wednesday or Thursday this week so I can walk you through the pilot in 10 minutes?
 
 Shivam Kanodia
 214-470-0598
@@ -100,7 +100,7 @@ Your facility runs lean and downtime is expensive. I can deploy predictive equip
 
 8-week pilot on one line; no disruption to current operations. We'll measure downtime reduction on the pilot equipment.
 
-Call Wednesday or Thursday this week; I'll walk you through it in 10 minutes.
+Can you call Wednesday or Thursday this week so I can walk you through it in 10 minutes?
 
 Shivam Kanodia
 214-470-0598
@@ -126,7 +126,7 @@ Boundary decisions are reactive now. I can build a predictive model (historical 
 
 8-week pilot with your data.
 
-Call Wednesday or Thursday; quick 10-minute walk-through of how this works.
+Can you call Wednesday or Thursday for a quick 10-minute walk-through of how this works?
 
 Shivam Kanodia
 214-470-0598
@@ -152,7 +152,7 @@ Your bond projects face scope creep and contractor delays. I can build a trackin
 
 8-week pilot across your portfolio; measure impact on timelines.
 
-Call Wednesday or Thursday this week; 10-minute overview.
+Can you call Wednesday or Thursday this week for a 10-minute overview?
 
 Shivam Kanodia
 214-470-0598
