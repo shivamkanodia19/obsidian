@@ -6,7 +6,12 @@ status: stable
 origin_dump: "[[01_Source/Research/2026-04-14_ai-ops-targets]]"
 last_synced_dump: "[[01_Source/Research/2026-04-14_ai-ops-targets]]"
 last_updated: 2026-04-14
-tags: [career, internship, ai-ops, flower-mound, targets]
+tags:
+  - career
+  - internship
+  - ai-ops
+  - flower-mound
+  - targets
 ---
 
 # Flower Mound AI Operations Target Companies

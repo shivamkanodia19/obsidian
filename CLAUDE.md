@@ -94,13 +94,85 @@ When you `/resume` a file with `conflict_detected: true`:
 When you `/audit`:
 - Unreviewed conflicts are listed
 - You can choose to investigate or acknowledge them
+- **Folder reorganization suggestions are surfaced** (see below)
+
+**How History + Conflicts Work Together:**
+
+When `/save` detects a conflict (new Source contradicts old decision):
+1. Old content is **moved to History** with date + context: `[2026-04-14] Old: said X, Source contradicts this`
+2. New content replaces it in the main text
+3. Conflict is **logged** in `.vault-conflicts` with old vs. new states
+4. File gets `conflict_detected: true` flag
+
+Result: You can see the change (History), understand why (Conflict log), and act on it.
 
 **Why non-blocking?** Blocking prevents work. Conflicts are logged, visible, but never blocking. You review them or not—your choice.
+
+## Audit & Reorganization Suggestions
+
+When `/audit` runs, it surfaces folder organization issues as **suggestions only** (no auto-reorganization):
+
+**Checks:**
+1. **Orphaned folders** — Folders with no files or only `_index.md` (candidates for deletion)
+2. **Consolidation opportunities** — Folders with 1–2 files that could merge with parent folder
+3. **Misplaced notes** — Files stored in wrong folders based on folder structure:
+   - File about ClinicalHours pricing in `/02_Analyst/projects/` instead of `/02_Analyst/projects/ClinicalHours/Strategy/`
+   - Internship research in `/02_Analyst/` instead of `/02_Analyst/career/internships/`
+   - File in wrong project folder (e.g., FEDVT content in ClinicalHours folder)
+   - Analyst files in Source folder or vice versa
+4. **Broken wikilinks** — Links to files/folders that no longer exist
+5. **Missing indexes** — Folders without `_index.md` (though `/save` creates these automatically)
+6. **Folder naming consistency** — Check folder names against conventions (lowercase, hyphens for spaces, no abbreviations unless standard)
+7. **Folder hierarchy appropriateness** — Suggest if a folder should be moved to a different parent level (e.g., `Strategy/` shouldn't be nested 4 levels deep)
+8. **Name conciseness & clarity** — Suggest shorter, clearer names for files and folders:
+   - Remove redundancy (e.g., file named "internship-search-strategy" in `internships/` folder should be just "strategy")
+   - Shorten verbose names (e.g., "flower-mound-ai-operations-target-companies" → "flower-mound-targets")
+   - Improve clarity (e.g., "research-notes-v2-final-actual" → "research-v2")
+
+**Example Output:**
+```
+🔍 Folder Organization Audit
+
+✅ Healthy:
+- /02_Analyst/career/ (2 subfolders, 1 index, 2 files)
+- /02_Analyst/projects/ (2 subfolders, all with indexes)
+
+⚠️ Consolidation Candidates:
+- /02_Analyst/projects/FEDVT/Analysis/ has only 1 file → consider merging into /02_Analyst/projects/FEDVT/
+
+📛 Naming Consistency Issues:
+- `/02_Analyst/career/OLD_TARGETS/` — should be `old-targets/` (lowercase + hyphens)
+- `/02_Analyst/projects/ClinicalHours/EmailAutomation/` — should be `email-automation/` (kebab-case)
+
+✂️ Conciseness & Clarity Improvements:
+- `flower-mound-ai-operations-target-companies.md` → `flower-mound-targets.md` (context from folder path)
+- `summer-2026-internship-search-strategy.md` in `internships/` → `strategy.md` (redundant context)
+- `research-notes-v2-final-actual.md` → `research-v2.md` (remove status words)
+
+📍 Hierarchy Issues:
+- `/02_Analyst/projects/ClinicalHours/Strategy/Pricing/` is 4 levels deep → consider moving `Pricing/` up to `/02_Analyst/projects/ClinicalHours/Pricing/`
+- `/02_Analyst/career/internships/2026-summer/` should be `/02_Analyst/career/summer-2026-internship/` (top-level clarity)
+
+❌ Critical Issues — Misplaced Notes:
+- `/02_Analyst/pricing-strategy.md` should be in `/02_Analyst/projects/ClinicalHours/Strategy/` (about ClinicalHours)
+- `/02_Analyst/projects/internship-targets.md` should be in `/02_Analyst/career/internships/` (internship content, not projects)
+- `/02_Analyst/projects/Research/` is orphaned (empty, no files) → consider deleting
+- `/02_Analyst/career/old-targets/` has broken wikilinks to deleted companies
+
+👤 Action: Review suggestions above. You decide what to rename/move/delete.
+```
+
+**Naming Conventions:**
+- Folder names: lowercase, hyphens for spaces, no abbreviations (unless standard like `_index`)
+- Depth: avoid nesting >4 levels unless essential
+- Clarity: folder name should describe contents (e.g., `Strategy/` not `Other/`)
+
+**No auto-reorganization.** You review suggestions and manually move/delete files as needed.
 
 ## Command Reference
 - `/save [topic]` — Read new/updated Source files, synthesize into Analyst, **create/update all folder indexes**, create/update wikilinks, log conflicts
 - `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from Analyst + Source, surface conflicts
-- `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts
+- `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts, **AND folder reorganization suggestions** (orphaned folders, consolidation opportunities, structural drift)
 - `/history [topic]` — trace concept evolution chronologically through Source + History sections
 
 ## Bulk Synthesis Workflow
@@ -179,34 +251,38 @@ In a single session, vanilla Claude file writes work fine. `/save` adds value **
 
 Without `/save`, each session is isolated. With `/save`, your vault is a persistent, cross-session knowledge base where your Source files inform an evolving persona in Analyst.
 
-## History System & Archival
+## History System (Simple)
 
-**CRITICAL: Token Budget Impact**
-History sections directly impact session cost. Each `/resume` loads an Analyst file; old history inflates that cost exponentially. Mandatory archival keeps sessions cheap and fast.
+**What it is:** Keep old versions of content so you can see what changed and when. Works hand-in-hand with Conflicts.
 
-**Analyst files maintain a `## History` section** to track changes over time. When old content is displaced by new information:
-- Move displaced content to `## History` with date labels: `[YYYY-MM-DD]`
-- Keep chronological order (newest changes at top of History)
-- Include context: what changed and why (reference the Source dump)
-- Never delete historical content
+**How it works:**
 
-**History archival (mandatory, every `/save` run):**
-- `/save` automatically checks every Analyst file for History entries >6 months old
-- Archives old entries to `/04_Archive/[project]_history.md` with backlinks
-- Original Analyst keeps only recent 6 months (active context for `/resume`)
-- Format: Keep the `## History` header + date-labeled entries from original file
-- Archive file references original Analyst file with wikilink
-- **Result:** `/resume` stays fast; full history always available in `/04_Archive/`
+1. **In Analyst files**, add a `## History` section at the bottom
+2. When something changes (manual edit OR via conflict detection), old version goes to History with date: `[2026-04-14] Old: said X. New: Source says Y`
+3. Newest changes go at the top of History
+4. Never delete—always move old stuff to History instead
 
-**Conflict log management:**
-- `.vault-conflicts` tracks all strategic file overwrites (recent conflicts only)
-- `/save` automatically archives conflicts >90 days old to `.vault-conflicts-archive`
-- `/resume` surfaces active conflicts (<=90 days) as first output—user decides on the spot
-- Archive format: `[ARCHIVED YYYY-MM-DD] [old_timestamp] conflict details`
+**Two Types of History Entries:**
 
-**Frontmatter validation** (handled by `/save`):
-- All required fields must exist: `title`, `project`, `strategic`, `status`, `origin_dump`, `last_synced_dump`, `last_updated`, `tags`
-- Wikilinks must use correct format: `[[01_Source/Dumps/YYYY-MM-DD_slug]]`
-- Auto-correct `status: stable` after sync (unless file is explicitly `drifted`)
-- Warn if any field is missing or malformed
+1. **Manual updates:** You change your mind
+   ```
+   [2026-04-14] Old: target was 50 companies by May 1
+   New: 50-70 by May 15 (research found more opportunities)
+   ```
+
+2. **Conflict-driven updates:** New Source contradicts old decision
+   ```
+   [2026-04-14] Old: believed IntelliCentrics had no turnover issues
+   New: [[01_Source/...]] shows 50-60% staff turnover (Glassdoor data)
+   See [[.vault-conflicts]] for full contradiction log
+   ```
+
+**Auto-cleanup:**
+- After 6 months, `/save` moves old history to `/04_Archive/[project]_history.md`
+- Your active files stay lean (faster to load)
+- Full history always available in Archive
+- Conflicts >90 days old also auto-archive
+
+**Why?** Keeps context (why did you change your mind?) but doesn't slow down current work. Conflicts show the reasoning.
+
 

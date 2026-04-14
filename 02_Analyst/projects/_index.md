@@ -11,7 +11,7 @@ Central hub for all project work. Each project has its own folder with subfolder
 ## 📂 Active Projects
 
 - **[[ClinicalHours/_index]]** — Clinical hours marketplace (automation, market strategy, sales, operations)
-- **[[FEDVT/_index]]** — Feedlot economics research and paper (analysis, introduction, sources)
+- **[[02_Analyst/research/FEDVT/_index]]** — Feedlot economics research and paper (analysis, introduction, sources)
 
 ## 📋 Project Structure
 
