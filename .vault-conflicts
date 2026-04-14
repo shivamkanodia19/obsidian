@@ -1,0 +1,20 @@
+# Vault Conflict Log
+
+**Format:**
+[YYYY-MM-DD HH:MM] CONFLICT: [file]
+Old: [previous state]
+New: [current state]
+Dump: [[01_Source/Dumps/YYYY-MM-DD_slug]]
+Status: awaiting_review | acknowledged
+
+---
+
+## Recent Conflicts (<=90 days)
+
+None yet. Conflicts will be logged here when /save detects strategic file overwrites.
+
+---
+
+## Archive (>90 days)
+
+See .vault-conflicts-archive for historical conflicts.
