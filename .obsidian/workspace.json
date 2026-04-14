@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
+                "file": "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exam_Question_Map"
+              "title": "ALL_EXAMS_COMPREHENSIVE_ANALYSIS"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
+                "file": "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Exam_Question_Map"
+              "title": "Outline of ALL_EXAMS_COMPREHENSIVE_ANALYSIS"
             }
           },
           {
@@ -197,25 +197,39 @@
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md.tmp.11776.1776209984482",
-    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md.tmp.11776.1776209943461",
-    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md.tmp.11776.1776209899846",
-    "02_Analyst/academics/Physics 206/Practice_Sets",
-    "02_Analyst/academics/Physics 206/Year_Breakdowns",
-    "02_Analyst/academics/Physics 206/Question_Analysis",
-    "02_Analyst/academics/Physics 206/Concept_Guides",
-    "02_Analyst/academics/Physics 206/Exam3_Deep_Analysis.md",
-    "02_Analyst/academics/Physics 206/Question_by_Question_Analysis.md",
-    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md",
+    "02_Analyst/academics/_index.md",
+    "02_Analyst/academics/Physics 206/ANALYSIS_COMPLETE_SUMMARY.md",
+    "02_Analyst/academics/Physics 206/ANALYSIS_COMPLETE_SUMMARY.md.tmp.11776.1776210825660",
+    "02_Analyst/academics/Physics 206/Question_Analysis/PRACTICE_SETS_ORGANIZED.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/PRACTICE_SETS_ORGANIZED.md.tmp.11776.1776210796355",
+    "02_Analyst/academics/Physics 206/Question_Analysis/COMPLETE_15_EXAM_ANALYSIS.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/COMPLETE_15_EXAM_ANALYSIS.md.tmp.11776.1776210756758",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/analysis_summary.json",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/conversion_results.json",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_5.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_4.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_3.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_2.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_1.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018/page_5.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018/page_4.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018/page_3.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018/page_2.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018/page_1.png",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2018",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2017",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016",
+    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2015",
     "02_Analyst/academics/Physics 206/START_HERE.md",
+    "02_Analyst/academics/Physics 206/Question_by_Question_Analysis.md",
+    "02_Analyst/academics/Physics 206/Exam3_Deep_Analysis.md",
     "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
+    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md",
     "01_Source/academics/ETAM Essays.md",
-    "02_Analyst/_index.md.tmp.25384.1776209629305",
-    "02_Analyst/academics/_index.md.tmp.25384.1776209616773",
-    "02_Analyst/academics/_index.md.tmp.25384.1776209615864",
     "02_Analyst/academics/Physics 206/_index.md",
     "02_Analyst/academics/ETAM/isen-essay.md",
     "02_Analyst/academics/Physics 1/_index.md",
@@ -229,10 +243,6 @@
     "02_Analyst/career/internships/outreach/wave-3/draft-emails.md",
     "02_Analyst/career/internships/outreach/wave-3/_index.md",
     "02_Analyst/career/internships/wave-3-optimized-emails.md",
-    "02_Analyst/career/internships/wave-3-draft-emails.md",
-    "02_Analyst/career/internships/flower-mound-verified-research.md",
-    "02_Analyst/career/internships/email-optimization-strategy.md",
-    "02_Analyst/career/internships/_index.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

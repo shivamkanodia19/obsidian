@@ -1,0 +1,37 @@
+{
+  "total_exams": 15,
+  "fully_extracted": [
+    2007,
+    2008,
+    2009,
+    2010
+  ],
+  "newly_extracted": [
+    2005,
+    2006,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "image_page_counts": {
+    "2005": 5,
+    "2006": 5,
+    "2011": 5,
+    "2012": 5,
+    "2013": 5,
+    "2014": 5,
+    "2015": 5,
+    "2016": 5,
+    "2017": 4,
+    "2018": 5,
+    "2019": 5
+  },
+  "total_new_pages": 54,
+  "status": "Image extraction complete - ready for visual analysis and question mapping"
+}
