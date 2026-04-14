@@ -144,24 +144,28 @@ Without `/save`, each session is isolated. With `/save`, your vault is a persist
 
 ## History System & Archival
 
+**CRITICAL: Token Budget Impact**
+History sections directly impact session cost. Each `/resume` loads an Analyst file; old history inflates that cost exponentially. Mandatory archival keeps sessions cheap and fast.
+
 **Analyst files maintain a `## History` section** to track changes over time. When old content is displaced by new information:
 - Move displaced content to `## History` with date labels: `[YYYY-MM-DD]`
 - Keep chronological order (newest changes at top of History)
 - Include context: what changed and why (reference the Source dump)
 - Never delete historical content
 
+**History archival (mandatory, every `/save` run):**
+- `/save` automatically checks every Analyst file for History entries >6 months old
+- Archives old entries to `/04_Archive/[project]_history.md` with backlinks
+- Original Analyst keeps only recent 6 months (active context for `/resume`)
+- Format: Keep the `## History` header + date-labeled entries from original file
+- Archive file references original Analyst file with wikilink
+- **Result:** `/resume` stays fast; full history always available in `/04_Archive/`
+
 **Conflict log management:**
 - `.vault-conflicts` tracks all strategic file overwrites (recent conflicts only)
 - `/save` automatically archives conflicts >90 days old to `.vault-conflicts-archive`
-- `/audit` surfaces active conflicts (<=90 days), can optionally archive older ones manually
+- `/resume` surfaces active conflicts (<=90 days) as first output—user decides on the spot
 - Archive format: `[ARCHIVED YYYY-MM-DD] [old_timestamp] conflict details`
-
-**History archival strategy:**
-- For Analyst files: move History sections >6 months old to `/04_Archive/[project]_history.md`
-- Format: Keep the `## History` header + date-labeled entries from original file
-- Add backlinks: archive file references original Analyst file
-- Original Analyst keeps only recent 6 months of history (active context)
-- Re-run manually when History section grows too large (recommend >2000 words of old content)
 
 **Frontmatter validation** (handled by `/save`):
 - All required fields must exist: `title`, `project`, `strategic`, `status`, `origin_dump`, `last_synced_dump`, `last_updated`, `tags`
