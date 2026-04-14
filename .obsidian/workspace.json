@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/clinicalhours/tier1-execution-plan.md",
+                "file": "projects/clinicalhours/pitch-deck.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tier1-execution-plan"
+              "title": "pitch-deck"
             }
           }
         ]
@@ -187,8 +187,10 @@
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "projects/clinicalhours/sales-target-list.md",
+    "projects/clinicalhours/market-analysis-competitive-landscape.md",
+    "projects/clinicalhours/business-model-overview.md",
     "projects/clinicalhours/tier1-execution-plan.md",
+    "projects/clinicalhours/sales-target-list.md",
     "projects/clinicalhours/outreach-emails.md",
     "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138086076",
     "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138000018",
@@ -222,8 +224,6 @@
     "excel-model.md",
     "career/programs/avf-prep.md",
     "research/fedvt/working-paper.md",
-    "career/programs/fellowships-tracker.md",
-    "dashboard.md",
     "projects.canvas"
   ]
 }
