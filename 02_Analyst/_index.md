@@ -2,7 +2,9 @@
 title: Analyst Index
 description: Navigation hub for your persona and synthesis
 last_audited: 2026-04-14
-active_projects: []
+active_projects:
+  - Internships/Summer2026/flower-mound-ai-ops-targets
+  - Internships/Summer2026/flower-mound-verified-research
 drifted_files: []
 orphaned_sources: []
 unreviewed_conflicts: []
@@ -29,7 +31,6 @@ Last updated: **2026-04-14**
 **Vault restructured:**
 - `/01_Source/` — upload raw writing here (organized by topic)
 - `/02_Analyst/` — my synthesis of your Source (where your persona lives)
-- `/04_Archive/` — historical content
-- `/03_Inbox/` — removed (no longer needed)
+- `/03_Archive/` — historical content
 
 **Next:** Upload your work to Source, I synthesize into Analyst via `/save`

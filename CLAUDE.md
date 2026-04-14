@@ -29,6 +29,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 - **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to the Source that informed it** — traceability is mandatory.
 - **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **ALWAYS write `last_synced_dump` and `origin_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
+- **Every folder in `/02_Analyst/` must have an `_index.md`** — no matter how specialized. `/save` automatically creates/updates indexes for any new folder and all parent folders.
 - **Technical enforcement:** All skills and tools validate that writes are NEVER directed to `/01_Source/`. Any write attempt to `/01_Source/` must fail with an error.
 
 ## Note Title Convention
@@ -97,7 +98,7 @@ When you `/audit`:
 **Why non-blocking?** Blocking prevents work. Conflicts are logged, visible, but never blocking. You review them or not—your choice.
 
 ## Command Reference
-- `/save [topic]` — Read new/updated Source files, synthesize into Analyst, create/update wikilinks, log conflicts
+- `/save [topic]` — Read new/updated Source files, synthesize into Analyst, **create/update all folder indexes**, create/update wikilinks, log conflicts
 - `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from Analyst + Source, surface conflicts
 - `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts
 - `/history [topic]` — trace concept evolution chronologically through Source + History sections
@@ -117,6 +118,26 @@ When you upload multiple related dumps at once (e.g., "Meeting notes, follow-up 
 **Why atomic?** If a later dump resolves a conflict from an earlier dump in the same run, the latest state is recorded (no intermediate conflicts).
 
 **Example:** Upload 3 files on ClinicalHours. Run `/save ClinicalHours` once → all 3 are read, synthesized, and conflicts logged/resolved in one pass.
+
+## Index Creation (Mandatory for `/save`)
+
+**Rule:** Every folder in `/02_Analyst/` must have an `_index.md`, no matter how specialized.
+
+**When `/save` runs:**
+1. **Detect new folders** — If synthesis created files in a new folder, create `_index.md` for that folder
+2. **Update parent indexes** — For every new file, update all parent folder indexes to include the new file
+3. **Index format:**
+   - Frontmatter with `title`, `description`, `last_updated`
+   - Navigation section (`📂 Folders` and `📄 Files`)
+   - Links to all files in that folder
+   - Quick reference/summary of the folder's purpose
+4. **No orphaned folders** — If a folder exists but has no index, create one on next `/save`
+
+**Examples:**
+- New file in `/02_Analyst/career/internships/` → Update `/02_Analyst/career/internships/_index.md` and `/02_Analyst/career/_index.md`
+- New project folder `/02_Analyst/projects/NewProject/` → Create `/02_Analyst/projects/NewProject/_index.md` and update `/02_Analyst/projects/_index.md`
+
+**Result:** All folders are navigable from their indexes, and parent folders always reflect their children.
 
 ## Frontmatter Schema (Analyst files)
 
