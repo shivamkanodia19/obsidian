@@ -63,4 +63,5 @@ APA style
 
 ## Links
 - [[working-paper]] — FEDVT ASAS working paper (synthesized)
-- [[excel-model]] — Excel cost model inputs
+- [[research-tracker]] — FEDVT research overview
+- [[Paper Outline - Feedlot Economics and Management.docx (1).pdf]] — source PDF

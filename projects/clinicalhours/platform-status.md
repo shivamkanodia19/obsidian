@@ -93,3 +93,7 @@ Knowledge graph at: `C:\Users\shiva\ClinicalHours\graphify-out\`  ✓ (correct l
 
 Key god nodes: `handler()` (72 edges), `escapeHtml()` (15), `trackEvent()` (9)
 Key insight: email verification flow directly manages the entire cookie lifecycle (`createSessionCookie`, `createCSRFCookie`, `createRefreshTokenCookie`, `clearRefreshTokenCookie`)
+
+## Links
+- [[pitch-deck]] — ClinicalHours pitch deck
+- [[resume-current]] — Shivam's resume (ClinicalHours co-founder section)

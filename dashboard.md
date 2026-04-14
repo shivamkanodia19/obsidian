@@ -76,3 +76,22 @@ FROM ""
 WHERE type != "dashboard" AND type != "vault-config"
 SORT file.folder ASC, file.name ASC
 ```
+
+---
+
+## Vault Index
+
+**Career**
+- [[resume-current]] — current resume
+- [[summer-2026-search]] — summer 2026 internship search
+- [[fellowships-tracker]] — programs, fellowships, leadership apps
+- [[avf-prep]] — Aggie Venture Fund second round prep
+
+**Projects**
+- [[platform-status]] — ClinicalHours project overview
+- [[pitch-deck]] — ClinicalHours pitch deck
+
+**Research**
+- [[research-tracker]] — FEDVT research overview
+- [[paper-outline]] — FEDVT paper 1 outline
+- [[working-paper]] — FEDVT ASAS-CSAS working paper

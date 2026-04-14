@@ -96,5 +96,6 @@ LSTM R² = 0.975 proves high-accuracy cattle futures prediction is achievable. N
 - Yahoo Finance. (2024). GF=F ticker data.
 
 ## Links
-- [[excel-model]] — FEDVT Excel cost model inputs
-- [[research-tracker]] — FedVT research overview
+- [[research-tracker]] — FEDVT research overview
+- [[paper-outline]] — Paper 1 full outline
+- [[Literature Summaries.pdf]] — source PDF (literature review)

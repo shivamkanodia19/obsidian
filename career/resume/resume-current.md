@@ -57,3 +57,11 @@ B.S. Industrial Systems Engineering (Honors), Minor in Statistics | GPA: 3.7
 - **ML & Modeling:** XGBoost, LightGBM, LSTM, SHAP, Scikit-learn, Vensim
 - **Data & Research:** Python, SQL, Pandas, ARIMA/SARIMA, Literature Review, Technical Writing
 - **Tools:** Git, Figma, Docker, Arduino, Fusion360
+
+## Links
+- [[platform-status]] — ClinicalHours project overview
+- [[pitch-deck]] — ClinicalHours pitch deck
+- [[research-tracker]] — FEDVT research overview
+- [[summer-2026-search]] — internship applications
+- [[fellowships-tracker]] — programs and fellowships
+- [[ShivamKanodiaResume (20).pdf]] — source PDF

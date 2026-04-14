@@ -53,3 +53,8 @@ Scoped but separate from Paper 1. Incorporates SARIMA, LSTM, and XGBoost models 
 
 ## Advisor
 Dr. Kaniyamattam, Texas A&M
+
+## Links
+- [[paper-outline]] — Paper 1 full outline
+- [[working-paper]] — ASAS-CSAS working paper synthesis
+- [[resume-current]] — resume (FEDVT research entry)

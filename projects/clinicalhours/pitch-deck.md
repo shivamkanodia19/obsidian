@@ -115,3 +115,5 @@ Solution: Centralized "Command Center" with:
 
 ## Links
 - [[platform-status]] — ClinicalHours project overview
+- [[resume-current]] — Shivam's resume (founder background)
+- [[ClinicalHours Pitch (2).pdf]] — source PDF
