@@ -2,17 +2,19 @@
 title: DAEN Essay
 project: academics
 status: draft
-origin_dump: "[2026-04-14]"
-last_synced_dump: "[2026-04-14]"
+origin_dump: "[[01_Source/academics/ETAM Essays.md]]"
+last_synced_dump: "[[01_Source/academics/ETAM Essays.md]]"
 references: []
 conflict_detected: false
 last_updated: 2026-04-14
-tags: [etam, daen, essay, application]
+tags: [etam, daen, essay, application, data-engineering, machine-learning]
 ---
 
 # Data Engineering Essay
 
-## Source Version (from /01_Source/)
+## Final Version (from Source)
+
+[[01_Source/academics/ETAM Essays.md]] - DAEN Essay
 
 I have considered pursuing data engineering given my current experience in data science, product development, and economic research. For example, my startup, ClinicalHours, is a two-sided marketplace that has since evolved into an agency providing volunteer coordination infrastructure to smaller clinics. The problem we solve revolves around data. 
 
@@ -26,75 +28,10 @@ That's what DAEN teaches: how to build the scaffolding that turns raw data into 
 
 ---
 
----
+## Status
+Draft. Focuses on data infrastructure and pipelines as the critical constraint.
 
-## Strategic Recommendations (DAEN Admissions Lens)
-
-**What DAEN committee wants:** Engineers who see data infrastructure as the critical constraint. Not just ML/AI, but the entire pipeline from ingestion → transformation → learning → decision support.
-
-### Strengths in this essay
-✅ Bottleneck-first framing (data quality, not algorithm) — exactly right for DAEN  
-✅ Specific examples of data problems (spreadsheets, visibility gaps)  
-✅ Three-part experience structure (startup, systems model, forecasting)  
-✅ Explicit about pipeline components (ingestion, transformation, uncertainty surfacing)  
-✅ Distinguishes DAEN from optimization and architecture (shows you understand program identity)  
-✅ "Extract signal from complexity" — DAEN's core mission
-
-### Strategic edits to consider
-
-1. **Strengthen the opening** — "I have considered pursuing data engineering" is weak for a major choice:
-   - Current: "I have considered pursuing data engineering given my current experience..."
-   - Stronger: "I'm pursuing Data Engineering because the problems I care about most are fundamentally data problems. Building the infrastructure that turns raw data into actionable intelligence is what separates working systems from broken ones."
-
-2. **Make the data engineering identity clearer** — Your essay is strong but could emphasize what makes DAEN different:
-   - DAEN is not just ML (you mention this but could strengthen)
-   - DAEN is about building pipelines, infrastructure, systems that learn
-   - Consider adding language about: ETL, data preprocessing, real-time systems, streaming data
-   - Example: "The forecasting dashboard works because the pipeline handles real-time data ingestion, validation, and model updates—not just because the underlying math is good."
-
-3. **Add specificity about ML techniques** — You mention "supervised and unsupervised learning, deep learning" but could be more specific to your work:
-   - What ML techniques would improve your system dynamics model? (parameter optimization, anomaly detection for extreme scenarios)
-   - What techniques help your forecasting dashboard? (time-series forecasting, uncertainty quantification)
-   - This shows you understand the gap between math and implementation
-
-4. **Emphasize "real-time" and "live systems"** — DAEN is about systems that operate in production, not just notebooks:
-   - You mention this ("real-time market data," "updating recommendations") but could emphasize more
-   - Consider: "The challenge isn't building a model; it's building a system that operates in production—handling real-time data streams, updating as new information arrives, surfacing uncertainty in ways humans can act on."
-
-5. **Word count** — You're at ~280 words (30 over). Consider trimming:
-   - "I have considered pursuing data engineering given my current experience in data science, product development, and economic research" could be tighter
-   - Suggestion: "My work in product development and economic research has shown me that most complex problems are actually data problems."
-
-### Optional: Add a forward-looking perspective
-Consider ending with a more specific goal tied to DAEN:
-- Current: "That's what I want to do at scale."
-- Stronger: "DAEN teaches me to build data infrastructure that scales. That's where I want to make an impact."
-
----
-
-## Key Strengths
-
-**Reframes ClinicalHours as data work:** Shows you understand that the real constraint was data quality/access, not the algorithm or architecture.
-
-**Connects pipeline thinking to DAEN:** Demonstrates you understand DAEN as "infrastructure that learns from data," not just ML algorithms.
-
-**Differentiates from ISEN/CPEN:** DAEN is about extracting signal from noise, not just optimizing or architecting.
-
-**Grounds in FEDVT:** Your forecasting work is inherently data engineering (ingestion, transformation, learning).
-
-**No em dashes:** Uses periods and colons.
-
----
-
-## Word Count
-218/250 (32 words under limit)
-
----
-
-## Why This Works for ETAM
-
-- Shows you understand DAEN's identity as a new program focused on data-driven systems
-- Explains why DAEN, not just "ML engineering"
-- Uses ClinicalHours as proof of data-centric thinking (different from the other essays' framing)
-- Addresses DAEN curriculum (deep learning, regularization, supervised/unsupervised learning)
-- Connects to your actual research credibly (forecasting dashboard is inherently data engineering)
+## Issues to Address (if revising)
+- Opening "I have considered" sounds tentative compared to ISEN/CPEN's "I want to..."
+- Doesn't name Dr. Kaniyamattam (unlike ISEN essay)
+- Could be more specific about which ML techniques address which problems in your work

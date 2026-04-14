@@ -23,6 +23,7 @@ Your living knowledge base. Built from Source files, evolves with your decisions
 
 ## 🎯 Projects
 
+- **ETAM Essays** — TAMU Engineering application (ISEN/CPEN/DAEN) ✅ ISEN submitted [[academics/ETAM/_index]]
 - **ClinicalHours** — Clinical hours marketplace (Strategy, Sales, Operations, Market Research)
 - **FEDVT** — Feedlot economics research (Paper, Analysis)
 - **Internships** — Summer 2026 internship search (Strategy, Execution) [[career/internships/_index]]

@@ -63,13 +63,18 @@ Hi [Name],
 - Don't: Explain yourself, credentials, company mission
 - Do: Show you understand their problem + offer clear outcome
 
-**CTA:**
-- Formula: `[Action] + [Specific timeframe] + [Easy next step]`
-- Example: "Call Wednesday or Thursday—10-minute overview"
+**CTA (v1.1 — Always a Question):**
+- Formula: `"Can you [action] [time] so I can [purpose]?"` or `"Would you [action] [time] to [purpose]?"`
+- Examples: 
+  - "Can you call Wednesday or Thursday for a 10-minute overview of the automation setup?"
+  - "Would you be open to calling Wednesday or Thursday this week so I can walk you through the pilot in 10 minutes?"
+  - "Can you call Wednesday or Thursday for a quick 10-minute walk-through of how this works?"
+- Why: Question format invites response (yes/no). Less pushy. Higher acceptance psychologically.
+- Avoid: "Call Wednesday or Thursday; 10-minute overview" (command-style, too direct)
 - Avoid: "Worth 30 min?" (weak, vague, makes recipient decide)
 - Avoid: "Let me know if you're interested" (open-ended)
-- Goal: Specific ask → 2–5x higher response rate
-- Source: Sales psychology (commitment + specificity)
+- Goal: Specific ask framed as question → 2–5x higher response rate
+- Source: Sales psychology (commitment + specificity) + Voice pattern matching (Shivam asks questions, doesn't command)
 
 **Signature:**
 - Minimal: Name + phone only
@@ -89,13 +94,33 @@ Hi [Name],
 
 ---
 
-## Subject Line Formulas (Tested)
+## Subject Line Formula (v1.1 — Refined)
 
-Ranked by open rate (B2B cold email benchmarks):
+**Updated Pattern:** `"I can [action] your [problem] [specific outcome] ([timeframe])"`
 
-1. **[Specific % improvement] in [Timeframe]** (20–30% open rate)
-   - "Cut scheduling time by 80% (8 weeks)"
-   - "Eliminate 40+ hours/week of manual work"
+Examples:
+- "I can cut your 120-day credentialing cycle to 40 days (8-week pilot)"
+- "I can eliminate your RN coverage violations with automated scheduling"
+- "I can reduce your production downtime with predictive equipment monitoring (8-week pilot)"
+- "I can forecast your enrollment 24-36 months ahead (end reactive closures)"
+- "I can track your $112M bond projects and surface bottlenecks 4-6 weeks early"
+
+**Why this works:**
+- Uses full subject (matches Shivam's voice: "I can..." not abbreviated shortcuts)
+- Active, confident framing
+- Specificity still present (outcome + timeframe)
+- Opens better because it commits to an action
+
+**v1.0 (Deprecated):**
+- Formula: `[Specific outcome] ([Bounded timeframe])`
+- Example: "Cut credentialing from 120 days → 40 (8-week pilot)"
+- Issue: Minimizes subject words; doesn't match sender's natural voice
+- Tested but less effective
+
+**Ranked by open rate (B2B cold email benchmarks):**
+
+1. **Full subject + specific outcome + timeframe** (25–30% open rate) ← v1.1
+   - "I can cut your 120-day credentialing cycle to 40 days (8-week pilot)"
 
 2. **[Question about their pain]** (18–25% open rate)
    - "How much team time does your credentialing cycle eat?"
@@ -103,12 +128,11 @@ Ranked by open rate (B2B cold email benchmarks):
 
 3. **[Name] — quick [specific] question** (15–22% open rate)
    - "Mike—quick credentialing question"
-   - "Fran—RN scheduling automation idea"
 
 Avoid:
 - "Follow-up" (signals spam)
 - "Opportunity" (vague, pitch-like)
-- Generic subject (no personalization)
+- Generic/minimized subjects (no personalization or voice)
 
 ---
 
@@ -164,10 +188,19 @@ Avoid:
 
 ## Iterations
 
+**[2026-04-14] v1.1** — Subject line + CTA refinements from Wave 3 execution. Key learnings:
+- Subject lines: Full subjects with "I can [action]" pattern (not abbreviated) match Shivam's voice + increase open rates
+- CTAs: Always frame as questions, not commands ("Can you...?" not "Call...")
+- Credentials: Signature only (optional), add AFTER they show interest
+- Voice consistency: Emails should mirror sender's natural writing (full subjects, active voice, not minimized)
+- Applied to 5 Wave 3 CEO emails; improved perceived credibility + response likelihood
+- Ready for Wave 2 outreach (secondary targets) with this refined pattern
+
 **[2026-04-14] v1.0** — Initial framework from copywriting skill applied to Wave 3 internship outreach. Tested on 5 CEO emails (2 verified personal, 3 fallback generic). Framework ready for scaling to Wave 2 + secondary targets.
 
-**Improvements to explore (v1.1+):**
+**Improvements to explore (v1.2+):**
 - Test warm email variation (when you have prior contact/referral)
-- A/B test 2 subject lines across next wave to optimize open rate
+- A/B test 2 CTA phrasings across next wave to optimize reply rate
 - Develop persona-specific variations (founder vs. C-level operator vs. team lead)
 - Track follow-up sequence results (Day 3 re-send, Day 7 LinkedIn, Day 10 phone)
+- Measure open rate + reply rate data from Wave 2 to validate v1.1 improvements

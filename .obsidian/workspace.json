@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Source/academics/ETAM Essays.md",
+                "file": "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ETAM Essays"
+              "title": "Exam_Question_Map"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Source/academics/ETAM Essays.md",
+                "file": "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ETAM Essays"
+              "title": "Outline of Exam_Question_Map"
             }
           },
           {
@@ -197,28 +197,30 @@
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "CLAUDE.md.tmp.15200.1776209166515",
-    "CLAUDE.md.tmp.15200.1776209166205",
-    "CLAUDE.md.tmp.15200.1776209165878",
-    "CLAUDE.md.tmp.15200.1776209165244",
-    "CLAUDE.md.tmp.15200.1776209164742",
-    "CLAUDE.md.tmp.15200.1776209164347",
-    "CLAUDE.md.tmp.15200.1776209163856",
-    "CLAUDE.md.tmp.15200.1776209163418",
-    "CLAUDE.md.tmp.15200.1776209162992",
-    "CLAUDE.md.tmp.15200.1776209160451",
-    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md",
-    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md.tmp.11776.1776208983635",
-    "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
-    "02_Analyst/academics/Physics 206/Question_by_Question_Analysis.md",
-    "02_Analyst/academics/Physics 206/START_HERE.md",
-    "02_Analyst/academics/Physics 206/_index.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md.tmp.11776.1776209984482",
+    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md.tmp.11776.1776209943461",
+    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md.tmp.11776.1776209899846",
+    "02_Analyst/academics/Physics 206/Practice_Sets",
+    "02_Analyst/academics/Physics 206/Year_Breakdowns",
+    "02_Analyst/academics/Physics 206/Question_Analysis",
+    "02_Analyst/academics/Physics 206/Concept_Guides",
     "02_Analyst/academics/Physics 206/Exam3_Deep_Analysis.md",
+    "02_Analyst/academics/Physics 206/Question_by_Question_Analysis.md",
+    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md",
+    "02_Analyst/academics/Physics 206/START_HERE.md",
+    "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
+    "01_Source/academics/ETAM Essays.md",
+    "02_Analyst/_index.md.tmp.25384.1776209629305",
+    "02_Analyst/academics/_index.md.tmp.25384.1776209616773",
+    "02_Analyst/academics/_index.md.tmp.25384.1776209615864",
+    "02_Analyst/academics/Physics 206/_index.md",
     "02_Analyst/academics/ETAM/isen-essay.md",
     "02_Analyst/academics/Physics 1/_index.md",
     "02_Analyst/academics/ETAM/daen-essay.md",
     "02_Analyst/academics/ETAM/cpen-essay.md",
-    "01_Source/academics/ETAM Essays.md",
     "02_Analyst/academics/ETAM/_index.md",
     "CLAUDE.md",
     "2026-04-14.md",
@@ -231,8 +233,6 @@
     "02_Analyst/career/internships/flower-mound-verified-research.md",
     "02_Analyst/career/internships/email-optimization-strategy.md",
     "02_Analyst/career/internships/_index.md",
-    "INDEX.md",
-    "Exam3_Question_Types_Guide.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

@@ -2,6 +2,8 @@
 title: ETAM Major Essays
 description: TAMU Engineering ETAM application essays for ISEN, CPEN, DAEN
 last_updated: 2026-04-14
+origin_dump: "[[01_Source/academics/ETAM Essays.md]]"
+last_synced_dump: "[[01_Source/academics/ETAM Essays.md]]"
 ---
 
 # ETAM Essays — Texas A&M Engineering
@@ -14,9 +16,9 @@ Application essays for three major choices: ISEN, CPEN, DAEN. Each tailored to t
 
 | Major | Focus | Word Count | Status |
 |-------|-------|-----------|--------|
-| **ISEN** | Optimization, systems thinking, operations research | 210/250 | ✅ Ready to edit |
-| **CPEN** | Hardware-software integration, technical architecture | 215/250 | ✅ Draft |
-| **DAEN** | Data-driven systems, ML, forecasting | 218/250 | ✅ Draft |
+| **ISEN** | Optimization, systems thinking, operations research | 250/250 | ✅ Submitted |
+| **CPEN** | Hardware-software integration, technical architecture | ~250/250 | Draft |
+| **DAEN** | Data-driven systems, ML, forecasting | ~280/250 | Draft (over limit) |
 
 ---
 

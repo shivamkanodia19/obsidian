@@ -15,9 +15,12 @@ Comprehensive Exam 3 study materials
   - 150+ practice problems
   - All years available for targeted practice
 
-### [[ETAM/|ETAM]]
-Transfer/Pre-Major materials
-- Engineering essays and preparation
+### [[ETAM/|ETAM]] (ACTIVE)
+TAMU Engineering ETAM Application
+- **Major Essays:** [[ETAM/isen-essay]] | [[ETAM/cpen-essay]] | [[ETAM/daen-essay]]
+  - ISEN: 250 words (submitted)
+  - CPEN: ~250 words (draft)
+  - DAEN: ~280 words (draft)
 
 ### [[Physics 1/|Physics 1]]
 Introductory physics materials
@@ -40,6 +43,14 @@ Study materials organized by:
 - Week 2: Medium difficulty + application
 - Week 3: Hard problems + full exams
 - Week 4: Polish + confidence
+
+---
+
+## 🎯 Current Focus
+
+**ETAM Application (Priority):**
+- ✅ ISEN essay submitted (250 words)
+- Waiting on other major decisions before submitting CPEN/DAEN
 
 ---
 

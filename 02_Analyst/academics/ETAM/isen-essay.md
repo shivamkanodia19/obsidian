@@ -1,13 +1,13 @@
 ---
 title: ISEN Essay
 project: academics
-status: ready
-origin_dump: "[User provided draft via image]"
-last_synced_dump: "[2026-04-14]"
+status: submitted
+origin_dump: "[[01_Source/academics/ETAM Essays.md]]"
+last_synced_dump: "[[01_Source/academics/ETAM Essays.md]]"
 references: []
 conflict_detected: false
 last_updated: 2026-04-14
-tags: [etam, isen, essay, application]
+tags: [etam, isen, essay, application, constraint-modeling, operations-research]
 ---
 
 # Industrial and Systems Engineering Essay
