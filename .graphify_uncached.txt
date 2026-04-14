@@ -1,0 +1,22 @@
+CLAUDE.md
+dashboard.md
+excel-model.md
+links.md
+career\internships\summer-2026-search.md
+career\programs\avf-prep.md
+career\programs\fellowships-tracker.md
+career\resume\resume-current.md
+inbox\README.md
+projects\clinicalhours\pitch-deck.md
+projects\clinicalhours\platform-status.md
+research\fedvt\introduction-v3.md
+research\fedvt\literature-index.md
+research\fedvt\paper-outline.md
+research\fedvt\research-tracker.md
+research\fedvt\working-paper.md
+sessions\2026-04-13.md
+documents\processed\ClinicalHours Pitch (2).pdf
+documents\processed\Literature Summaries.pdf
+documents\processed\Paper Outline - Feedlot Economics and Management.docx (1) 1.pdf
+documents\processed\Paper Outline - Feedlot Economics and Management.docx (1).pdf
+documents\processed\ShivamKanodiaResume (20).pdf

@@ -11,14 +11,12 @@
             "id": "fca35acf7363bb63",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "career/programs/fellowships-tracker.md",
-                "mode": "source",
-                "source": false
+                "file": "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1) 1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "fellowships-tracker"
+              "icon": "lucide-file-text",
+              "title": "Paper Outline - Feedlot Economics and Management.docx (1) 1"
             }
           }
         ]
@@ -187,30 +185,33 @@
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "career/resume/resume-current.md",
-    "research/fedvt/introduction-v3.md",
+    "career/internships/summer-2026-search.md.tmp.23664.1776125974587",
+    "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
+    "documents/processed/Literature Summaries.pdf",
+    "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1) 1.pdf",
+    "career/programs/avf-prep.md",
+    "research/fedvt/paper-outline.md",
     "research/fedvt/literature-index.md",
-    "inbox/README.md",
+    "graphify-out/cache",
+    "graphify-out",
+    "research/fedvt/research-tracker.md",
+    "research/fedvt/working-paper.md",
+    "research/fedvt/introduction-v3.md",
+    "career/programs/fellowships-tracker.md",
+    "excel-model.md",
     "dashboard.md",
     "links.md",
-    "research/fedvt/paper-outline.md",
-    "research/fedvt/research-tracker.md",
-    "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
+    "career/resume/resume-current.md",
+    "inbox/README.md",
     "documents/processed/ShivamKanodiaResume (20).pdf",
     "projects/clinicalhours/platform-status.md",
     "documents/processed/ClinicalHours Pitch (2).pdf",
-    "documents/processed/Literature Summaries.pdf",
-    "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1) 1.pdf",
     "inbox/processed",
     "documents/processed",
     "documents/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
-    "documents/Literature Summaries.pdf",
-    "documents/Paper Outline - Feedlot Economics and Management.docx (1) 1.pdf",
     "career/internships/summer-2026-search.md",
-    "career/programs/fellowships-tracker.md",
     "projects/clinicalhours/pitch-deck.md",
     "projects/clinicalhours/overview.md",
-    "research/fedvt/working-paper.md",
     "Untitled.canvas",
     "career/programs/overview.md",
     "career/internships/overview.md",
@@ -221,7 +222,6 @@
     "2026-04-13.md",
     "academics.md",
     "projects.canvas",
-    "career.md",
-    "knowledge.md"
+    "career.md"
   ]
 }

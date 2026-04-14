@@ -21,3 +21,8 @@ tags: [career, fellowships, leadership, programs]
 
 ## Notes
 Focus on Zachry submission before June 2026.
+
+## Links
+- [[avf-prep]] — AVF second round interview prep
+- [[resume-current]] — current resume
+- [[summer-2026-search]] — internship search tracker

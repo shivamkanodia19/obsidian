@@ -27,3 +27,7 @@ Systematic cold email pipeline to 13+ DFW-area companies including SPI, AptusCar
 
 ## Status
 No offers yet as of April 2026.
+
+## Links
+- [[resume-current]] — current resume used for applications
+- [[fellowships-tracker]] — programs and fellowships tracker
