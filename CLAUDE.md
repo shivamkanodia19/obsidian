@@ -24,11 +24,12 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 4. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
 
 ## Hard Rules
-- **NEVER edit, rename, move, or rewrite any file CONTENT in `/01_Source/`** — It is immutable and sacred. You may organize subfolders only.
+- **NEVER edit, rename, move, or rewrite any file CONTENT in `/01_Source/`** — It is immutable and sacred. You may organize subfolders only. AI CANNOT write to `/01_Source/` under any circumstances — this is technically enforced.
 - **NEVER delete content from Analyst files** — move old content to `## History` instead with a date label [YYYY-MM-DD].
 - **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to the Source that informed it** — traceability is mandatory.
 - **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **ALWAYS write `last_synced_dump` and `origin_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
+- **Technical enforcement:** All skills and tools validate that writes are NEVER directed to `/01_Source/`. Any write attempt to `/01_Source/` must fail with an error.
 
 ## Note Title Convention
 **Keep titles SIMPLE and IDEA-FOCUSED, not descriptive.**
