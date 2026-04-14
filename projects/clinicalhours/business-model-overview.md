@@ -45,18 +45,48 @@ tags: [clinicalhours, business-model, pricing, market-definition]
 2. **Clinic Acquisition:** Direct email & phone outreach to DFW free clinics
 3. **Network Effect:** Clinic referrals (once one clinic adopts, others follow)
 
+## Product Positioning (Clarified)
+
+### Primary Positioning
+**"We make volunteer hiring pain-free"**
+- Core strength: Custom applications → screening → interview invites → decisions → onboarding
+- Competitive advantage: Easier than Google Forms + email; faster than Volgistics
+- Value prop: Clinic coordinators save 10-15 hours/month on hiring workflow
+
+### Secondary Positioning
+- "Replace email + spreadsheet chaos for volunteer ops"
+- "Handle the entire volunteer lifecycle" (hiring + management + tracking)
+
+### Feature Roadmap (In Progress & Planned)
+
+| Feature | Status | Priority | Why It Matters |
+|---|---|---|---|
+| **Custom Applications** | Live | Core | Self-explanatory intake |
+| **Applicant Management/Sorting** | Live | Core | Make decisions faster |
+| **Interview Invites + Email** | Live | Core | Integrated comms |
+| **Applicant Decisions & Onboarding** | Live | Core | Accepted volunteer tracking |
+| **Attendance Tracking** | In Progress | High | How many hours did they contribute? |
+| **Hour Logging** | In Progress | High | Track volunteer time + generate reports |
+| **Shift Scheduling** | Planned | Medium | Optional for clinics that need it |
+| **Clinical Credentialing** | Planned | Low | Future hospital network feature |
+
+### Market Focus
+- **Primary (12+ months):** Small non-profit free clinics (15-100 volunteers)
+- **Secondary (24+ months):** Hospital networks + larger health systems (premium tier only)
+- **Skip for now:** Generic nonprofits, large hospital ERPs
+
 ## Key Unknowns (To Solve)
-1. **Pricing Model:** Annual subscription price?
-2. **Pricing Sensitivity:** What can free clinics afford?
-3. **Feature Prioritization:** What features drive customer adoption?
-4. **Competitive Differentiation:** What prevents clinics from building in-house?
-5. **Expansion Path:** Hospital networks vs. pure free-clinic focus?
+1. **Pricing Commitment:** Lock in $1,200/year Standard tier?
+2. **Pricing Sensitivity:** Will free clinics bite at $1,200/year?
+3. **2nd Customer Timeline:** Can you close one by Q3 2026?
+4. **Hospital Network Opportunity:** Is it worth building for, or double down on free clinics?
+5. **Expansion Path:** Go deep in DFW (6 months) or expand nationally immediately?
 
 ---
 
 ## Next Market Research Steps
-- [ ] Competitive landscape analysis (existing volunteer management solutions)
-- [ ] TAM/SAM/SOM calculations for free clinic market
-- [ ] Free clinic economics research (budget constraints, grant funding)
-- [ ] Pricing benchmarking (similar SaaS / nonprofit tools)
-- [ ] Hospital network opportunity assessment
+- [ ] Test pricing with Tier 1 clinics (Mercy, Julia's, Community Health, EPIC)
+- [ ] Validate attendance/hour logging drives adoption (ask BCS FHC)
+- [ ] Confirm hospital network interest + budget (Baylor, St. Joseph, Ascension advisors)
+- [ ] Build compliance story (HIPAA docs, legal audit)
+- [ ] Refine messaging: "volunteer hiring pain-free" as headline

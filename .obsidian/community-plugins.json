@@ -1,5 +1,6 @@
 [
   "dataview",
   "obsidian-git",
-  "mcp-tools"
+  "mcp-tools",
+  "obsidian-local-rest-api"
 ]

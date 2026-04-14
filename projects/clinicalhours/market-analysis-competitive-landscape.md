@@ -125,7 +125,20 @@ ClinicalHours operates in an **underserved, fragmented market** where:
 
 ---
 
-## ClinicalHours' Niche Position
+## ClinicalHours' Niche Position & Differentiation
+
+### Primary Positioning: "We Make Volunteer Hiring Pain-Free"
+
+**Why This Resonates with Small Clinics:**
+- Hiring is the #1 pain point for volunteer coordinators (not shift scheduling or compliance)
+- Current solution (Google Forms + email + spreadsheets) is broken but familiar
+- Volgistics solves this but is overkill + too expensive ($3-5K/year)
+- ClinicalHours = same outcome (better hiring decisions) at 1/3 the cost + better UX
+
+**Core Workflow Defensibility:**
+Custom applications → Screen/sort applicants → Interview invites → Decisions → Onboarding → **[NEW] Attendance + Hour Logging**
+
+This end-to-end workflow is your moat. Volgistics has it but buried in complexity. Google Forms can't do it. You're the only option that's both simple AND complete.
 
 ### What Makes Your Niche Defensible
 
@@ -136,19 +149,24 @@ ClinicalHours operates in an **underserved, fragmented market** where:
 - Google Forms is the status quo (but painful)
 
 **2. Healthcare-Specific Context**
-- Your product includes features Volgistics doesn't: clinical credential tracking, HIPAA considerations, patient-facing scheduling
+- Your product includes clinic-specific features Volgistics doesn't emphasize: HIPAA considerations, volunteer hour tracking, healthcare context
 - Volunteer Hub doesn't have backend clinic operations
 - Generic nonprofit tools miss healthcare nuances
 
 **3. Dual-Sided Marketplace Advantage**
 - You own both the supply (student volunteers) AND demand (clinics)
-- This is powerful: clinics pay for access to pre-vetted volunteers; students pay for access to opportunities
+- This is powerful: clinics pay for access to pre-vetted volunteers; students get volunteer opportunities
 - Competitors only solve one side
 
 **4. Low Switching Costs → High Lock-In**
 - Once a clinic adopts ClinicalHours, switching to Volgistics = expensive + painful
-- Your platform becomes the operational backbone of their volunteer program
+- Your platform becomes the operational backbone of their volunteer program (hiring + tracking)
 - Network effects: As more students use ClinicalHours, clinics have more incentive to stay
+
+### Secondary Positioning: "Replace Email + Spreadsheet Chaos"
+- Clinics currently manage volunteers across email, spreadsheets, Google Forms, manual tracking
+- ClinicalHours = single source of truth
+- Value proposition = 10-15 hours/month saved for clinic coordinators
 
 ---
 
@@ -309,23 +327,30 @@ ClinicalHours operates in an **underserved, fragmented market** where:
 
 ## Strategic Recommendations
 
+### Go-to-Market Positioning
+- **Headline:** "We make volunteer hiring pain-free for free clinics"
+- **Website/pitch deck focus:** Hiring workflow (applications → decisions → onboarding)
+- **Secondary angle:** "Replaces email + spreadsheets" + "Tracks attendance + hours"
+- **Avoid:** Enterprise features (compliance, multi-location, EHR integrations) until hospital network phase
+
 ### Short-Term (Next 6 Months)
-1. **Define pricing:** Land on $1,200/year for Standard tier
-2. **Win 2nd customer:** Close Mercy Clinic Friends or Julia's Center Healthcare
-3. **Validate hospital network interest:** Get specific budget numbers from Baylor/St. Joseph
-4. **Build compliance story:** Publish HIPAA/compliance docs on website
+1. **Pricing commitment:** Finalize $1,200/year Standard tier; update pricing page
+2. **Messaging update:** Update website/pitch to lead with "volunteer hiring pain-free"
+3. **Win 2nd customer:** Close Mercy Clinic Friends or Julia's Center Healthcare (Tier 1 DFW clinics)
+4. **Validate attendance/hours:** Confirm BCS FHC is actively using attendance tracking feature
+5. **Build compliance story:** Publish HIPAA/compliance docs on website (support 2nd customer)
 
 ### Medium-Term (6-12 Months)
-1. **Expand DFW:** Win 5-8 clinics in Texas
-2. **Explore hospital networks:** Pilot custom integration with 1 health system
-3. **Build expansion features:** Clinical credentialing, skills tracking, compliance reporting
-4. **Launch referral incentive:** Encourage BCS FHC to refer other clinics
+1. **Go deep on DFW:** Win 5-8 free clinics in Dallas-Fort Worth area
+2. **Expand to adjacent cities:** Houston, Austin (other Texas free clinic hubs)
+3. **Build referral motion:** Encourage BCS FHC + paid customers to refer other clinics
+4. **Feature stability:** Polish attendance/hour logging; make it a selling point
 
-### Long-Term (12+ Months)
-1. **Geographic expansion:** Launch in Midwest (Chicago, Detroit), West Coast (LA, SF)
-2. **Hospital network tier:** Build premium offering for health systems ($5-10K/year)
-3. **Feature moat:** Deep integrations (Calendly, Gmail, Stripe, EHR APIs) that competitors can't replicate
-4. **Acquisition path:** Position for acqui-hire by larger healthcare IT platforms
+### Long-Term (12+ Months — Only if Small Clinic Market Saturates)
+1. **Geographic expansion:** Midwest, West Coast (other free clinic clusters)
+2. **Hospital network exploration:** If you have 10+ free clinics, explore hospital networks with premium tier
+3. **Premium features:** Clinical credentialing, skills tracking (not core to free clinic positioning)
+4. **Acquisition path:** Position for acqui-hire by larger healthcare IT platforms OR sustained independent SaaS
 
 ---
 
