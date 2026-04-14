@@ -11,10 +11,14 @@
             "id": "fca35acf7363bb63",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "01_Source/Dumps/2026-04-14_internships-baseline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-14_internships-baseline"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300.5
   },
   "right": {
     "id": "d500e636a9c87736",
@@ -152,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "career/programs/overview.md",
-                "followCursor": false,
+                "file": "01_Source/Dumps/2026-04-14_internships-baseline.md",
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of overview"
+              "title": "Outline of 2026-04-14_internships-baseline"
             }
           }
         ],
@@ -183,43 +187,43 @@
   },
   "active": "ffbefc36a646e71b",
   "lastOpenFiles": [
-    "51-Image-Critiques.md",
-    "51-Image-Critiques.md.tmp.14464.1776148278773",
-    "CLAUDE-SYSTEM-INSTRUCTIONS.md",
-    "CLAUDE-SYSTEM-INSTRUCTIONS.md.tmp.14464.1776148274150",
-    "10-Content-Calendar.md",
-    "10-Content-Calendar.md.tmp.14464.1776148260736",
-    "00-Strategy-Overview.md",
-    "00-Strategy-Overview.md.tmp.14464.1776148242619",
-    "00-QUICK-START.md",
-    "00-QUICK-START.md.tmp.14464.1776148226207",
-    "projects/clinicalhours/market-analysis-competitive-landscape.md.tmp.29368.1776148012079",
-    "projects/clinicalhours/pitch-deck.md",
-    "projects/clinicalhours/market-analysis-competitive-landscape.md",
-    "projects/clinicalhours/business-model-overview.md",
-    "projects/clinicalhours/tier1-execution-plan.md",
-    "projects/clinicalhours/sales-target-list.md",
-    "projects/clinicalhours/outreach-emails.md",
-    "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138086076",
-    "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138000018",
-    "projects/clinicalhours/platform-status.md",
-    "Untitled.canvas",
-    "links.md",
-    "Untitled",
-    "career/internships/summer-2026-search.md",
-    "_COMMUNITY_Vault Protocols.md",
-    "documents/processed/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
-    "inbox/README.md",
+    "CLAUDE.md.tmp.18364.1776187933734",
+    "CLAUDE.md.tmp.18364.1776187926277",
+    "CLAUDE.md.tmp.18364.1776187921408",
+    "CLAUDE.md.tmp.18364.1776187914795",
+    "CLAUDE.md.tmp.18364.1776187906998",
+    "CLAUDE.md.tmp.22652.1776187554873",
+    "01_Source/Dumps/2026-04-14_fedvt-baseline.md",
+    "01_Source/Dumps/2026-04-14_csce120-baseline.md",
+    "01_Source/Dumps/2026-04-14_clinicalhours-baseline.md",
+    "CLAUDE.md",
     "graphify-out/GRAPH_REPORT.md",
-    "sessions/2026-04-13.md",
-    "research/fedvt/sessions/2026-04-13.md",
-    "research/fedvt/introduction-v3.md",
-    "research/fedvt/section2-draft1.md",
-    "research/fedvt/research-tracker.md",
-    "research/fedvt/paper-outline.md",
-    "research/fedvt/literature-index.md",
-    "career/resume/resume-current.md",
-    "_COMMUNITY_BRD and Health Economics.md",
+    "02_Analyst/career/internships.md",
+    "01_Source/Dumps/2026-04-14_internships-baseline.md",
+    "02_Analyst/academics/csce120.md",
+    "02_Analyst/projects/fedvt.md",
+    "02_Analyst/projects/clinicalhours.md",
+    "02_Analyst/_index.md",
+    "04_Archive",
+    "03_Inbox",
+    "02_Analyst/knowledge/_templates",
+    "02_Analyst/projects",
+    "02_Analyst/knowledge",
+    "career/internships/Execution/wave1-tracking.md",
+    "career/internships/Execution/Wave1-tracking.md",
+    "career/internships/Execution/Checklist.md",
+    "knowledge/Save-skill-design.md",
+    "research/fedvt/Outline.md",
+    "research/fedvt/Sources.md",
+    "research/fedvt/Introduction.md",
+    "projects/clinicalhours/Strategy/Execution-plan.md",
+    "projects/clinicalhours/Strategy/Technical-design.md",
+    "projects/clinicalhours/Strategy/Methods.md",
+    "projects/clinicalhours/Strategy/Overview.md",
+    "projects/clinicalhours/Strategy/BCS-integration.md",
+    "projects/clinicalhours/Sales & Outreach/Student-sequence.md",
+    "projects/clinicalhours/Sales & Outreach/Email-templates.md",
+    "Untitled.canvas",
     "projects.canvas"
   ]
 }

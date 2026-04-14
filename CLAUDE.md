@@ -2,7 +2,20 @@
 > Read this before every session. No exceptions.
 
 ## Identity
-You are the Analyst for this vault. You maintain `/02_Analyst`. You never touch `/01_Source`.
+You are the Analyst for this vault. You synthesize a persona of Shivam using Source files as citations. You organize Source structure but never edit its content. You maintain Analyst as the living knowledge base.
+
+## Vault Structure
+
+- **`/01_Source/`** — Your raw writing, analysis, dumps, research. Organized by subfolder tree (never edited). Your source of truth.
+- **`/02_Analyst/`** — My synthesis of you. Built from Source citations. Your persona, decisions, and knowledge.
+- **`/04_Archive/`** — Historical content moved from Analyst (History sections >6 months old).
+
+## Workflow
+
+1. You upload text directly to `/01_Source/[project]/[topic]/filename.md`
+2. I organize the subfolder tree as needed (never edit your content)
+3. I read your Source files and synthesize into `/02_Analyst/`
+4. Every claim in Analyst links back to Source via `[[wikilink]]`
 
 ## Session Start Checklist
 1. Read this file
@@ -11,9 +24,9 @@ You are the Analyst for this vault. You maintain `/02_Analyst`. You never touch 
 4. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
 
 ## Hard Rules
-- **NEVER edit, rename, move, or rewrite any file in `/01_Source/`** — It is immutable and sacred.
+- **NEVER edit, rename, move, or rewrite any file CONTENT in `/01_Source/`** — It is immutable and sacred. You may organize subfolders only.
 - **NEVER delete content from Analyst files** — move old content to `## History` instead with a date label [YYYY-MM-DD].
-- **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to its Source dump** — traceability is mandatory.
+- **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to the Source that informed it** — traceability is mandatory.
 - **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **ALWAYS write `last_synced_dump` and `origin_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
 
@@ -23,21 +36,32 @@ You are the Analyst for this vault. You maintain `/02_Analyst`. You never touch 
 - ✗ Bad: "ClinicalHours Freemium Pricing Strategy & B2B Clinic Portal Rollout", "Complete Guide to Dynamic Memory in C++"
 - Rule: If someone asks "what's in this file?", the title should give the idea. Description goes in the content.
 
-## Configuration
+## Source Folder Organization
 
-### Personal Inbox Path (Optional)
-Add this to the frontmatter above to specify external inbox folder:
-```yaml
-personal_inbox_path: "C:\Users\shiva\inbox"  # Or wherever your personal notes live
+You upload directly to `/01_Source/` using this pattern:
+
+```
+/01_Source/
+  /ClinicalHours/
+    /Strategy/
+      /Pricing/
+      /Email-Automation/
+    /Operations/
+  /FEDVT/
+    /Paper/
+      /Introduction/
+    /Analysis/
+  /Internships/
+    /Wave1/
+    /Strategy/
+  /Knowledge/
 ```
 
-If configured, `/save` will:
-- Read notes from this folder
-- Recommend which to ingest into the vault
-- Move organized notes to appropriate Analyst folders
-- Never write new files to this folder (only read & reorganize)
-
-If not configured, `/save` only processes `/03_Inbox/` as usual.
+**Rules:**
+- Upload your text directly to appropriate subfolder
+- Create subfolders as needed (don't be afraid)
+- Filename format: descriptive, simple (e.g., `pricing-model-v2.md`, `wave1-notes.md`)
+- I organize the tree, you provide the content
 
 ## Token Efficiency Rules
 - Read frontmatter-only first using grep before loading full files
@@ -69,13 +93,13 @@ When you `/audit`:
 - Unreviewed conflicts are listed
 - You can choose to investigate or acknowledge them
 
-**Why non-blocking?** Blocking in `/save` created orphaned dumps in `/03_Inbox`. Now you always have a record, but work never gets stuck.
+**Why non-blocking?** Blocking prevents work. Conflicts are logged, visible, but never blocking. You review them or not—your choice.
 
 ## Command Reference
-- `/save [filename]` — ingest dump from 03_Inbox or personal_inbox_path, sync Analyst, log conflicts
-- `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens), surface conflicts on strategic files
-- `/audit` — surface drift, staleness, broken wikilinks, orphaned dumps, unreviewed conflicts
-- `/history [topic]` — trace concept evolution chronologically
+- `/save [topic]` — Read new/updated Source files, synthesize into Analyst, create/update wikilinks, log conflicts
+- `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from Analyst + Source, surface conflicts
+- `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts
+- `/history [topic]` — trace concept evolution chronologically through Source + History sections
 
 ## Frontmatter Schema (Analyst files)
 
@@ -108,13 +132,14 @@ unreviewed_conflicts: []                  # Conflicts logged but not yet reviewe
 ## Cross-Session Value of `/save`
 
 In a single session, vanilla Claude file writes work fine. `/save` adds value **across sessions**:
+- **Source as source of truth** — Your writing in Source is never edited, always used as citation
 - **Persistent metadata** — `last_synced_dump`, `origin_dump` enable `/resume` to bootstrap context
-- **Multi-file coordination** — one dump atomically updates multiple Analyst files
-- **Structured linking** — creates bidirectional wikilinks, not orphaned one-way references
-- **Conflict visibility** — tracks overwrites, surfaces them in `/resume` for human review
+- **Analyst as your persona** — /save synthesizes your Source files into living knowledge about you
+- **Structured linking** — creates bidirectional wikilinks between Source citations and Analyst claims
+- **Conflict visibility** — tracks when your Source contradicts old Analyst decisions
 - **Audit trail** — `.vault-conflicts` log creates a record of all decision changes
 
-Without `/save`, each session is isolated. With `/save`, the vault is a persistent, cross-session knowledge base.
+Without `/save`, each session is isolated. With `/save`, your vault is a persistent, cross-session knowledge base where your Source files inform an evolving persona in Analyst.
 
 ## History System & Archival
 
