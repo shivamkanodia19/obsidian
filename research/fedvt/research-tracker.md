@@ -46,7 +46,13 @@ Each stage maps to a separate worksheet tab. VBA macros cascade recalculations a
 BEP is the most important output. It tells a feedlot operator the minimum $/cwt needed to break even against live CME futures price.
 
 ### Status
-In progress. Poster presented at Student Research Week. Paper not yet published.
+**Draft stage: ~40% complete for journal submission.** Poster presented at ASAS-CSAS Annual Meeting 2025. Full journal paper currently requires:
+- Sections 3 (Methods) and 4 (Results) — not yet drafted
+- Historical validation via Kansas FOF backtesting (2015–2023 closeout data)
+- Pilot user testing (5–8 feedlot operators for adoption validation)
+- Reference verification (3 citations need DOI/publication status fixes)
+
+**Publication target:** AJAE (American Journal of Agricultural Economics) or equivalent applied ag economics journal. AJAE submission will require formal validation before review.
 
 ## Paper 2: ML Forecasting Models
 Scoped but separate from Paper 1. Incorporates SARIMA, LSTM, and XGBoost models for futures price forecasting. Tableau and ML components are the focus. Not yet started.
