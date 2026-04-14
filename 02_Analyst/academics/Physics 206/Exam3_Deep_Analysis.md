@@ -21,13 +21,13 @@ last_updated: 2026-04-14
 
 ### General Exam Characteristics
 
-| Aspect | Details |
-|--------|---------|
-| Duration | 50 minutes (typically) |
-| Total Questions | 10-12 problems |
-| Point Distribution | Usually 100 points total |
-| Allowed Tools | Calculator (scientific), no graphing |
-| Format | Free-response (show all work) |
+| Aspect             | Details                              |
+| ------------------ | ------------------------------------ |
+| Duration           | 50 minutes (typically)               |
+| Total Questions    | 10-12 problems                       |
+| Point Distribution | Usually 100 points total             |
+| Allowed Tools      | Calculator (scientific), no graphing |
+| Format             | Free-response (show all work)        |
 
 ### Typical Score Breakdown
 

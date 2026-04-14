@@ -6,7 +6,7 @@ Course materials, study guides, exam prep, and academic resources.
 
 ### [[Mechanics/|Mechanics]] (ACTIVE - May 2026 Exam)
 Comprehensive Exam 3 study materials
-- **Main Study Guide:** [[Mechanics/Exam3_Deep_Analysis|Exam 3 Deep Analysis & Question Mapping]]
+- **Main Study Guide:** [[Exam3_Deep_Analysis|Exam 3 Deep Analysis & Question Mapping]]
   - 6 question types with detailed analysis
   - Problem-solving framework & strategy
   - 4-week study schedule
@@ -31,7 +31,7 @@ Study materials organized by:
 ## Quick Access - May Exam
 
 **If studying for Exam 3:**
-1. Start: [[Mechanics/Exam3_Deep_Analysis|Exam 3 Deep Analysis]] (overview + strategy)
+1. Start: [[Exam3_Deep_Analysis|Exam 3 Deep Analysis]] (overview + strategy)
 2. Practice: `/02_Analyst/academics/Mechanics/Exam3/` (15 past exams)
 3. Reference: Key equations section in Deep Analysis
 

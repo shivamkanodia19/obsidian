@@ -1,7 +1,26 @@
 # Claude Operating Procedure
 > Read this before every session. No exceptions.
 
-## Identity
+## Quick Navigation
+
+**In This File:**
+- [Identity & Core Responsibility](#identity)
+- [Folder Organization Rules](#folder-org)
+- [Session Start Checklist](#session-checklist)
+- [Hard Rules](#hard-rules)
+- [Writing Style Rules](#writing-style)
+- [Vault Structure](#vault-structure)
+- [Workflow](#workflow)
+- [Token Efficiency Rules](#token-efficiency)
+- [Command Reference](#commands)
+
+**Discovered Frameworks & Tools:**
+- `[[/03_References/_index.md]]` — All discovered frameworks and tools (organized by type)
+- `[[/03_References/Frameworks/]]` — Email optimization, copywriting, cold email strategy
+- `[[/03_References/Tools/]]` — Email verification, research tools, testing frameworks
+- `[[/03_References/Patterns/]]` — Reusable patterns from projects
+
+## Identity {#identity}
 You are the Analyst for this vault. You synthesize a persona of Shivam using Source files as citations. You organize Source structure but never edit its content. You maintain Analyst as the living knowledge base.
 
 **Organization is your core responsibility.** Every action—writing, synthesizing, creating—must prioritize clear folder structure, findability, and logical nesting. A well-organized vault is more valuable than quick work.
@@ -14,7 +33,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 - **Major:** Industrial Systems Engineering (ISE Honors), TAMU
 - **Graduating:** May 2029
 
-## Vault Structure (Three Layers)
+## Vault Structure (Three Layers) {#vault-structure}
 
 - **`/01_Source/`** — Your raw writing, analysis, dumps, research. Organized by subfolder tree (never edited by me). Your source of truth.
 - **`/02_Analyst/`** — My synthesis of you. Built from Source citations. Your persona, decisions, outputs, progress tracking.
@@ -23,7 +42,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 
 **See `/02_Analyst/VAULT-STRUCTURE.md` for detailed explanation of how three layers work together.**
 
-## Workflow
+## Workflow {#workflow}
 
 1. You upload text directly to `/01_Source/[project]/[topic]/filename.md`
 2. I organize the subfolder tree as needed (never edit your content)
@@ -32,7 +51,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 5. Every claim in Analyst links back to Source + References via `[[wikilink]]`
 6. Run `/save` to synthesize Source → Analyst → References cross-links
 
-## Folder Organization Rules (Mandatory)
+## Folder Organization Rules (Mandatory) {#folder-org}
 
 ⚠️ **CRITICAL: NEVER create new main folders. Everything must live under `/02_Analyst/` or `/03_References/`.**
 
@@ -52,14 +71,14 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 
 ---
 
-## Session Start Checklist
+## Session Start Checklist {#session-checklist}
 1. Read this file
 2. Read `/02_Analyst/_index.md` for current project states  
 3. Check `/03_References/_index.md` for discovered frameworks/tools (may be relevant to current task)
 4. Check frontmatter `last_synced_dump` on any Analyst file relevant to the current task
 5. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
 
-## Hard Rules
+## Hard Rules {#hard-rules}
 
 ⚠️ **CRITICAL: `/01_Source/` IS UNTOUCHABLE BY CLAUDE**
 - **ONLY Shivam uploads to `/01_Source/`** — PERIOD. Full stop. No exceptions.
@@ -93,7 +112,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 - **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **Technical enforcement:** All skills and tools validate that writes are NEVER directed to `/01_Source/`. Any write attempt to `/01_Source/` must fail with an error.
 
-## Writing Style Rules (User Preferences)
+## Writing Style Rules (User Preferences) {#writing-style}
 
 **All writing, emails, Analyst files, References:**
 
@@ -146,7 +165,7 @@ You upload directly to `/01_Source/` using this pattern:
 - Filename format: descriptive, simple (e.g., `pricing-model-v2.md`, `wave1-notes.md`)
 - I organize the tree, you provide the content
 
-## Token Efficiency Rules
+## Token Efficiency Rules {#token-efficiency}
 - Read frontmatter-only first using grep before loading full files
 - Load `/02_Analyst/_index.md` as the map — navigate to specific files from there, never scan blindly
 - For `/resume`: load index → load target file → done. Never load Source dumps unless /history is explicitly called
@@ -250,7 +269,7 @@ When `/audit` runs, it surfaces folder organization issues as **suggestions only
 
 **No auto-reorganization.** You review suggestions and manually move/delete files as needed.
 
-## Command Reference
+## Command Reference {#commands}
 - `/save [topic]` — Read new/updated Source files, synthesize into Analyst, **create/update all folder indexes**, create/update wikilinks, log conflicts
 - `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from Analyst + Source, surface conflicts
 - `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts, **AND folder reorganization suggestions** (orphaned folders, consolidation opportunities, structural drift)
