@@ -3,6 +3,8 @@ title: Email Verification Tools for Outreach
 type: tool
 source: Hunter.io, Tomba.io, RocketReach, ZoomInfo, Apollo.io (tested Apr 2026)
 relevance: cold email, founder outreach, sales research, internship targeting
+version: 1.0
+tested_in: 20-company Flower Mound research (Apr 2026)
 tags: [tools, email, research, founder-outreach, b2b-sales]
 last_updated: 2026-04-14
 ---
@@ -209,6 +211,19 @@ Example: HD Supply (no personal email) → Call (972) 874-6680 for facility mana
 - RocketReach — https://www.rocketreach.co
 - ZoomInfo — https://www.zoominfo.com
 - Apollo.io — https://www.apollo.io
+
+---
+
+## Iterations
+
+**[2026-04-14] v1.0** — Workflow tested on 20 Flower Mound companies. Results: 8 verified personal emails (40%), 11 fallback generic (55%), 1 no contact (5%). Time: 2 hours. Workflow documented for reuse.
+
+**Improvements to explore (v1.1+):**
+- Test RocketReach + Hunter combo vs. solo Hunter (does dual lookup improve accuracy?)
+- Compare cost/accuracy across tools at scale (20 vs. 100+ companies)
+- Develop pattern recognition (if company A uses firstname@domain, do competitors in same industry?)
+- Document fallback escalation: Generic email → LinkedIn search → Phone call success rate by industry
+- Add LinkedIn search strategy (connecting with CEO before email vs. after email)
 
 ---
 

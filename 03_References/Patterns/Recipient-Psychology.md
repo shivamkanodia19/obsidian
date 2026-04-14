@@ -3,6 +3,8 @@ title: Recipient Psychology in Cold Outreach
 type: pattern
 source: Copywriting skill, Sales psychology (HubSpot, Conversion sciences)
 relevance: cold email, sales, founder outreach, any outreach
+version: 1.0
+tested_in: Wave 3 internship outreach (Apr 2026)
 tags: [psychology, persuasion, recipient-focus, cold-email, sales]
 last_updated: 2026-04-14
 ---
@@ -177,6 +179,18 @@ Busy executives scan cold emails in <20 seconds. Decision points:
 - [[Frameworks/Cold-Email-Optimization]]
 - [[Patterns/Response-Rate-Psychology]]
 - [[Tools/Email-Verification]]
+
+---
+
+## Iterations
+
+**[2026-04-14] v1.0** — Initial pattern from copywriting skill. Applied to Wave 3 internship outreach. Core insight: executives scan <20 seconds → specificity + urgency win.
+
+**Improvements to explore (v1.1+):**
+- Test if "Question-based opener" outperforms "Direct problem statement" across industries
+- Explore how persona differences affect psychology (founder ≠ operator ≠ hired exec)
+- Document which self-focus mistakes are most costly (credentials vs. goals vs. effort mentions)
+- Measure if "20-second rule" holds for different industries (SaaS vs. manufacturing vs. nonprofit)
 
 ---
 

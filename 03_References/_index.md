@@ -39,12 +39,16 @@ Curated knowledge built from my learnings across sessions. Everything is sourced
 - Your writing/outputs (→ Source)
 - Unsourced speculation (must be sourced)
 
-**Example flow:**
+**Example flow (with Iteration):**
 1. I discover copywriting principles while working on your Wave 3 emails
-2. I save the framework to `03_References/Frameworks/Cold-Email-Optimization.md` (with real sources)
+2. I save the framework to `03_References/Frameworks/Cold-Email-Optimization.md` (with real sources) — **v1.0**
 3. Your Analyst file (`email-optimization-strategy.md`) links to it in frontmatter + body
-4. You can reference the framework directly when applying it to Wave 2 or future outreach
-5. Next session, I remember these frameworks and don't re-learn them
+4. You apply it to Wave 2 → I test results, find what works better
+5. I iterate: improve the framework with new insights → **v1.1**
+6. Next session, I reference the improved v1.1 (not re-learning, but building on learnings)
+7. Each cycle: framework compounds, improves toward what actually works
+
+**Result:** References aren't static checklists. They're living frameworks that evolve based on real usage.
 
 ---
 

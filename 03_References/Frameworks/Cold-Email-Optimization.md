@@ -3,6 +3,8 @@ title: Cold Email Optimization for Executives
 type: framework
 source: Copywriting skill (HubSpot, Neil Patel cold email research)
 relevance: internship outreach, sales, B2B prospecting
+version: 1.0
+tested_in: Wave 3 internship outreach (Apr 2026)
 tags: [email, outreach, copywriting, cold-email, psychology]
 last_updated: 2026-04-14
 ---
@@ -157,3 +159,15 @@ Avoid:
 - [[Patterns/Response-Rate-Psychology]]
 - [[Tools/Email-Verification]]
 - [[Patterns/Recipient-Psychology]]
+
+---
+
+## Iterations
+
+**[2026-04-14] v1.0** — Initial framework from copywriting skill applied to Wave 3 internship outreach. Tested on 5 CEO emails (2 verified personal, 3 fallback generic). Framework ready for scaling to Wave 2 + secondary targets.
+
+**Improvements to explore (v1.1+):**
+- Test warm email variation (when you have prior contact/referral)
+- A/B test 2 subject lines across next wave to optimize open rate
+- Develop persona-specific variations (founder vs. C-level operator vs. team lead)
+- Track follow-up sequence results (Day 3 re-send, Day 7 LinkedIn, Day 10 phone)

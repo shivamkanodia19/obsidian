@@ -21,10 +21,10 @@ Research-backed operational pain points for 20 Flower Mound companies. **Only ve
 - **CEO:** Fran Kirley (Nexion Health Founder/Chairman/CEO)
 - **Email:** crosstimbers.adm@nexion-health.com (facility); f***@nexion-health.com (masked corporate)
 - **Verified Issues:**
-  - **100% nursing staff turnover** + 4 administrator departures (ProPublica nursing home records)
-  - **26 health deficiencies** including failure to maintain RN on duty 8 hrs/day (ProPublica compliance data)
-  - **$509,793 in fines over 3 years** for regulatory violations (ProPublica)
-  - **Special Focus Facility candidate** flagged for abuse/inadequate care (CMS/ProPublica)
+  - **100% nursing staff turnover** plus 4 administrator departures ([ProPublica nursing home records](https://projects.propublica.org/nursing-homes/facilities/065283))
+  - **26 health deficiencies** including failure to maintain RN on duty 8 hrs/day ([ProPublica compliance data](https://projects.propublica.org/nursing-homes/facilities/065283))
+  - **$509,793 in fines over 3 years** for regulatory violations ([ProPublica](https://projects.propublica.org/nursing-homes/facilities/065283))
+  - **Special Focus Facility candidate** flagged for abuse/inadequate care ([CMS/ProPublica](https://projects.propublica.org/nursing-homes/facilities/065283))
 
 **Internship Solution Ideas:**
 1. **Staff Scheduling Optimization System:** Build a shift scheduling tool that integrates compliance requirements (RN coverage hours), staff preferences, and retention incentives. Target: Reduce unplanned turnover by 15% in 8 weeks by preventing burnout-driven departures.
@@ -36,10 +36,10 @@ Research-backed operational pain points for 20 Flower Mound companies. **Only ve
 - **CEO:** Mike Sheehan
 - **Email:** msheehan@deviewelectronics.com (verify current status)
 - **Verified Issues:**
-  - **50–60% staff turnover rate** ("revolving door" affecting service continuity) (Glassdoor 120+ reviews)
-  - **Toxic work environment:** favoritism, poor culture, minimal raises (Glassdoor 2.8/5 rating)
+  - **50–60% staff turnover rate** ("revolving door" affecting service continuity) ([Glassdoor 120+ reviews](https://www.glassdoor.com/Reviews/IntelliCentrics-Reviews-E1342814.htm))
+  - **Toxic work environment:** favoritism, poor culture, minimal raises ([Glassdoor 2.8/5 rating](https://www.glassdoor.com/Reviews/IntelliCentrics-Reviews-E1342814.htm))
   - **Manual credentialing bottleneck:** 120-day processing cycles (product documentation + user feedback)
-  - **Executive instability:** average C-level tenure <1 year (Glassdoor reviews)
+  - **Executive instability:** average C-level tenure under 1 year ([Glassdoor reviews](https://www.glassdoor.com/Reviews/IntelliCentrics-Reviews-E1342814.htm))
 
 **Internship Solution Ideas:**
 1. **Automated Credentialing Pipeline:** Build email intake automation + document validation using Python RPA. Integrate with healthcare databases to auto-populate fields. Target: Reduce 120-day cycle to 30–40 days, freeing up manual effort for higher-value work.

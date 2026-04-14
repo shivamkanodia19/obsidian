@@ -151,14 +151,14 @@ Hi James—I can build a project tracking dashboard for your $112M bond portfoli
 
 ## Key Differences from Original
 
-| Aspect | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| **Length** | 120–150 words | 55–65 words | Cut by 60% |
-| **Lead** | "I researched..." | "Your [problem] is [drag]" | Recipient-focused |
-| **Self-reference** | "I'm TAMU junior..." | Removed | 100% value-focused |
-| **Numbers** | "~60%", "50+ hours" | "40 days", "75%", "48 hours" | Specific ✓ |
-| **CTA** | "Worth 30 min?" | "Call Wed/Thu—10 min" | Urgent + specific |
-| **Subject** | Feature-focused | Outcome + timeframe | Opens better |
+| Aspect             | Before               | After                        | Improvement        |
+| ------------------ | -------------------- | ---------------------------- | ------------------ |
+| **Length**         | 120–150 words        | 55–65 words                  | Cut by 60%         |
+| **Lead**           | "I researched..."    | "Your [problem] is [drag]"   | Recipient-focused  |
+| **Self-reference** | "I'm TAMU junior..." | Removed                      | 100% value-focused |
+| **Numbers**        | "~60%", "50+ hours"  | "40 days", "75%", "48 hours" | Specific ✓         |
+| **CTA**            | "Worth 30 min?"      | "Call Wed/Thu—10 min"        | Urgent + specific  |
+| **Subject**        | Feature-focused      | Outcome + timeframe          | Opens better       |
 
 ---
 
