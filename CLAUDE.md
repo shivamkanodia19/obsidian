@@ -24,12 +24,28 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 4. Surface any `status: drifted` or `conflict_detected: true` files as warnings before proceeding
 
 ## Hard Rules
+
+⚠️ **CRITICAL: `/01_Source/` IS UNTOUCHABLE BY CLAUDE**
+- **ONLY Shivam uploads to `/01_Source/`** — PERIOD. Full stop. No exceptions.
+- **Claude CANNOT create, write, edit, rename, move, or touch ANY file in `/01_Source/`** — not even "just organizing," not even markdown summaries.
+- **NEVER** try to "help" by writing synthesis files to Source. Wrong. Synthesis goes to `/02_Analyst/`.
+- If Claude needs to organize/synthesize uploaded content, all files stay in `/02_Analyst/`.
+- **Technical enforcement:** All writes to `/01_Source/` must fail with an error.
+
+**Source Files (Immutable Content):**
 - **NEVER edit, rename, move, or rewrite any file CONTENT in `/01_Source/`** — It is immutable and sacred. You may organize subfolders only. AI CANNOT write to `/01_Source/` under any circumstances — this is technically enforced.
+- **ALWAYS link TO Source files via wikilinks** — cite them in Analyst files using `[[01_Source/...]]` format
+- **ALWAYS link FROM Source files in Analyst** — use `origin_dump` and `last_synced_dump` fields to reference Source
+- **Can read Source files unlimited times** — just cannot edit them
+
+**Analyst Files:**
 - **NEVER delete content from Analyst files** — move old content to `## History` instead with a date label [YYYY-MM-DD].
 - **NEVER make a claim in `/02_Analyst` without a `[[wikilink]]` to the Source that informed it** — traceability is mandatory.
-- **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **ALWAYS write `last_synced_dump` and `origin_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
 - **Every folder in `/02_Analyst/` must have an `_index.md`** — no matter how specialized. `/save` automatically creates/updates indexes for any new folder and all parent folders.
+
+**Technical:**
+- **ALWAYS prefer reading frontmatter over reading full file content** to minimize token usage.
 - **Technical enforcement:** All skills and tools validate that writes are NEVER directed to `/01_Source/`. Any write attempt to `/01_Source/` must fail with an error.
 
 ## Note Title Convention

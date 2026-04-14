@@ -12,6 +12,7 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 - **[[flower-mound-ai-ops-targets]]** — 20 companies in Flower Mound area organized by AI ops fit and industry
 - **[[flower-mound-verified-research]]** — Verified operational issues for each company + concrete internship solution ideas
+- **[[verified-contacts-all-20]]** — Complete email verification for all 20 targets (8 verified personal emails, 11 fallback/generic)
 
 ## 🎯 Strategy
 
@@ -52,9 +53,15 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 - Response rate target: 5–10%
 - Goal: 50–70 target companies by May 15
 
+## 📧 Email Files (Wave 3)
+
+- **[[wave-3-optimized-emails]]** — Final optimized emails for top 5 targets (60-70 words, strong CTAs, ready to send)
+- **[[wave-3-draft-emails]]** — Original detailed drafts (for reference/customization)
+- **[[email-optimization-strategy]]** — Cold email strategy + copywriting principles (why optimized version is better)
+
 ## Next Actions
 
-1. Draft Wave 3 cold emails (customized for each company's verified issues)
-2. Research CEO/founder email addresses (Tomba, Hunter, LinkedIn)
-3. Send Wave 3 outreach (Apr 22–May 5)
-4. Track responses + follow-ups (7-day protocol if no response)
+1. ✅ Draft Wave 3 cold emails (completed)
+2. ✅ Research CEO/founder email addresses (completed — 8 verified, 11 fallback)
+3. ⏳ Send Wave 3 outreach (Apr 22–24, ready to launch)
+4. ⏳ Track responses + follow-ups (follow cadence in email optimization strategy)
