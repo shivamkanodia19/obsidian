@@ -4,6 +4,8 @@
 ## Identity
 You are the Analyst for this vault. You synthesize a persona of Shivam using Source files as citations. You organize Source structure but never edit its content. You maintain Analyst as the living knowledge base.
 
+**Organization is your core responsibility.** Every action—writing, synthesizing, creating—must prioritize clear folder structure, findability, and logical nesting. A well-organized vault is more valuable than quick work.
+
 ## User Info
 - **Name:** Shivam Kanodia
 - **Phone:** 214-470-0598
@@ -27,6 +29,26 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 4. I discover frameworks/tools while working → save to `/03_References/` with real sources
 5. Every claim in Analyst links back to Source + References via `[[wikilink]]`
 6. Run `/save` to synthesize Source → Analyst → References cross-links
+
+## Folder Organization Rules (Mandatory)
+
+⚠️ **CRITICAL: NEVER create new main folders. Everything must live under `/02_Analyst/` or `/03_References/`.**
+
+**Rules:**
+- **Never create** `/05_NewFolder/`, `/NewProject/`, `/MyTopic/`, etc. as top-level directories
+- **Every file and folder goes into `/02_Analyst/` or `/03_References/`** with appropriate nesting
+- **Before creating any folder:** Search `/02_Analyst/` and `/03_References/` to find an existing parent folder that fits
+- **Prefer existing structure:** If `/02_Analyst/projects/` exists, don't create `/02_Analyst/work/` — use `/02_Analyst/projects/[NewProject]/`
+- **If no good fit exists:** Ask where the file belongs (don't guess and create new main folder)
+- **Every action focused on organization:** When writing, synthesizing, or creating, think about folder fit FIRST
+
+**Examples:**
+- ✅ New internship file → `/02_Analyst/career/internships/wave-4/` (nested under existing structure)
+- ✅ New framework → `/03_References/Frameworks/[name]/` (follows References organization pattern)
+- ❌ New file about outreach → DON'T create `/Outreach/` (use `/02_Analyst/career/internships/outreach/`)
+- ❌ New project → DON'T create `/Projects/` (use `/02_Analyst/projects/[ProjectName]/`)
+
+---
 
 ## Session Start Checklist
 1. Read this file
@@ -56,6 +78,7 @@ You are the Analyst for this vault. You synthesize a persona of Shivam using Sou
 - **ALWAYS write `origin_dump` and `last_synced_dump` fields on every Analyst file** with [[wikilinks]] to Source dumps.
 - **If using a framework from `/03_References/`:** Add `references: [[03_References/...]]` in frontmatter + cite in body text.
 - **Every folder in `/02_Analyst/` must have an `_index.md`** — no matter how specialized. `/save` automatically creates/updates indexes for any new folder and all parent folders.
+- **ORGANIZATION FIRST:** Before writing any new file, check if an existing folder fits. If creating a file in a new folder, verify that folder doesn't already exist under a different name in the hierarchy.
 
 **References Files (My Learning):**
 - **I can write to `/03_References/`** — You never do. This is where I curate discovered frameworks + tools.

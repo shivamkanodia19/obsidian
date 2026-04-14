@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/research/FEDVT/paper-draft-v1.md",
+                "file": "02_Analyst/academics/ETAM/isen-essay.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "paper-draft-v1"
+              "title": "isen-essay"
             }
           }
         ],
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/research/FEDVT/paper-draft-v1.md",
+                "file": "02_Analyst/academics/ETAM/isen-essay.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of paper-draft-v1"
+              "title": "Outline of isen-essay"
             }
           }
         ],
@@ -202,20 +202,29 @@
   },
   "active": "d50010cceb07363c",
   "lastOpenFiles": [
-    "Exam3_PDFs/Exam3_2019.txt",
-    "Exam3_PDFs/Exam3_2018.txt",
-    "Exam3_PDFs/Exam3_2017.txt",
-    "Exam3_PDFs/Exam3_2016.txt",
-    "Exam3_PDFs/Exam3_2015.txt",
-    "Exam3_PDFs/Exam3_2015.pdf",
-    "Exam3_PDFs/Exam3_2016.pdf",
-    "Exam3_PDFs/Exam3_2017.pdf",
-    "Exam3_PDFs/Exam3_2018.pdf",
-    "Exam3_PDFs/Exam3_2019.pdf",
-    "Exam3_PDFs",
+    "CLAUDE.md.tmp.15200.1776204841635",
+    "CLAUDE.md.tmp.15200.1776204836858",
+    "02_Analyst/academics/ETAM/daen-essay.md",
+    "02_Analyst/academics/ETAM/cpen-essay.md",
+    "02_Analyst/academics/ETAM/_index.md",
+    "02_Analyst/academics/Physics 1/_index.md",
+    "CLAUDE.md.tmp.15200.1776204828874",
+    "02_Analyst/academics/Physics 1/pdfs/Exam3_2019.pdf",
+    "02_Analyst/academics/Physics 1/pdfs/Exam3_2005.pdf",
+    "01_Source/internships/ShivamKanodiaResume (20).pdf",
+    "02_Analyst/academics/ETAM/daen-essay.md.tmp.25384.1776204707122",
+    "02_Analyst/academics/ETAM/isen-essay.md",
+    "02_Analyst/academics/ETAM/isen-essay.md.tmp.25384.1776204692236",
+    "02_Analyst/academics/ETAM/_index.md.tmp.25384.1776204683360",
+    "02_Analyst/academics/ETAM",
+    "01_Source/academics",
+    "01_Source/internships/Internship goal.md",
+    "02_Analyst/academics/Physics/Exam3_Question_Types_Guide.md",
+    "02_Analyst/academics/Physics/_index.md",
+    "02_Analyst/research/FEDVT/paper-draft-v1.md",
+    "02_Analyst/academics/_index.md",
     "02_Analyst/research/FEDVT/paper-structure-outline.md",
     "02_Analyst/research/FEDVT/literature-summaries-annotated.md",
-    "02_Analyst/research/FEDVT/paper-draft-v1.md",
     "02_Analyst/career/internships/outreach/wave-3/draft-emails.md",
     "02_Analyst/career/internships/outreach/wave-3/optimized-emails.md",
     "02_Analyst/career/internships/outreach/wave-3/_index.md",
@@ -229,15 +238,6 @@
     "02_Analyst/career/internships/research/flower-mound-targets.md",
     "02_Analyst/career/internships/research/_index.md",
     "02_Analyst/career/internships/wave-3-draft-emails.md",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md",
-    "02_Analyst/career/internships/flower-mound-verified-research.md",
-    "02_Analyst/career/internships/verified-contacts-all-20.md",
-    "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
-    "02_Analyst/career/internships/email-optimization-strategy.md",
-    "03_References/Tools/Email-Verification.md",
-    "01_Source/internships/Internship goal.md",
-    "graphify-out/GRAPH_REPORT.md",
-    "02_Analyst/_index.md",
     "Untitled.canvas",
     "projects.canvas"
   ]
