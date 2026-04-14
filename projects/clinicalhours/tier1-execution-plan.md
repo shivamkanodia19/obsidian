@@ -19,20 +19,20 @@ tags: [clinicalhours, sales, execution, tier1, clinic-outreach]
 
 ### Pre-Call Research ✓ COMPLETE
 
-| Field | Value |
-|-------|-------|
-| **Organization** | Mercy Clinic Friends |
-| **Location** | 775 W Bowie St, Fort Worth, TX 76110 |
-| **Volunteers** | 140+ (largest manual system) |
-| **Current System** | PDF forms + fax/email submission |
-| **Operating Hours** | Tue/Thu 6:00 PM-8:30 PM, Wed 1:00 PM-4:00 PM |
-| **Director** | Peggy Leitch (Executive Director) |
-| **Volunteer Contact** | **Meredith Yount** (Assistant Medical Director, Board Member) |
-| **Email** | meredithyount@mercy-clinic.org |
-| **Phone** | (817) 840-3501 |
-| **Website** | mercy-clinic.org |
-| **Pain Points** | 140+ volunteers managed via fax/email; scheduling chaos; hour tracking is manual |
-| **Contact Status** | ❌ No prior contact |
+| Field                 | Value                                                                            |
+| --------------------- | -------------------------------------------------------------------------------- |
+| **Organization**      | Mercy Clinic Friends                                                             |
+| **Location**          | 775 W Bowie St, Fort Worth, TX 76110                                             |
+| **Volunteers**        | 140+ (largest manual system)                                                     |
+| **Current System**    | PDF forms + fax/email submission                                                 |
+| **Operating Hours**   | Tue/Thu 6:00 PM-8:30 PM, Wed 1:00 PM-4:00 PM                                     |
+| **Director**          | Peggy Leitch (Executive Director)                                                |
+| **Volunteer Contact** | **Meredith Yount** (Assistant Medical Director, Board Member)                    |
+| **Email**             | meredithyount@mercy-clinic.org                                                   |
+| **Phone**             | (817) 840-3501                                                                   |
+| **Website**           | mercy-clinic.org                                                                 |
+| **Pain Points**       | 140+ volunteers managed via fax/email; scheduling chaos; hour tracking is manual |
+| **Contact Status**    | ❌ No prior contact                                                               |
 
 ### Your Call Script
 
