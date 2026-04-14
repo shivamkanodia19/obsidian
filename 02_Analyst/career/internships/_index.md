@@ -61,9 +61,9 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 ## 📧 Email Files (Wave 3)
 
-- **[[wave-3-optimized-emails]]** — Final optimized emails for top 5 targets (60-70 words, strong CTAs, ready to send)
-- **[[wave-3-draft-emails]]** — Original detailed drafts (for reference/customization)
-- **[[email-optimization-strategy]]** — Cold email strategy + copywriting principles (why optimized version is better)
+- **[[wave-3-optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
+- **[[wave-3-draft-emails]]** — Reference: Original longer drafts for detailed context
+- **[[email-optimization-strategy]]** — Framework: Cold email strategy plus copywriting principles and recipient psychology
 
 ## Next Actions
 
