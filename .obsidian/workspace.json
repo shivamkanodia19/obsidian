@@ -11,10 +11,14 @@
             "id": "fca35acf7363bb63",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02_Analyst/career/internships.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "internships"
             }
           }
         ]
@@ -152,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Source/Dumps/2026-04-14_internships-baseline.md",
+                "file": "02_Analyst/career/internships.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-04-14_internships-baseline"
+              "title": "Outline of internships"
             }
           }
         ],
@@ -181,15 +185,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffbefc36a646e71b",
+  "active": "fca35acf7363bb63",
   "lastOpenFiles": [
+    "01_Source/Dumps/2026-04-14_internships-baseline.md",
     "CLAUDE.md.tmp.22652.1776189125310",
     "01_Source/Dumps/2026-04-14_fedvt-baseline.md",
     "01_Source/Dumps/2026-04-14_csce120-baseline.md",
     "02_Analyst/academics/csce120.md",
     "CLAUDE.md",
     "02_Analyst/career/internships.md",
-    "01_Source/Dumps/2026-04-14_internships-baseline.md",
     "03_Archive/Untitled",
     "INDEX.md",
     "01_Source/Knowledge",
@@ -200,7 +204,6 @@
     "02_Analyst/Internships/Execution",
     "02_Analyst/Internships",
     "02_Analyst/FEDVT/Research",
-    "02_Analyst/FEDVT/Paper",
     "01_Source/Dumps/2026-04-14_clinicalhours-baseline.md",
     "graphify-out/GRAPH_REPORT.md",
     "02_Analyst/projects/fedvt.md",
