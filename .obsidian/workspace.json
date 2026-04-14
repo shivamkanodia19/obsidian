@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Source/Dumps/2026-04-14_internships-baseline.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-14_internships-baseline"
+              "title": "CLAUDE"
             }
           }
         ]
@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Source/Dumps/2026-04-14_internships-baseline.md",
+                "file": "CLAUDE.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-04-14_internships-baseline"
+              "title": "Outline of CLAUDE"
             }
           }
         ],
@@ -185,30 +185,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffbefc36a646e71b",
+  "active": "fca35acf7363bb63",
   "lastOpenFiles": [
-    "CLAUDE.md.tmp.18364.1776187933734",
-    "CLAUDE.md.tmp.18364.1776187926277",
-    "CLAUDE.md.tmp.18364.1776187921408",
-    "CLAUDE.md.tmp.18364.1776187914795",
-    "CLAUDE.md.tmp.18364.1776187906998",
-    "CLAUDE.md.tmp.22652.1776187554873",
+    "01_Source/Dumps/2026-04-14_internships-baseline.md",
+    "03_Archive/Untitled",
+    "INDEX.md",
+    "01_Source/Knowledge",
+    "01_Source/Internships",
+    "01_Source/FEDVT",
+    "01_Source/ClinicalHours",
+    "02_Analyst/Internships/Strategy",
+    "02_Analyst/Internships/Execution",
+    "02_Analyst/Internships",
+    "02_Analyst/FEDVT/Research",
+    "02_Analyst/FEDVT/Paper",
     "01_Source/Dumps/2026-04-14_fedvt-baseline.md",
     "01_Source/Dumps/2026-04-14_csce120-baseline.md",
     "01_Source/Dumps/2026-04-14_clinicalhours-baseline.md",
     "CLAUDE.md",
     "graphify-out/GRAPH_REPORT.md",
     "02_Analyst/career/internships.md",
-    "01_Source/Dumps/2026-04-14_internships-baseline.md",
     "02_Analyst/academics/csce120.md",
     "02_Analyst/projects/fedvt.md",
     "02_Analyst/projects/clinicalhours.md",
     "02_Analyst/_index.md",
-    "04_Archive",
-    "03_Inbox",
-    "02_Analyst/knowledge/_templates",
-    "02_Analyst/projects",
-    "02_Analyst/knowledge",
     "career/internships/Execution/wave1-tracking.md",
     "career/internships/Execution/Wave1-tracking.md",
     "career/internships/Execution/Checklist.md",
@@ -222,7 +222,6 @@
     "projects/clinicalhours/Strategy/Overview.md",
     "projects/clinicalhours/Strategy/BCS-integration.md",
     "projects/clinicalhours/Sales & Outreach/Student-sequence.md",
-    "projects/clinicalhours/Sales & Outreach/Email-templates.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

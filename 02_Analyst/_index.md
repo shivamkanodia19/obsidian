@@ -1,46 +1,35 @@
 ---
+title: Analyst Index
+description: Navigation hub for your persona and synthesis
 last_audited: 2026-04-14
-active_projects:
-  - clinicalhours
-  - fedvt
-  - internships
-  - csce120
+active_projects: []
 drifted_files: []
-orphaned_dumps: []
+orphaned_sources: []
+unreviewed_conflicts: []
 ---
 
 # Analyst Index
 
-Master navigation hub for Analyst file tracking. This file maps all current active projects and flags any vault health issues.
+Your living knowledge base. Built from Source files, evolves with your decisions.
 
-## Active Projects
+## 🎯 Projects
 
-- **[[projects/clinicalhours.md]]** — Volunteer management platform. B2C freemium $4.99/mo, B2B clinic portal $750-1000/yr. Strategic: true (requires approval for major pivots).
-  - Last updated: 2026-04-14
-  - Status: stable
+- **ClinicalHours** — Clinical hours marketplace (Strategy, Sales, Operations, Market Research)
+- **FEDVT** — Feedlot economics research (Paper, Analysis)
+- **Internships** — Summer 2026 internship search (Strategy, Execution)
 
-- **[[projects/fedvt.md]]** — Feedlot Economics forecasting research with ML layer. Paper 1 complete (Introduction v3, 20 sources verified).
-  - Last updated: 2026-04-14
-  - Status: stable
+## 📚 Knowledge
 
-- **[[internships.md]]** — Summer 2026 internship search. Targeting DFW PM/ML roles. Wave 1 outreach ready to execute.
-  - Last updated: 2026-04-14
-  - Status: stable
+- **Knowledge** — Concepts, frameworks, reusable ideas
 
-- **[[academics/csce120.md]]** — C++ coursework at TAMU. Topics: dynamic memory, pointers, operator overloading.
-  - Last updated: 2026-04-14
-  - Status: stable
+## 📋 Activity Log
 
-## Drifted Files
-None (all synced as of 2026-04-14)
+Last updated: **2026-04-14**
 
-## Orphaned Dumps
-None (all Source dumps anchored)
+**Vault restructured:**
+- `/01_Source/` — upload raw writing here (organized by topic)
+- `/02_Analyst/` — my synthesis of your Source (where your persona lives)
+- `/04_Archive/` — historical content
+- `/03_Inbox/` — removed (no longer needed)
 
-## Navigation
-
-- To resume work on a project: use `/resume [project-name]`
-- To add new information: drop dumps in `/03_Inbox`, then `/save`
-- To audit vault health: `/audit`
-- To trace history: `/history [concept]`
-
+**Next:** Upload your work to Source, I synthesize into Analyst via `/save`
