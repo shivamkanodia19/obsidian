@@ -42,7 +42,7 @@ tags: [internship, outreach, optimized-emails, cold-email, copywriting, ready-to
 
 **To:** msheehan@intellicentrics.com
 
-**Subject:** Automate your 120-day credentialing cycle (8-week pilot)
+**Subject:** I can cut your 120-day credentialing cycle to 40 days (8-week pilot)
 
 Hi Mike,
 
@@ -52,6 +52,7 @@ Call Wednesday or Thursday; 10-minute overview of the automation setup.
 
 Shivam Kanodia
 214-470-0598
+linkedin.com/in/shivamkanodia19
 
 ---
 
@@ -65,7 +66,7 @@ Hi Mike—Your 120-day credentialing bottleneck is automatable. I can build an i
 
 **To:** crosstimbers.adm@nexion-health.com (facility admin; follow up with phone call for direct contact)
 
-**Subject:** Eliminate RN coverage violations; automated shift scheduler
+**Subject:** I can eliminate your RN coverage violations with automated scheduling
 
 Hi Fran,
 
@@ -77,6 +78,7 @@ Call Wednesday or Thursday this week; I'll walk you through the pilot in 10 minu
 
 Shivam Kanodia
 214-470-0598
+linkedin.com/in/shivamkanodia19
 
 ---
 
@@ -90,7 +92,7 @@ Hi Fran—I can build an automated shift scheduler to eliminate your RN coverage
 
 **To:** info@miwindows.com (fallback; direct email masked)
 
-**Subject:** Predictive equipment monitoring for production downtime (8-week pilot)
+**Subject:** I can reduce your production downtime with predictive equipment monitoring (8-week pilot)
 
 Hi Pete/Matt,
 
@@ -102,6 +104,7 @@ Call Wednesday or Thursday this week; I'll walk you through it in 10 minutes.
 
 Shivam Kanodia
 214-470-0598
+linkedin.com/in/shivamkanodia19
 
 ---
 
@@ -115,7 +118,7 @@ Hi Pete—I can deploy predictive equipment monitoring to surface maintenance is
 
 **To:** rappl@lisd.net (verified)
 
-**Subject:** Forecast enrollment 24-36 months ahead (end reactive closures)
+**Subject:** I can forecast your enrollment 24-36 months ahead (end reactive closures)
 
 Hi Dr. Rapp,
 
@@ -127,6 +130,7 @@ Call Wednesday or Thursday; quick 10-minute walk-through of how this works.
 
 Shivam Kanodia
 214-470-0598
+linkedin.com/in/shivamkanodia19
 
 ---
 
@@ -140,7 +144,7 @@ Hi Dr. Rapp—I can build an enrollment forecasting model that gives you 24-36 m
 
 **To:** james.childers@flowermound.gov (verified)
 
-**Subject:** Track $112M bond projects; surface bottlenecks 4-6 weeks early
+**Subject:** I can track your $112M bond projects and surface bottlenecks 4-6 weeks early
 
 Hi James,
 
@@ -152,6 +156,7 @@ Call Wednesday or Thursday this week; 10-minute overview.
 
 Shivam Kanodia
 214-470-0598
+linkedin.com/in/shivamkanodia19
 
 ---
 

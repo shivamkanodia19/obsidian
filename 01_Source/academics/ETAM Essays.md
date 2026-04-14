@@ -38,3 +38,16 @@ That's what DAEN teaches: how to build the scaffolding that turns raw data into 
 Industrial and Systems Engineering:
 
 
+**
+
+I want to major in Industrial and Systems Engineering because it provides the formal methodology for the way I naturally approach the world. While building ClinicalHours, a two-sided platform connecting pre-med students with clinical opportunities, I found myself drawn less to the code's syntax and more to the ecosystem's architecture. 
+
+  
+
+My primary challenges were optimization problems, not technical. How can we minimize administrative overhead for clinics without compromising the human judgment essential to healthcare volunteering? How can we maximize our market expansion through both clinical growth and student marketing, and how can we expand our reach around A&M itself? These experiences made me realize that I am not just interested in building the tool but also in optimizing the system it inhabits.
+
+This systems-centric mentality is the thread that connects my diverse interests in venture capital, product management, and undergraduate research. Working with Dr. Kaniyamattam, I apply system dynamics modeling to map the Water-Energy-Food (WEF) nexus in dairy farming. Simultaneously, I am developing a futures-forecasting dashboard to help cattle operators navigate financial volatility and make informed hedging decisions. These are both unique system problems, and have further driven me to pursue ISEN.
+
+Long-term, I want to work at the intersection of operations research and technical product development. A degree in ISEN will provide me with the frameworks necessary to work with businesses and transform them into high-functioning systems.
+
+**

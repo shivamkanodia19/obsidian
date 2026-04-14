@@ -12,13 +12,54 @@ tags: [etam, isen, essay, application]
 
 # Industrial and Systems Engineering Essay
 
-## Final Version (215 words)
+## Source Version (from /01_Source/)
 
-I built ClinicalHours to provide a two-sided marketplace connecting pre-meds with volunteer opportunities at hospitals and clinics. The constraint I ran into was operational: how do you reduce admin overhead when clinics depend on human judgment to match the right volunteer to the right department? I spent my time on that problem (product-market fit and operational design) more than on developing the platform itself.
+I want to major in Industrial and Systems Engineering because it provides the formal methodology for the way I naturally approach the world. While building ClinicalHours, a two-sided platform connecting pre-med students with clinical opportunities, I found myself drawn less to the code's syntax and more to the ecosystem's architecture. 
 
-My research with Dr. Kaniyamattam follows the same pattern. I work on a system dynamics model mapping the water-food-energy nexus in dairy farming, testing extreme scenarios. I also work on a futures forecasting dashboard for cattle operators to improve financial decision-making. Both projects hit different constraints, but I approach them the same way: identify what's actually limiting the system, model how the pieces interact, find the optimization that works within real operational limits.
+My primary challenges were optimization problems, not technical. How can we minimize administrative overhead for clinics without compromising the human judgment essential to healthcare volunteering? How can we maximize our market expansion through both clinical growth and student marketing, and how can we expand our reach around A&M itself? These experiences made me realize that I am not just interested in building the tool but also in optimizing the system it inhabits.
 
-Operations research and systems design are what I'm already doing. ISEN formalizes that. The program teaches me to think systematically about the intersection where people, processes, and data converge. That's where ClinicalHours lives, that's what the FEDVT research requires, and that's the kind of work I want to do long-term. ISEN is built for that.
+This systems-centric mentality is the thread that connects my diverse interests in venture capital, product management, and undergraduate research. Working with Dr. Kaniyamattam, I apply system dynamics modeling to map the Water-Energy-Food (WEF) nexus in dairy farming. Simultaneously, I am developing a futures-forecasting dashboard to help cattle operators navigate financial volatility and make informed hedging decisions. These are both unique system problems, and have further driven me to pursue ISEN.
+
+Long-term, I want to work at the intersection of operations research and technical product development. A degree in ISEN will provide me with the frameworks necessary to work with businesses and transform them into high-functioning systems.
+
+---
+
+---
+
+## Strategic Recommendations (ISEN Admissions Lens)
+
+**What ISEN committee wants:** Systems thinkers who understand that humans + processes + optimization = real impact. Not just technical optimization, but human-centered systems thinking.
+
+### Strengths in this essay
+✅ "Ecosystem's architecture" - shows you think beyond code  
+✅ Specific optimization questions tied to human judgment (perfect for ISEN's focus on human factors)  
+✅ Systems-centric mentality connected to three different domains  
+✅ Clear progression: ClinicalHours (business systems) → WEF nexus (natural systems) → cattle operators (economic systems)  
+✅ Strong closing about transforming businesses into "high-functioning systems"
+
+### Strategic edits to consider
+
+1. **Strengthen the human factors angle** — ISEN explicitly teaches human factors engineering. Your essay mentions "human judgment" but could emphasize more:
+   - How does volunteer matching depend on understanding volunteer preferences (human factors)?
+   - How do cattle operators make decisions (behavioral economics + systems)?
+   - Consider adding language around "people are part of the system"
+
+2. **Clarify the boundary between architecture vs. systems** — You say "ecosystem's architecture" but ISEN is less about architecture design and more about optimizing systems where humans + processes + data interact. Consider:
+   - Current: "less to the code's syntax and more to the ecosystem's architecture"
+   - Stronger: "less to the code's syntax and more to understanding how people, processes, and constraints interact within the system"
+
+3. **Make operations research more explicit** — Your essay hints at it ("system dynamics modeling") but could name it:
+   - Add reference to specific OR techniques (optimization models, sensitivity analysis, simulation)
+   - This shows you understand what ISEN actually teaches
+
+4. **Quantify the optimization problems** (if possible) — Makes it more concrete for admissions:
+   - "Reduce admin overhead" → "Reduce clinic admin time from X to Y"
+   - "Expand reach around A&M" → specific geographic/market targets
+
+### Word count
+~260 words (10 over limit). Could trim by:
+- Removing one of the three research examples (WEF or cattle operators) if needed
+- Condensing the market expansion sentence
 
 ---
 
