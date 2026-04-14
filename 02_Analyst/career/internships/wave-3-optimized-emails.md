@@ -1,9 +1,13 @@
 ---
 title: Wave 3 Optimized Emails (Final)
 project: internships
+strategic: false
 status: ready-to-send
+origin_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
+last_synced_dump: "[[02_Analyst/career/internships/email-optimization-strategy]]"
+conflict_detected: false
 last_updated: 2026-04-14
-tags: [internship, outreach, optimized-emails, cold-email, copywriting]
+tags: [internship, outreach, optimized-emails, cold-email, copywriting, ready-to-send]
 ---
 
 # Wave 3 Optimized Emails — Final Send Version

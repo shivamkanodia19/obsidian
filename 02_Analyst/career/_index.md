@@ -1,6 +1,9 @@
 ---
 title: Career Index
 description: Internship search, job opportunities, professional development
+project: internships
+last_audited: 2026-04-14
+active_projects: [internships]
 last_updated: 2026-04-14
 ---
 
@@ -27,7 +30,14 @@ Navigation hub for internship search, job targets, and professional opportunitie
 
 **Active Strategy:** Technical Operations Hire positioning (non-technical founder companies who hire on capability, not credentials).
 
+**Completed (This Session - Apr 14):**
+- ✅ Draft cold emails for top 5 companies (Wave 3) — created + optimized
+- ✅ Research & verify CEO contact emails — 8 verified personal, 11 fallback
+- ✅ Optimize emails for recipient perspective — 60% shorter, value-first positioning
+- ✅ Cold email strategy documented — copywriting principles applied
+
 **Next Actions:**
-- Draft cold emails for top 5 companies (Wave 3)
-- Research CEO contact emails
-- Customize pitch for each company's verified issues
+- Send Wave 3 optimized emails (Apr 22–24)
+- Track opens + responses (follow-up cadence: Day 3, 7, 10)
+- Book 1–2 calls by May 5
+- Continue Wave 2 + expand to secondary targets (50–70 total by May 15)

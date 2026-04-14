@@ -1,9 +1,13 @@
 ---
 title: Wave 3 Cold Emails — Top 5 Targets
 project: internships
+strategic: false
 status: draft
+origin_dump: "[[02_Analyst/career/internships/flower-mound-verified-research]]"
+last_synced_dump: "[[02_Analyst/career/internships/verified-contacts-all-20]]"
+conflict_detected: false
 last_updated: 2026-04-14
-tags: [internship, outreach, cold-email, wave-3]
+tags: [internship, outreach, cold-email, wave-3, draft]
 ---
 
 # Wave 3 Initial Emails + LinkedIn Backups

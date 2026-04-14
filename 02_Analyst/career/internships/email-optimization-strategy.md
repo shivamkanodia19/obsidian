@@ -1,9 +1,13 @@
 ---
 title: Cold Email Optimization Strategy
 project: internships
+strategic: true
 status: active
+origin_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
+last_synced_dump: "[[02_Analyst/career/internships/wave-3-draft-emails]]"
+conflict_detected: false
 last_updated: 2026-04-14
-tags: [internship, cold-email, optimization, strategy, copywriting]
+tags: [internship, cold-email, optimization, strategy, copywriting, recipient-focused]
 ---
 
 # Cold Email Optimization for Executive Outreach

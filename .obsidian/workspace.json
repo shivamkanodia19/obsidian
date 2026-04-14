@@ -25,14 +25,12 @@
             "id": "d50010cceb07363c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "02_Analyst/career/internships/wave-3-draft-emails.md",
-                "mode": "source",
-                "source": false
+                "file": "01_Source/internships/ShivamKanodiaResume (20).pdf"
               },
-              "icon": "lucide-file",
-              "title": "wave-3-draft-emails"
+              "icon": "lucide-file-text",
+              "title": "ShivamKanodiaResume (20)"
             }
           }
         ],
@@ -171,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/career/internships/wave-3-draft-emails.md",
+                "file": "01_Source/internships/ShivamKanodiaResume (20).pdf",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of wave-3-draft-emails"
+              "title": "Outline of ShivamKanodiaResume (20)"
             }
           }
         ],
@@ -202,29 +200,32 @@
   },
   "active": "d50010cceb07363c",
   "lastOpenFiles": [
-    "CLAUDE.md.tmp.32124.1776198362244",
-    "02_Analyst/career/internships/_index.md.tmp.15200.1776197846529",
-    "02_Analyst/career/internships/_index.md.tmp.15200.1776197840895",
+    "02_Analyst/_index.md.tmp.15200.1776198730296",
+    "02_Analyst/_index.md.tmp.15200.1776198725054",
+    "01_Source/internships/Internship goal.md",
+    "02_Analyst/career/internships/_index.md",
+    "02_Analyst/career/_index.md.tmp.15200.1776198407645",
+    "02_Analyst/career/_index.md.tmp.15200.1776198402657",
+    "02_Analyst/career/internships/_index.md.tmp.15200.1776198395645",
+    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776198391431",
+    "02_Analyst/career/internships/email-optimization-strategy.md.tmp.15200.1776198387979",
+    "02_Analyst/career/internships/verified-contacts-all-20.md.tmp.15200.1776198384043",
+    "02_Analyst/career/internships/wave-3-draft-emails.md.tmp.15200.1776198380673",
+    "02_Analyst/projects/FEDVT/research/paper-structure-outline.md",
+    "02_Analyst/projects/FEDVT/research/paper-draft-v1.md",
+    "02_Analyst/projects/FEDVT/research/literature-summaries-annotated.md",
+    "02_Analyst/projects/FEDVT/research",
+    "02_Analyst/projects/FEDVT",
+    "02_Analyst/career/internships/wave-3-draft-emails.md",
     "02_Analyst/career/internships/wave-3-optimized-emails.md",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776197836293",
     "02_Analyst/career/internships/email-optimization-strategy.md",
-    "02_Analyst/career/internships/email-optimization-strategy.md.tmp.15200.1776197793313",
     "01_Source/FEDVT/research/paper-structure-outline.md",
-    "01_Source/FEDVT/research/paper-structure-outline.md.tmp.32124.1776197762066",
     "01_Source/FEDVT/research/literature-summaries-annotated.md",
-    "01_Source/FEDVT/research/literature-summaries-annotated.md.tmp.32124.1776197718314",
     "02_Analyst/career/_index.md",
     "02_Analyst/career/internships/flower-mound-verified-research.md",
     "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
     "02_Analyst/career/internships/verified-contacts-all-20.md",
-    "02_Analyst/career/internships/wave-3-draft-emails.md",
-    "02_Analyst/career/internships/_index.md",
     "01_Source/FEDVT/research/paper-draft-v1.md",
-    "01_Source/FEDVT/research/paper-draft-v1.md.tmp.32124.1776197662124",
-    "01_Source/FEDVT/Paper Outline - Feedlot Economics and Management.docx (1).pdf",
-    "01_Source/FEDVT/Literature Summaries.pdf",
-    "02_Analyst/career/internships/verified-contacts-all-20.md.tmp.15200.1776197503798",
-    "01_Source/internships/Internship goal.md",
     "02_Analyst/research/FEDVT/_index.md",
     "02_Analyst/projects/ClinicalHours/_index.md",
     "02_Analyst/projects/_index.md",
@@ -235,9 +236,6 @@
     "01_Source/Dumps/2026-04-14_csce120-baseline.md",
     "02_Analyst/academics/csce120.md",
     "CLAUDE.md",
-    "INDEX.md",
-    "01_Source/Dumps/2026-04-14_clinicalhours-baseline.md",
-    "graphify-out/GRAPH_REPORT.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

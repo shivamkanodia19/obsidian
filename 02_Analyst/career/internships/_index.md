@@ -1,6 +1,12 @@
 ---
 title: Internship Search — Summer 2026
 description: Target company research, outreach strategy, and execution tracking
+project: internships
+last_audited: 2026-04-14
+active_projects: [wave-3-optimized-emails, email-optimization-strategy, verified-contacts-all-20]
+drifted_files: []
+orphaned_dumps: []
+unreviewed_conflicts: []
 last_updated: 2026-04-14
 ---
 
