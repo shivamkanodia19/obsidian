@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/career/internships/wave-3-optimized-emails.md",
+                "file": "02_Analyst/research/FEDVT/paper-draft-v1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wave-3-optimized-emails"
+              "title": "paper-draft-v1"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 321.5
   },
   "right": {
     "id": "d500e636a9c87736",
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/career/internships/wave-3-optimized-emails.md",
+                "file": "02_Analyst/research/FEDVT/paper-draft-v1.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of wave-3-optimized-emails"
+              "title": "Outline of paper-draft-v1"
             }
           }
         ],
@@ -202,42 +202,42 @@
   },
   "active": "d50010cceb07363c",
   "lastOpenFiles": [
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202866587",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202859926",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202851852",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202843998",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202837625",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202831771",
-    "02_Analyst/_index.md.tmp.15200.1776202040094",
-    "02_Analyst/career/internships/_index.md.tmp.15200.1776202031490",
-    "02_Analyst/career/internships/wave-3-draft-emails.md.tmp.15200.1776202026410",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md.tmp.15200.1776202019746",
-    "02_Analyst/career/internships/verified-contacts-all-20.md",
-    "02_Analyst/career/internships/flower-mound-verified-research.md",
-    "02_Analyst/career/internships/flower-mound-verified-research.md.tmp.15200.1776201875105",
-    "02_Analyst/career/internships/wave-3-optimized-emails.md",
-    "03_References/Tools/Email-Verification.md",
-    "01_Source/internships/Internship goal.md",
+    "Exam3_PDFs/Exam3_2019.txt",
+    "Exam3_PDFs/Exam3_2018.txt",
+    "Exam3_PDFs/Exam3_2017.txt",
+    "Exam3_PDFs/Exam3_2016.txt",
+    "Exam3_PDFs/Exam3_2015.txt",
+    "Exam3_PDFs/Exam3_2015.pdf",
+    "Exam3_PDFs/Exam3_2016.pdf",
+    "Exam3_PDFs/Exam3_2017.pdf",
+    "Exam3_PDFs/Exam3_2018.pdf",
+    "Exam3_PDFs/Exam3_2019.pdf",
+    "Exam3_PDFs",
+    "02_Analyst/research/FEDVT/paper-structure-outline.md",
+    "02_Analyst/research/FEDVT/literature-summaries-annotated.md",
+    "02_Analyst/research/FEDVT/paper-draft-v1.md",
+    "02_Analyst/career/internships/outreach/wave-3/draft-emails.md",
+    "02_Analyst/career/internships/outreach/wave-3/optimized-emails.md",
+    "02_Analyst/career/internships/outreach/wave-3/_index.md",
+    "02_Analyst/career/internships/outreach/_index.md",
+    "02_Analyst/career/internships/strategy/email-optimization-strategy.md",
+    "02_Analyst/research/FEDVT/_index.md",
+    "02_Analyst/career/internships/strategy/_index.md",
+    "02_Analyst/career/internships/contacts/verified-contacts.md",
+    "02_Analyst/career/internships/contacts/_index.md",
+    "02_Analyst/career/internships/research/verified-research.md",
+    "02_Analyst/career/internships/research/flower-mound-targets.md",
+    "02_Analyst/career/internships/research/_index.md",
     "02_Analyst/career/internships/wave-3-draft-emails.md",
+    "02_Analyst/career/internships/wave-3-optimized-emails.md",
+    "02_Analyst/career/internships/flower-mound-verified-research.md",
+    "02_Analyst/career/internships/verified-contacts-all-20.md",
     "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
     "02_Analyst/career/internships/email-optimization-strategy.md",
+    "03_References/Tools/Email-Verification.md",
+    "01_Source/internships/Internship goal.md",
     "graphify-out/GRAPH_REPORT.md",
-    "02_Analyst/research/FEDVT/literature-summaries-annotated.md",
-    "02_Analyst/research/FEDVT/paper-structure-outline.md",
     "02_Analyst/_index.md",
-    "02_Analyst/VAULT-STRUCTURE.md",
-    "03_References/Frameworks/Cold-Email-Optimization.md",
-    "03_References/Patterns/Recipient-Psychology.md",
-    "03_References/_index.md",
-    "02_Analyst/career/_index.md",
-    "CLAUDE.md",
-    "02_Analyst/research/FEDVT/paper-draft-v1.md",
-    "02_Analyst/research/FEDVT/_index.md",
-    "02_Analyst/projects/_index.md",
-    "02_Analyst/career/internships/_index.md",
-    "01_Source/FEDVT/research/paper-structure-outline.md",
-    "01_Source/FEDVT/research/literature-summaries-annotated.md",
-    "01_Source/FEDVT/research/paper-draft-v1.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

@@ -14,11 +14,12 @@ last_updated: 2026-04-14
 
 Comprehensive research and outreach for AI Operations internship roles in DFW area.
 
-## 📄 Research Files
+## 📂 Folders
 
-- **[[flower-mound-ai-ops-targets]]** — 20 companies in Flower Mound area organized by AI ops fit and industry
-- **[[flower-mound-verified-research]]** — Verified operational issues for each company + concrete internship solution ideas
-- **[[verified-contacts-all-20]]** — Complete email verification for all 20 targets (8 verified personal emails, 11 fallback/generic)
+- **[[research/]]** — Target company research, operational issues, and verified data
+- **[[contacts/]]** — Email verification and contact information for all targets
+- **[[strategy/]]** — Outreach frameworks and copywriting strategy
+- **[[outreach/]]** — Email campaigns organized by wave (Wave 3 ready to send)
 
 ## 🎯 Strategy
 
@@ -59,11 +60,11 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 - Response rate target: 5–10%
 - Goal: 50–70 target companies by May 15
 
-## 📧 Email Files (Wave 3)
+## 📧 Wave 3 Outreach (Ready to Send)
 
-- **[[wave-3-optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
-- **[[wave-3-draft-emails]]** — Reference: Original longer drafts for detailed context
-- **[[email-optimization-strategy]]** — Framework: Cold email strategy plus copywriting principles and recipient psychology
+- **[[outreach/wave-3/optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
+- **[[outreach/wave-3/draft-emails]]** — Reference: Original longer drafts for detailed context
+- **[[strategy/email-optimization-strategy]]** — Framework: Cold email strategy plus copywriting principles and recipient psychology
 
 ## Next Actions
 
