@@ -102,6 +102,22 @@ When you `/audit`:
 - `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts
 - `/history [topic]` — trace concept evolution chronologically through Source + History sections
 
+## Bulk Synthesis Workflow
+When you upload multiple related dumps at once (e.g., "Meeting notes, follow-up research, status update"):
+
+1. **Upload all to `/01_Source/[project]/` in appropriate subfolders** (don't organize yet)
+2. **Run `/save [project]` once** — it processes all new files atomically:
+   - Reads all new/updated files in the project
+   - Synthesizes them into relevant Analyst files
+   - Creates wikilinks from all dumps to their Analyst counterparts
+   - Logs any conflicts from ANY dump that contradicts old decisions
+   - Runs history archival across all affected files
+3. **Result:** One `/save` call = unified synthesis across multiple inputs, one conflict check, atomically linked
+
+**Why atomic?** If a later dump resolves a conflict from an earlier dump in the same run, the latest state is recorded (no intermediate conflicts).
+
+**Example:** Upload 3 files on ClinicalHours. Run `/save ClinicalHours` once → all 3 are read, synthesized, and conflicts logged/resolved in one pass.
+
 ## Frontmatter Schema (Analyst files)
 
 ```yaml
