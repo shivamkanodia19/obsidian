@@ -329,12 +329,12 @@ Ready for: Email/LinkedIn/phone outreach
 
 ## Secondary Wave — Strong Manual Systems, Unknown Volume
 
-| Clinic | Location | System | Contact | Contacted |
-|--------|----------|--------|---------|-----------|
-| ICNA Relief | Dallas | Email/Paper | muzair@icnarelief.org, 866-354-0102 | ❌ No |
-| Agape Clinic | Dallas | Web Form | Dr. Barbara Baxter, theagapeclinic.org | ❌ No |
-| Arlington Free Clinic | Arlington | Email App | volunteer@arlingtonfreeclinic.org | ❌ No |
-| Open Arms Health Clinic | Arlington | Email | volunteersoahc@gmail.com | ❌ No |
+| Clinic                  | Location  | System      | Contact                                | Contacted |
+| ----------------------- | --------- | ----------- | -------------------------------------- | --------- |
+| ICNA Relief             | Dallas    | Email/Paper | muzair@icnarelief.org, 866-354-0102    | ❌ No      |
+| Agape Clinic            | Dallas    | Web Form    | Dr. Barbara Baxter, theagapeclinic.org | ❌ No      |
+| Arlington Free Clinic   | Arlington | Email App   | volunteer@arlingtonfreeclinic.org      | ❌ No      |
+| Open Arms Health Clinic | Arlington | Email       | volunteersoahc@gmail.com               | ❌ No      |
 
 ---
 
