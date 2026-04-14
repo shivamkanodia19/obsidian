@@ -11,10 +11,14 @@
             "id": "fca35acf7363bb63",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "projects/clinicalhours/sales-target-list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sales-target-list"
             }
           }
         ]
@@ -183,6 +187,8 @@
   },
   "active": "fca35acf7363bb63",
   "lastOpenFiles": [
+    "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138086076",
+    "projects/clinicalhours/sales-target-list.md.tmp.29368.1776138000018",
     "projects/clinicalhours/sales-target-list.md",
     "projects/clinicalhours/pitch-deck.md",
     "projects/clinicalhours/platform-status.md",
@@ -210,7 +216,6 @@
     "graphify-out/cache/90738918c6298e0f8bf86df5246398bbe9eaf0280f8b1f7c0b42974b3ddbe9eb.json",
     "graphify-out/cache/fdd95112ddde388283099d05cbbafca88c8985c511e3ce6d65c2187c66276932.json",
     "graphify-out/cache/7a09059086be6a634f92764acb218bc7841b5da7bfa873f1834e09290b9e683d.json",
-    "graphify-out/cache/5c06962a6e6ff56938e61a7594f8f3380d293c7f3ba35ded8b82c184a649fbde.json",
     "ShivamKanodiaResume (20).md",
     "ClinicalHours Pitch (2).md",
     "excel-model.md",
@@ -219,7 +224,6 @@
     "career/programs/fellowships-tracker.md",
     "dashboard.md",
     "projects/clinicalhours/overview.md",
-    "career/programs/overview.md",
     "projects.canvas"
   ]
 }
