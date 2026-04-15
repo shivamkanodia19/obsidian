@@ -269,10 +269,81 @@ When `/audit` runs, it surfaces folder organization issues as **suggestions only
 
 **No auto-reorganization.** You review suggestions and manually move/delete files as needed.
 
+## Automated Organization Rules (For /save & /audit)
+
+**I HANDLE ALL ORGANIZATION AUTOMATICALLY. USER NEVER ORGANIZES.**
+
+### /save Automation
+
+When `/save [topic]` runs, I MUST:
+
+1. **Read new Source files** in `/01_Source/[topic]/`
+2. **Synthesize to Analyst:**
+   - Create/update relevant `/02_Analyst/[project]/` files
+   - Add frontmatter with `origin_dump`, `last_synced_dump`, `references`
+   - Link all claims back to Source via wikilinks
+3. **Create/Update Indexes:**
+   - Every new folder gets `_index.md` with navigation
+   - Parent folder indexes updated to reflect new files
+   - MEMORY.md updated if new project/feedback discovered
+4. **Update Memory:**
+   - New project found? Create `memory/project_[name].md`
+   - New feedback discovered? Create `memory/feedback_[topic].md`
+   - Existing memory stale? Update `last_updated` field
+   - Add one-line entry to MEMORY.md with keywords
+5. **Log Conflicts:**
+   - If new Source contradicts old Analyst → set `conflict_detected: true`
+   - Log to `.vault-conflicts` with timestamp + old vs. new states
+6. **Archive Old History:**
+   - History sections >6 months old → move to `/04_Archive/`
+   - Keep active files lean
+
+**Never ask user to organize. Just do it.**
+
+### /audit Automation
+
+When `/audit` runs, I MUST:
+
+1. **Scan vault structure:**
+   - Detect orphaned folders (no files, only index)
+   - Find duplicates (same content in multiple places)
+   - Identify misplaced files (wrong folder for content)
+   - Check broken wikilinks
+   - Find missing indexes
+2. **Flag for Auto-Cleanup:**
+   - Orphaned folders → DELETE them
+   - Duplicates → CONSOLIDATE and DELETE redundant version
+   - Misplaced files → MOVE to correct folder
+   - Missing indexes → CREATE them
+   - Broken wikilinks → REPAIR or FLAG for user review
+3. **Report to User:**
+   - Surface ONLY critical issues (broken wikilinks, misplaced reference data)
+   - Do NOT surface cosmetic suggestions (naming, folder depth, minor reorganization)
+   - Format: Issues only, no suggestions, no analysis paralysis
+4. **Handle Memory:**
+   - Stale memories (>6 months, status=complete) → MOVE to archive/
+   - Conflicting memories → surface at session start with `conflict_detected: true`
+   - Unreachable memories (referenced but not found) → FLAG
+
+**Never ask user for permission to delete/move/consolidate. Just do it. Surface only critical issues.**
+
+### Memory Automation
+
+When updating memory, I MUST:
+
+1. **Follow schema:** name, description, type, created, last_updated, relevance, status
+2. **Keep MEMORY.md under 200 lines:** Delete old one-liners if list gets long (move files to archive/ first)
+3. **Add keywords:** Relevance field is searchable; tag memories for future retrieval
+4. **Date everything:** created and last_updated are mandatory on every memory file
+5. **Archive aggressively:** >6 months old? Move to memory/archive/ automatically
+6. **No duplicates:** Check MEMORY.md before creating new memory file; update existing instead
+
+---
+
 ## Command Reference {#commands}
-- `/save [topic]` — Read new/updated Source files, synthesize into Analyst, **create/update all folder indexes**, create/update wikilinks, log conflicts
-- `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from Analyst + Source, surface conflicts
-- `/audit` — surface drift, staleness, broken wikilinks, orphaned Source files, unreviewed conflicts, **AND folder reorganization suggestions** (orphaned folders, consolidation opportunities, structural drift)
+- `/save [topic]` — Read new Source files, synthesize to Analyst, create/update indexes + memory, log conflicts, archive old history. **I do all organization.**
+- `/resume [topic]` — 3-sentence context bootstrap (~500-700 tokens) from relevant Analyst + Memory files, surface conflicts
+- `/audit` — Scan vault, auto-fix structural issues (orphans, duplicates, misplaced files), report critical issues only. **I clean up automatically.**
 - `/history [topic]` — trace concept evolution chronologically through Source + History sections
 
 ## Bulk Synthesis Workflow
@@ -395,6 +466,77 @@ When I invoke a Claude Code skill (copywriting, cold-email, sales:outreach, etc.
 
 ---
 
+## Memory Management (For Claude's Use Across Sessions) {#memory}
+
+**Memory is NOT for the user. Memory is for ME.** I maintain a persistent knowledge base about Shivam, projects, feedback, and learnings across sessions. User can add to and refer to memory, but I manage all organization and updates automatically.
+
+**Memory Location:** `C:\Users\shiva\.claude\projects\C--Users-shiva\memory\`
+
+**Memory Structure:**
+
+```
+memory/
+  MEMORY.md                    # Index (1-line entries only, max 200 lines)
+  user_profile.md              # Who is Shivam (role, goals, context)
+  feedback_*.md                # How to work with Shivam (collected feedback)
+  project_*.md                 # Active projects (status, next steps, learnings)
+  reference_*.md               # External pointers (where to find information)
+  archive/                     # Old memories >6 months old
+```
+
+**Frontmatter Schema (Memory Files):**
+
+```yaml
+---
+name: [Memory Name]                              # Short title
+description: [One-line hook for relevance]       # Used to decide if memory is relevant
+type: [user|feedback|project|reference]          # Memory type
+created: YYYY-MM-DD                              # When I first recorded this
+last_updated: YYYY-MM-DD                         # Last time I updated this
+relevance: [comma-separated keywords]            # Tags for search/relevance
+---
+```
+
+**Memory.md Format (Index Only):**
+
+Max 200 lines. One line per memory file. Format:
+```
+- [Name](./file.md) — One-line description (keywords: tag1, tag2)
+```
+
+No memory content goes directly in MEMORY.md. All content in separate files. MEMORY.md is read-only navigation.
+
+**How I Use Memory:**
+
+1. **At Session Start:** Read MEMORY.md (one-line hooks) + load relevant memory files based on task context
+2. **During Work:** Reference memory to inform decisions, avoid repeating questions, maintain consistency
+3. **At Session End:** Update/create memory entries about:
+   - New feedback from user
+   - Project status changes
+   - Discoveries about Shivam's preferences
+   - Reference pointers to new resources
+4. **Automatic Cleanup:** /save runs periodic memory archival:
+   - Files >6 months old → move to `archive/` + update index
+   - Stale project memories → mark with `status: complete` if project finished
+   - Conflicting memories → flag + surface to user at session start
+
+**Why This Matters:**
+
+- **Traceability:** Every memory has created date + last_updated. I know when I learned something.
+- **Relevance:** One-line hooks in MEMORY.md let me quickly decide if a memory is relevant to the current task.
+- **Auto-organization:** /save handles all cleanup; user never needs to manually organize memory.
+- **Cross-session coherence:** I remember Shivam's preferences, project progress, decisions from past sessions without re-asking.
+
+**Memory Rules:**
+
+- **User inputs:** Shivam can add to memory anytime; I incorporate it into appropriate memory files
+- **I maintain structure:** All organization is my responsibility; user never manages folders/files
+- **Traceability is mandatory:** Every memory entry has dates + keywords for cross-session retrieval
+- **No sensitive data:** Password, API keys, account numbers go nowhere (not vault, not memory)
+- **References are sourced:** If a reference memory points to external info, include URL/location
+
+---
+
 ## Cross-Session Value of `/save`
 
 In a single session, vanilla Claude file writes work fine. `/save` adds value **across sessions**:
@@ -402,7 +544,8 @@ In a single session, vanilla Claude file writes work fine. `/save` adds value **
 - **Persistent metadata** — `last_synced_dump`, `origin_dump` enable `/resume` to bootstrap context
 - **Analyst as your persona** — /save synthesizes your Source files into living knowledge about you + your outputs
 - **References as shared learning** — Frameworks + tools I discover are saved with real sources, reusable across projects
-- **Structured linking** — Creates bidirectional wikilinks: Source → Analyst → References → Real sources
+- **Memory as my learning** — /save updates memory about you, your feedback, your projects, so I carry learnings forward
+- **Structured linking** — Creates bidirectional wikilinks: Source → Analyst → References → Real sources → Memory
 - **Conflict visibility** — Tracks when your Source contradicts old Analyst decisions
 - **Audit trail** — `.vault-conflicts` log creates a record of all decision changes
 
@@ -410,6 +553,7 @@ Without `/save`, each session is isolated. With `/save`, your vault is a persist
 - Your Source files → inform Analyst (your persona)
 - Analyst outputs + skills → inform References (shared frameworks)
 - References stay sourced → reusable + credible for future work
+- Memory stores learnings → inform my decisions across sessions
 
 ## History System (Simple)
 
@@ -451,5 +595,6 @@ Without `/save`, each session is isolated. With `/save`, your vault is a persist
 
 - **`/02_Analyst/VAULT-STRUCTURE.md`** — Detailed guide to three-layer vault (Source, Analyst, References) with scenarios and wikilink maps
 - **`/03_References/_index.md`** — Index of all discovered frameworks, tools, patterns
+- **`/03_References/Best-Practices/Claude-Code-Obsidian-Integration.md`** — Research-backed best practices from GitHub (integration strategies, vault structure, memory systems, automation rules, token efficiency)
 
 
