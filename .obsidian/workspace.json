@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "clinic outreach.md",
+                "file": "02_Analyst/career/internships/outreach/wave-4/EXECUTE-NOW.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "clinic outreach"
+              "title": "EXECUTE-NOW"
             }
           }
         ],
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "clinic outreach.md",
+                "file": "02_Analyst/career/internships/outreach/wave-4/EXECUTE-NOW.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of clinic outreach"
+              "title": "Outline of EXECUTE-NOW"
             }
           },
           {
@@ -208,6 +208,17 @@
   },
   "active": "0988a61336347248",
   "lastOpenFiles": [
+    "02_Analyst/projects/ClinicalHours/Outreach/Personas-Reference.md",
+    "02_Analyst/projects/ClinicalHours/Outreach/DFW-Clinic-Research-Checklist.md",
+    "02_Analyst/projects/ClinicalHours/Outreach/DFW-Strategy.md",
+    "02_Analyst/projects/ClinicalHours/Outreach",
+    "02_Analyst/career/internships/outreach/wave-4/TIER-2-VALIDATION-CHECKLIST.md",
+    "02_Analyst/career/internships/outreach/wave-4/TIER-2-VALIDATION-CHECKLIST.md.tmp.34356.1776230299645",
+    "02_Analyst/career/internships/outreach/wave-4/READY-TO-SEND-TIER-1.md",
+    "02_Analyst/career/internships/outreach/wave-4/expansion-roadmap.md",
+    "02_Analyst/career/internships/outreach/wave-4/EXECUTE-NOW.md",
+    "02_Analyst/career/internships/contacts/verified-contacts.md",
+    "02_Analyst/career/internships/contacts/_index.md",
     "clinic outreach.md",
     "01_Source/clinicalhours",
     "Untitled 1",
@@ -217,33 +228,22 @@
     "02_Analyst/career/internships/research/wave-4-education-qualified-expanded.md",
     "02_Analyst/career/internships/research/wave-4-healthcare-qualified-expanded.md",
     "02_Analyst/career/internships/research/wave-4-all-contacts-found.md",
-    "02_Analyst/career/internships/outreach/wave-4/EXECUTE-NOW.md",
     "02_Analyst/career/internships/research/wave-4-government-expanded-research.md",
     "02_Analyst/career/internships/research/wave-4-education-expanded-research.md",
     "02_Analyst/career/internships/research/wave-4-healthcare-expanded-research.md",
     "02_Analyst/career/internships/research/wave-4-logistics-regression-test.md",
     "02_Analyst/career/internships/research/wave-4-logistics-regression-test.md.tmp.34356.1776216502345",
     "02_Analyst/career/internships/research/wave-4-logistics-contacts.md",
-    "02_Analyst/career/internships/outreach/wave-4/expansion-roadmap.md",
     "02_Analyst/career/internships/research/wave-4-business-services-research.md",
     "02_Analyst/career/internships/research/wave-4-manufacturing-research.md",
     "02_Analyst/career/internships/research/wave-4-government-expanded.md",
     "02_Analyst/career/internships/research/wave-4-government-expanded.md.tmp.34356.1776215992531",
     "02_Analyst/career/internships/research/wave-4-education-expanded.md",
     "02_Analyst/career/internships/research/wave-4-healthcare-expanded.md",
-    "02_Analyst/career/internships/outreach/wave-4/draft-emails.md",
-    "02_Analyst/career/internships/outreach/wave-4/status.md",
-    "02_Analyst/career/internships/research/wave-4-manufacturing-qualified.md",
-    "02_Analyst/career/internships/research/wave-4-manufacturing-problems.md",
-    "02_Analyst/career/internships/outreach/wave-4/government-draft-emails.md",
-    "02_Analyst/career/internships/research/wave-4-government-qualified.md",
-    "02_Analyst/career/internships/research/wave-4-government-problems.md",
     "02_Analyst/career/internships/outreach/wave-4",
     "02_Analyst/career/internships/research/wave-4-logistics-qualified.md.tmp.34356.1776213800242",
     "02_Analyst/career/internships/research/_index.md.tmp.34356.1776213459772",
     "02_Analyst/career/internships/research/wave-4-company-list.md.tmp.34356.1776213442579",
-    "02_Analyst/career/internships/research/wave-4-company-list.md.tmp.34356.1776213413992",
-    "02_Analyst/career/internships/_index.md.tmp.34356.1776212745111",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_2.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_1.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_3.png",
