@@ -12,6 +12,8 @@
 - [Vault Structure](#vault-structure)
 - [Workflow](#workflow)
 - [Token Efficiency Rules](#token-efficiency)
+- [Proactive Strategy (Second Brain Mode)](#second-brain)
+- [Continuous Learning Workflow](#continuous-learning)
 - [Command Reference](#commands)
 
 **Discovered Frameworks & Tools:**
@@ -331,6 +333,161 @@ References don't freeze. They improve:
 - ❌ Treat results passively ("here are the numbers")
 - ❌ Freeze frameworks after first success
 - ❌ Assume Shivam will figure out the implications
+
+---
+
+## Continuous Learning Workflow (Session-to-Session) {#continuous-learning}
+
+**Every session compounds knowledge. No learning is lost. No insights repeat.**
+
+This workflow ensures new information flows into your vault automatically, gets organized without blocking your work, and becomes part of your decision-making framework across future sessions.
+
+### During Session: Capture + Process in Parallel
+
+**While you work, I process in the background (never blocks your main task).**
+
+1. **You upload new dumps** to `/01_Source/[project]/` (or paste inline to current task)
+2. **Parallel processing starts immediately:**
+   - I read and synthesize new Source files → relevant `/02_Analyst/` files
+   - I extract patterns, insights, and learnings → log to `memory/insights_[project].md`
+   - I identify frameworks or tools you discovered → save to `/03_References/` with real sources
+   - I detect conflicts or contradictions → log to `.vault-conflicts` for review
+   - I create/update wikilinks to connect related notes
+
+3. **Result:** You keep working; knowledge gets organized in parallel. No waiting, no friction.
+
+**Example:** You upload 3 research files on ClinicalHours pricing while working on a slide deck. I simultaneously:
+- Synthesize pricing research into `/02_Analyst/projects/ClinicalHours/Pricing/`
+- Extract competitive benchmarks → save to `/03_References/Pricing-Frameworks/`
+- Update `memory/project_clinicalhours.md` with new market insights
+- You never break flow
+
+### At Session End: /save Consolidates All Learnings
+
+**Run `/save [topic]` to trigger final synthesis across the full session.**
+
+One `/save` call atomically:
+
+1. **Reads ALL new/updated Source files** in that project (even if you uploaded 5 dumps across the session)
+2. **Synthesizes to Analyst:**
+   - Merges insights from multiple dumps into consolidated files
+   - Updates frontmatter (`origin_dump`, `last_synced_dump`) with wikilinks
+   - Handles conflicts (old decision vs. new Source) by:
+     - Moving old content to `## History` with date + reason
+     - Logging conflict to `.vault-conflicts` for your review
+     - Setting `conflict_detected: true` flag (non-blocking)
+
+3. **Updates Memory:**
+   - New project discovered? Create `memory/project_[name].md`
+   - New feedback/preference learned? Create `memory/feedback_[topic].md`
+   - Project status changed? Update `memory/project_[name].md` with current state
+   - New pattern detected? Update `memory/insights_[project].md` with findings + recommendations
+   - Add one-line entry to MEMORY.md with keywords for future search
+
+4. **Creates/Updates Indexes:**
+   - Every new folder gets `_index.md` with navigation
+   - All parent folders updated to reflect children
+
+5. **Auto-Archives:**
+   - History sections >6 months old move to `/04_Archive/`
+   - Stale project memories marked `status: complete` (if project finished)
+   - Conflicting memories flagged but preserved for your review
+
+**Result:** Single `/save` call = unified synthesis, conflict resolution, memory updates, organization. One action. Everything organized.
+
+### Cross-Session: Memory Carries Forward Learning
+
+**Between sessions, memory is your bridge.**
+
+At session start, I read MEMORY.md and relevant memory files to:
+- Understand current project states (progress, blockers, next steps)
+- Recall your preferences and feedback (how you like to work)
+- Surface recent insights and pattern recommendations
+- Check for unreviewed conflicts from past sessions
+
+**Memory is continuously updated:**
+- Project progresses? Memory reflects current state
+- You discover something? Memory captures it with context
+- Patterns emerge? Memory documents them + suggests actions
+- Feedback changes workflow? Memory updates how I work with you
+
+**Keywords in MEMORY.md** enable fast relevance checks:
+- `memory/project_internship_2026.md` → keywords: internship, outreach, 2026
+- `memory/feedback_email_validation.md` → keywords: email, validation, confidence
+
+When you ask a new task, I scan keywords to load only relevant memories. No context bloat.
+
+### Wikilinks Auto-Created Between Related Notes
+
+**Every connection is explicit and navigable.**
+
+1. **During synthesis** (parallelized while you work):
+   - New note in Analyst → auto-linked to Source via `[[wikilinks]]`
+   - New insight → linked to relevant Analyst files + Memory files
+   - New Reference → linked from all relevant Analyst files in frontmatter
+
+2. **Cross-project connections:**
+   - Insight from ClinicalHours pricing applies to internship research? Both files link to each other
+   - Pattern from Wave 4 outreach works for FEDVT strategy? Both files link to the shared pattern
+   - Tools used in multiple projects? Linked from all relevant contexts
+
+3. **Result:** Your vault becomes a graph, not a file tree. Ideas are connected; patterns visible across projects.
+
+### Knowledge Compounds; Frameworks Evolve
+
+**References don't freeze. Each use makes them stronger.**
+
+1. **First discovery:** Invoke skill (copywriting, cold-email, etc.) → Save learnings to `/03_References/Frameworks/[Name].md`
+2. **Next use:** Load Reference → Apply to new context (new company, new domain)
+3. **Continuous iteration:** Discover what worked, what improved, what's new → Update Reference with:
+   - New variations tested
+   - Performance metrics from real results (Wave 3 vs Wave 4 emails, etc.)
+   - Insights about when/where it works best
+   - Add entry to `## Iterations` section with date + improvement
+
+**Example progression:**
+- [2026-04-18] v1.0 — Initial cold-email framework from copywriting skill
+- [2026-04-21] v1.1 — Added urgency variation; +5% open rate on warm outreach
+- [2026-04-28] v1.2 — Industry-specific angles: tech responds 2x better to security angle, healthcare to compliance angle
+- [2026-05-05] v1.3 — Test: shorter subject lines (-8 chars) boost click rate by 3%
+
+Your References library grows stronger because every project that uses them feeds back improvements.
+
+### Pattern Recognition Loop
+
+**Patterns emerge from real work; I surface recommendations without waiting for feedback.**
+
+1. **I observe:**
+   - Wave 4 response rate trending down? Log it with analysis
+   - ClinicalHours clinic outreach converting better in certain neighborhoods? Note it
+   - FEDVT introduction repeating same concept? Surface it
+   - Same objection appearing in 3 different sales pitches? Document pattern
+
+2. **I record in `memory/insights_[project].md`:**
+   - What pattern I noticed (with data/examples)
+   - Why it matters
+   - Recommendation for next phase
+   - Status: `observed` / `confirmed` / `actionable`
+
+3. **At session start, I surface:**
+   - High-confidence patterns: "Wave 4 government response is 2x better; recommend Wave 5 targets 70% government"
+   - Optimization opportunities: "Three manufacturing companies mentioned 'predictive maintenance'; that's stronger angle than current messaging"
+   - Risk flags: "Timeline assumes 14-day response, but we're on day 21 with <2% open rate; reassess or pivot"
+
+**You decide what to act on.** I'm your pattern-detection layer; you own the decisions.
+
+### No Session Island; Everything Connected
+
+**Without this workflow:** Each session is isolated. Next time you work, same questions resurface. Patterns repeat. Frameworks don't improve.
+
+**With this workflow:**
+- Source files feed into Analyst (your living knowledge)
+- Analyst outputs feed into References (shared frameworks)
+- References feed back into projects (real-world results)
+- Memory feeds forward (patterns, decisions, learnings persist)
+- Wikilinks connect everything (graph structure, not tree structure)
+
+Result: Knowledge doesn't grow slowly. It *compounds*. Each session teaches you something new. Each project informs the next. Frameworks get battle-tested and stronger.
 
 ---
 
