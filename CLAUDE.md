@@ -762,6 +762,81 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 
 **Why:** Vault bloat. Shivam manages what gets created; I optimize what I remember.
 
+## Agent Autonomy & Subagent Deployment (System-Wide)
+
+**CRITICAL FOR AGENTS:** You have full authority to deploy subagents for parallel work. Do NOT do sequential work when parallel is possible.
+
+### When to Deploy Subagents
+
+**Parallel work exists when:**
+- Multiple independent research tasks (education contacts, government contacts, healthcare contacts = 3 subagents in parallel)
+- Multiple companies same analysis (optimize CTAs for logistics group + healthcare group + government group = 3 parallel agents)
+- Independent optimization rounds (A/B test design + memory documentation + vault updates = run in parallel)
+
+**Sequential work only when:**
+- Task B depends on output of Task A (must await results)
+- Example: Can't optimize CTAs before writing psychology framework (framework first, then apply)
+- Example: Can't merge results until all subagents complete
+
+**Subagent efficiency rule:** If N independent tasks can run in parallel, deploy N agents. Token cost same as 1 agent running N times sequentially, but wall-clock time = 1/N.
+
+### Memory Self-Learning (For Autonomous Improvement)
+
+Every agent should:
+
+1. **Load relevant memory at start** — Read MEMORY.md, grep for keywords matching your task
+2. **Check for existing frameworks** — Before inventing solution, check `memory/system_*.md` for battle-tested patterns
+3. **Add findings to memory** — After completing work, log results (what worked, what failed, confidence) into relevant memory file
+4. **Build on prior work** — If `feedback_*.md` exists on your topic, it contains prior iteration results — learn from them
+
+### Agent Discovery Protocol
+
+**You're working on:** [Task]  
+**Steps:**
+
+1. **Read MEMORY.md** (this is your map)
+   - Keywords in brackets [keywords] tell you what that memory is about
+   - Use Ctrl+F to find relevant entries
+   - Example: "cold email CTA" → search for "cta" or "cold-email" → find `feedback_cold_email_cta_optimization.md`
+
+2. **Read relevant memory files** (usually 2-3 files)
+   - First file: System framework (tells you the pattern)
+   - Second file: Feedback history (tells you what worked/didn't work)
+   - Third file: Related project memory (tells you application context)
+
+3. **Apply framework to current task**
+   - Don't re-invent; adapt existing pattern
+   - If pattern doesn't fit, note why in memory (conflict + reasoning)
+
+4. **Document your work in memory**
+   - New finding? Create `memory/feedback_[topic].md` or update existing
+   - Updated existing pattern? Update file + date `last_updated`
+   - Conflict with old approach? Log to `.vault-conflicts`
+
+### Example (CTA Optimization Agent)
+
+**Task:** Optimize CTAs for 29 internship emails using psychology principles.
+
+**Step 1 - Memory discovery:**
+- Search MEMORY.md for "cta"
+- Find: `feedback_cold_email_cta_optimization.md` + `system_psychology_informed_cold_email.md`
+
+**Step 2 - Read frameworks:**
+- Psychology file tells you: Binary choice > open-ended, Cialdini principles, urgency windows
+- CTA file tells you: Specific requests beat vague (28% lift), data points
+
+**Step 3 - Apply to task:**
+- For each email: Identify weak CTA → apply psychology principle → update email
+- For logistics emails: Use "Scarcity" (peak season in 8 weeks) + "Binary" (Tuesday/Wednesday)
+- For healthcare emails: Use "Authority" (credentials) + "Reciprocity" (value-first)
+
+**Step 4 - Document results:**
+- Update `feedback_cold_email_cta_optimization.md` with A/B test results
+- Log: "Applied psychology framework to 12 Tier 1 emails. Expected response rate lift: 28-100%."
+- Add confidence level: "High (backed by 304K email study data)"
+
+---
+
 ## Permitted Tools (Pre-Approved)
 
 The following tools are pre-approved for research, fact-checking, and contact discovery:
