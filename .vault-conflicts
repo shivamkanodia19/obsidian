@@ -1,11 +1,106 @@
 # Vault Conflict Log
 
-**Format:**
+## Format Specification
+
+### Legacy Format (still valid for source file conflicts)
+```
 [YYYY-MM-DD HH:MM] CONFLICT: [file]
 Old: [previous state]
 New: [current state]
 Dump: [[01_Source/Dumps/YYYY-MM-DD_slug]]
 Status: awaiting_review | acknowledged
+```
+
+### New Format (for agent contradictions, processed by /save)
+```
+[YYYY-MM-DD HH:MM] AGENT-CONTRADICTION: [memory file]
+Agent: [agent name] [session date] [confidence]
+Old Finding: [prior vault finding]
+New Finding: [agent's contradictory finding]
+Reasoning: [Why agent's finding differs from vault finding]
+Sources:
+  - Old: [vault file location, version]
+  - New: [agent exit log location]
+Exit Log: [[.claude/agent-exits/YYYY-MM-DD_agent_task.md]]
+Status: awaiting_review | resolved
+Recommendation: [How to resolve the contradiction]
+```
+
+**Field definitions:**
+- **Agent:** Agent name from exit log + session date + confidence level of contradiction (HIGH/MEDIUM/LOW)
+- **Old Finding:** Exact statement from prior memory/vault about what was believed
+- **New Finding:** Exact statement from agent's exit log about what they discovered
+- **Reasoning:** Why different (methodology changed, sample size grew, context was missing, etc.)
+- **Exit Log:** Link to the .claude/agent-exits file containing full context
+- **Status:**
+  - `awaiting_review` — Shivam needs to decide which is correct
+  - `resolved` — Shivam has decided (add note: "Keeping old because..." or "Adopting new because...")
+- **Recommendation:** Suggested resolution path
+
+### Conflict Log Usage
+
+**When /save detects a contradiction:**
+1. Extracts "Old Finding" from affected memory file
+2. Extracts "New Finding" from agent exit log
+3. Logs full AGENT-CONTRADICTION entry
+4. Sets status to `awaiting_review`
+5. Alerts Shivam to review
+
+**When Shivam reviews conflict:**
+1. Reads Old vs. New side-by-side
+2. Decides: Keep old? Use new? Test both? Context-dependent?
+3. Updates status to `resolved`
+4. Adds decision note to Recommendation field
+5. Updates the affected memory file accordingly
+
+---
+
+## Format Examples
+
+### Example 1: Agent Finding Contradicts Prior Work
+
+```
+[2026-04-15 14:32] AGENT-CONTRADICTION: memory/reference_psychology_optimized_ctas_by_industry.md
+Agent: general-purpose-agent-1 2026-04-15 HIGH
+Old Finding: "Any CTA works fine, psychology doesn't matter"
+New Finding: "Binary CTAs get 13x more meetings than open-ended CTAs"
+Reasoning: Old finding had no source; new finding backed by 304K email study (Instantly.ai)
+Sources:
+  - Old: reference_psychology_optimized_ctas_by_industry.md v1.0 (2026-04-01)
+  - New: .claude/agent-exits/2026-04-15_general-purpose-agent-1_psychology-cta-framework.md
+Exit Log: .claude/agent-exits/2026-04-15_general-purpose-agent-1_psychology-cta-framework.md
+Status: awaiting_review
+Recommendation: Adopt new finding (HIGH confidence + research-backed). Replace old statement with Agent 1's finding. Update reference file v1.0 → v1.1.
+```
+
+### Example 2: Agent Finding Augments (Not Contradicts) Prior Work
+
+If an agent finds "Scarcity principle works specifically for Logistics" but the old finding was "Psychology principles work in general," this is not a contradiction—it's clarification. /save would log this as AUGMENTATION, not AGENT-CONTRADICTION:
+
+```
+[2026-04-15 15:45] AGENT-AUGMENTATION: memory/reference_psychology_optimized_ctas_by_industry.md
+Agent: general-purpose-agent-2 2026-04-15 MEDIUM
+Extends: "Psychology principles work in general"
+Refined Finding: "Scarcity principle specifically works for Logistics (binary choice + urgency window)"
+Evidence: Framework theory + industry-specific CTA variants created
+Sources:
+  - Prior: reference_psychology_optimized_ctas_by_industry.md v1.0
+  - New: .claude/agent-exits/2026-04-15_general-purpose-agent-2_logistics-cta-variants.md
+Exit Log: .claude/agent-exits/2026-04-15_general-purpose-agent-2_logistics-cta-variants.md
+Status: resolved
+Action: Added to reference file as industry-specific variant (v1.0 → v1.1)
+```
+
+### Example 3: Sourced from Source File Upload (Legacy)
+
+```
+[2026-04-14 09:20] CONFLICT: memory/project_internship_2026.md
+Old: "Wave 3 complete: 15 targets contacted"
+New: "Wave 3 complete: 18 targets contacted"
+Dump: [[01_Source/Dumps/2026-04-14_wave3-final-count]]
+Status: resolved
+Reason: Shivam uploaded updated progress; count was higher. Updated memory file accordingly.
+```
 
 ---
 

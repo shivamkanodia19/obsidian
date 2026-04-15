@@ -874,6 +874,326 @@ With agent exit logs + /save:
 
 ---
 
+## Exit Log Synthesis in /save (The Learning Mechanism)
+
+**/save is not just a file uploader—it is the engine that turns agent discoveries into institutional knowledge.** This section documents the complete 9-phase synthesis workflow that transforms raw exit logs into refined memory artifacts.
+
+### The 9-Phase Synthesis Workflow
+
+When `/save` processes an exit log, it executes a complete DETECT → PARSE → EXTRACT → SYNTHESIZE → CONFLICT → MEMORY → INDEX → ARCHIVE → PATTERN → REPORT cycle.
+
+```
+Phase 1: DETECT
+├─ Scan .claude/agent-exits/ for new [YYYY-MM-DD]_[agent-name]_[task].md files
+├─ Verify YAML frontmatter (agent_name, task, session_date, status)
+└─ Load all unprocessed exit logs
+
+Phase 2: PARSE
+├─ Read YAML frontmatter (agent metadata, task, focus_area, status)
+├─ Parse markdown sections (Findings, Contradictions, Files Updated, Recommendations)
+├─ Extract confidence levels (HIGH / MEDIUM / LOW)
+└─ Validate required sections (Key Findings, Recommendations)
+
+Phase 3: EXTRACT
+├─ For each Finding:
+│  ├─ Extract statement
+│  ├─ Extract evidence + confidence + reasoning + source
+│  └─ Flag if confidence < MEDIUM (signal: needs validation)
+├─ For each Contradiction:
+│  ├─ Extract old finding + new finding
+│  ├─ Extract "why different" (methodology? sample size? context?)
+│  └─ Extract recommendation (replace/augment/test both)
+└─ Build findings + contradictions arrays
+
+Phase 4: SYNTHESIZE
+├─ For each finding: Determine which memory file(s) it updates
+│  ├─ If finding is about CTAs → update reference_psychology_optimized_ctas_by_industry.md
+│  ├─ If finding is about process → update relevant system_*.md file
+│  ├─ If finding is about project progress → update relevant project_*.md file
+│  └─ Check: does this finding belong in MEMORY.md directly?
+├─ Add agent attribution: "[Agent X, YYYY-MM-DD, found...]"
+├─ Add confidence indicator: [HIGH] / [MEDIUM] / [LOW]
+└─ Add version increment (v1.0 → v1.1 if update) with changelog
+
+Phase 5: CONFLICT DETECTION
+├─ For each finding, search MEMORY.md + affected memory files for contradictions:
+│  ├─ IF finding contradicts prior belief → log to .vault-conflicts
+│  ├─ IF confidence of new > confidence of old → mark old for review
+│  ├─ IF confidence of new < confidence of old → recommend validation before update
+│  └─ IF new finding is different context (e.g., "works for logistics") → augment, not replace
+├─ For each extracted contradiction: validate that old finding exists in vault
+└─ Build conflict resolution matrix
+
+Phase 6: MEMORY UPDATE
+├─ Update affected memory files:
+│  ├─ Add finding with agent attribution + date + confidence
+│  ├─ Add version: v1.0 → v1.1 (incremental update) or v1.0 → v2.0 (major update)
+│  ├─ Add changelog entry: "Agent X finding incorporated, MEDIUM confidence, test with Wave Y"
+│  └─ Preserve prior findings (don't delete; augment or mark obsolete)
+├─ Create new agent-findings-[topic].md if warranted (new discovery category)
+└─ Log update metadata: which files touched, by which agent, when
+
+Phase 7: INDEX UPDATE
+├─ Update MEMORY.md:
+│  ├─ Add new line under relevant section:
+│  │  "- [Agent Findings: Topic](./agent-findings-[topic].md) — [summary] (Agent [name]; keywords: [tags])"
+│  └─ Link to any new agent-findings files created
+├─ Update Fast Start section if findings invalidate prior recommendations
+├─ Add new section "## Agent Findings Index" if first time
+└─ Preserve line count (<200 lines: consolidate old findings if needed)
+
+Phase 8: ARCHIVE
+├─ Move exit log: .claude/agent-exits/[file] → .claude/agent-exits-archive/[YYYY-MM]/[file]
+├─ Create archive index: .claude/agent-exits-archive/[YYYY-MM]/INDEX.md
+│  ├─ List all archived exit logs for that month
+│  ├─ Index findings by topic + agent + confidence
+│  └─ Link to memory files they updated
+└─ Log archival metadata: processed_at, synthesized_to, conflicts_found
+
+Phase 9: PATTERN SURFACING
+├─ Analyze entire exit log history (last 90 days):
+│  ├─ IF Agent X has 3+ findings in same category → pattern emerging
+│  ├─ IF Agent A & Agent B both found same thing (contradictory findings) → ping for discussion
+│  ├─ IF Agent X recommends X, Agent Y tests X, Agent Z optimizes X → create pattern file
+│  └─ Identify common blockers (what agents got stuck on)
+├─ Create or update pattern_[topic].md if pattern detected
+└─ Log pattern trends: "Psychology CTA research: 3 agents contributed, HIGH consensus"
+
+Phase 10: REPORT
+├─ /save outputs report:
+│  ├─ Files processed: [list]
+│  ├─ Findings synthesized: [count] (HIGH: N, MEDIUM: N, LOW: N)
+│  ├─ Contradictions detected: [count]
+│  ├─ Conflicts logged to .vault-conflicts: [Y/N]
+│  ├─ New memory files created: [list]
+│  ├─ Agent Findings Index updated: [Y/N]
+│  └─ Archive indexed: [Y/N]
+└─ Alert Shivam if conflicts or LOW-confidence findings need review
+```
+
+### Conflict Detection Logic
+
+When a finding contradicts prior work, /save follows this flowchart:
+
+```
+New Finding detected
+  ↓
+Search vault for existing statement
+  ├─ NOT FOUND → Add as new finding (no conflict)
+  │
+  └─ FOUND → Comparison phase
+      ├─ confidence(new) > confidence(old)?
+      │  ├─ YES → Mark old finding obsolete, add new finding, log to .vault-conflicts
+      │  └─ NO → Check "why different"
+      │
+      ├─ New finding has different context? (e.g., "Scarcity works for Logistics")
+      │  ├─ YES → Augment: add context-specific variant, don't replace
+      │  └─ NO → True contradiction
+      │
+      └─ True contradiction → .vault-conflicts entry
+         ├─ Log old finding + new finding side-by-side
+         ├─ Flag for Shivam review
+         └─ Status: awaiting_review (until Shivam updates to "resolved")
+```
+
+### Reference Iteration Rules (v1.0 → v1.1)
+
+When /save updates memory files with agent findings, it follows strict versioning rules:
+
+**Minor Update (v1.0 → v1.1):**
+- Adding agent findings that augment (not replace) existing knowledge
+- Adding context-specific variants (e.g., industry-specific CTA)
+- Adding confidence indicators or test results
+- Action: Update file, add agent attribution, add "v1.0 → v1.1" in changelog
+
+**Major Update (v1.0 → v2.0):**
+- Replacing or contradicting core finding
+- Methodology or framework completely revised
+- Prior findings marked obsolete
+- Action: Archive old version, create new file, log conflict, link both versions
+
+**Changelog Entry Format:**
+```markdown
+## Version History
+
+### v1.1 (Agent X, 2026-04-15)
+- Added psychology CTA variants for Logistics industry
+- Confidence: MEDIUM (theory-based, not yet A/B tested)
+- Recommendation: Test in Wave 1 before scaling
+
+### v1.0 (Baseline)
+- Original framework documented
+```
+
+### Pattern Surfacing Rules
+
+/save automatically creates pattern files when:
+
+1. **3+ agents contribute to same topic** (in 90-day window)
+   - File: `pattern_[topic].md`
+   - Content: Aggregate findings + consensus + divergences + next steps
+
+2. **Agent findings form causal chain** (A→B→C progression)
+   - Example: Agent 1 theory → Agent 2 validates → Agent 3 optimizes
+   - File: `pattern_[topic]_evolution.md`
+   - Content: Journey of discovery + evidence build
+
+3. **Common blocker identified** (2+ agents got stuck on same thing)
+   - File: `blocker_[topic].md`
+   - Content: What got agents stuck + why + workarounds + next approach
+
+### Mandatory Exit Log Format Specification
+
+For /save to correctly parse exit logs, agents MUST follow this format:
+
+**File location:**
+```
+.claude/agent-exits/[YYYY-MM-DD]_[agent-name]_[task-slug].md
+```
+- Date: ISO 8601 (YYYY-MM-DD)
+- Agent name: lowercase, no spaces (use hyphens: general-purpose-agent-1)
+- Task slug: kebab-case, <30 chars (psychology-cta-framework)
+
+**YAML frontmatter (required):**
+```yaml
+---
+agent_name: [string]
+task: [string]
+session_date: [YYYY-MM-DD]
+session_duration: [e.g., "3 hours"]
+focus_area: [comma-separated tags]
+status: [completed|partial|blocked]
+---
+```
+
+**Markdown sections (required in order):**
+1. `## What I Was Asked to Do` — Task summary
+2. `## What I Actually Did` — Work completed
+3. `## Key Findings (For Next Agent)` — Subsections with:
+   - **Evidence:** Where this came from
+   - **Confidence:** HIGH / MEDIUM / LOW
+   - **Reasoning:** Why confident
+   - **Source:** Which file/test/research
+4. `## Contradictions (With Prior Work)` — Subsections with:
+   - **Old finding:** What vault said
+   - **What I found:** New discovery
+   - **Why different:** Changed context/methodology/sample
+   - **Recommendation:** How to handle conflict
+5. `## Files Updated by This Agent` — Bulleted list
+6. `## What I Recommend for Next Agent` — Three subsections:
+   - What to Test
+   - What NOT to Do
+   - Blockers / Unknowns
+7. `## Metrics (If Applicable)` — Quantified results
+8. `## For /save to Process` — Metadata for synthesis:
+   ```markdown
+   **Files to synthesize:**
+   - memory/file1.md
+   
+   **Conflicts to log:**
+   - [List any self-identified contradictions]
+   
+   **New memories to create:**
+   - [If this finding warrants new file]
+   
+   **Staleness warnings:**
+   - [If old finding should be questioned]
+   ```
+
+### Integration with Existing /save Workflow
+
+This 9-phase synthesis is **additive to** existing /save behavior:
+
+**Existing /save (unchanged):**
+- Reads `/01_Source/` uploads
+- Synthesizes to Analyst
+- Updates MEMORY.md
+
+**New /save additions:**
+- Phase 1-10 above: Processes agent exit logs
+- Result: Both Source files AND agent findings feed memory
+- Conflict resolution: If Source contradicts agent finding, log to .vault-conflicts
+
+### Example: Exit Log Processing Walkthrough
+
+**Input: Exit log file**
+```
+.claude/agent-exits/2026-04-15_agent-1_psychology-cta-framework.md
+```
+
+**Phase 1-2: DETECT + PARSE**
+```
+agent_name: general-purpose-agent-1
+task: Apply psychology framework to 12 internship emails
+focus_area: internship, cta-optimization, psychology
+status: completed
+```
+
+**Phase 3: EXTRACT**
+```
+Finding 1: Binary CTAs get 13x more meetings
+  Confidence: HIGH
+  Evidence: Instantly.ai 304K email study
+  
+Finding 2: Scarcity principle works for Logistics
+  Confidence: MEDIUM (theory, not tested)
+  
+Contradiction 1: Old memory says "Any CTA works fine"
+  New: CTA psychology matters significantly
+```
+
+**Phase 4: SYNTHESIZE**
+```
+Finding 1 → reference_psychology_optimized_ctas_by_industry.md
+Finding 2 → reference_psychology_optimized_ctas_by_industry.md + pattern_cta_psychology_by_industry.md
+Contradiction 1 → .vault-conflicts
+```
+
+**Phase 5-6: CONFLICT + MEMORY UPDATE**
+```
+Conflict logged:
+  Old: "Any CTA works fine" (no source, LOW confidence)
+  New: "CTA psychology matters" (Agent 1, HIGH confidence, 304K study)
+  Decision: Replace old with new, update reference file
+
+Memory files updated:
+  - reference_psychology_optimized_ctas_by_industry.md (v1.0 → v1.1)
+    Added: Agent 1 findings + industry variants
+    Changelog: "Agent 1 psychology findings, HIGH confidence"
+```
+
+**Phase 7: INDEX UPDATE**
+```
+MEMORY.md updated:
+  New entry: "- [Agent Findings: Psychology CTA](./agent-findings-psychology-cta.md) 
+     — CTA psychology framework validated; binary choice + industry-specific principles 
+     (Agent 1; keywords: cta, psychology, framework, internship)"
+```
+
+**Phase 8: ARCHIVE**
+```
+Exit log moved: 
+  .claude/agent-exits/2026-04-15_agent-1_psychology-cta-framework.md 
+  → .claude/agent-exits-archive/2026-04/2026-04-15_agent-1_psychology-cta-framework.md
+
+Archive INDEX created:
+  .claude/agent-exits-archive/2026-04/INDEX.md
+```
+
+**Phase 9-10: PATTERN + REPORT**
+```
+Pattern check: Only 1 agent on this topic yet → no pattern file
+Report output:
+  ✓ Exit log: 2026-04-15_agent-1_psychology-cta-framework.md
+  ✓ Findings extracted: 2 (HIGH: 1, MEDIUM: 1, LOW: 0)
+  ✓ Conflicts detected: 1 (logged to .vault-conflicts, status: awaiting_review)
+  ✓ Memory files updated: 1 (reference_psychology_optimized_ctas_by_industry.md v1.1)
+  ✓ Agent Findings Index: Created (first entry)
+  ⚠ Action: Shivam review conflict in .vault-conflicts
+```
+
+---
+
 ## Agent Autonomy & Subagent Deployment (System-Wide)
 
 **CRITICAL FOR AGENTS:** You have full authority to deploy subagents for parallel work. Do NOT do sequential work when parallel is possible.
