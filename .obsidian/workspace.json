@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/academics/Physics 206/Question_Analysis/EVERY_PROBLEM_EXTRACTED.md",
+                "file": "02_Analyst/career/internships/research/wave-4-logistics-qualified.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EVERY_PROBLEM_EXTRACTED"
+              "title": "wave-4-logistics-qualified"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/academics/Physics 206/Question_Analysis/EVERY_PROBLEM_EXTRACTED.md",
+                "file": "02_Analyst/career/internships/research/wave-4-logistics-qualified.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of EVERY_PROBLEM_EXTRACTED"
+              "title": "Outline of wave-4-logistics-qualified"
             }
           },
           {
@@ -195,23 +195,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fca35acf7363bb63",
+  "active": "ffbefc36a646e71b",
   "lastOpenFiles": [
+    "02_Analyst/career/internships/outreach/wave-4/draft-emails.md",
+    "02_Analyst/career/internships/outreach/wave-4/strategy-iteration.md",
+    "02_Analyst/career/internships/outreach/wave-4",
+    "02_Analyst/career/internships/research/wave-4-logistics-problems.md",
+    "02_Analyst/career/internships/research/wave-4-company-list.md",
+    "02_Analyst/career/internships/research/flower-mound-targets.md",
+    "02_Analyst/career/internships/outreach/wave-3/optimized-emails.md",
+    "02_Analyst/career/internships/research/wave-4-logistics-qualified.md",
+    "02_Analyst/career/internships/research/wave-4-logistics-qualified.md.tmp.34356.1776213800242",
+    "02_Analyst/career/internships/outreach/wave-3/draft-emails.md",
+    "02_Analyst/career/internships/outreach/wave-3/_index.md",
+    "02_Analyst/career/internships/research/verified-research.md",
+    "02_Analyst/career/internships/strategy/expansion-playbook.md",
+    "02_Analyst/career/internships/strategy/email-optimization-strategy.md",
+    "02_Analyst/career/internships/strategy/_index.md",
+    "02_Analyst/career/_index.md",
+    "02_Analyst/_index.md",
+    "03_References/Frameworks/Cold-Email-Optimization.md",
+    "02_Analyst/career/internships/verified-contacts-all-20.md",
+    "02_Analyst/career/internships/flower-mound-verified-research.md",
+    "02_Analyst/career/internships/flower-mound-ai-ops-targets.md",
+    "02_Analyst/career/internships/strategy/industry-frameworks.md",
+    "02_Analyst/career/internships/_index.md",
+    "02_Analyst/career/internships/email-optimization-strategy.md",
+    "02_Analyst/academics/Physics 206/Question_Analysis/EVERY_PROBLEM_EXTRACTED.md",
     "02_Analyst/career/internships/research/_index.md.tmp.34356.1776213459772",
     "02_Analyst/career/internships/research/wave-4-company-list.md.tmp.34356.1776213442579",
     "02_Analyst/career/internships/research/wave-4-company-list.md.tmp.34356.1776213413992",
-    "02_Analyst/career/internships/research/wave-4-company-list.md",
     "02_Analyst/academics/Physics 206/Question_Analysis/_index.md",
     "02_Analyst/academics/Physics 206/README.md",
     "02_Analyst/academics/Physics 206/STUDY_GUIDE.md",
-    "03_References/Frameworks/Cold-Email-Optimization.md",
     "02_Analyst/career/internships/_index.md.tmp.34356.1776212745111",
-    "02_Analyst/career/internships/strategy/expansion-playbook.md",
-    "03_References/Patterns/Recipient-Psychology.md",
-    "03_References/Tools/Email-Verification.md",
-    "03_References/Voice-Style/Shivam-Voice-Pattern.md",
-    "02_Analyst/career/internships/strategy/industry-frameworks.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/EVERY_PROBLEM_EXTRACTED.md",
     "02_Analyst/academics/Physics 206/Question_Analysis/EVERY_PROBLEM_EXTRACTED.md.tmp.11776.1776212610570",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_2.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_1.png",
@@ -222,27 +239,10 @@
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2017/page_3.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2017/page_2.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2017/page_1.png",
-    "02_Analyst/academics/Physics 206/START_HERE.md",
-    "02_Analyst/academics/Physics 206/Question_by_Question_Analysis.md",
-    "02_Analyst/academics/Physics 206/Exam3_Deep_Analysis.md",
-    "02_Analyst/academics/Physics 206/Exam_Question_Map.md",
-    "02_Analyst/academics/Physics 206/ANALYSIS_COMPLETE_SUMMARY.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/PRACTICE_SETS_ORGANIZED.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/YEAR_BY_YEAR_BREAKDOWN.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/MASTER_TOPIC_INDEX.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/COMPLETE_15_EXAM_ANALYSIS.md",
-    "02_Analyst/academics/Physics 206/Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md",
-    "02_Analyst/academics/_index.md",
     "02_Analyst/academics/Physics 206/ANALYSIS_COMPLETE_SUMMARY.md.tmp.11776.1776210825660",
     "02_Analyst/academics/Physics 206/Question_Analysis/PRACTICE_SETS_ORGANIZED.md.tmp.11776.1776210796355",
     "02_Analyst/academics/Physics 206/Question_Analysis/COMPLETE_15_EXAM_ANALYSIS.md.tmp.11776.1776210756758",
-    "02_Analyst/academics/Physics 206/exam_images_extracted/analysis_summary.json",
-    "02_Analyst/academics/Physics 206/exam_images_extracted/conversion_results.json",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019/page_5.png",
-    "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2019",
-    "02_Analyst/academics/Physics 206/SYSTEM_OVERVIEW.md",
-    "01_Source/academics/ETAM Essays.md",
-    "02_Analyst/academics/Physics 206/_index.md",
     "Untitled.canvas",
     "projects.canvas"
   ]

@@ -76,7 +76,11 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 - **[[outreach/wave-3/optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
 - **[[outreach/wave-3/draft-emails]]** — Reference: Original longer drafts for detailed context
-- **[[strategy/email-optimization-strategy]]** — Framework: Cold email strategy plus copywriting principles and recipient psychology
+
+## 📧 Wave 4 Outreach (Draft Emails Ready)
+
+- **[[outreach/wave-4/draft-emails]]** — READY TO SEND: 5 personalized logistics emails (WSI, NXTPoint, KTX, Beitler, BSP) using vault frameworks + company research
+- **[[outreach/wave-4/strategy-iteration]]** — Vault integration: Applied Cold-Email-Optimization v1.1, Recipient-Psychology v1.0, Shivam-Voice-Pattern v1.0 to logistics subset
 
 ## Next Actions
 
