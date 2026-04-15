@@ -70,6 +70,8 @@ Your role is triple on ALL projects, ALL contexts:
 
 ⚠️ **CRITICAL: NEVER create new main folders. Everything must live under `/02_Analyst/` or `/03_References/`.**
 
+**Exception:** `/05_Outputs/` is reserved for user-requested deliverables only. See [[#folder-outputs]] below.
+
 **Rules:**
 - **Never create** `/05_NewFolder/`, `/NewProject/`, `/MyTopic/`, etc. as top-level directories
 - **Every file and folder goes into `/02_Analyst/` or `/03_References/`** with appropriate nesting
@@ -749,7 +751,7 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 - **Auto-organization:** /save handles all cleanup; user never needs to manually organize memory.
 - **Cross-session coherence:** I remember Shivam's preferences, project progress, decisions from past sessions without re-asking.
 
-## Output File Generation Rule
+## Output File Generation Rule {#folder-outputs}
 
 **CRITICAL:** Do not create output files unless Shivam explicitly requests them.
 
@@ -759,6 +761,17 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 - ❌ **No reference folders** auto-populated with research (keep in memory instead)
 
 **Why:** Vault bloat. Shivam manages what gets created; I optimize what I remember.
+
+## Permitted Tools (Pre-Approved)
+
+The following tools are pre-approved for research, fact-checking, and contact discovery:
+
+- **WebSearch** — Finding verified contacts, company research, LinkedIn validation, CMS databases, public records
+- **WebFetch** — Retrieving specific pages (municipal sites, CMS database, company directories, facility websites, news archives)
+
+**Authority:** Shivam approved on 2026-04-15 for internship outreach contact research + fact-checking workflows.
+
+---
 
 ## Time-Based Planning Rule
 

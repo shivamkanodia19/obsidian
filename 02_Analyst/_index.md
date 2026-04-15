@@ -33,9 +33,15 @@ All synthesis from `/01_Source/` into your evolving understanding. Organized by 
 
 - **Knowledge** — Concepts, frameworks, reusable ideas
 
+## 📦 Outputs
+
+**[[/05_Outputs/]]** — User-requested deliverables only (organized, easy-to-read documents you ask me to create). Never assumption files.
+
+---
+
 ## 📋 Activity Log
 
-Last updated: **2026-04-14**
+Last updated: **2026-04-15**
 
 **Vault restructured:**
 - `/01_Source/` — upload raw writing here (organized by topic)

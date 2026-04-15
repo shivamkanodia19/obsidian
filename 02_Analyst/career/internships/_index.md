@@ -2,12 +2,12 @@
 title: Internship Search — Summer 2026
 description: Target company research, outreach strategy, and execution tracking
 project: internships
-last_audited: 2026-04-14
-active_projects: [wave-3-optimized-emails, email-optimization-strategy, verified-contacts-all-20]
+last_audited: 2026-04-15
+active_projects: [wave-3-optimized-emails, wave-4-outreach-expansion, internship-outreach-by-industry-output]
 drifted_files: []
 orphaned_dumps: []
 unreviewed_conflicts: []
-last_updated: 2026-04-14
+last_updated: 2026-04-15
 ---
 
 # Summer 2026 Internship Search
@@ -77,9 +77,15 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 - **[[outreach/wave-3/optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
 - **[[outreach/wave-3/draft-emails]]** — Reference: Original longer drafts for detailed context
 
+## 📦 User-Requested Output
+
+**[[/05_Outputs/INTERNSHIP-OUTREACH-BY-INDUSTRY.md]]** — Complete internship outreach campaign organized by industry (Logistics, Education, Government, Healthcare, Manufacturing, Business Services). Verified contacts where found, problem statements, drafted internship emails, and research workflows. Ready to send Tier 1 companies.
+
+---
+
 ## 📧 Wave 4 Outreach (Multi-Industry Expansion)
 
-**Status:** Logistics ready to send + Healthcare/Education/Government drafted (pending contact verification) + Manufacturing/Business Services in research
+**Status:** Logistics ready to send + Healthcare/Education/Government drafted (pending contact verification) + Manufacturing/Business Services in research. All companies, contacts, and emails compiled in [[/05_Outputs/INTERNSHIP-OUTREACH-BY-INDUSTRY.md]]
 
 - **[[outreach/wave-4/status]]** — WAVE 4 STATUS SUMMARY: 8 companies qualified across 6 industries; 5 logistics + 1 healthcare + 1 education + 1 government; 4 ready to send (Logistics Tier 1); 3 drafts pending contact verification; manufacturing + business services in research
 - **[[outreach/wave-4/draft-emails]]** — READY TO SEND: 5 personalized logistics emails (WSI, NXTPoint, KTX, Beitler, BSP) using vault frameworks + company research
