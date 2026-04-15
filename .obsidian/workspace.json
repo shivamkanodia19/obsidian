@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "SELF_LEARNING_QUICK_START.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "SELF_LEARNING_QUICK_START"
             }
           }
         ],
@@ -208,14 +208,14 @@
   },
   "active": "0988a61336347248",
   "lastOpenFiles": [
-    "SELF_LEARNING_QUICK_START.md",
     "CLAUDE.md",
+    "SELF_LEARNING_QUICK_START.md",
+    "INDEX.md",
     "02_Analyst/career/internships/strategy/_index.md.tmp.13808.1776278919632",
     "02_Analyst/projects/ClinicalHours/_index.md.tmp.13808.1776278903784",
     "02_Analyst/projects/ClinicalHours/_index.md.tmp.13808.1776278903479",
     "02_Analyst/projects/ClinicalHours/Strategy/niche-refinement.md",
     "02_Analyst/projects/ClinicalHours/Strategy/niche-refinement.md.tmp.13808.1776278895894",
-    "INDEX.md",
     "02_Analyst/career/internships/strategy/internship-goal.md",
     "02_Analyst/career/internships/strategy/internship-goal.md.tmp.13808.1776278877730",
     "05_Outputs/INTERNSHIP-OUTREACH-BY-INDUSTRY.md",
