@@ -155,24 +155,46 @@ tags: [internship, wave-4, status, expansion, logistics, healthcare, education, 
 
 ## Immediate Next Steps (Priority Order)
 
-1. **Logistics (Send immediately):**
-   - ✅ WSI, KTX, NXTPoint — Send Tier 1 emails (Apr 15-17)
-   - ✅ Beitler, BSP — Validate Tier 2 (Apr 16-18), then send
+### PHASE 2A: Send Tier 1 + Contact Verification (This Week)
 
-2. **Healthcare, Education, Government (Verify contacts):**
+1. **Logistics (Send immediately):**
+   - ✅ WSI, KTX, NXTPoint — Send Tier 1 emails now
+   - ✅ Beitler, BSP — Validate Tier 2 (LinkedIn DM), then send
+
+2. **Healthcare, Education, Government (Verify contacts + send):**
    - ⏳ DFW Nursing & Rehab — Find admin name; send compliance email
    - ⏳ Lewisville ISD — Find Dr. Lori Rapp email; send enrollment forecast email
    - ⏳ City of Dallas — Find Kimberly Tolbert email; send project acceleration email
 
-3. **Manufacturing (Research):**
-   - ⏳ Krypton Solutions — Glassdoor + LinkedIn research (30 min)
-   - ⏳ Virtex — Glassdoor + LinkedIn research (30 min)
-   - ⏳ Identify Tier 1/2 problem; find decision-maker; draft emails
+### PHASE 2B: Deep Research on Manufacturing + Business Services (2-3 hours)
 
-4. **Business Services (Research):**
-   - ⏳ Select 1-2 target companies (dfwHR or Frontline Source Group recommended)
-   - ⏳ Research cycle-time + credential verification problems (30 min each)
-   - ⏳ Find decision-maker; draft emails
+3. **Manufacturing (Glassdoor + LinkedIn):**
+   - ⏳ Krypton Solutions — 20 min: read 15-20 Glassdoor reviews for equipment/production issues
+   - ⏳ Virtex — 20 min: read 15-20 Glassdoor reviews for downtime/quality issues
+   - ⏳ LinkedIn decision-maker search for each
+   - ⏳ Confidence assessment (Tier 1/2); draft emails if qualified
+
+4. **Business Services (Glassdoor + LinkedIn):**
+   - ⏳ NextStep Resources — 20 min: read reviews for credentialing cycle time issues
+   - ⏳ Frontline Source Group — 20 min: read reviews for placement pipeline bottlenecks
+   - ⏳ LinkedIn decision-maker search for each
+   - ⏳ Confidence assessment (Tier 1/2); draft emails if qualified
+
+### PHASE 3: Expand Each Industry (Next 2-3 days)
+
+5. **Healthcare expansion:**
+   - ⏳ Pull CMS nursing home dataset for DFW; identify 4-5 facilities with >5 deficiencies or >50% turnover
+   - ⏳ Find administrator names; draft emails using healthcare-draft-emails.md template
+
+6. **Education expansion:**
+   - ⏳ TEA database research on Fort Worth ISD, Lake Worth ISD (state takeover enrollment impact)
+   - ⏳ Superintendent transitions (Prosper, Irving, DeSoto); verify enrollment decline
+   - ⏳ Find superintendent names; draft emails using education-draft-emails.md template
+
+7. **Government expansion:**
+   - ⏳ Municipal bond research on Fort Worth, Arlington, Plano (project delays)
+   - ⏳ Find city manager names for each
+   - ⏳ Draft emails using government-draft-emails.md template
 
 ---
 
