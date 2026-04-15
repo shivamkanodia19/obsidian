@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Analyst/career/internships/_index.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "CLAUDE"
             }
           }
         ],
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Analyst/career/internships/_index.md",
+                "file": "CLAUDE.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of _index"
+              "title": "Outline of CLAUDE"
             }
           },
           {
@@ -206,8 +206,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffbefc36a646e71b",
+  "active": "0988a61336347248",
   "lastOpenFiles": [
+    "02_Analyst/_index.md.tmp.34356.1776234021392",
+    "02_Analyst/_index.md.tmp.34356.1776234006142",
+    "CLAUDE.md.tmp.34356.1776233945520",
+    "CLAUDE.md.tmp.34356.1776233942552",
+    "CLAUDE.md.tmp.34356.1776233877877",
+    "CLAUDE.md.tmp.34356.1776233867136",
+    "01_Source/clinicalhours/clinic outreach.md",
+    "CLAUDE.md",
+    "02_Analyst/career/internships/_index.md",
     "CLAUDE.md.tmp.34356.1776233678035",
     "03_References/Best-Practices/Claude-Code-Obsidian-Integration.md",
     "03_References/Best-Practices",
@@ -217,20 +226,15 @@
     "02_Analyst/projects/ClinicalHours/Strategy/_index.md",
     "02_Analyst/projects/ClinicalHours/Strategy/_index.md.tmp.27128.1776232811786",
     "02_Analyst/projects/ClinicalHours/Market/_index.md",
-    "02_Analyst/projects/ClinicalHours/Market/_index.md.tmp.27128.1776232804084",
     "02_Analyst/projects/ClinicalHours/Outreach/_index.md",
-    "02_Analyst/projects/ClinicalHours/Outreach/_index.md.tmp.27128.1776232790459",
     "02_Analyst/projects/ClinicalHours/Market/Competitive-Analysis-Free-Clinic-Space.md",
-    "02_Analyst/projects/ClinicalHours/Market/Competitive-Analysis-Free-Clinic-Space.md.tmp.27128.1776232772998",
     "02_Analyst/projects/ClinicalHours/Outreach/Outreach-Tracker.md",
     "02_Analyst/projects/ClinicalHours/Strategy/Clinic-Outreach-Strategy-Framework.md",
     "02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04.md",
     "02_Analyst/projects/ClinicalHours/Outreach/Clinic-Target-List-2026-04.md",
     "02_Analyst/career/internships/outreach/wave-4/ACTION-ITEMS/_index.md",
     "02_Analyst/career/internships/outreach/wave-4/REFERENCE/_index.md",
-    "02_Analyst/career/internships/outreach/wave-4/REFERENCE",
     "02_Analyst/career/internships/outreach/wave-4/RESEARCH/_index.md",
-    "02_Analyst/career/internships/outreach/wave-4/RESEARCH",
     "02_Analyst/career/internships/research/wave-4-logistics-problems.md",
     "02_Analyst/career/internships/research/wave-4-logistics-regression-test.md",
     "02_Analyst/career/internships/outreach/wave-4/ACTION-ITEMS/MASTER-ACTION-ITEMS.md",
@@ -239,11 +243,7 @@
     "02_Analyst/career/internships/outreach/wave-4/ACTION-ITEMS/VALIDATE-TIER-2.md",
     "02_Analyst/career/internships/outreach/wave-4/EXECUTE-NOW.md",
     "02_Analyst/career/internships/outreach/wave-4/ACTION-ITEMS/SEND-TIER-1.md",
-    "02_Analyst/career/internships/outreach/wave-4/ACTION-ITEMS",
     "02_Analyst/projects/ClinicalHours/Outreach/Personas-Reference.md",
-    "02_Analyst/projects/ClinicalHours/Outreach/DFW-Clinic-Research-Checklist.md",
-    "02_Analyst/projects/ClinicalHours/Outreach/DFW-Strategy.md",
-    "02_Analyst/career/internships/outreach/wave-4/TIER-2-VALIDATION-CHECKLIST.md",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_2.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_1.png",
     "02_Analyst/academics/Physics 206/exam_images_extracted/Exam3_2016/page_3.png",
