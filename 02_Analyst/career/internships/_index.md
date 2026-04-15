@@ -17,19 +17,31 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 ## 📂 Folders
 
 - **[[research/]]** — Target company research, operational issues, and verified data
+  - [[research/verified-research]] — Flower Mound Top 5 + extended research
+  - [[research/wave-4-company-list]] — DFW expansion discovery (50–70 companies across 6 industries)
 - **[[contacts/]]** — Email verification and contact information for all targets
 - **[[strategy/]]** — Outreach frameworks and copywriting strategy
+  - [[strategy/industry-frameworks]] — 6 industry-specific email templates + psychology
+  - [[strategy/expansion-playbook]] — 6-phase workflow for scaling to 50–70 companies
 - **[[outreach/]]** — Email campaigns organized by wave (Wave 3 ready to send)
 
 ## 🎯 Strategy
 
 **Positioning:** Technical Operations Hire — position as builder/executor, not learner
 
+**Expansion Strategy:** Industry-specific email frameworks (6 industries) + rapid company discovery + template-based generation
+
 **Target Profile:**
-- Location: Flower Mound, TX + 30-mile radius (DFW area)
+- Location: DFW metro (Dallas, Fort Worth, Arlington, Plano, Irving, Lewisville, Frisco, etc.)
+- Industries: Healthcare, Manufacturing, Logistics, Education, Government, Business Services
 - Non-tech companies with clear operational pain points
 - Non-technical founders (hire on capability, not credentials)
 - Companies with automation/efficiency problems solvable by AI
+
+**Resources:**
+- **[[strategy/industry-frameworks]]** — 6 industry-specific email templates + positioning psychology
+- **[[strategy/expansion-playbook]]** — Company discovery + research workflow for 50–70 target companies
+- **[[strategy/email-optimization-strategy]]** — Core cold email framework (generic + variations)
 
 **Top 5 Priority Targets (Verified Issues):**
 1. Cross Timbers Rehabilitation / Nexion Health — Staff scheduling + compliance
@@ -68,7 +80,15 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 ## Next Actions
 
+**Wave 3 (Flower Mound Top 5):**
 1. ✅ Draft Wave 3 cold emails (completed)
 2. ✅ Research CEO/founder email addresses (completed — 8 verified, 11 fallback)
-3. ⏳ Send Wave 3 outreach (Apr 22–24, ready to launch)
-4. ⏳ Track responses + follow-ups (follow cadence in email optimization strategy)
+3. ✅ Ready to send anytime
+4. ⏳ Track responses + follow-ups
+
+**Wave 4+ (Expansion to 50–70 Companies):**
+1. ✅ Phase 1: Rapid company discovery complete (28+ companies identified across 6 industries)
+2. ⏳ Phase 2: Pre-qualification filter (verify: real? pain point? decision-maker? contact?)
+3. ⏳ Phase 3: Industry-specific research (find 1–2 verified issues per company)
+4. ⏳ Phase 4: Email generation (customize industry templates with company data)
+5. ⏳ Phase 5: Contact verification + sending

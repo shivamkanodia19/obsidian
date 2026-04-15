@@ -53,11 +53,11 @@ Sortable reference guide:
 
 ## 🚀 Quick Start (Next 10 Min)
 
-1. Read: **START_HERE.md** (2 min)
-2. Skim: **Exam_Question_Map.md** → "EASY" section (3 min)
-3. Pick: One **Easy** problem (2 min)
-4. **Solve under timed conditions**
-5. Review using **Question_by_Question_Analysis.md**
+1. Read: **README.md** (2 min) - Navigation guide
+2. Read: **STUDY_GUIDE.md** (10 min) - All 4 question types explained
+3. Pick: One **Easy** problem from **Question_Analysis/PRACTICE_SETS_ORGANIZED.md**
+4. **Solve under timed conditions** (find exam in Exam3/ folder)
+5. Review using **Question_Analysis/ALL_EXAMS_COMPREHENSIVE_ANALYSIS.md**
 
 ---
 

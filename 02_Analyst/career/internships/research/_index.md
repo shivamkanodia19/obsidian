@@ -1,7 +1,7 @@
 ---
 title: Research
 description: Target company research, operational issues, and verified data
-last_updated: 2026-04-14
+last_updated: 2026-04-15
 ---
 
 # Research
@@ -10,8 +10,8 @@ Company targeting and verification documents.
 
 ## 📄 Files
 
-- **[[flower-mound-targets]]** — 20 Flower Mound companies organized by AI ops fit and industry
-- **[[verified-research]]** — Verified operational issues + CEO contact info for all 20 targets
+- **[[verified-research]]** — Verified operational issues + CEO contact info for 20 Flower Mound targets
+- **[[wave-4-company-list]]** — Wave 4+ company discovery (50–70 targets across 6 DFW industries) — IN PROGRESS
 
 ---
 
