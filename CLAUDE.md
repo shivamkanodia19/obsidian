@@ -762,6 +762,118 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 
 **Why:** Vault bloat. Shivam manages what gets created; I optimize what I remember.
 
+## /save Skill — The Agent Learning Mechanism (CRITICAL)
+
+**The `/save` skill is how agents learn from each other across sessions.** It's the mechanism that makes continuous improvement possible.
+
+### What /save Does (Current + Enhanced)
+
+**Current workflow:**
+```
+You upload Source file → /save reads it → synthesizes to Analyst → updates MEMORY.md
+```
+
+**Enhanced workflow (with agent integration):**
+```
+Agent 1 completes work → writes exit log → /save detects it
+  ↓
+/save reads exit log (structured YAML + findings)
+  ↓
+/save synthesizes findings → updates relevant memory files (with agent + date attribution)
+  ↓
+/save updates MEMORY.md with findings summary
+  ↓
+/save logs conflicts (if finding contradicts prior belief)
+  ↓
+/save archives exit log
+  ↓
+Agent 2 loads MEMORY.md → sees Agent 1's findings + recommendation → builds on it
+```
+
+### How Agents Feed Findings Back to Vault
+
+**Agent doesn't need to upload Source files.** Instead:
+
+1. **Agent completes work**
+2. **Agent writes exit log:** `.claude/agent-exits/[YYYY-MM-DD]_[agent-name]_[task].md`
+   - Use template: `AGENT_EXIT_LOG_TEMPLATE.md`
+   - Document: What I found + confidence + recommendation for next agent
+3. **Manual or auto-trigger `/save`** (Shivam runs it, or /save runs on session end)
+4. **/save processes exit logs:**
+   - Reads exit log (structured YAML)
+   - Extracts findings + confidence + contradictions
+   - Updates relevant memory files (e.g., `reference_psychology_optimized_ctas_by_industry.md`)
+   - Adds attribution: "Agent 1, 2026-04-15, found..."
+   - Updates MEMORY.md with summary
+   - Logs conflicts if findings contradict prior work
+   - Archives exit log
+
+### Required Changes to /save Spec
+
+**/save must:**
+1. ✅ Read `/01_Source/` (already does)
+2. ✅ Synthesize to Analyst (already does)
+3. ❌ **NEW: Read `.claude/agent-exits/` for agent exit logs**
+4. ❌ **NEW: Extract findings from exit logs (YAML parsing)**
+5. ❌ **NEW: Update memory files with agent findings + attribution**
+6. ❌ **NEW: Log contradictions + agent journey in `.vault-conflicts`**
+7. ✅ Update MEMORY.md (already does, now enhanced with agent findings)
+8. ❌ **NEW: Archive exit logs after processing**
+
+### Example Flow (Internship CTA Optimization)
+
+**Session 1:**
+```
+Agent: "I optimized 12 CTAs using psychology framework"
+→ Agent writes exit log:
+  Finding: "Scarcity principle works for logistics (binary choice + urgency window)"
+  Confidence: MEDIUM (theoretical, not yet tested)
+  Recommendation: "A/B test first 5 sends to validate"
+→ /save processes exit log
+→ Updates: memory/reference_psychology_optimized_ctas_by_industry.md
+   Adds: "[Agent 1 finding] Scarcity CTA: MEDIUM confidence. Test in Wave 1."
+→ Updates MEMORY.md: "CTA optimization findings from Agent 1 — scarcity principle theory"
+```
+
+**Session 2:**
+```
+Agent 2 reads MEMORY.md
+→ Sees: "Agent 1 found scarcity principle theory in CTAs (MEDIUM confidence)"
+→ Reads: reference_psychology_optimized_ctas_by_industry.md
+→ Sees: "Agent 1 recommends A/B testing first 5 sends"
+→ Agent 2 does: Sends 5 CTAs with scarcity principle, measures reply rates
+→ Agent 2 finds: 5.2% reply rate (vs. 2% baseline "Can we chat?")
+→ Agent 2 writes exit log: "Scarcity principle HIGH confidence (tested). Lift: 150%."
+→ /save processes it
+→ Updates: reference file + MEMORY.md with Agent 2's findings
+```
+
+**Session 3:**
+```
+Agent 3 reads MEMORY.md
+→ Sees: "Agent 1 theory (MEDIUM), Agent 2 test (HIGH confidence, 5.2% rate)"
+→ Decides: Skip scarcity principle testing, test reciprocity instead
+→ Agent 3 finds: Reciprocity 6.1% reply rate (better than scarcity)
+→ Writes exit log: "Reciprocity > Scarcity. Recommend Wave 2 uses reciprocity."
+→ /save synthesizes
+→ MEMORY.md now shows: Agent 1 → Agent 2 → Agent 3 progression
+```
+
+### Why This Matters
+
+Without agent exit logs + /save integration:
+- Agent learning stops at session end
+- Next agent starts cold (or reads old findings with no context)
+- Results don't compound; you redo work repeatedly
+
+With agent exit logs + /save:
+- Findings persist + get refined across sessions
+- Each agent builds on prior discoveries
+- Knowledge compounds (Agent 1 theory → Agent 2 validation → Agent 3 optimization)
+- Vault becomes a living knowledge base, not a static repository
+
+---
+
 ## Agent Autonomy & Subagent Deployment (System-Wide)
 
 **CRITICAL FOR AGENTS:** You have full authority to deploy subagents for parallel work. Do NOT do sequential work when parallel is possible.
@@ -789,51 +901,88 @@ Every agent should:
 3. **Add findings to memory** — After completing work, log results (what worked, what failed, confidence) into relevant memory file
 4. **Build on prior work** — If `feedback_*.md` exists on your topic, it contains prior iteration results — learn from them
 
-### Agent Discovery Protocol
+### Agent Discovery Protocol (With Exit Logs)
 
 **You're working on:** [Task]  
 **Steps:**
 
-1. **Read MEMORY.md** (this is your map)
+1. **Check CONTEXT_BUNDLES.md** (fast-track context)
+   - Find your task type in the bundles
+   - Load files in order (total: 15-30 min depending on task)
+   - This is faster than searching MEMORY.md
+
+2. **Read MEMORY.md if task is unclear** (backup search)
    - Keywords in brackets [keywords] tell you what that memory is about
    - Use Ctrl+F to find relevant entries
    - Example: "cold email CTA" → search for "cta" or "cold-email" → find `feedback_cold_email_cta_optimization.md`
 
-2. **Read relevant memory files** (usually 2-3 files)
+3. **Read relevant memory files** (usually 2-3 files + task-specific)
    - First file: System framework (tells you the pattern)
-   - Second file: Feedback history (tells you what worked/didn't work)
-   - Third file: Related project memory (tells you application context)
+   - Second file: Reference/patterns (tells you proven approaches)
+   - Third file: Feedback history (tells you what worked/didn't work)
+   - Fourth file: Related project memory (tells you application context)
 
-3. **Apply framework to current task**
+4. **Apply framework to current task**
    - Don't re-invent; adapt existing pattern
    - If pattern doesn't fit, note why in memory (conflict + reasoning)
+   - **Check memory findings:** If previous agents tested this, see their exit log results
 
-4. **Document your work in memory**
+5. **Document your work in exit log** (CRITICAL FOR NEXT AGENT)
+   - Write exit log: `.claude/agent-exits/[YYYY-MM-DD]_[agent-name]_[task].md`
+   - Use template: `AGENT_EXIT_LOG_TEMPLATE.md`
+   - Document: What you found + confidence + recommendation for next agent
+   - This exit log will be processed by /save → synthesized into memory → seen by next agent
+
+6. **Update memory if pattern evolved**
    - New finding? Create `memory/feedback_[topic].md` or update existing
    - Updated existing pattern? Update file + date `last_updated`
-   - Conflict with old approach? Log to `.vault-conflicts`
+   - Conflict with old approach? Log to `.vault-conflicts` in exit log
+   - /save will synthesize your exit log into memory files
 
 ### Example (CTA Optimization Agent)
 
 **Task:** Optimize CTAs for 29 internship emails using psychology principles.
 
-**Step 1 - Memory discovery:**
-- Search MEMORY.md for "cta"
-- Find: `feedback_cold_email_cta_optimization.md` + `system_psychology_informed_cold_email.md`
+**Step 1 - Load context bundle:**
+- Check CONTEXT_BUNDLES.md
+- Find: Bundle 1 (Internship) + Bundle 4 (Email Optimization)
+- Load: QUICK_REF → work_preferences → project_internship_2026 → psychology_framework → reference_ctas → feedback_cta_optimization
+- Time: ~30 min total context load
 
-**Step 2 - Read frameworks:**
-- Psychology file tells you: Binary choice > open-ended, Cialdini principles, urgency windows
-- CTA file tells you: Specific requests beat vague (28% lift), data points
+**Step 2 - Read prior agent findings (if any):**
+- Search MEMORY.md for "cta" + "psychology"
+- Check if Agent 1 already optimized CTAs
+- If yes, read their exit log for: What worked, what didn't, what to test next
+- If no, you're first — your exit log will guide Agent 2
 
 **Step 3 - Apply to task:**
 - For each email: Identify weak CTA → apply psychology principle → update email
 - For logistics emails: Use "Scarcity" (peak season in 8 weeks) + "Binary" (Tuesday/Wednesday)
 - For healthcare emails: Use "Authority" (credentials) + "Reciprocity" (value-first)
+- For government emails: Use "Urgency" (planning window) + "Binary" choice
 
-**Step 4 - Document results:**
-- Update `feedback_cold_email_cta_optimization.md` with A/B test results
-- Log: "Applied psychology framework to 12 Tier 1 emails. Expected response rate lift: 28-100%."
-- Add confidence level: "High (backed by 304K email study data)"
+**Step 4 - A/B test (if first wave):**
+- Send 5 optimized CTAs (small sample test)
+- Measure reply rate vs. baseline "Can we chat?"
+- Document findings + confidence level
+
+**Step 5 - Write exit log:**
+- Create: `.claude/agent-exits/2026-04-15_[agent-name]_cta-optimization.md`
+- Use: `AGENT_EXIT_LOG_TEMPLATE.md`
+- Document:
+  - What you optimized (12 Tier 1 CTAs + 17 research-pending)
+  - What psychology principles you applied (Scarcity for logistics, Authority for healthcare, etc.)
+  - What you tested (first 5 sends if doing A/B)
+  - Reply rate results (if A/B tested)
+  - What Agent 2 should test next (remaining psychology principle stacks)
+  - Confidence level: "HIGH (backed by 304K email study, 13x meetings booked research)"
+
+**Step 6 - /save processes your exit log:**
+- /save reads your exit log from `.claude/agent-exits/`
+- /save updates: `reference_psychology_optimized_ctas_by_industry.md` with your tested results + agent attribution
+- /save updates: `MEMORY.md` with: "CTA optimization findings from [Agent Name] — [date]: [finding summary]"
+- /save logs conflicts if you contradicted prior approach
+- Next agent reads MEMORY.md → sees your findings → builds on them
 
 ---
 
