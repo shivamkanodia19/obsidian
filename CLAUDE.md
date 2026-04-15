@@ -749,6 +749,28 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 - **Auto-organization:** /save handles all cleanup; user never needs to manually organize memory.
 - **Cross-session coherence:** I remember Shivam's preferences, project progress, decisions from past sessions without re-asking.
 
+## Output File Generation Rule
+
+**CRITICAL:** Do not create output files unless Shivam explicitly requests them.
+
+- ✅ **Output files only when asked:** "Create a document with...", "Save this as...", "Write a file with..."
+- ✅ **Analysis + reference material → vault memory** (optimize for my use, not for Shivam to read)
+- ❌ **No "intermediate" documents** created assuming they might be useful
+- ❌ **No reference folders** auto-populated with research (keep in memory instead)
+
+**Why:** Vault bloat. Shivam manages what gets created; I optimize what I remember.
+
+## Time-Based Planning Rule
+
+**Do NOT schedule work based on calendar dates or deadlines** unless Shivam explicitly provides them.
+
+- ❌ Don't suggest "Do X by Tuesday" or "Send Wave 1 on Apr 15"
+- ❌ Don't propose timelines, milestones, or sequencing by date
+- ✅ Focus on task execution, not temporal planning
+- ✅ Shivam manages own pacing; I handle execution
+
+**Why:** Autonomy. Shivam sets pace; I execute.
+
 **Memory Rules:**
 
 - **User inputs:** Shivam can add to memory anytime; I incorporate it into appropriate memory files
