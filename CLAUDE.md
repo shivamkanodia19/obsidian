@@ -771,6 +771,20 @@ No memory content goes directly in MEMORY.md. All content in separate files. MEM
 
 **Why:** Autonomy. Shivam sets pace; I execute.
 
+## 05_Outputs Folder (User-Requested Outputs Only)
+
+**Rule:** `/05_Outputs/` contains ONLY organized deliverables Shivam explicitly asks for.
+
+- ✅ **Create output here when asked:** "I want a document with...", "Create a report...", "Compile this into..."
+- ✅ **Emphasize organization:** Clear structure, easy to read, findable
+- ✅ **No assumption files:** Never add outputs assuming they might be useful
+- ❌ **No intermediate work:** Analysis, research, drafts stay in memory/vault
+- ❌ **No auto-generation:** Wait for explicit request
+
+**Structure:** Shivam decides the organization. If they suggest "by industry," use that. If they say "sort by tier," use that.
+
+**Why:** Outputs are for Shivam to use/share. They decide what exists.
+
 **Memory Rules:**
 
 - **User inputs:** Shivam can add to memory anytime; I incorporate it into appropriate memory files
