@@ -1,12 +1,16 @@
 ---
 title: Wave 4 — 30 DFW Companies (Qualified + Ready to Execute)
 description: Wave 4 expansion across 6 industries (logistics, healthcare, education, government, manufacturing, business services). 30 companies qualified. 25 Tier 1 ready to send. 5 Tier 2 pending validation.
-last_updated: 2026-04-15
+last_updated: 2026-04-21
 ---
 
 # Wave 4 Index — Navigate Here
 
 Complete Wave 4 outreach campaign. 30 companies qualified. 25 Tier 1 ready to send. All problems backtested.
+
+## Latest Save Sync
+
+**2026-04-21:** Added [[email-research-2026-04-21]] from [[01_Source/internships/wave-4-email-research-2026-04-21.md]]. Founder outreach now has 47+ Gmail drafts, with one new verified direct founder email: Will Coleman at Alto. The main blocker is still verified public email availability; do not infer from masked or paywalled email results.
 
 ---
 

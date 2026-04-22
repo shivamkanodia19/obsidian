@@ -39,15 +39,20 @@ Submitted/Active:
 - ESL software/data science
 - Zachry Leadership Program (TAMU, deadline June 2026)
 
+## Target Mode
+
+**Primary:** Local DFW company outreach (maximize odds of getting offer)  
+**Secondary:** Formal applications + broader opportunities
+
+Reasoning: Direct outreach to 50-70 local companies provides broader exposure than formal apps alone.
+
 ## Resume
 
-Attached in `/01_Source/internships/` folder.
+Resume attached in `/01_Source/internships/` folder.
 
-## Next Actions
+## Sourced From
 
-**Immediate (Weeks 1–2):**
-1. Send Wave 3 (Flower Mound Top 5 emails) — ready anytime
-2. Continue Wave 4 contact verification (Healthcare, Education, Government)
+[[01_Source/internships/Internship goal.md]] (updated 2026-04-15)
 3. Track responses + follow-ups
 
 **Medium-term (Weeks 3–6):**

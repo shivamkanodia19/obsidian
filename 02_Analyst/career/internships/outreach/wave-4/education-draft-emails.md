@@ -31,11 +31,11 @@ tags: [internship, wave-4, education, draft-emails, school-districts]
 
 Hi Dr. Rapp,
 
-You closed 5 schools because you lost 4,300 students you didn't forecast. I build enrollment prediction models using your historical data + demographics; you forecast enrollment 5 years ahead, plan facilities + staffing proactively, avoid reactive closures.
+You closed 5 schools because you lost 4,300 students you didn't forecast; I build enrollment prediction models using your historical data and demographics, so you forecast enrollment 5 years ahead, plan facilities and staffing proactively, and avoid reactive closures.
 
-Pilot: I forecast Lewisville ISD enrollment through 2030. We measure forecast accuracy + facility optimization opportunities.
+The pilot: I forecast Lewisville ISD enrollment through 2030; we'll measure forecast accuracy and facility optimization opportunities.
 
-Can you call this week so I can show you the forecast model in 10 minutes?
+Can we talk next week? I'd love to show you the forecast model in 10 minutes.
 
 Shivam Kanodia
 214-470-0598
@@ -46,7 +46,7 @@ Shivam Kanodia
 
 Hi Dr. Rapp,
 
-Your 4,300-student decline forced 5 school closures + a $4.5M deficit. I can forecast enrollment 5 years ahead so you plan proactively, not reactively. Worth a quick call?
+Your 4,300-student decline forced 5 school closures and a $4.5M deficit; I can forecast enrollment 5 years ahead, so you plan proactively instead of reactively. Worth a quick chat next week?
 
 ---
 
@@ -58,11 +58,11 @@ Your 4,300-student decline forced 5 school closures + a $4.5M deficit. I can for
 
 Hi Dr. Rapp,
 
-Your $4.5M budget deficit is driven by over-capacity facilities serving declining enrollment. I build enrollment forecasts that show exactly which schools to right-size; you reduce fixed costs, align staffing budgets, close this gap over 2-3 years.
+Your $4.5M budget deficit is driven by over-capacity facilities serving declining enrollment; I build enrollment forecasts that show exactly which schools to right-size, so you reduce fixed costs, align staffing budgets, and close this gap over 2-3 years.
 
-Pilot: I analyze Lewisville's 42,000-student base + decline trends. We model facility utilization + cost savings opportunities.
+The pilot: I analyze Lewisville's 42,000-student base and decline trends; we'll model facility utilization and cost savings opportunities.
 
-Can you call this week so I can share the analysis in 10 minutes?
+Can we talk next week? I'd love to share the analysis in 10 minutes.
 
 Shivam Kanodia
 214-470-0598
@@ -73,7 +73,7 @@ Shivam Kanodia
 
 Hi Dr. Rapp,
 
-You're carrying $4.5M deficit from over-capacity buildings serving declining enrollment. I can forecast enrollment + optimal facility mix; you right-size operations, close this gap, restore budget flexibility. Worth a 10-minute call?
+You're carrying a $4.5M deficit from over-capacity buildings serving declining enrollment; I can forecast enrollment and optimal facility mix, so you right-size operations, close this gap, and restore budget flexibility. Open to a 10-minute conversation next week?
 
 ---
 

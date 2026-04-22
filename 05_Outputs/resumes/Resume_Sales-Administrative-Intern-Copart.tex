@@ -1,0 +1,189 @@
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shivam Kanodia} \\ \vspace{1pt}
+    \small (214) 470-0598 $|$ \href{mailto:shivamkanodia77@gmail.com}{\underline{shivamkanodia77@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/shivamkanodia19}{\underline{linkedin.com/in/shivamkanodia19}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Texas A\&M University}{Aug. 2025 -- May 2028}
+      {B.S. Industrial Systems Engineering (Honors) $|$ GPA: 3.7}{College Station, TX}
+  \resumeSubHeadingListEnd
+  \vspace{-13pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Relevant Coursework:} Data Analysis, Python Programming, Quantitative Methods \\
+      \textbf{Organizations:} Product@TAMU, Aggie Data Science Club, IEEE
+    }}
+  \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://clinicalhours.org/}{ClinicalHours} $|$ \emph{Co-Founder \& Chief Technology Officer}}{Nov. 2025 -- Present}
+  {Texas A\&M University}{College Station, TX}
+    \resumeItemListStart
+        \resumeItem{Scaled two-sided marketplace from \textbf{0 to 170+ active users} and \textbf{18,000+ hospital partnerships} through zero paid acquisition; managed \textbf{customer communications, scheduling, and relationship coordination}.}
+        \resumeItem{Led \textbf{end-to-end operations execution} including customer outreach strategy, partnership management, feature prioritization based on customer feedback, and internal process optimization.}
+        \resumeItem{Conducted \textbf{customer needs assessment} across 170+ students and 50+ hospitals; identified pain points in volunteer coordination and clinical placement workflows; iterated product to match customer requirements.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+  {System Dynamics Research $|$ \emph{Undergraduate Researcher}}{Jan. 2026 -- Present}
+  {Texas A\&M University}{College Station, TX}
+      \resumeItemListStart
+      \resumeItem{Developed \textbf{comprehensive research documentation} and technical communication; maintained detailed project tracking, workflow coordination, and team collaboration across multi-disciplinary research initiative.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Celvio} $|$ \emph{Business Development \& Operations}}{Feb. 2026}
+      \resumeItemListStart
+        \resumeItem{Managed project coordination and stakeholder communications for medical device competition entry; created \textbf{comprehensive business documentation}, presentations, and strategic planning materials.}
+        \resumeItem{Conducted \textbf{market research and competitive analysis}; developed detailed \textbf{pricing, cost analysis, and financial models} for product positioning and customer outreach.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Persona} $|$ \emph{Team Coordinator}}{Nov. 2025}
+      \resumeItemListStart
+        \resumeItem{Collaborated with multidisciplinary team to deliver presentation, pitch deck, and promotional video during Product@TAMU's 24-hour Ideathon; coordinated team alignment and \textbf{earned 2nd place}.}
+        \resumeItem{Managed \textbf{project timeline, resource allocation, and internal communication}} to ensure seamless delivery of all project deliverables.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Office Productivity}{: Microsoft Excel, Word, PowerPoint, Outlook, Google Suite} \\
+     \textbf{Organization \& Coordination}{: Project Management, Customer Relationship Tracking, Event Coordination, Process Documentation} \\
+     \textbf{Communication}{: Customer Service, Stakeholder Management, Technical Writing, Presentation Development} \\
+     \textbf{Additional Tools}{: Git, Figma, Tableau} \\
+    }}
+ \end{itemize}
+
+%-----------AWARDS-----------
+\section{Awards}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Product@TAMU Ideathon} $|$ \emph{2nd Place}}{November 2025}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

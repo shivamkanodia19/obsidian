@@ -31,11 +31,11 @@ tags: [internship, wave-4, healthcare, draft-emails, nursing-homes]
 
 Hi [Name],
 
-You have 7 CMS deficiencies + $87K in fines. Root cause: reactive auditing. I build compliance risk models using your facility data; you identify violations 8 weeks early, fix proactively, and avoid fines.
+You have 7 CMS deficiencies + $87K in fines; the root cause is reactive auditing. I build compliance risk models using your facility data, so you identify violations 8 weeks early, fix proactively, and avoid fines.
 
-8-week pilot forecasts deficiencies across your 98 beds. We measure compliance violations prevented + fines avoided.
+The 8-week pilot forecasts deficiencies across your 98 beds; we'll measure compliance violations prevented + fines avoided.
 
-Can you call this week so I can show you how this works in 10 minutes?
+Can we talk next week? I'd love to show you how this works in 10 minutes.
 
 Shivam Kanodia
 214-470-0598
@@ -46,7 +46,7 @@ Shivam Kanodia
 
 Hi [Name],
 
-Your 7 CMS deficiencies triggered $87K in fines. I can build a compliance forecasting model that flags violations 8 weeks early; you fix proactively, reduce deficiencies, lower liability. Worth a quick call?
+Your 7 CMS deficiencies triggered $87K in fines; I can build a compliance forecasting model that flags violations 8 weeks early, so you fix proactively, reduce deficiencies, and lower liability. Open to talking next week?
 
 ---
 
@@ -58,11 +58,11 @@ Your 7 CMS deficiencies triggered $87K in fines. I can build a compliance foreca
 
 Hi [Name],
 
-Your 57% RN turnover is causing your 7 CMS deficiencies; both are symptoms of under-forecasting. I forecast staffing + compliance risks together; you maintain consistent RN coverage, reduce violations, improve morale.
+Your 57% RN turnover is causing your 7 CMS deficiencies; both are symptoms of under-forecasting. I forecast staffing and compliance risks together, so you maintain consistent RN coverage, reduce violations, and improve morale.
 
-8-week pilot runs parallel with your operations. We measure turnover reduction + deficiency prevention.
+The 8-week pilot runs parallel with your operations; we'll measure turnover reduction + deficiency prevention.
 
-Can you call this week so I can walk through the integrated model in 10 minutes?
+Can we talk next week? I'd love to walk through the integrated model in 10 minutes.
 
 Shivam Kanodia
 214-470-0598
@@ -73,7 +73,7 @@ Shivam Kanodia
 
 Hi [Name],
 
-High RN turnover (57%) creates CMS compliance violations (7 deficiencies, $87K fines). I can forecast both simultaneously: staff 8 weeks ahead, prevent violations, improve retention. Worth a 10-minute call?
+High RN turnover (57%) creates CMS compliance violations (7 deficiencies, $87K fines); I can forecast both simultaneously, so you staff 8 weeks ahead, prevent violations, and improve retention. Open to a 10-minute chat next week?
 
 ---
 

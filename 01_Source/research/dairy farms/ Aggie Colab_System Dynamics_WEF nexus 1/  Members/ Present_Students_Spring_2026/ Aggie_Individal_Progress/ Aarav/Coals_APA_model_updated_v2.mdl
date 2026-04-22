@@ -1,0 +1,287 @@
+{UTF-8}
+Number of Cows=
+	100
+	~	cows
+	~	Hypothetical lactating dairy herd size.	|
+
+Milk production rate=
+	Number of Cows*21.5
+	~	kg/day
+	~	Avg lactating cow produces 21.5 kg milk/day (US avg ~23000 lbs/yr).	|
+
+Water Usage rate=
+	Number of Cows*4500
+	~	liters/month
+	~	Lactating cow drinks ~150 L/day x 30 days = 4500 L/cow/month.	|
+
+Feed Consumption rate=
+	Number of Cows*750
+	~	kg DM/month
+	~	Lactating cow requires ~25 kg DM/day TMR x 30 days = 750 kg/cow/month.	|
+
+Energy Consumption rate=
+	Number of Cows*65
+	~	kWh/month
+	~	Dairy farm energy use ~65 kWh/cow/month. 100 cows = 6500 kWh/month.	|
+
+Manure Production rate=
+	Number of Cows*500
+	~	kg/month
+	~	Lactating cow produces ~68 kg wet manure/day. Monthly ~500 kg DM/cow.	|
+
+Urine production rate=
+	Number of Cows*120
+	~	liters/month
+	~	Cows produce ~4 L urine/day. Monthly ~120 L/cow.	|
+
+Biogas Production rate=
+	Manure storage*0.025
+	~	m3 CH4/month
+	~	Anaerobic digestion: ~25 L biogas per kg VS manure. CH4 fraction 60%.	|
+
+Solar generation rate=
+	850
+	~	kWh/month
+	~	100 kW solar array. TX avg 5.5 peak sun hrs/day x 30 = 850 kWh/month.	|
+
+Precipitation rate=
+	75
+	~	mm/month
+	~	College Station TX avg precipitation ~900 mm/yr = 75 mm/month (NOAA).	|
+
+recharge rate=
+	15
+	~	mm/month
+	~	~20% of precipitation recharges groundwater = 15 mm/month.	|
+
+Nutrient loss=
+	Feed domain*0.05
+	~	kg N/month
+	~	~5% of feed nutrients lost via leaching or volatilization monthly.	|
+
+Feed growth rate=
+	Soil Nutrient*0.3
+	~	kg DM/month
+	~	Forage growth proportional to soil N. Coeff 0.3 from bermudagrass yield data.	|
+
+Manure application rate=
+	Manure storage*0.1
+	~	kg/month
+	~	10% of stored manure applied to fields monthly (agronomic loading rate).	|
+
+Treatment rate=
+	Water domain*0.15
+	~	liters/month
+	~	15% of water domain treated and recycled monthly.	|
+
+Water recycling efficiency=
+	0.75
+	~	dimensionless
+	~	75% of treated wastewater reused on-farm (industry average).	|
+
+Milk Yield=
+	INTEG(Milk production rate, 0)
+	~	kg
+	~	Cumulative milk produced over simulation.	|
+
+Urine output=
+	INTEG(Urine production rate, 0)
+	~	liters
+	~	Cumulative urine output.	|
+
+Hypothetical dairy herd= INTEG (
+	Energy Consumption rate+Feed Consumption rate+Water Usage rate\
+		-Manure Production rate-Milk production rate-Urine production rate,
+	100)
+	~	cows
+	~	Herd mass balance stock. Initial = 100 lactating cows.	|
+
+Manure storage= INTEG (
+	Manure Production rate-Biogas Production rate-Manure application rate,
+	0)
+	~	kg
+	~	Stored manure available for anaerobic digestion or field application.	|
+
+Water domain= INTEG (
+	Precipitation rate+recharge rate+Treatment rate-Water Usage rate,
+	5000)
+	~	liters
+	~	Total water available to farm system. Initial = 5000 L.	|
+
+Feed domain= INTEG (
+	Feed growth rate-Feed Consumption rate+Nutrient loss,
+	65000)
+	~	kg DM
+	~	Total feed inventory. Initial = 65000 kg DM (~2 month supply for 100 cows).	|
+
+Energy domain= INTEG (
+	Biogas Production rate+Solar generation rate-Energy Consumption rate,
+	0)
+	~	kWh
+	~	Net energy balance. Biogas + solar minus consumption.	|
+
+Energy Storage= INTEG (
+	Solar generation rate-Energy Consumption rate,
+	0)
+	~	kWh
+	~	Battery/grid storage from solar surplus.	|
+
+Soil Nutrient= INTEG (
+	Manure application rate-Feed growth rate,
+	500)
+	~	kg N
+	~	Soil nitrogen pool. Initial = 500 kg N.	|
+
+surface water= INTEG (
+	Precipitation rate,
+	1000)
+	~	liters
+	~	Surface water availability. Initial = 1000 L.	|
+
+Ground water= INTEG (
+	recharge rate,
+	3000)
+	~	liters
+	~	Groundwater stock. Initial = 3000 L.	|
+
+Waste water reuse= INTEG (
+	Treatment rate*Water recycling efficiency,
+	0)
+	~	liters
+	~	Wastewater recovered and reused on farm.	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,100,2
+10,1,Hypothetical dairy herd,761,351,57,25,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+10,2,Water domain,746,179,54,26,3,3,0,60,-1,1,0,0,0-0-0,0-255-255,Bradley Hand ITC|16|BI|0-0-255,0,0,0,0,0,0
+10,3,Feed domain,468,356,50,26,3,3,0,62,-1,1,0,0,0-0-0,0-255-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+10,4,Energy domain,1044,353,57,26,3,3,0,62,-1,1,0,0,0-0-0,255-255-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,5,7,2,100,0,0,22,0,192,0,-1--1--1,,1|(732,231)|
+1,6,7,1,4,0,0,22,0,192,0,-1--1--1,,1|(732,298)|
+11,7,0,732,264,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,8,Water Usage rate,804,264,64,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,9,11,3,100,0,0,22,0,192,0,-1--1--1,,1|(567,336)|
+1,10,11,1,4,0,0,22,0,192,0,-1--1--1,,1|(666,336)|
+11,11,0,623,336,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,12,Feed Consumption rate,623,367,67,23,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,13,15,4,100,0,0,22,0,192,0,-1--1--1,,1|(953,352)|
+1,14,15,1,4,0,0,22,0,192,0,-1--1--1,,1|(862,352)|
+11,15,0,913,352,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,16,Energy Consumption rate,913,383,72,23,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+10,17,Milk Yield,537,592,46,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+10,18,Manure storage,723,675,46,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+10,19,Urine output,943,589,49,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,20,22,1,100,0,0,22,0,192,0,-1--1--1,,1|(658,351)|
+1,21,22,17,4,0,0,22,0,192,0,-1--1--1,,1|(537,475)|
+11,22,0,658,475,8,6,33,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,23,Milk production rate,658,503,78,22,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,24,26,1,100,0,0,22,0,192,0,-1--1--1,,1|(717,440)|
+1,25,26,18,4,0,0,22,0,192,0,-1--1--1,,1|(717,582)|
+11,26,0,717,510,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,27,Manure Production rate,800,510,75,25,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,28,30,1,100,0,0,22,0,192,0,-1--1--1,,1|(761,485)|
+1,29,30,19,4,0,0,22,0,192,0,-1--1--1,,1|(954,527)|
+11,30,0,954,485,8,6,33,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,31,Urine production rate,954,512,74,21,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,32,1,12,1,0,0,0,0,192,0,-1--1--1,,1|(710,420)|
+1,33,1,16,1,0,0,0,0,192,0,-1--1--1,,1|(832,418)|
+1,34,1,8,1,0,0,0,0,192,0,-1--1--1,,1|(817,288)|
+1,35,37,18,100,0,0,22,0,192,0,-1--1--1,,1|(1037,675)|
+1,36,37,4,4,0,0,22,0,192,0,-1--1--1,,1|(1037,504)|
+11,37,0,1037,636,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,38,Biogas Production rate,1128,636,83,24,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+10,39,surface water,659,32,52,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+10,40,Ground water,811,29,53,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,41,43,39,100,0,0,22,0,192,0,-1--1--1,,1|(586,32)|
+1,42,43,2,4,0,0,22,0,192,0,-1--1--1,,1|(586,179)|
+11,43,0,586,109,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,44,Precipitation rate,658,109,64,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,45,47,40,100,0,0,22,0,192,0,-1--1--1,,1|(889,29)|
+1,46,47,2,4,0,0,22,0,192,0,-1--1--1,,1|(889,179)|
+11,47,0,889,99,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,48,recharge rate,949,99,52,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+10,49,Energy Storage,1281,357,57,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,50,52,49,100,0,0,22,0,192,0,-1--1--1,,1|(1199,353)|
+1,51,52,4,4,0,0,22,0,192,0,-1--1--1,,1|(1131,353)|
+11,52,0,1168,353,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,53,Solar generation rate,1168,387,62,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+10,54,Waste water reuse,1004,208,48,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,55,57,54,100,0,0,22,0,192,0,-1--1--1,,1|(918,194)|
+1,56,57,2,4,0,0,22,0,192,0,-1--1--1,,1|(834,194)|
+11,57,0,874,194,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,58,Treatment rate,874,228,60,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+11,59,0,573,542,8,6,1,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,60,Soil Nutrient,427,664,49,26,3,3,0,58,-1,1,0,0,0-0-0,0-0-0,Bradley Hand ITC|16|BI|0-0-0,0,0,0,0,0,0
+1,61,63,18,100,0,0,22,0,192,0,-1--1--1,,1|(634,669)|
+1,62,63,60,4,0,0,22,0,192,0,-1--1--1,,1|(527,669)|
+11,63,0,585,669,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,64,Manure application rate,585,700,68,23,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,65,67,60,100,0,0,22,0,192,0,-1--1--1,,1|(447,577)|
+1,66,67,3,4,0,0,22,0,192,0,-1--1--1,,1|(447,443)|
+11,67,0,447,510,8,6,33,3,0,0,4,0,0,0,0,0,0,0,0,0
+10,68,Feed growth rate,518,510,63,26,40,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+10,69,Nutrient loss,351,469,50,26,8,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,70,69,68,1,0,0,0,0,192,0,-1--1--1,,1|(404,506)|
+1,71,69,3,1,0,0,0,0,192,0,-1--1--1,,1|(389,390)|
+10,72,Water recycling efficiency,1163,196,74,24,8,3,0,58,-1,1,0,0,0-0-0,0-0-0,Arial|16|B|0-0-0,0,0,0,0,0,0
+1,73,72,54,1,0,0,0,0,192,0,-1--1--1,,1|(1115,252)|
+///---\\\
+:L<%^E!@
+5:Milk production rate
+19:100,0
+24:0
+25:0
+26:0
+23:0
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:0
+96:0
+97:0
+77:0
+78:0
+102:1
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Vensim Sans|12||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1

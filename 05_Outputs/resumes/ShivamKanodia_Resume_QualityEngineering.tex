@@ -1,0 +1,169 @@
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shivam Kanodia} \\ \vspace{1pt}
+    \small (214) 470-0598 $|$ \href{mailto:shivamkanodia77@gmail.com}{\underline{shivamkanodia77@gmail.com}} $|$
+    \href{https://linkedin.com/in/shivamkanodia19}{\underline{linkedin.com/in/shivamkanodia19}} $|$
+    \href{https://shivamkanodia.com}{\underline{shivamkanodia.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Texas A\&M University}{Aug. 2025 -- May 2028}
+      {B.S. Industrial Systems Engineering (Honors), Minor in Statistics $|$ GPA: 3.7}{College Station, TX}
+  \resumeSubHeadingListEnd
+  \vspace{-11pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Coursework:} C++ Design, Engineering Calculus III, Python Programming, Operations Research, Supply Chain Management \\
+      \textbf{Organizations:} EDGE, FREE, Aggies Create, Product@TAMU, IEEE, Aggie Data Science Club, Aggie Innovators
+    }}
+  \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+  {System Dynamics Research $|$ \emph{Undergraduate Researcher}}{Jan. 2026 - Present}
+  {Texas A\&M University}{College Station, TX}
+
+      \resumeItemListStart
+        \resumeItem{\textbf{Developed system dynamic models} in Vensim applying \textbf{Lean manufacturing principles} (5S, Kaizen) to validate efficiency frameworks; engineered ML pipelines (XGBoost, Random Forest) with SHAP to identify critical \textbf{KPIs}}, \textbf{cycle time}} drivers, and process bottlenecks supporting \textbf{continuous improvement}} and waste reduction.}}
+        \resumeItem{Applied \textbf{root cause analysis}} and systematic problem-solving methodologies to identify KPIs, failure modes, and efficiency opportunities; authored technical documentation demonstrating structured \textbf{procedure development}} and analytical rigor in manufacturing contexts.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+        {\textbf{ClinicalHours} $|$ \emph{Co-Founder}}{Dec. 2025 -- Present}
+        \resumeItemListStart
+          \resumeItem{Led operational execution and process optimization across 200+ users; managed end-to-end supply chain from intake to fulfillment with meticulous attention to detail, procedure documentation, metrics tracking, and cross-functional collaboration across departments.}
+          \resumeItem{Secured funding through \textbf{McFerrin Ideas Challenge} (Finalist) and \textbf{Good Bull Pitch} (3rd place); invited to \textbf{Meloy Kickstart Accelerator}}.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Celvio} $|$ \emph{MedXplore Competition}}{Feb. 2026}
+        \resumeItemListStart
+          \resumeItem{Led financial model for medical device; conducted market analysis and cost breakdown achieving \textbf{\$45 COGS}} target.}
+          \resumeItem{Developed device with attention to technical specifications and safety standards—direct application of quality engineering compliance principles.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{FinSeek} $|$ \emph{TAMUHack (Capital One Challenge)}}{Jan. 2026}
+        \resumeItemListStart
+          \resumeItem{Engineered fraud detection platform with 95\%+ precision via ensemble ML; conducted threshold optimization analysis on 200k+ dataset reducing errors by 99\%, demonstrating advanced \textbf{data-driven decision-making}} and \textbf{process efficiency}} improvement methodologies applicable to manufacturing quality metrics.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Good Bull Pitch} (3rd Place, March 2026) $|$ \textbf{Texas A\&M Ideas Challenge} (Finalist, March 2026) $|$ \textbf{Product@TAMU Ideathon} (2nd Place, Nov 2025)
+    }}
+ \end{itemize}
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Manufacturing \& Supply Chain}{: Lean/Six Sigma methodologies (5S, Kaizen), process optimization, cycle time reduction, continuous improvement, root cause analysis, line balancing, time studies, metrics \& KPI analysis, FPX project management} \\
+     \textbf{Data Analysis \& Visualization}{: Python, SQL, Pandas, XGBoost, LightGBM, SHAP, Advanced Excel, Power BI, statistical analysis, technical documentation} \\
+     \textbf{Tools \& Systems}{: Vensim, Git, Docker, Arduino, Fusion360} \\
+     \textbf{Core Competencies}{: Attention to detail, analytical problem-solving, cross-functional collaboration, manufacturing environment operations, procedure development, multi-task management}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

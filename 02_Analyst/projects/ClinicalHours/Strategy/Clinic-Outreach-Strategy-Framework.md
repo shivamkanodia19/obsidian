@@ -1,3 +1,13 @@
+---
+title: Clinic Outreach Strategy Framework
+project: clinicalhours
+status: stable
+origin_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+last_synced_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+last_updated: 2026-04-17
+tags: [clinicalhours, outreach, strategy, targeting, positioning]
+---
+
 # ClinicalHours Clinic Outreach Strategy Framework
 
 ## Strategy Overview: Problem-First Personalization

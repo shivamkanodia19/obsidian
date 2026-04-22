@@ -2,12 +2,12 @@
 title: Internship Search — Summer 2026
 description: Target company research, outreach strategy, and execution tracking
 project: internships
-last_audited: 2026-04-15
-active_projects: [wave-3-optimized-emails, wave-4-outreach-expansion, internship-outreach-by-industry-output]
+last_audited: 2026-04-21
+active_projects: [wave-3-optimized-emails, wave-4-outreach-expansion, wave-4-founder-email-research, internship-outreach-by-industry-output]
 drifted_files: []
 orphaned_dumps: []
 unreviewed_conflicts: []
-last_updated: 2026-04-15
+last_updated: 2026-04-21
 ---
 
 # Summer 2026 Internship Search
@@ -83,34 +83,41 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 ---
 
-## 📧 Wave 4 Outreach (Multi-Industry Expansion)
+## 📧 Wave 4 Outreach (Multi-Industry Expansion — 30 Companies, 25 Tier 1 Ready)
 
-**Status:** Logistics ready to send + Healthcare/Education/Government drafted (pending contact verification) + Manufacturing/Business Services in research. All companies, contacts, and emails compiled in [[/05_Outputs/INTERNSHIP-OUTREACH-BY-INDUSTRY.md]]
+**Status (2026-04-16):** ✅ READY TO EXECUTE
 
-- **[[outreach/wave-4/status]]** — WAVE 4 STATUS SUMMARY: 8 companies qualified across 6 industries; 5 logistics + 1 healthcare + 1 education + 1 government; 4 ready to send (Logistics Tier 1); 3 drafts pending contact verification; manufacturing + business services in research
-- **[[outreach/wave-4/draft-emails]]** — READY TO SEND: 5 personalized logistics emails (WSI, NXTPoint, KTX, Beitler, BSP) using vault frameworks + company research
-- **[[outreach/wave-4/sending-workflow]]** — Tier-based sending strategy: Tier 1 (≥90% confidence, send immediately); Tier 2 (60-80%, validate first); all emails backtested against real problems
-- **[[outreach/wave-4/healthcare-draft-emails]]** — 2 approaches for DFW Nursing & Rehab (compliance + combined staffing/compliance angles); pending administrator contact
-- **[[outreach/wave-4/education-draft-emails]]** — 2 approaches for Lewisville ISD (enrollment forecasting + budget optimization); pending superintendent contact
-- **[[outreach/wave-4/government-draft-emails]]** — 2 approaches for City of Dallas (project acceleration + portfolio management); pending city manager contact
-- **[[outreach/wave-4/strategy-iteration]]** — Vault integration: Applied Cold-Email-Optimization v1.1, Recipient-Psychology v1.0, Shivam-Voice-Pattern v1.0 to logistics subset
+- **30 companies qualified** across 6 industries (Logistics 5, Healthcare 6, Education 6, Government 6, Manufacturing 3, Business Services 3)
+- **25 Tier 1 companies** (≥90% confidence) — ready to send immediately
+- **5 Tier 2 companies** (60-80% confidence) — pending LinkedIn DM validation
+- **All 30 problems regression-tested** against verified sources (Glassdoor, CMS, TEA, municipal bonds, news, SEC filings)
+
+**Key Files:**
+- **[[outreach/wave-4/READY-TO-SEND-5-EMAILS.md]]** — 5 emails ready NOW: Dallas (Tolbert), Flower Mound (Childers), Lewisville ISD (Rapp), Nexion Health (Kirley), IntelliCentrics (Sheehan)
+- **[[outreach/wave-4/COMPANY-TARGETS-VERIFIED.md]]** — All 30 companies with confidence levels + verification sources
+- **[[outreach/wave-4/VERIFIED-RESEARCH-DEEP-DIVE.md]]** — Full research backing each company's problem statement
+- **[[outreach/wave-4/TIER-1-RECOMMENDED-EMAILS.md]]** — 8 detailed email templates with Week 1 deliverables
+
+- **[[outreach/wave-4/email-research-2026-04-21.md]]** - latest founder-email research: Alto/Will Coleman verified; public-source founder email bottleneck documented
 
 ## Next Actions
 
-**Wave 3 (Flower Mound Top 5):**
-1. ✅ Draft Wave 3 cold emails (completed)
-2. ✅ Research CEO/founder email addresses (completed — 8 verified, 11 fallback)
-3. ✅ Ready to send anytime
-4. ⏳ Track responses + follow-ups
+**Wave 4 (30 Companies → Execute):**
 
-**Wave 4 (Multi-Industry Expansion — 8→50-70 Companies):**
-1. ✅ Phase 1: Rapid company discovery complete (28+ companies identified across 6 industries)
-2. ✅ Phase 2: Pre-qualification filter complete (8 companies qualified; 4 ready to send; 3 drafts pending contact)
-3. ✅ Phase 3: Industry-specific research complete (Logistics verified; Healthcare/Education/Government drafted; Manufacturing/Business Services in research)
-4. ⏳ Phase 4: Email generation (Logistics ready; Healthcare/Education/Government ready; Manufacturing/Business Services pending research)
-5. ⏳ Phase 5: Contact verification + sending (Logistics send now; Healthcare/Education/Government pending contact info; Manufacturing/Business Services pending research)
-6. ⏳ Phase 6: Expand each industry (Healthcare: +4-5; Education: +4-5; Government: +4-5; Manufacturing: +2-3; Business Services: +2-3)
+1. ✅ Company research complete (30 qualified, 25 Tier 1 + 5 Tier 2)
+2. ✅ Email templates created (value-first, psychology-informed, verified metrics)
+3. ⏳ **IMMEDIATE:** Start with 5 ready-to-send emails:
+   - Dallas (Tolbert) — highest visibility
+   - Flower Mound (Childers) — government, fast decision cycle
+   - Lewisville ISD (Rapp) — education, clear problem
+   - Nexion Health (Kirley) — healthcare, compliance focus
+   - IntelliCentrics (Sheehan) — healthcare, credentialing focus
+4. ⏳ Contact verification for remaining 20 (LinkedIn searches for missing contacts)
+5. ⏳ Track responses + follow-up sequences (Day 7 LinkedIn, Day 10 phone)
+6. ⏳ Document patterns for Wave 5 expansion (50-70 companies)
 
-**Wave 4 Resources:**
-- Expansion roadmap: `[[outreach/wave-4/expansion-roadmap]]` — Full path to 50-70 companies
-- Research files: `[[research/wave-4-healthcare-expanded]]`, `[[research/wave-4-education-expanded]]`, `[[research/wave-4-government-expanded]]`, `[[research/wave-4-manufacturing-research]]`, `[[research/wave-4-business-services-research]]`
+**Resources:**
+- Master company list: `[[outreach/wave-4/COMPANY-TARGETS-VERIFIED.md]]`
+- Research backing: `[[outreach/wave-4/VERIFIED-RESEARCH-DEEP-DIVE.md]]`
+- Email templates: `[[outreach/wave-4/TIER-1-RECOMMENDED-EMAILS.md]]`
+- Task checklist: `[[outreach/wave-4/_index.md]]` — action items with timing
