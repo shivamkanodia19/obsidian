@@ -125,3 +125,10 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 - [[verified-contacts-all-20]] — Verified Contacts — All 20 Targets
 - [[wave-3-draft-emails]] — Wave 3 Cold Emails — Top 5 Targets
 - [[wave-3-optimized-emails]] — Wave 3 Optimized Emails (Internship-Focused)
+
+## New Files
+
+- 📂 [[contacts/_index|contacts/]] — contacts
+- 📂 [[outreach/_index|outreach/]] — outreach
+- 📂 [[research/_index|research/]] — research
+- 📂 [[strategy/_index|strategy/]] — strategy
