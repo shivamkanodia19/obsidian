@@ -1,27 +1,30 @@
----
-title: Research
-description: Target company research, operational issues, and verified data
-last_updated: 2026-04-15
----
+# research
 
-# Research
-
-Company targeting and verification documents.
-
-## 📄 Files
-
-- **[[verified-research]]** — Verified operational issues + CEO contact info for 20 Flower Mound targets
-- **[[wave-4-company-list]]** — Wave 4+ company discovery (50–70 targets across 6 DFW industries) — IN PROGRESS
-
----
-
-## Context
-
-All claims are sourced to ProPublica, Glassdoor, official documents, case studies, and industry reports. No hallucination.
-
-Top 5 priority targets:
-1. Cross Timbers/Nexion Health
-2. IntelliCentrics
-3. MI Windows & Doors
-4. Lewisville ISD
-5. Town of Flower Mound
+- [[flower-mound-targets]]
+- [[verified-research]]
+- [[wave-4-all-contacts-found]]
+- [[wave-4-business-services-qualified]]
+- [[wave-4-business-services-research]]
+- [[wave-4-company-list]]
+- [[wave-4-education-expanded-research]]
+- [[wave-4-education-expanded]]
+- [[wave-4-education-problems]]
+- [[wave-4-education-qualified-expanded]]
+- [[wave-4-education-qualified]]
+- [[wave-4-government-expanded-research]]
+- [[wave-4-government-expanded]]
+- [[wave-4-government-problems]]
+- [[wave-4-government-qualified-expanded]]
+- [[wave-4-government-qualified]]
+- [[wave-4-healthcare-expanded-research]]
+- [[wave-4-healthcare-expanded]]
+- [[wave-4-healthcare-problems]]
+- [[wave-4-healthcare-qualified-expanded]]
+- [[wave-4-healthcare-qualified]]
+- [[wave-4-logistics-contacts]]
+- [[wave-4-logistics-problems]]
+- [[wave-4-logistics-qualified]]
+- [[wave-4-logistics-regression-test]]
+- [[wave-4-manufacturing-problems]]
+- [[wave-4-manufacturing-qualified]]
+- [[wave-4-manufacturing-research]]

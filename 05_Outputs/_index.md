@@ -1,7 +1,7 @@
 ---
 title: Outputs Index
 description: User-requested deliverables organized by project/type
-last_updated: 2026-04-17
+last_updated: 2026-04-23
 ---
 
 # Outputs Index
@@ -21,8 +21,9 @@ Target-specific resume versions for internship applications
 Complete email outreach campaigns (drafts, optimizations, frameworks)
 - **Wave 3:** 20 companies, ready to send (Apr 22-24)
 - **Wave 4:** 30-company multi-industry expansion (25 Tier 1 ready, 5 Tier 2 pending)
+- **Wave 5-18:** Founder/direct-contact internship expansion, Homebase meeting prep, and Gmail draft batches through Texas growth-company, enterprise ops software, public-sector SaaS, industrial, fintech, deeptech, route-heavy platform, strategic workflow-platform, ops-infrastructure, healthcare workforce/access, and healthcare admin/platform targets
 - **Frameworks:** Value-first optimization, psychology principles, contact routing
-- Last updated: 2026-04-15
+- Last updated: 2026-04-23
 
 ### [[system-designs/]]
 Architecture and workflow design documentation
