@@ -29,7 +29,6 @@ Curated knowledge built from my learnings across sessions. Everything is sourced
 - Skill documentation or best practices
 
 **What links here:**
-- Analyst files link to References via `references: [[[03_References/...]]]` in frontmatter
 - Analyst files cite References in body text when explaining why they did something
 - References cite real sources (URLs, authors, tools, research)
 - Bidirectional wikilinks: Analyst ↔ References
@@ -64,3 +63,12 @@ Curated knowledge built from my learnings across sessions. Everything is sourced
 ## History
 
 [2026-04-14] References folder created as shared knowledge base. First entries from Wave 3 cold email optimization work.
+
+## New Files
+
+- 📂 [[Best-Practices/_index|Best-Practices/]] — Best Practices Index
+- 📂 [[Frameworks/_index|Frameworks/]] — Frameworks Index
+- 📂 [[Patterns/_index|Patterns/]] — Patterns Index
+- 📂 [[Tools/_index|Tools/]] — Tools Index
+- 📂 [[Voice-Style/_index|Voice-Style/]] — Voice Style Index
+- [[template-iterations]] — Template showing the standard Iterations section format for all Reference files
