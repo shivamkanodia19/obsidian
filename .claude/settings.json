@@ -19,7 +19,22 @@
       "Bash(mkdir -p \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\")",
       "Bash(mkdir -p \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\references\")",
       "Bash(PYTHONIOENCODING=utf-8 python3 /c/Users/shiva/.claude/projects/c--Users-shiva-obsidian/save-audit/save_audit.py)",
-      "Bash(xargs wc *)"
+      "Bash(xargs wc *)",
+      "WebFetch(domain:wiza.co)",
+      "WebFetch(domain:app.lead411.com)",
+      "WebFetch(domain:rapiddeploy.com)",
+      "WebFetch(domain:energyx.com)",
+      "WebFetch(domain:www4.lead411.com)",
+      "WebFetch(domain:scalelist.com)",
+      "WebFetch(domain:growjo.com)",
+      "WebFetch(domain:www.cience.com)",
+      "WebFetch(domain:www.adapt.io)",
+      "Bash(curl -s \"https://scholar.google.com/scholar?q=Langemeier+Schroeder+Mintert+1992+Determinants+Cattle+Feeding+Profitability&hl=en\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")",
+      "Bash(curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=Langemeier+Schroeder+Mintert+1992+Determinants+Cattle+Feeding+Profitability&fields=title,authors,year,venue,externalIds,publicationVenue,journal&limit=5\" -H \"Accept: application/json\")",
+      "Bash(curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=Bina+Schroeder+2022+feeder+cattle+basis+volatility&fields=title,authors,year,venue,externalIds,publicationVenue,journal&limit=5\" -H \"Accept: application/json\")",
+      "Bash(curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=Coffey+Tonsor+Schroeder+2018+cost+of+gain+volatility+basis+prediction&fields=title,authors,year,venue,externalIds,publicationVenue,journal&limit=5\" -H \"Accept: application/json\")",
+      "Bash(python3 \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\\\\save_audit.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python3 \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\\\\save_audit.py\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\shiva\\.claude",
