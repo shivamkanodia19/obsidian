@@ -34,7 +34,13 @@
       "Bash(curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=Bina+Schroeder+2022+feeder+cattle+basis+volatility&fields=title,authors,year,venue,externalIds,publicationVenue,journal&limit=5\" -H \"Accept: application/json\")",
       "Bash(curl -s \"https://api.semanticscholar.org/graph/v1/paper/search?query=Coffey+Tonsor+Schroeder+2018+cost+of+gain+volatility+basis+prediction&fields=title,authors,year,venue,externalIds,publicationVenue,journal&limit=5\" -H \"Accept: application/json\")",
       "Bash(python3 \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\\\\save_audit.py\")",
-      "Bash(PYTHONIOENCODING=utf-8 python3 \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\\\\save_audit.py\")"
+      "Bash(PYTHONIOENCODING=utf-8 python3 \"C:\\\\Users\\\\shiva\\\\.claude\\\\skills\\\\save-audit\\\\scripts\\\\save_audit.py\")",
+      "WebFetch(domain:rocketreach.co)",
+      "WebFetch(domain:www.cambridge.org)",
+      "WebFetch(domain:onlinelibrary.wiley.com)",
+      "WebFetch(domain:www.ageconomics.k-state.edu)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:academic.oup.com)"
     ],
     "additionalDirectories": [
       "C:\\Users\\shiva\\.claude",

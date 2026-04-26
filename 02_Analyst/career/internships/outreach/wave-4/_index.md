@@ -1,5 +1,11 @@
 # wave-4
 
+## 📬 Follow-ups (2026-04-25)
+
+- [[wave-4-followups-2026-04-25]] — 8 drafts ready (Bowdark, FieldPulse, Go High Level, G3 Tech, Denco); OAuth Gmail integration complete
+
+## Outreach Execution
+
 - [[COMPANY-TARGETS-VERIFIED]]
 - [[COMPLETE-INVENTORY]]
 - [[EXECUTE-NOW]]

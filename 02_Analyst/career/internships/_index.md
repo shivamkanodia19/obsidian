@@ -54,6 +54,17 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 
 **Wave 3 (Apr 22–May 5):** Top 5 Flower Mound targets + secondary targets (custom emails based on verified issues)
 
+## 🎯 OA Pipeline (Active — 2026-04-24)
+
+| Company | Role | Platform | Deadline | Status |
+|---|---|---|---|---|
+| IBM | Technology Sales Co-op | Knockri (video) | ~2026-05-01 | Do FIRST |
+| McAfee | AI Intern | CoderPad (~1hr) | ~2026-04-27 | Do second |
+
+**IBM Knockri:** Behavioral video, 5 questions, 1 min prep / 3 min answer. AI scores transcript on STAR quality + sales competency keywords. Build 4 STAR stories before opening link. Test mic/camera night before.
+
+**McAfee CoderPad:** Python/ML eval ~1 hr. Expect EDA + classifier build + theory questions. Narrate every step. scikit-learn pipeline from memory. Don't skip EDA or over-rely on AI Assist.
+
 ## 🎓 Formal Applications
 
 - Innovation WorkSpaces AI Operations (Contact: Valerie Gibson)
