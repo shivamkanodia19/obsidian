@@ -8,6 +8,7 @@ active_projects:
   - projects/ideathon26
   - projects/ClinicalHours
   - projects/keeper-clash
+  - projects/poker-app
   - projects/FEDVT
   - stocks
   - prediction-markets
@@ -56,7 +57,60 @@ Quick links added 2026-04-21: [[stocks/_index]] and [[prediction-markets/_index]
 
 ## 📋 Activity Log
 
-Last updated: **2026-04-21**
+Last updated: **2026-04-25**
+
+**Session 2026-04-25 (Wave 4 Gmail Follow-ups — OAuth Integration + 8 Drafts):**
+
+Gmail Access Setup:
+- ✅ Bypassed broken Gmail MCP (auth error: dynamic client registration unsupported)
+- ✅ Integrated direct Python API via OAuth token
+- ✅ Google Cloud credentials extracted and authenticated
+- ✅ Browser OAuth flow completed; token.json generated with refresh token
+
+Follow-up Campaign:
+- ✅ Smart filtering applied: from:me before:2026-04-20, exclude bounces, only no-reply threads
+- ✅ 9 emails found; 1 excluded (AMD — already replied)
+- ✅ **8 follow-up drafts created** and placed in Gmail threads:
+  - Bowdark (James Wood / jwood@bowdark.com) — 3 variants
+  - FieldPulse (gabriel@fieldpulse.com)
+  - Go High Level (shaun@gohighlevel.com)
+  - G3 Tech Consultants (contact@g3techconsultants.com)
+  - Denco (melinda.camp@denco.org, employment@denco.org) — 2 variants
+- ✅ Generic follow-up template provided; user to customize + send
+- ✅ All drafts in Gmail Drafts folder (not auto-sent)
+
+Analyst Files Created:
+- [[02_Analyst/career/internships/outreach/wave-4-followups-2026-04-25]] — Full strategy + drafts summary
+- Updated [[02_Analyst/career/internships/outreach/wave-4/_index]] — Added follow-ups section
+
+**Status:** 8 follow-up drafts ready for user review + send. Expected response window: 5-10 days. If no reply by May 1, queue second follow-up.
+
+---
+
+**Previous Session:** 2026-04-24
+
+**Session 2026-04-24 (IBM + McAfee OA Research + Internship Pipeline):**
+
+OA Pipeline Captured:
+- IBM Technology Sales Co-op: Knockri video assessment (7-day window from today); behavioral STAR questions; AI scores transcript on sales competencies
+- McAfee AI Intern: CoderPad ~1hr Python/ML evaluation; EDA + classifier + theory; narration is 40% of score
+- Detailed prep guidance delivered for both; priority order: McAfee by ~Apr 27, IBM by ~May 1
+- Updated [[career/internships/_index]] with OA pipeline table + prep summaries
+- Updated memory: project_internships_2026.md with full OA specs and deadlines
+
+**Session 2026-04-24 (Poker App Phase 2 PRD Synthesis + NBA Lines Research):**
+
+Poker App:
+- Synthesized [[01_Source/projects/poker-app/prd-phase-2-multiplayer]] into new Analyst folder
+- Created [[projects/poker-app/_index]] and [[projects/poker-app/phase-2-multiplayer]]
+- Phase 2 scope: real-time multiplayer (up to 6 players), persistent tables, authoritative server-side chip math, session-scoped chip tracking
+- Key architectural constraints documented: authoritative server, no global wallet, seat reconnection requires durable state
+- Next decision: real-time sync stack (Socket.io / Supabase Realtime / Liveblocks) + game state machine
+
+NBA Research:
+- Pulled live lines for Cavaliers vs. Raptors Game 3 (NBA Playoffs, April 23, 2026)
+- Cavs -3 / Raptors +3; total 219.5–221.5; Cavs -155 ML
+- Best bets flagged: Harden Over 2.5 3PM, Barrett Over 19.5 pts, Game Total Over, Mitchell Under 4.5 assists
 
 **Session 2026-04-21 (Keeper Clash Product Brainstorm):**
 
