@@ -11,7 +11,9 @@
       "PowerShell(pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client)",
       "mcp__gmail__search_threads",
       "mcp__gmail__list_drafts",
-      "Bash(python smart_followup_draft.py)"
+      "Bash(python smart_followup_draft.py)",
+      "Bash(python cleanup_and_draft_named.py)",
+      "Bash(python followup_april21.py)"
     ]
   }
 }
