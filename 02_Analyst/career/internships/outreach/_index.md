@@ -2,10 +2,11 @@
 
 - [[AI-OPS-INTERNSHIP-EMAILS]]
 - [[founder-direct-campaign-2026-04-22]]
+- [[sector-expansion-2026-04-28]] - bounce replacement cleanup plus four-sector expansion batch
 
 ## New Files
 
-- 📂 [[wave-3/_index|wave-3/]] — wave-3
-- 📂 [[wave-4/_index|wave-4/]] — wave-4
+- [[wave-3/_index|wave-3/]] - wave-3
+- [[wave-4/_index|wave-4/]] - wave-4
 
-- [[wave-4-followups-2026-04-25]] — Wave 4 Gmail Follow-ups System (2026-04-25)
+- [[wave-4-followups-2026-04-25]] - Wave 4 Gmail Follow-ups System (2026-04-25)
