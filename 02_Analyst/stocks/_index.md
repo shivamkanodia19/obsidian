@@ -6,7 +6,7 @@ status: active
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
-last_updated: 2026-04-21
+last_updated: 2026-04-29
 tags: [stocks, portfolio, investing]
 ---
 
@@ -18,8 +18,11 @@ tags: [stocks, portfolio, investing]
 - [[STOCK-ADVICE-PROTOCOL]] - mandatory Yahoo Finance first-check rule for all future stock advice
 - [[PORTFOLIO]] - portfolio management note with historical context and current event-driven strategy
 - [[PORTFOLIO-DECISIONS]] - prior decision log
+- [[PORTFOLIO-REFRESH-2026-04-29]] - live refresh using the Apr 21 holdings snapshot plus Apr 29 market data
+- [[DIP-WATCHLIST-2026-04-29]] - limit-order style dip watchlist built after the Apr 29 close
 - [[ITERATION-LOG]] - iteration history
 - [[MULTI-AGENT-CONSENSUS-SYSTEM]] - research and debate structure for future stock decisions
+- [[PREMARKET-OPEN-MEMO-2026-04-29]] - tactical premarket memo for the Apr 29, 2026 open
 
 ## Current Strategy
 
