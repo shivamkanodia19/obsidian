@@ -8,6 +8,8 @@ last_updated: 2026-04-15
 
 All research projects and analyses under `/02_Analyst/research/`.
 
+- **[[crypto/_index]]** - Crypto investigations, scam screening, and token risk analysis
+
 ## 📂 Active Research
 
 - **[[FEDVT/_index]]** — Feedlot economics & market structure (TAMU research) [[01_Source/research/fedvt]]

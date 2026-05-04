@@ -1,0 +1,143 @@
+@page {
+    size: Letter;
+    margin: 0.58in 0.62in 0.62in 0.62in;
+}
+
+:root {
+    --text: #1b1f24;
+    --muted: #4b5563;
+    --line: #c9d2dc;
+    --soft: #f4f7fa;
+    --accent: #1f4e79;
+    --accent-soft: #eaf2fb;
+}
+
+html {
+    font-size: 11.9pt;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: "Aptos", "Segoe UI", "Calibri", sans-serif;
+    line-height: 1.29;
+    background: white;
+}
+
+main.cheatsheet {
+    column-count: 2;
+    column-gap: 0.44in;
+    column-rule: 1px solid var(--line);
+}
+
+h1, h2, h3, h4, p, ul, ol, pre, table, blockquote {
+    break-inside: avoid;
+}
+
+h1 {
+    column-span: all;
+    margin: 0 0 0.18in 0;
+    padding-bottom: 0.1in;
+    font-size: 1.48rem;
+    line-height: 1.05;
+    border-bottom: 2px solid var(--accent);
+    color: #10253d;
+}
+
+h2 {
+    margin: 0.22in 0 0.11in 0;
+    padding: 0.07in 0.075in;
+    font-size: 0.98rem;
+    line-height: 1.08;
+    color: #14385a;
+    background: linear-gradient(to right, var(--accent-soft), white);
+    border-left: 3px solid var(--accent);
+}
+
+h3 {
+    margin: 0.08in 0 0.04in 0;
+    font-size: 0.88rem;
+    color: #173956;
+}
+
+p {
+    margin: 0 0 0.08in 0;
+}
+
+ul, ol {
+    margin: 0 0 0.095in 0.17in;
+    padding-left: 0.12in;
+}
+
+li {
+    margin: 0 0 0.045in 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 0.09in 0;
+}
+
+table {
+    width: 100%;
+    margin: 0.095in 0 0.12in 0;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+thead {
+    background: var(--soft);
+}
+
+th, td {
+    border: 1px solid #d9e0e7;
+    padding: 0.03in 0.04in;
+    vertical-align: top;
+    text-align: left;
+}
+
+pre, code {
+    font-family: "Consolas", "Cascadia Mono", monospace;
+}
+
+code {
+    font-size: 0.84em;
+    background: #f5f7f9;
+    padding: 0.01in 0.02in;
+    border-radius: 2px;
+}
+
+pre {
+    margin: 0.07in 0 0.095in 0;
+    padding: 0.08in 0.085in;
+    font-size: 0.82rem;
+    line-height: 1.18;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: #f8fafc;
+    border: 1px solid #dfe6ee;
+    border-radius: 4px;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+}
+
+blockquote {
+    margin: 0.05in 0 0.07in 0;
+    padding: 0.04in 0.07in;
+    color: var(--muted);
+    background: #fafbfd;
+    border-left: 3px solid #c5d3e2;
+}
+
+strong {
+    color: #132f4c;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

@@ -6,7 +6,7 @@ status: active
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
-last_updated: 2026-04-29
+last_updated: 2026-05-03
 tags: [prediction-markets, nba, betting, research]
 ---
 
@@ -21,8 +21,10 @@ tags: [prediction-markets, nba, betting, research]
 - [[NBA-2026-04-21]] - Apr 21 NBA slate, agent debate, fair-price thresholds, and pass list
 - [[NBA-2026-04-23]] - Apr 23 NBA slate and best same-day contract pricing
 - [[NBA-2026-04-28]] - Apr 28 NBA slate, multi-agent bet calibration, and consensus thresholds
+- [[NBA-2026-04-30]] - Apr 30 live Timberwolves-Nuggets closeout read driven by possession edges
+- [[NBA-2026-05-02]] - May 2 live Sixers-Celtics memo after Tatum's absence reshaped the comeback path
+- [[NBA-2026-05-03]] - May 3 Magic-Pistons Game 7 memo with Cade PRA and under leans
 
 ## Operating Rule
 
 Use market price, sportsbook consensus, injury/news context, statistical forecasts, liquidity, settlement terms, and a skeptic pass before buying a contract. Do not buy only because the outcome is likely; buy only when estimated probability beats the market price after risk and fees.
-

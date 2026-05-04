@@ -3,8 +3,8 @@ title: Conventional vs. Robotic Dairy Farms
 project: dairy-farms-research
 strategic: false
 status: stable
-origin_dump: [[01_Source/research/dairy farms]]
-last_synced_dump: [[01_Source/research/dairy farms]]
+origin_dump: null
+last_synced_dump: null
 references: []
 conflict_detected: false
 last_updated: 2026-04-15
@@ -14,7 +14,7 @@ tags: [dairy, farming, robotic, conventional, resource-usage, economics, water, 
 # Conventional vs. Robotic Dairy Farms: A Comparative Analysis
 
 **Date:** April 15, 2026  
-**Source:** Aggie Collab System Dynamics & WEF Nexus Research + Texas Dairy Farm Research (Aarav Pulsani, Week 2) via [[01_Source/research/dairy farms]]
+**Source:** Aggie Collab System Dynamics and WEF Nexus research plus Texas Dairy Farm Research (Aarav Pulsani, Week 2) from the `01_Source/research/dairy farms/` source folder.
 
 ---
 

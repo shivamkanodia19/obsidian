@@ -2,8 +2,8 @@
 title: Scenario Stress Analysis
 project: dairy-farms
 status: stable
-origin_dump: "[[05_Outputs/dairy-scenario-stress-analysis.md]]"
-last_synced_dump: "[[05_Outputs/dairy-scenario-stress-analysis.md]]"
+origin_dump: "[[05_Outputs/research-analysis/dairy-scenario-stress-analysis.md]]"
+last_synced_dump: "[[05_Outputs/research-analysis/dairy-scenario-stress-analysis.md]]"
 last_updated: 2026-04-16
 tags: [scenario-analysis, stress-test, water, energy, feed, resilience]
 ---

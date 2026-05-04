@@ -3,8 +3,8 @@ title: Flower Mound AI Ops Research — Verified Issues & CEO Emails
 project: internships
 strategic: false
 status: stable
-origin_dump: "[[01_Source/Research/2026-04-14_verified-issues]]"
-last_synced_dump: "[[01_Source/Research/2026-04-14_verified-issues]]"
+origin_dump: null
+last_synced_dump: null
 last_updated: 2026-04-14
 writing_style_applied: true
 source_links_verified: true
