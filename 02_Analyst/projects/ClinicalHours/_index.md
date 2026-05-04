@@ -1,53 +1,50 @@
 ---
 title: ClinicalHours
 description: Clinical hours marketplace and automation platform
-last_updated: 2026-04-14
+last_updated: 2026-05-03
 project: clinicalhours
 ---
 
 # ClinicalHours
 
-Clinical hours marketplace connecting students with free clinics for volunteer service + TikTok + email automation agents.
+Clinical hours marketplace connecting students with free clinics for volunteer service plus email and workflow automation.
 
-## 📂 Subfolders
+## Subfolders
 
-- **Strategy/** — Pricing, market analysis, positioning, niche refinement, competitive landscape
-- **Operations/** — Clinic outreach, customer workflows
-- **Sales/** — Go-to-market, partnerships
-- **Market/** — TAM analysis, competitive positioning
-- **Outreach/** — DFW clinic research, personas, targeting strategy
+- **Strategy/** - Pricing, market analysis, positioning, niche refinement, competitive landscape
+- **Market/** - TAM analysis and competitive positioning
+- **Outreach/** - DFW clinic research, personas, and targeting strategy
 
-## 📄 Strategy Files
+## Strategy Files
 
-- **[[Strategy/niche-refinement]]** — Small clinic positioning (15–100 volunteers), competitive landscape (Volgistics, VSYS), strategic questions for product-clinic fit refinement
-- **[[Market/DFW-Clinic-Market-Analysis-2026-04]]** — TAM ($1.2–2.4M), pricing ($1,200/yr), target profile
+- **[[Strategy/niche-refinement]]** - Small-clinic positioning (15-100 volunteers), competitive landscape, and product-fit questions
+- **[[Market/DFW-Clinic-Market-Analysis-2026-04]]** - TAM, pricing, and target profile
 
-## 🎯 Current Focus
+## Current Focus
 
-- Clinic outreach agent (email automation via Claude API)
-- TikTok carousel content agent (v4 built; next = rejection learning)
-- Market positioning ($1.2–2.4M TAM; $1,200/year pricing; target free clinics 15–100 volunteers)
+- Clinic outreach agent
+- TikTok carousel content agent
+- Market positioning for free clinics with 15-100 volunteers
 
 ## Current Status (As of 2026-04-17)
 
-- Clinic outreach strategy → stable, ready for Wave 1 execution
-- Market analysis → DFW TAM $1.2–2.4M, 15+ target clinics identified
-- Competitive landscape → mapped vs. Volgistics, VSys, DIY alternatives
-- Email/positioning framework → problem-first strategy documented + refined
+- Clinic outreach strategy is stable and ready for Wave 1 execution
+- Market analysis established the DFW TAM and target-clinic list
+- Competitive landscape is mapped against Volgistics, VSys, and DIY alternatives
+- Email and positioning framework is documented and refined
 
 ## Next Actions
 
 - [ ] Execute Wave 1 clinic outreach (Mercy, Julia's, Community Health, EPIC)
 - [ ] Track email responses and qualification metrics
-- [ ] Implement B2B sales workflow (calls → demos → pilots)
-- [ ] Develop hospital/larger clinic tier (expansion beyond free clinics)
+- [ ] Implement B2B sales workflow (calls -> demos -> pilots)
+- [ ] Develop a hospital and larger-clinic tier
 
 ## New Files
 
-- 📂 [[Market/_index|Market/]] — Market
-- 📂 [[Operations/_index|Operations/]] — Operations
-- 📂 [[Outreach/_index|Outreach/]] — Outreach
-- 📂 [[Sales/_index|Sales/]] — Sales
-- 📂 [[Strategy/_index|Strategy/]] — Strategy
-- [[clinicalhours_email_outreach_strategy]] — ClinicalHours Email Outreach Strategy
-- [[Market-Research-Data-2026-04]] — Clinical Hours Market Data — Clinic Inventory (Apr 2026)
+- [[pear-founder-application-2026-05-01]] - Pear founder application framing built around ClinicalHours pivots
+- [[Market/_index|Market/]] - Market
+- [[Outreach/_index|Outreach/]] - Outreach
+- [[Strategy/_index|Strategy/]] - Strategy
+- [[clinicalhours_email_outreach_strategy]] - ClinicalHours email outreach strategy
+- [[Market-Research-Data-2026-04]] - Clinical Hours market data and clinic inventory

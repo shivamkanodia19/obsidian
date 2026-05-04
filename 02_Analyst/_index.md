@@ -1,8 +1,8 @@
 ---
 title: Analyst Index — Living Knowledge Base
 description: Your persona, decisions, outputs, progress tracking. Built from Source files.
-last_audited: 2026-04-21
-last_updated: 2026-04-21
+last_audited: 2026-05-04
+last_updated: 2026-05-04
 active_projects:
   - career/internships/outreach/wave-4
   - projects/ideathon26
@@ -57,7 +57,19 @@ Quick links added 2026-04-21: [[stocks/_index]] and [[prediction-markets/_index]
 
 ## 📋 Activity Log
 
-Last updated: **2026-04-25**
+Last updated: **2026-05-04**
+
+**Session 2026-05-04 (Vault Save Sweep):**
+
+Vault Save:
+- Confirmed recent Analyst backfills were already in place across academics, internships, prediction markets, poker-app, ClinicalHours, and crypto research
+- Added [[academics/final-exam-study-assets-2026-05-04]] so root-level final exam guides and source packets have durable Analyst coverage
+- Cleaned stale ClinicalHours links to deleted `Operations/_index` and `Sales/_index` pages
+- Logged this pass in [[codex-chat-save-audit-2026-05-04]]
+
+**Status:** Vault sweep complete; active Analyst and References folders are indexed, and today's root study assets now have a durable save breadcrumb.
+
+---
 
 **Session 2026-04-25 (Wave 4 Gmail Follow-ups — OAuth Integration + 8 Drafts):**
 
@@ -375,3 +387,4 @@ Analyst Files Created/Updated:
 - [[kalshi_validation_log]] — Kalshi Austin High Temp Validation Log
 
 - [[codex-chat-save-audit-2026-04-29]] — Audit of meaningful Codex chats after the 2026-04-23 audit pass
+- [[codex-chat-save-audit-2026-05-04]] — Full-vault save sweep covering study-asset backfills and structural cleanup

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spring 2026 Final Cheat Sheet - Condensed</title>
+  <link rel="stylesheet" href="cheatsheet-print.css">
+</head>
+<body>
+  <main class="cheatsheet">
+<h1 id="spring-2026-final-cheat-sheet---condensed">Spring 2026 Final
+Cheat Sheet - Condensed</h1>
+<p>Built from: - <code>Final Exam Sample.pdf</code> -
+<code>Final Exam Review - Spring 2026 (2).pdf</code></p>
+<p>Use this version for printing. It is organized by problem type.</p>
+<hr />
+<h2 id="static-vs.-dynamic-binding">1. Static vs. Dynamic Binding</h2>
+<h3 id="main-rule">Main rule</h3>
+<ul>
+<li><code>virtual</code>: actual object type decides</li>
+<li>not <code>virtual</code>: declared pointer/reference/object type
+decides</li>
+</ul>
+<h3 id="default-arguments-virtual">Default arguments + virtual</h3>
+<p>Default arguments use the static type. The function body uses the
+dynamic type.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">virtual</span> <span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">)</span> <span class="op">{</span> cout <span class="op">&lt;&lt;</span> <span class="st">&quot;A&quot;</span> <span class="op">&lt;&lt;</span> x<span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> B <span class="op">:</span> <span class="kw">public</span> A <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span> x <span class="op">=</span> <span class="dv">20</span><span class="op">)</span> <span class="kw">override</span> <span class="op">{</span> cout <span class="op">&lt;&lt;</span> <span class="st">&quot;B&quot;</span> <span class="op">&lt;&lt;</span> x<span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>A<span class="op">*</span> p <span class="op">=</span> <span class="kw">new</span> B<span class="op">();</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>p<span class="op">-&gt;</span>f<span class="op">();</span>   <span class="co">// B10</span></span></code></pre></div>
+<h3 id="key-patterns">Key patterns</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Base<span class="op">*</span> p <span class="op">=</span> <span class="kw">new</span> Derived<span class="op">();</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Base<span class="op">&amp;</span> r <span class="op">=</span> <span class="op">*</span>p<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Base x <span class="op">=</span> <span class="op">*</span>p<span class="op">;</span></span></code></pre></div>
+<ul>
+<li><code>p-&gt;f()</code> with <code>virtual</code> -&gt;
+<code>Derived::f</code></li>
+<li><code>r.f()</code> with <code>virtual</code> -&gt;
+<code>Derived::f</code></li>
+<li><code>x.f()</code> -&gt; <code>Base::f</code> because slicing
+happened</li>
+</ul>
+<p>If <code>f</code> is not virtual: - <code>p-&gt;f()</code> -&gt;
+<code>Base::f</code> - <code>r.f()</code> -&gt; <code>Base::f</code> -
+<code>x.f()</code> -&gt; <code>Base::f</code></p>
+<h3 id="scope-resolution">Scope resolution</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span>Base<span class="op">::</span>f<span class="op">();</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>p<span class="op">-&gt;</span>Base<span class="op">::</span>f<span class="op">();</span></span></code></pre></div>
+<ul>
+<li>forces the base version</li>
+<li>bypasses virtual dispatch</li>
+</ul>
+<h3 id="slicing-trigger">Slicing trigger</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Base b <span class="op">=</span> derivedObj<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Base b2 <span class="op">=</span> <span class="op">*</span>ptrToDerived<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>derived part is cut off</li>
+<li><code>b</code> is now just a <code>Base</code></li>
+</ul>
+<h3 id="value-vs.-reference-parameters">Value vs. reference
+parameters</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span>Base b<span class="op">);</span>   <span class="co">// slicing</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> g<span class="op">(</span>Base<span class="op">&amp;</span> b<span class="op">);</span>  <span class="co">// polymorphism</span></span></code></pre></div>
+<hr />
+<h2 id="inheritance-and-access">2. Inheritance and Access</h2>
+<h3 id="direct-access-rules">Direct access rules</h3>
+<p>Inside child member function:</p>
+<table>
+<thead>
+<tr>
+<th>Base member</th>
+<th>Child can access?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>From <code>main</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th><code>main</code> can access?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inheritance-mode">Inheritance mode</h3>
+<table>
+<thead>
+<tr>
+<th>Inheritance</th>
+<th>Base <code>public</code> becomes</th>
+<th>Base <code>protected</code> becomes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>public</td>
+<td>protected</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>protected</td>
+<td>protected</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>private</td>
+<td>private</td>
+</tr>
+</tbody>
+</table>
+<p>Base <code>private</code> never becomes directly visible in the
+child.</p>
+<h3 id="common-exam-traps">Common exam traps</h3>
+<ul>
+<li>child can use base <code>protected</code></li>
+<li><code>main</code> cannot use <code>protected</code></li>
+<li>with <code>protected</code> inheritance, even base
+<code>public</code> members stop being public to <code>main</code></li>
+</ul>
+<hr />
+<h2 id="constructors-abstract-classes-and-destructors">3. Constructors,
+Abstract Classes, and Destructors</h2>
+<h3 id="construction-destruction-order">Construction / destruction
+order</h3>
+<ul>
+<li>construction: Base -&gt; Derived</li>
+<li>destruction: Derived -&gt; Base</li>
+</ul>
+<p>If the derived constructor does not explicitly call base, base
+default constructor is used.</p>
+<h3 id="virtual-calls-in-constructors-destructors">Virtual calls in
+constructors / destructors</h3>
+<p>Virtual dispatch does not reach the most-derived override inside
+constructors or destructors.</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    A<span class="op">()</span> <span class="op">{</span> f<span class="op">();</span> <span class="op">}</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">virtual</span> <span class="dt">void</span> f<span class="op">()</span> <span class="op">{</span> cout <span class="op">&lt;&lt;</span> <span class="st">&quot;A&quot;</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> B <span class="op">:</span> <span class="kw">public</span> A <span class="op">{</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> f<span class="op">()</span> <span class="kw">override</span> <span class="op">{</span> cout <span class="op">&lt;&lt;</span> <span class="st">&quot;B&quot;</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>B b<span class="op">;</span>   <span class="co">// prints A</span></span></code></pre></div>
+<h3 id="abstract-class">Abstract class</h3>
+<p>Pure virtual function:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">virtual</span> <span class="dt">void</span> print<span class="op">()</span> <span class="at">const</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span></code></pre></div>
+<p>Then: - base class is abstract - cannot create base objects - can use
+base pointers/references - derived must implement pure virtual functions
+or it stays abstract</p>
+<h3 id="override-rules">Override rules</h3>
+<ul>
+<li>pure virtual: derived must implement to become concrete</li>
+<li>regular virtual: derived may override, but does not have to</li>
+</ul>
+<h3 id="deleting-through-base-pointer">Deleting through base
+pointer</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Base<span class="op">*</span> p <span class="op">=</span> <span class="kw">new</span> Derived<span class="op">();</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">delete</span> p<span class="op">;</span></span></code></pre></div>
+<p>Safe only if base destructor is virtual.</p>
+<p>If base destructor is not virtual: - only base destructor runs -
+derived cleanup skipped - derived memory may leak</p>
+<hr />
+<h2 id="pointers-stack-vs.-heap-and-parameter-passing">4. Pointers,
+Stack vs. Heap, and Parameter Passing</h2>
+<h3 id="stack-vs.-heap">Stack vs. heap</h3>
+<table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>Where?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>local variable</td>
+<td>stack</td>
+</tr>
+<tr>
+<td>local pointer variable</td>
+<td>stack</td>
+</tr>
+<tr>
+<td>local object</td>
+<td>stack</td>
+</tr>
+<tr>
+<td>object created by <code>new</code></td>
+<td>heap</td>
+</tr>
+<tr>
+<td>member of stack object</td>
+<td>stored inside that stack object</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span><span class="op">*</span> p <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">{</span><span class="dv">7</span><span class="op">};</span></span></code></pre></div>
+<ul>
+<li><code>p</code> is on stack</li>
+<li><code>*p</code> is on heap</li>
+</ul>
+<h3 id="parameter-passing">Parameter passing</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span> x<span class="op">)</span>     <span class="co">// copy</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">&amp;</span> x<span class="op">)</span>    <span class="co">// alias</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">*</span> p<span class="op">)</span>    <span class="co">// copied address</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">*&amp;</span> p<span class="op">)</span>   <span class="co">// alias to pointer</span></span></code></pre></div>
+<h3 id="huge-exam-trap">Huge exam trap</h3>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">*</span> p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">{</span><span class="dv">9</span><span class="op">};</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>This does not change the caller’s pointer.</p>
+<p>But:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">*</span> p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>p <span class="op">=</span> <span class="dv">9</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>does change the caller’s pointee.</p>
+<h3 id="vectors">Vectors</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;&amp;</span> a<span class="op">,</span> vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> b<span class="op">)</span></span></code></pre></div>
+<ul>
+<li>changes to <code>a</code> affect caller</li>
+<li>changes to <code>b</code> do not</li>
+</ul>
+<hr />
+<h2 id="memory-leaks-and-rule-of-3">5. Memory Leaks and Rule of 3</h2>
+<h3 id="leak-checklist">Leak checklist</h3>
+<p>For each <code>new</code> ask: - is there a matching
+<code>delete</code>? - is there a matching <code>delete[]</code> for
+<code>new[]</code>? - did the address get lost? - was the heap object
+itself never deleted?</p>
+<h3 id="common-leak-patterns">Common leak patterns</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span><span class="op">*</span> p <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">{</span><span class="dv">5</span><span class="op">};</span>   <span class="co">// leak if never deleted</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">*</span> p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">4</span><span class="op">];</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>local reassignment does not update caller</li>
+<li>new array leaks unless deleted inside <code>f</code></li>
+</ul>
+<h3 id="rule-of-3">Rule of 3</h3>
+<p>If a class owns dynamic memory, it usually needs: - destructor - copy
+constructor - copy assignment operator</p>
+<p>If one is missing, default shallow copying can cause: - shared
+pointers by accident - double delete - memory leaks - unexpected
+output</p>
+<h3 id="copy-constructor-vs-assignment">Copy constructor vs
+assignment</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Box a <span class="op">=</span> b<span class="op">;</span>   <span class="co">// copy constructor</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b<span class="op">;</span>       <span class="co">// copy assignment</span></span></code></pre></div>
+<p>These are not the same.</p>
+<hr />
+<h2 id="overloading-overriding-and-templates">6. Overloading,
+Overriding, and Templates</h2>
+<h3 id="overloading">Overloading</h3>
+<p>Compiler chooses based on argument types.</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> func<span class="op">(</span><span class="dt">double</span><span class="op">);</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> func<span class="op">(</span><span class="dt">int</span><span class="op">);</span></span></code></pre></div>
+<p>For nested calls, trace inside-out.</p>
+<h3 id="overriding">Overriding</h3>
+<p>Derived version replaces virtual base version during dynamic
+dispatch.</p>
+<h3 id="exact-signature-rule">Exact signature rule</h3>
+<p>To override, the signature must match exactly.</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> A <span class="op">{</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">virtual</span> <span class="dt">void</span> f<span class="op">(</span><span class="dt">int</span><span class="op">);</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> B <span class="op">:</span> <span class="kw">public</span> A <span class="op">{</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> f<span class="op">(</span><span class="dt">double</span><span class="op">);</span>  <span class="co">// NOT override</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code></pre></div>
+<h3 id="function-hiding">Function hiding</h3>
+<p>A derived function with the same name but different parameters hides
+base versions.</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>B b<span class="op">;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b<span class="op">.</span>f<span class="op">(</span><span class="dv">5</span><span class="op">);</span>   <span class="co">// calls B::f(double); A::f is hidden</span></span></code></pre></div>
+<p>Use <code>A::f(...)</code> or <code>using A::f;</code> to expose the
+base version.</p>
+<h3 id="override-keyword"><code>override</code> keyword</h3>
+<ul>
+<li>optional</li>
+<li>does not change runtime behavior</li>
+<li>catches signature mismatches at compile time</li>
+</ul>
+<h3 id="template-substitution">Template substitution</h3>
+<p>Substitute the actual type first.</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">template</span> <span class="op">&lt;</span><span class="kw">typename</span> T<span class="op">&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> func<span class="op">(</span>T x<span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> x <span class="op">/</span> <span class="dv">2</span><span class="op">;</span> <span class="op">}</span></span></code></pre></div>
+<ul>
+<li><code>func(3)</code> -&gt; <code>T = int</code> -&gt; integer
+division -&gt; <code>1</code></li>
+<li><code>func(3.0)</code> -&gt; <code>T = double</code> -&gt;
+<code>1.5</code></li>
+</ul>
+<h3 id="operator-overloading">Operator overloading</h3>
+<p>Treat overloaded operators like regular functions.</p>
+<p>Ask: - what values are actually used? - what new object is returned?
+- what does <code>operator&lt;&lt;</code> print exactly?</p>
+<hr />
+<h2 id="stringstream-exceptions-and-overflow">7.
+<code>stringstream</code>, Exceptions, and Overflow</h2>
+<h3 id="stringstream-int"><code>stringstream &gt;&gt; int</code></h3>
+<p>Stops at first invalid integer token.</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>stringstream ss<span class="op">(</span><span class="st">&quot;11 * 12 + 13&quot;</span><span class="op">);</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>ss <span class="op">&gt;&gt;</span> x<span class="op">)</span> <span class="op">{</span> <span class="op">...</span> <span class="op">}</span></span></code></pre></div>
+<ul>
+<li>reads <code>11</code></li>
+<li>fails at <code>*</code></li>
+<li>loop ends</li>
+</ul>
+<h3 id="exceptions">Exceptions</h3>
+<p>Once <code>throw</code> happens: - current function ends immediately
+- later statements in that function do not run</p>
+<h3 id="overflow-trap">Overflow trap</h3>
+<p>This can overflow in the check itself:</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> INT_MAX <span class="op">-</span> y<span class="op">)</span></span></code></pre></div>
+<p>Safer signed-addition check:</p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">((</span>y <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> x <span class="op">&gt;</span> INT_MAX <span class="op">-</span> y<span class="op">)</span> <span class="op">||</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">(</span>y <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">&amp;&amp;</span> x <span class="op">&lt;</span> INT_MIN <span class="op">-</span> y<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">throw</span> <span class="op">...;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<hr />
+<h2 id="recursion">8. Recursion</h2>
+<h3 id="method">Method</h3>
+<ol type="1">
+<li>Find base case.</li>
+<li>Find recursive step.</li>
+<li>Write every call until base case.</li>
+<li>Return upward.</li>
+</ol>
+<h3 id="examples">Examples</h3>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> mystery<span class="op">(</span><span class="dt">int</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">8</span><span class="op">)</span> <span class="cf">return</span> x<span class="op">;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mystery<span class="op">(</span>x <span class="op">*</span> <span class="dv">2</span><span class="op">);</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Trace: - <code>1 -&gt; 2 -&gt; 4 -&gt; 8 -&gt; 16</code> - returns
+<code>16</code></p>
+<p>Collatz-style:</p>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> foo<span class="op">(</span>n<span class="op">/</span><span class="dv">2</span><span class="op">);</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">1</span><span class="op">)</span> <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> foo<span class="op">(</span><span class="dv">3</span><span class="op">*</span>n <span class="op">+</span> <span class="dv">1</span><span class="op">);</span></span></code></pre></div>
+<p>Write every <code>n</code> value. Do not skip steps.</p>
+<hr />
+<h2 id="linked-list-patterns">9. Linked List Patterns</h2>
+<h3 id="traversal">Traversal</h3>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> curr <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>curr <span class="op">!=</span> <span class="kw">nullptr</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    curr <span class="op">=</span> curr<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="average">Average</h3>
+<p>Plan: - if empty, throw - traverse once - track sum and count -
+return <code>sum / count</code></p>
+<h3 id="remove-all-maximums">Remove all maximums</h3>
+<p>Plan: 1. if empty, return 2. first pass: find max 3. remove matching
+nodes at head 4. remove matching nodes in rest using <code>prev</code>
+and <code>curr</code></p>
+<h3 id="reverse">Reverse</h3>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> prev <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> curr <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>curr <span class="op">!=</span> <span class="kw">nullptr</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    Node<span class="op">*</span> next <span class="op">=</span> curr<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    curr<span class="op">-&gt;</span>next <span class="op">=</span> prev<span class="op">;</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> curr<span class="op">;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    curr <span class="op">=</span> next<span class="op">;</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>head <span class="op">=</span> prev<span class="op">;</span></span></code></pre></div>
+<h3 id="middle-of-list">Middle of list</h3>
+<p>Use slow/fast pointers:</p>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> slow <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> fast <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>fast <span class="op">!=</span> <span class="kw">nullptr</span> <span class="op">&amp;&amp;</span> fast<span class="op">-&gt;</span>next <span class="op">!=</span> <span class="kw">nullptr</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    slow <span class="op">=</span> slow<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    fast <span class="op">=</span> fast<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> slow<span class="op">;</span></span></code></pre></div>
+<p>Empty list -&gt; <code>nullptr</code></p>
+<h3 id="detect-cycle">Detect cycle</h3>
+<p>Floyd:</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> slow <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> fast <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>fast <span class="op">!=</span> <span class="kw">nullptr</span> <span class="op">&amp;&amp;</span> fast<span class="op">-&gt;</span>next <span class="op">!=</span> <span class="kw">nullptr</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    slow <span class="op">=</span> slow<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    fast <span class="op">=</span> fast<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>slow <span class="op">==</span> fast<span class="op">)</span> <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span></code></pre></div>
+<h3 id="swap-evens-between-two-lists">Swap evens between two lists</h3>
+<p>Safest exam method: - find next even node in list 1 - find next even
+node in list 2 - swap their values - continue until either list runs out
+of even nodes</p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> a <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Node<span class="op">*</span> b <span class="op">=</span> other<span class="op">.</span>head<span class="op">;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>a <span class="op">!=</span> <span class="kw">nullptr</span> <span class="op">&amp;&amp;</span> a<span class="op">-&gt;</span>value <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">)</span> a <span class="op">=</span> a<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>b <span class="op">!=</span> <span class="kw">nullptr</span> <span class="op">&amp;&amp;</span> b<span class="op">-&gt;</span>value <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">)</span> b <span class="op">=</span> b<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>a <span class="op">==</span> <span class="kw">nullptr</span> <span class="op">||</span> b <span class="op">==</span> <span class="kw">nullptr</span><span class="op">)</span> <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> temp <span class="op">=</span> a<span class="op">-&gt;</span>value<span class="op">;</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    a<span class="op">-&gt;</span>value <span class="op">=</span> b<span class="op">-&gt;</span>value<span class="op">;</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    b<span class="op">-&gt;</span>value <span class="op">=</span> temp<span class="op">;</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> a<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> b<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Why this is good: - no allocation - no pointer surgery - no
+head-update bugs</p>
+<hr />
+<h2 id="struct-2-d-vector-processing">10. Struct / 2-D Vector
+Processing</h2>
+<p>Problem shape from sample exam:</p>
+<ul>
+<li>input: <code>vector&lt;bounds&gt;</code></li>
+<li>output: <code>vector&lt;vector&lt;int&gt;&gt;</code></li>
+<li>skip invalid bounds where <code>min &gt; max</code></li>
+<li>build inclusive rows from <code>min</code> to <code>max</code></li>
+<li>trim all rows to shortest valid row length</li>
+</ul>
+<h3 id="plan">Plan</h3>
+<ol type="1">
+<li>create output vector</li>
+<li>track shortest valid row</li>
+<li>build each valid row</li>
+<li>trim all rows to shortest length</li>
+</ol>
+<p>Skeleton:</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>vector<span class="op">&lt;</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;&gt;</span> out<span class="op">;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> have_row <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> shortest <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> input<span class="op">.</span>size<span class="op">();</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>input<span class="op">[</span>i<span class="op">].</span>min <span class="op">&gt;</span> input<span class="op">[</span>i<span class="op">].</span>max<span class="op">)</span> <span class="cf">continue</span><span class="op">;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> row<span class="op">;</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> x <span class="op">=</span> input<span class="op">[</span>i<span class="op">].</span>min<span class="op">;</span> x <span class="op">&lt;=</span> input<span class="op">[</span>i<span class="op">].</span>max<span class="op">;</span> x<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>        row<span class="op">.</span>push_back<span class="op">(</span>x<span class="op">);</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>have_row <span class="op">||</span> row<span class="op">.</span>size<span class="op">()</span> <span class="op">&lt;</span> shortest<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>        shortest <span class="op">=</span> row<span class="op">.</span>size<span class="op">();</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>        have_row <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    out<span class="op">.</span>push_back<span class="op">(</span>row<span class="op">);</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> out<span class="op">.</span>size<span class="op">();</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>out<span class="op">[</span>i<span class="op">].</span>size<span class="op">()</span> <span class="op">&gt;</span> shortest<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>        out<span class="op">[</span>i<span class="op">].</span>pop_back<span class="op">();</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>If all bounds invalid, return empty vector.</p>
+<hr />
+  </main>
+</body>
+</html>

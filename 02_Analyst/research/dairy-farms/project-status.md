@@ -2,8 +2,8 @@
 title: Dairy Farms Project Status
 project: dairy-farms
 status: active
-origin_dump: "[[01_Source/research/dairy-farms/]]"
-last_synced_dump: "[[01_Source/research/dairy-farms/]]"
+origin_dump: null
+last_synced_dump: null
 last_updated: 2026-04-16
 tags: [dairy, wef-nexus, system-dynamics, vensim, sustainability]
 ---

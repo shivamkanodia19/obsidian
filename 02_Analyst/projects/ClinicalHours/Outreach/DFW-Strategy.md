@@ -3,8 +3,8 @@ title: DFW Clinic Outreach Strategy
 project: clinicalhours
 strategic: true
 status: in-progress
-origin_dump: "[[01_Source/ClinicalHours/]]"
-last_synced_dump: "[[01_Source/ClinicalHours/]]"
+origin_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+last_synced_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
 last_updated: 2026-04-15
 description: Detailed outreach plan for Dallas-Fort Worth tier 1 free clinics targeting Mercy Clinic Friends, Julia's Center, Community Health, EPIC Medical
 ---
