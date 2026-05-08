@@ -1,8 +1,8 @@
 ---
 title: Analyst Index — Living Knowledge Base
 description: Your persona, decisions, outputs, progress tracking. Built from Source files.
-last_audited: 2026-05-04
-last_updated: 2026-05-04
+last_audited: 2026-05-06
+last_updated: 2026-05-06
 active_projects:
   - career/internships/outreach/wave-4
   - projects/ideathon26
@@ -57,7 +57,20 @@ Quick links added 2026-04-21: [[stocks/_index]] and [[prediction-markets/_index]
 
 ## 📋 Activity Log
 
-Last updated: **2026-05-04**
+Last updated: **2026-05-06**
+
+**Session 2026-05-06 (Save Audit + Root Cleanup):**
+
+Vault Save:
+- Audited meaningful Codex sessions from 2026-05-06 and logged the pass in [[codex-chat-save-audit-2026-05-06]]
+- Preserved the new internship research note in [[career/internships/research/ai-ops-internship-outreach-research-2026-05-04]]
+
+Structural Cleanup:
+- Consolidated the duplicate `flower-mound-ai-ops-targets` file by keeping [[career/internships/research/flower-mound-targets]] as the canonical version
+
+**Status:** Root clutter reduced substantially, reusable prompt assets now have a durable home, and the 2026-05-06 Codex work has explicit save coverage.
+
+---
 
 **Session 2026-05-04 (Vault Save Sweep):**
 
@@ -388,3 +401,5 @@ Analyst Files Created/Updated:
 
 - [[codex-chat-save-audit-2026-04-29]] — Audit of meaningful Codex chats after the 2026-04-23 audit pass
 - [[codex-chat-save-audit-2026-05-04]] — Full-vault save sweep covering study-asset backfills and structural cleanup
+
+- [[codex-chat-save-audit-2026-05-03]] — Codex Chat Save Audit - 2026-05-03

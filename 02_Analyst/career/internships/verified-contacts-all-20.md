@@ -3,8 +3,8 @@ title: Verified Contacts — All 20 Targets
 project: internships
 strategic: false
 status: stable
-origin_dump: "[[02_Analyst/career/internships/flower-mound-ai-ops-targets]]"
-last_synced_dump: "[[02_Analyst/career/internships/flower-mound-ai-ops-targets]]"
+origin_dump: "[[02_Analyst/career/internships/research/flower-mound-targets]]"
+last_synced_dump: "[[02_Analyst/career/internships/research/flower-mound-targets]]"
 conflict_detected: false
 last_updated: 2026-04-14
 tags: [internship, contacts, verified-emails, all-targets]

@@ -131,7 +131,7 @@ Comprehensive research and outreach for AI Operations internship roles in DFW ar
 ## New Files
 
 - [[email-optimization-strategy]] — Cold Email Optimization Strategy
-- [[flower-mound-ai-ops-targets]] — Flower Mound AI Ops Target Companies
+- [[research/flower-mound-targets]] — Flower Mound AI Ops Target Companies
 - [[flower-mound-verified-research]] — Flower Mound AI Ops Research — Verified Issues & CEO Emails
 - [[verified-contacts-all-20]] — Verified Contacts — All 20 Targets
 - [[wave-3-draft-emails]] — Wave 3 Cold Emails — Top 5 Targets

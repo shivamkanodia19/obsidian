@@ -1,7 +1,7 @@
 ---
 title: Outputs Index
 description: User-requested deliverables organized by project/type
-last_updated: 2026-04-23
+last_updated: 2026-05-06
 ---
 
 # Outputs Index
@@ -11,6 +11,11 @@ Organized deliverables only. Files in this folder are user-requested and ready f
 ---
 
 ## 📂 Organized by Type
+
+### [[academics/]]
+Study outputs, printable review packets, and exam-prep deliverables
+- Final-exam cheat sheets, FRQ guides, and source packets from the 2026-05-04 study sprint
+- Last updated: 2026-05-06
 
 ### [[resumes/]]
 Target-specific resume versions for internship applications
@@ -40,6 +45,7 @@ Completed research writeups
 ### [[automation-code/]]
 Python scripts for automation workflows
 - LinkedIn outreach agent + safe connect scripts
+- Kalshi backtest script + weather dataset bundle
 - Gmail OAuth extraction script
 - Last updated: 2026-04-15
 

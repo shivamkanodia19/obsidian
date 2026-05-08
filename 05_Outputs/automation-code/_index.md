@@ -1,21 +1,22 @@
 ---
 title: Automation Code
-description: Scripts for LinkedIn, Gmail, and other automation workflows
-last_updated: 2026-04-17
+description: Scripts for LinkedIn, Gmail, Kalshi, and other automation workflows
+last_updated: 2026-05-06
 ---
 
 # Automation Code
 
-Python scripts for automation workflows.
+Python scripts and small data bundles for automation workflows.
 
 ## Scripts
 
-- **linkedin-outreach-agent.py** — LinkedIn outreach agent (connection + messaging automation)
-- **linkedin-safe-connect.py** — Safe LinkedIn connection script (rate-limited, safe approach)
-- **linkedin-auto-connect.py** — LinkedIn auto-connect script
-- **gmail-extract-oauth.py** — Gmail OAuth token extraction for automation
+- **linkedin-outreach-agent.py** - LinkedIn outreach agent (connection and messaging automation)
+- **linkedin-safe-connect.py** - Safe LinkedIn connection script (rate-limited approach)
+- **linkedin-auto-connect.py** - LinkedIn auto-connect script
+- **gmail-extract-oauth.py** - Gmail OAuth token extraction for automation
+- **[[kalshi-backtest/_index|kalshi-backtest/]]** - Kalshi temperature backtest script and paired Austin weather dataset
 
 ## Notes
 
-- All scripts should be reviewed for security/rate-limiting before deployment
-- OAuth credentials must be stored securely (not in vault)
+- Review scripts for security and rate-limiting before deployment
+- OAuth credentials should be stored securely, not in the vault
