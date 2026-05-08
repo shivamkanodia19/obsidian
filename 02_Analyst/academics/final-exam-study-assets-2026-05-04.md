@@ -12,7 +12,7 @@ tags: [academics, finals, study-guide, cpp, linked-list]
 
 # Final Exam Study Assets - 2026-05-04
 
-This note captures the direct study deliverables generated in the vault root so they are represented in Analyst instead of only existing as loose files.
+This note captures the direct study deliverables from the 2026-05-04 finals sprint so they are represented in Analyst instead of living only as loose output files.
 
 ## Primary Deliverables
 
@@ -35,4 +35,4 @@ This note captures the direct study deliverables generated in the vault root so 
 
 ## Save Decision
 
-Keep the PDFs, DOCX files, HTML print artifact, and condensed variants as direct study outputs. This Analyst note is the durable breadcrumb that explains what they are and why they matter.
+The PDFs, DOCX files, HTML print artifact, build helpers, and condensed variants now live in `05_Outputs/academics/finals-2026-05-04/`. This Analyst note is the durable breadcrumb that explains what they are and why they matter.

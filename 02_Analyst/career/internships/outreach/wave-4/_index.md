@@ -29,5 +29,3 @@
 ## New Files
 
 - 📂 [[ACTION-ITEMS/_index|ACTION-ITEMS/]] — ACTION-ITEMS
-- 📂 [[REFERENCE/_index|REFERENCE/]] — REFERENCE
-- 📂 [[RESEARCH/_index|RESEARCH/]] — RESEARCH
