@@ -442,7 +442,7 @@ def risk_check(proposal_id, estimated_risk, research_age_minutes, spread_pct, vo
 @cli.command("create-order-ticket")
 @click.argument("proposal_id")
 @click.option("--risk-result-id", default="")
-@click.option("--broker", default="paper", type=click.Choice(["paper", "kalshi_demo"]))
+@click.option("--broker", default="paper", type=click.Choice(["paper", "kalshi_demo", "kalshi_production", "robinhood_mcp"]))
 @click.option("--side", required=True, type=click.Choice(["buy", "sell", "yes", "no"]))
 @click.option("--limit-price", required=True, type=float)
 @click.option("--quantity", required=True, type=float)
