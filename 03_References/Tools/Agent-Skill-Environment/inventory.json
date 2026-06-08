@@ -1,0 +1,94 @@
+﻿{
+    "exported_at":  "2026-06-08T18:23:59-05:00",
+    "machine":  "SHIVAMCOMPUTER",
+    "vault_root":  "c:/Users/shiva/obsidian",
+    "bundle_root":  "03_References/Tools/Agent-Skill-Environment",
+    "notes":  [
+                  "Export excludes pyc/pyo and __pycache__ folders.",
+                  "Windows Claude settings are included for reference and may require path edits on macOS.",
+                  "Claude project memory files and session logs were intentionally excluded as potentially sensitive."
+              ],
+    "entries":  [
+                    {
+                        "name":  "home-claude-skills",
+                        "relative_path":  "roots/home-claude-skills",
+                        "source":  "C:\\Users\\shiva\\.claude\\skills",
+                        "purpose":  "Claude home skills root",
+                        "file_count":  1301,
+                        "skill_file_count":  925,
+                        "size_mb":  12.01
+                    },
+                    {
+                        "name":  "home-codex-skills",
+                        "relative_path":  "roots/home-codex-skills",
+                        "source":  "C:\\Users\\shiva\\.codex\\skills",
+                        "purpose":  "Codex home skills root",
+                        "file_count":  1231,
+                        "skill_file_count":  912,
+                        "size_mb":  10.28
+                    },
+                    {
+                        "name":  "home-agents-skills",
+                        "relative_path":  "roots/home-agents-skills",
+                        "source":  "C:\\Users\\shiva\\.agents\\skills",
+                        "purpose":  "User agent skills root",
+                        "file_count":  22,
+                        "skill_file_count":  6,
+                        "size_mb":  0.07
+                    },
+                    {
+                        "name":  "openai-bundled",
+                        "relative_path":  "roots/codex-plugin-cache/openai-bundled",
+                        "source":  "C:\\Users\\shiva\\.codex\\plugins\\cache\\openai-bundled",
+                        "purpose":  "Bundled plugin skill cache",
+                        "file_count":  1563,
+                        "skill_file_count":  5,
+                        "size_mb":  34.65
+                    },
+                    {
+                        "name":  "openai-curated",
+                        "relative_path":  "roots/codex-plugin-cache/openai-curated",
+                        "source":  "C:\\Users\\shiva\\.codex\\plugins\\cache\\openai-curated",
+                        "purpose":  "Curated plugin skill cache",
+                        "file_count":  268,
+                        "skill_file_count":  35,
+                        "size_mb":  2.69
+                    },
+                    {
+                        "name":  "openai-curated-remote",
+                        "relative_path":  "roots/codex-plugin-cache/openai-curated-remote",
+                        "source":  "C:\\Users\\shiva\\.codex\\plugins\\cache\\openai-curated-remote",
+                        "purpose":  "Curated remote plugin skill cache",
+                        "file_count":  91,
+                        "skill_file_count":  21,
+                        "size_mb":  1.15
+                    },
+                    {
+                        "name":  "openai-primary-runtime",
+                        "relative_path":  "roots/codex-plugin-cache/openai-primary-runtime",
+                        "source":  "C:\\Users\\shiva\\.codex\\plugins\\cache\\openai-primary-runtime",
+                        "purpose":  "Primary runtime skill cache",
+                        "file_count":  130,
+                        "skill_file_count":  3,
+                        "size_mb":  1.44
+                    },
+                    {
+                        "name":  "project-save-audit",
+                        "relative_path":  "extras/project-save-audit",
+                        "source":  "C:\\Users\\shiva\\.claude\\projects\\c--Users-shiva-obsidian\\save-audit",
+                        "purpose":  "Reusable project-specific save-audit helper",
+                        "file_count":  4,
+                        "skill_file_count":  1,
+                        "size_mb":  0.02
+                    },
+                    {
+                        "name":  "windows-claude-settings",
+                        "relative_path":  "extras/windows-claude-settings",
+                        "source":  "repo:.claude/settings*.json",
+                        "purpose":  "Windows Claude settings for reference only",
+                        "file_count":  2,
+                        "skill_file_count":  0,
+                        "size_mb":  0
+                    }
+                ]
+}

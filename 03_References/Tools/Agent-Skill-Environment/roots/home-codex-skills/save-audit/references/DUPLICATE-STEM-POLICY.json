@@ -1,0 +1,65 @@
+{
+  "redirect_markers": [
+    "canonical note:",
+    "stable redirect",
+    "redirect stub",
+    "legacy alias",
+    "preferred canonical folder",
+    "do not create new"
+  ],
+  "rules": [
+    {
+      "stem": "email-optimization-strategy",
+      "classification": "intentional_redirect",
+      "required_paths": [
+        "02_Analyst/career/internships/email-optimization-strategy.md",
+        "02_Analyst/career/internships/strategy/email-optimization-strategy.md"
+      ],
+      "required_markers": [
+        "canonical note:",
+        "stable redirect"
+      ],
+      "reason": "Legacy redirect stub preserved for older internship links."
+    },
+    {
+      "stem": "draft-emails",
+      "classification": "scoped_duplicate",
+      "path_globs": [
+        "02_Analyst/career/internships/outreach/wave-*/draft-emails.md"
+      ],
+      "reason": "Each outreach wave owns its own draft pack."
+    },
+    {
+      "stem": "narrative_plan",
+      "classification": "scoped_duplicate",
+      "path_globs": [
+        "05_Outputs/slides/*/narrative_plan.md"
+      ],
+      "reason": "Each slideshow output folder owns its own narrative plan."
+    },
+    {
+      "stem": "strategy_review",
+      "classification": "scoped_duplicate",
+      "path_globs": [
+        "05_Outputs/slides/*/strategy_review.md"
+      ],
+      "reason": "Each slideshow output folder can carry its own branch-specific strategy review."
+    },
+    {
+      "stem": "claude",
+      "classification": "scoped_duplicate",
+      "path_globs": [
+        "05_Outputs/system-designs/*/CLAUDE.md"
+      ],
+      "reason": "Each system-design output folder can carry its own local CLAUDE brief."
+    },
+    {
+      "stem": "prd",
+      "classification": "scoped_duplicate",
+      "path_globs": [
+        "05_Outputs/system-designs/*/PRD.md"
+      ],
+      "reason": "Each system-design output folder can carry its own local PRD."
+    }
+  ]
+}
