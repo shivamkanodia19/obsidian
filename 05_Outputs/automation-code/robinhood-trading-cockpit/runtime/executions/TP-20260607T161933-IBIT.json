@@ -1,0 +1,12 @@
+{
+  "account_value_after_fill_usd": 497.08,
+  "broker_mode": "mock",
+  "buying_power_after_fill_usd": 400.0,
+  "executed_at": "2026-06-07T16:19:33-05:00",
+  "filled_notional_usd": 50.0,
+  "filled_quantity": 1.190476,
+  "limit_price": 42.0,
+  "order_id": "MOCK-20260607T161933-IBIT",
+  "proposal_id": "TP-20260607T161933-IBIT",
+  "status": "filled"
+}

@@ -1,0 +1,11 @@
+{
+  "broker_mode": "mock",
+  "estimated_notional_usd": 50.0,
+  "estimated_quantity": 1.190476,
+  "limit_delta_percent": -0.12,
+  "proposal_id": "TP-20260607T161933-IBIT",
+  "reference_price": 42.05,
+  "reviewed_at": "2026-06-07T16:19:33-05:00",
+  "status": "approved",
+  "warnings": []
+}

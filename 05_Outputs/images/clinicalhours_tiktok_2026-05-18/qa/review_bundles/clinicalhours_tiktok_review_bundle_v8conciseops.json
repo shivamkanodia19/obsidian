@@ -1,0 +1,64 @@
+﻿{
+    "schemaVersion":  "clinicalhours_tiktok/review_bundle/v1",
+    "generatedAt":  "2026-06-02T17:44:37.3122016-05:00",
+    "versionSuffix":  "v8conciseops",
+    "htmlFile":  "clinicalhours_tiktok_clinic_ops_concise.html",
+    "htmlPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\composition\\clinicalhours_tiktok_clinic_ops_concise.html",
+    "outputDir":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops",
+    "qaScreenshotDir":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots",
+    "runQa":  true,
+    "generatedQaShots":  true,
+    "copyAuditProfile":  "clinic_ops_primary",
+    "slides":  [
+                   {
+                       "slide":  1,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops\\clinicalhours_tiktok_slide_1_v8conciseops.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=1\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=1\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nNo text overflow or safe-zone violations.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_1_v8conciseops.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  2,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops\\clinicalhours_tiktok_slide_2_v8conciseops.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=2\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=2\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nNo text overflow or safe-zone violations.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_2_v8conciseops.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  3,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops\\clinicalhours_tiktok_slide_3_v8conciseops.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=3\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=3\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nNo text overflow or safe-zone violations.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_3_v8conciseops.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  4,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops\\clinicalhours_tiktok_slide_4_v8conciseops.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=4\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=4\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nNo text overflow or safe-zone violations.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_4_v8conciseops.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  5,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v8conciseops\\clinicalhours_tiktok_slide_5_v8conciseops.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=5\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_clinic_ops_concise.html?slide=5\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nNo text overflow or safe-zone violations.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_5_v8conciseops.png",
+                       "width":  null,
+                       "height":  null
+                   }
+               ]
+}

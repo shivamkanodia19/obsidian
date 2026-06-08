@@ -1,0 +1,9 @@
+{
+  "approver": "demo-user",
+  "created_at": "2026-06-07T16:19:33-05:00",
+  "expected_phrase": "FINAL APPROVE TRADE: IBIT BUY 50.00 USD LIMIT 42.00 [TP-20260607T161933-IBIT]",
+  "is_valid": true,
+  "proposal_id": "TP-20260607T161933-IBIT",
+  "stage": "final",
+  "typed_phrase": "FINAL APPROVE TRADE: IBIT BUY 50.00 USD LIMIT 42.00 [TP-20260607T161933-IBIT]"
+}

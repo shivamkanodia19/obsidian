@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClinicalHours TikTok Carousel - Student Search Memory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a2530;
+      --ink-soft: #51606c;
+      --line: rgba(26, 37, 48, 0.11);
+      --paper: #f5efe4;
+      --paper-deep: #ebe1d2;
+      --paper-cool: #edf1ea;
+      --paper-fog: #edf1f3;
+      --card: rgba(255, 251, 245, 0.88);
+      --card-strong: rgba(255, 252, 248, 0.95);
+      --sage: #7e9a84;
+      --moss: #587362;
+      --clay: #c78661;
+      --gold: #bf9a58;
+      --sky: #8eaabc;
+      --shadow: 0 26px 70px rgba(26, 37, 48, 0.14);
+      --soft-shadow: 0 18px 38px rgba(26, 37, 48, 0.1);
+      --safe-left: 72px;
+      --safe-right: 1008px;
+      --safe-top: 72px;
+      --safe-bottom: 1708px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      padding: 64px 48px 120px;
+      font-family: "Public Sans", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f1ece3 0%, #ebe4d8 100%);
+    }
+
+    body.export-mode {
+      width: 1080px;
+      height: 1920px;
+      padding: 0;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      align-items: center;
+    }
+
+    body.export-mode .wrap {
+      display: block;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 42px 110px rgba(26, 37, 48, 0.16);
+    }
+
+    body.export-mode .slide {
+      box-shadow: none;
+    }
+
+    .slide[hidden] {
+      display: none;
+    }
+
+    .slide::before,
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .slide::before {
+      background:
+        repeating-linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0,
+          rgba(255, 255, 255, 0) 112px,
+          rgba(26, 37, 48, 0.04) 112px,
+          rgba(26, 37, 48, 0.04) 113px
+        );
+      z-index: 0;
+      opacity: 0.66;
+    }
+
+    .slide::after {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(142, 170, 188, 0.14), transparent 22%),
+        radial-gradient(circle at 16% 84%, rgba(199, 134, 97, 0.12), transparent 24%);
+      z-index: 0;
+    }
+
+    .slide-1 {
+      background:
+        linear-gradient(135deg, rgba(199, 134, 97, 0.08), transparent 24%),
+        linear-gradient(180deg, #f6efe2 0%, #efe5d6 100%);
+    }
+
+    .slide-2 {
+      background:
+        linear-gradient(135deg, rgba(126, 154, 132, 0.08), transparent 20%),
+        linear-gradient(180deg, #edf2eb 0%, #e5ece4 100%);
+    }
+
+    .slide-3 {
+      background:
+        linear-gradient(135deg, rgba(199, 134, 97, 0.08), transparent 22%),
+        linear-gradient(180deg, #f4ede3 0%, #eadfd3 100%);
+    }
+
+    .slide-4 {
+      background:
+        linear-gradient(135deg, rgba(126, 154, 132, 0.1), transparent 18%),
+        linear-gradient(180deg, #edf3ee 0%, #e2ebe4 100%);
+    }
+
+    .slide-5 {
+      background:
+        linear-gradient(135deg, rgba(142, 170, 188, 0.1), transparent 20%),
+        linear-gradient(180deg, #eef2f4 0%, #e6ecef 100%);
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 22% 18%, rgba(26, 37, 48, 0.045) 0 0.8px, transparent 0.9px),
+        radial-gradient(circle at 72% 62%, rgba(26, 37, 48, 0.035) 0 0.8px, transparent 0.9px);
+      background-size: 20px 20px, 24px 24px;
+      mix-blend-mode: multiply;
+      opacity: 0.24;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .guide-safe,
+    .guide-bottom,
+    .guide-report {
+      display: none;
+    }
+
+    body.qa-mode .guide-safe,
+    body.qa-mode .guide-bottom,
+    body.qa-mode .guide-report {
+      display: block;
+    }
+
+    .guide-safe {
+      position: absolute;
+      left: var(--safe-left);
+      top: var(--safe-top);
+      width: calc(var(--safe-right) - var(--safe-left));
+      height: calc(var(--safe-bottom) - var(--safe-top));
+      border: 2px dashed rgba(88, 115, 98, 0.72);
+      border-radius: 24px;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .guide-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: var(--safe-bottom);
+      bottom: 0;
+      background: rgba(255, 95, 95, 0.08);
+      border-top: 1px dashed rgba(255, 95, 95, 0.5);
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .guide-report {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 56px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(26, 37, 48, 0.14);
+      background: rgba(255, 255, 255, 0.9);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--ink);
+      white-space: pre-wrap;
+      z-index: 21;
+    }
+
+    body.qa-mode [data-essential="true"] {
+      outline: 2px solid rgba(88, 115, 98, 0.9);
+      outline-offset: 4px;
+    }
+
+    body.qa-mode [data-overflow="true"],
+    body.qa-mode [data-unsafe="true"] {
+      outline-color: rgba(255, 95, 95, 0.9);
+    }
+
+    .chrome {
+      position: absolute;
+      left: 78px;
+      right: 78px;
+      top: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .brand-lock {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(26, 37, 48, 0.2);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: inset 0 0 0 3px rgba(126, 154, 132, 0.18);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--clay), var(--sky));
+    }
+
+    .brand {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .progress {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 20px;
+      background: rgba(255, 252, 246, 0.85);
+      border: 1.5px solid rgba(26, 37, 48, 0.1);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .progress-track {
+      display: flex;
+      gap: 7px;
+    }
+
+    .progress-track span {
+      width: 18px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(26, 37, 48, 0.12);
+    }
+
+    .slide-1 .progress-track span:nth-child(1),
+    .slide-2 .progress-track span:nth-child(-n+2),
+    .slide-3 .progress-track span:nth-child(-n+3),
+    .slide-4 .progress-track span:nth-child(-n+4),
+    .slide-5 .progress-track span:nth-child(-n+5) {
+      background: linear-gradient(90deg, var(--clay), var(--sage));
+    }
+
+    .progress-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      color: var(--ink);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      position: absolute;
+      left: 80px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 18px;
+      background: rgba(255, 251, 245, 0.88);
+      border: 1.5px solid rgba(26, 37, 48, 0.12);
+      box-shadow: var(--soft-shadow);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      z-index: 10;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+      background: linear-gradient(135deg, var(--gold), var(--clay));
+      box-shadow: 0 0 0 5px rgba(199, 134, 97, 0.14);
+    }
+
+    .headline {
+      position: absolute;
+      left: 80px;
+      margin: 0;
+      width: 620px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 92px;
+      line-height: 0.94;
+      letter-spacing: -0.075em;
+      color: var(--ink);
+      text-wrap: balance;
+      z-index: 10;
+    }
+
+    .subtext {
+      position: absolute;
+      left: 82px;
+      margin: 0;
+      width: 470px;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.045em;
+      color: var(--ink-soft);
+      z-index: 10;
+    }
+
+    .accent-line {
+      position: absolute;
+      height: 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(191, 154, 88, 0.92), rgba(199, 134, 97, 0.92));
+      z-index: 9;
+    }
+
+    .field,
+    .proof-card,
+    .tile,
+    .cta-card,
+    .callout,
+    .info-card,
+    .badge {
+      position: absolute;
+      z-index: 6;
+    }
+
+    .field {
+      border-radius: 40px;
+      border: 1px solid rgba(26, 37, 48, 0.08);
+      background: rgba(255, 255, 255, 0.28);
+      z-index: 2;
+    }
+
+    .proof-card,
+    .tile {
+      overflow: hidden;
+      border-radius: 30px;
+      background: rgba(255, 252, 246, 0.78);
+      border: 1.5px solid rgba(26, 37, 48, 0.1);
+      box-shadow: var(--shadow);
+    }
+
+    .proof-card::before,
+    .tile::before {
+      content: "";
+      position: absolute;
+      left: 28px;
+      top: 14px;
+      width: 104px;
+      height: 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .proof-screen,
+    .tile-screen {
+      position: absolute;
+      inset: 14px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #10161b;
+      z-index: 1;
+    }
+
+    .proof-screen img,
+    .tile-screen img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.04) brightness(1.03);
+    }
+
+    .contain img {
+      object-fit: contain;
+      background: #10161b;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255, 251, 245, 0.92);
+      border: 1.5px solid rgba(26, 37, 48, 0.12);
+      box-shadow: var(--soft-shadow);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      z-index: 9;
+    }
+
+    .badge strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+    }
+
+    .chip-stack {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      z-index: 7;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      border: 1.5px solid rgba(26, 37, 48, 0.08);
+      background: rgba(255, 251, 245, 0.86);
+      color: var(--ink);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .chip.sky {
+      background: rgba(142, 170, 188, 0.16);
+      color: #45657a;
+    }
+
+    .chip.clay {
+      background: rgba(199, 134, 97, 0.17);
+      color: #975d40;
+    }
+
+    .chip.sage {
+      background: rgba(126, 154, 132, 0.16);
+      color: #40614b;
+    }
+
+    .chip.gold {
+      background: rgba(191, 154, 88, 0.18);
+      color: #8a6a30;
+    }
+
+    .callout,
+    .info-card {
+      padding: 20px 22px;
+      border-radius: 24px;
+      background: rgba(255, 251, 245, 0.94);
+      border: 1.5px solid rgba(26, 37, 48, 0.1);
+      box-shadow: var(--soft-shadow);
+      z-index: 8;
+    }
+
+    .callout {
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .info-card strong {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #587362;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .tile-label {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: rgba(255, 251, 245, 0.94);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      z-index: 4;
+    }
+
+    .cta-card {
+      padding: 30px 30px 34px;
+      border-radius: 30px;
+      background: var(--card-strong);
+      border: 1.5px solid rgba(26, 37, 48, 0.1);
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+
+    .cta-kicker {
+      display: block;
+      margin-bottom: 12px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .cta-title {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 54px;
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+    }
+
+    .cta-copy {
+      margin: 16px 0 0;
+      font-size: 27px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--ink-soft);
+    }
+
+    .action-row {
+      position: absolute;
+      display: flex;
+      gap: 16px;
+      z-index: 10;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      padding: 0 26px;
+      border-radius: 16px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      box-shadow: var(--soft-shadow);
+      border: 1.5px solid rgba(26, 37, 48, 0.1);
+    }
+
+    .action.primary {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .action.secondary {
+      background: rgba(255, 251, 245, 0.92);
+      color: var(--ink);
+    }
+
+    .ghost-sheet {
+      position: absolute;
+      border-radius: 30px;
+      border: 1px solid rgba(26, 37, 48, 0.08);
+      background: rgba(255, 255, 255, 0.28);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .slide-1 .eyebrow { top: 170px; }
+    .slide-1 .headline { top: 244px; width: 558px; height: 220px; font-size: 94px; }
+    .slide-1 .accent-line { left: 84px; top: 538px; width: 284px; }
+    .slide-1 .subtext { top: 574px; width: 430px; }
+    .slide-1 .ghost-sheet { right: 126px; top: 248px; width: 404px; height: 1082px; transform: rotate(-3deg); }
+    .slide-1 .phone-proof { right: 72px; top: 222px; width: 430px; height: 1082px; transform: rotate(1.6deg); }
+    .slide-1 .chip-stack { left: 80px; top: 930px; width: 412px; }
+    .slide-1 .callout-memory { left: 82px; top: 1164px; width: 306px; }
+
+    .slide-2 .eyebrow { top: 170px; }
+    .slide-2 .headline { top: 244px; width: 614px; height: 214px; font-size: 88px; }
+    .slide-2 .accent-line { left: 84px; top: 530px; width: 272px; }
+    .slide-2 .subtext { top: 566px; width: 474px; }
+    .slide-2 .badge { left: 82px; top: 676px; }
+    .slide-2 .callout-filter { right: 82px; top: 702px; width: 158px; text-align: center; }
+    .slide-2 .field { left: 38px; top: 760px; width: 1004px; height: 918px; }
+    .slide-2 .map-proof { left: 42px; top: 774px; width: 996px; height: 892px; border-radius: 36px; }
+    .slide-2 .map-proof .proof-screen { inset: 12px; border-radius: 24px; }
+
+    .slide-3 .eyebrow { top: 170px; }
+    .slide-3 .headline { top: 244px; width: 570px; height: 182px; font-size: 84px; }
+    .slide-3 .accent-line { left: 84px; top: 510px; width: 244px; }
+    .slide-3 .subtext { top: 544px; width: 456px; }
+    .slide-3 .field { left: 56px; top: 698px; width: 968px; height: 700px; }
+    .slide-3 .info-fit { left: 82px; top: 732px; width: 284px; }
+    .slide-3 .welcome-proof { right: 84px; top: 726px; width: 424px; height: 308px; transform: rotate(2deg); }
+    .slide-3 .featured-proof { left: 72px; top: 1048px; width: 936px; height: 242px; }
+    .slide-3 .featured-proof .proof-screen { inset: 12px; }
+    .slide-3 .chip-stack { left: 82px; top: 1342px; width: 550px; }
+
+    .slide-4 .eyebrow { top: 170px; }
+    .slide-4 .headline { top: 244px; width: 590px; height: 186px; font-size: 84px; }
+    .slide-4 .accent-line { left: 84px; top: 510px; width: 250px; }
+    .slide-4 .subtext { top: 544px; width: 520px; }
+    .slide-4 .field { left: 56px; top: 726px; width: 968px; height: 844px; }
+    .slide-4 .records-proof { left: 76px; top: 770px; width: 928px; height: 232px; }
+    .slide-4 .journal-proof { left: 76px; top: 1032px; width: 928px; height: 154px; }
+    .slide-4 .journal-proof .proof-screen { inset: 10px 14px; }
+    .slide-4 .prompt-proof { right: 82px; top: 1222px; width: 332px; height: 238px; transform: rotate(1.5deg); }
+    .slide-4 .prompt-proof .proof-screen { inset: 10px; }
+    .slide-4 .callout-track { left: 80px; top: 1254px; width: 320px; }
+    .slide-4 .chip-stack { left: 80px; top: 1490px; width: 520px; }
+
+    .slide-5 .eyebrow { top: 170px; }
+    .slide-5 .headline { top: 244px; width: 662px; height: 186px; font-size: 84px; }
+    .slide-5 .accent-line { left: 84px; top: 504px; width: 258px; }
+    .slide-5 .subtext { top: 538px; width: 520px; }
+    .slide-5 .cta-card { left: 80px; top: 732px; width: 438px; }
+    .slide-5 .action-row { left: 82px; top: 1118px; }
+    .slide-5 .field { left: 56px; top: 1230px; width: 968px; height: 330px; }
+    .slide-5 .auth-proof { left: 82px; top: 1254px; width: 918px; height: 278px; }
+    .slide-5 .auth-proof .proof-screen { inset: 12px; }
+    .slide-5 .chip-stack { left: 82px; top: 1566px; width: 452px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="slide slide-1" data-slide="1">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">01 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-1-eyebrow">01 Memory</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-1-headline">Found clinics.<br />Lost track?</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-1-subtext">Tabs, screenshots, and saved links do not remember what mattered.</p>
+      <div class="ghost-sheet"></div>
+      <div class="proof-card phone-proof" data-proof="true" data-name="slide-1-phone-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_map_tall_controls_focus_v1.png" alt="ClinicalHours map controls and opportunity clusters" />
+        </div>
+      </div>
+      <div class="chip-stack">
+        <div class="chip clay">tabs</div>
+        <div class="chip sky">screenshots</div>
+        <div class="chip sage">saved links</div>
+        <div class="chip gold">notes</div>
+      </div>
+      <div class="callout callout-memory">No place to pick the search back up.</div>
+    </section>
+
+    <section class="slide slide-2" data-slide="2">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">02 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-2-eyebrow">02 Map</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-2-headline">Search once.<br />Stay oriented.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-2-subtext">One map gives the search a cleaner place to start.</p>
+      <div class="badge"><strong>9,512</strong> visible opportunities</div>
+      <div class="callout callout-filter">Filter first.</div>
+      <div class="field"></div>
+      <div class="proof-card map-proof" data-proof="true" data-name="slide-2-map-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_map_focus_v1.png" alt="ClinicalHours opportunity map" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-3" data-slide="3">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">03 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-3-eyebrow">03 Preview</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-3-headline">Check fit before clicking.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-3-subtext">A clinic preview helps the next tab earn its place.</p>
+      <div class="field"></div>
+      <div class="info-card info-fit">
+        <strong>Featured clinic</strong>
+        <p>Location and fit show up before the next click.</p>
+      </div>
+      <div class="proof-card welcome-proof" data-proof="true" data-name="slide-3-welcome-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/derived/clinicalhours_dashboard_welcome_panel_v1.png" alt="ClinicalHours welcome panel with explore opportunities and log hours actions" />
+        </div>
+      </div>
+      <div class="proof-card featured-proof" data-proof="true" data-name="slide-3-featured-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png" alt="ClinicalHours featured clinic card" />
+        </div>
+      </div>
+      <div class="chip-stack">
+        <div class="chip sky">location</div>
+        <div class="chip sage">fit</div>
+        <div class="chip clay">volunteers</div>
+      </div>
+    </section>
+
+    <section class="slide slide-4" data-slide="4">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">04 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-4-eyebrow">04 Track</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-4-headline">No place to save it?</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-4-subtext">Save clinics, track opportunities, and log hours in one place.</p>
+      <div class="field"></div>
+      <div class="proof-card records-proof" data-proof="true" data-name="slide-4-records-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/derived/clinicalhours_dashboard_records_band_v1.png" alt="ClinicalHours dashboard cards for active opportunities and experiences recorded" />
+        </div>
+      </div>
+      <div class="proof-card journal-proof" data-proof="true" data-name="slide-4-journal-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/derived/clinicalhours_journal_controls_band_v1.png" alt="ClinicalHours activity log controls and log hours button" />
+        </div>
+        <div class="tile-label">activity log</div>
+      </div>
+      <div class="callout callout-track">Tracked opportunities give the search somewhere to stay.</div>
+      <div class="proof-card prompt-proof" data-proof="true" data-name="slide-4-prompt-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/derived/clinicalhours_journal_prompt_focus_v1.png" alt="ClinicalHours prompt to log the first hours" />
+        </div>
+      </div>
+      <div class="chip-stack">
+        <div class="chip sky">save clinics</div>
+        <div class="chip sage">track</div>
+        <div class="chip gold">log hours</div>
+      </div>
+    </section>
+
+    <section class="slide slide-5" data-slide="5">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">05 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-5-eyebrow">05 Start</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-5-headline">Browse first.<br />Save when ready.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-5-subtext">Browse the map first. Sign in when you want to keep your place.</p>
+      <div class="cta-card" data-essential="true" data-text="true" data-name="slide-5-cta-card">
+        <span class="cta-kicker">start here</span>
+        <h2 class="cta-title">Start at<br />clinicalhours.org</h2>
+        <p class="cta-copy">Browse the map first. Save your place when you are ready.</p>
+      </div>
+      <div class="action-row" data-essential="true" data-text="true" data-name="slide-5-actions">
+        <div class="action primary">Browse opportunities</div>
+        <div class="action secondary">Sign in to keep track</div>
+      </div>
+      <div class="field"></div>
+      <div class="proof-card auth-proof" data-proof="true" data-name="slide-5-auth-proof">
+        <div class="proof-screen contain">
+          <img src="../captures/derived/clinicalhours_auth_guest_actions_v1.png" alt="ClinicalHours browse as guest and sign in actions" />
+        </div>
+      </div>
+      <div class="chip-stack">
+        <div class="chip sage">browse as guest</div>
+        <div class="chip sky">sign in later</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const exportMode = params.get("export") === "1";
+    const qaMode = params.get("qa") === "1";
+    const slideParam = params.get("slide");
+
+    if (exportMode) {
+      document.body.classList.add("export-mode");
+    }
+
+    if (qaMode) {
+      document.body.classList.add("qa-mode");
+    }
+
+    if (slideParam) {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.dataset.slide !== slideParam) {
+          slide.remove();
+        }
+      });
+    }
+
+    const safe = {
+      left: 72,
+      right: 1008,
+      top: 72,
+      bottom: 1708
+    };
+
+    const overlaps = (a, b) => {
+      return !(a.right <= b.left || a.left >= b.right || a.bottom <= b.top || a.top >= b.bottom);
+    };
+
+    const relativeRect = (rect, origin) => ({
+      left: rect.left - origin.left,
+      top: rect.top - origin.top,
+      right: rect.right - origin.left,
+      bottom: rect.bottom - origin.top,
+      width: rect.width,
+      height: rect.height
+    });
+
+    const runQa = () => {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.hidden) {
+          const hiddenReport = slide.querySelector(".guide-report");
+          if (hiddenReport) {
+            hiddenReport.textContent = "QA SKIP\nHidden in current export.";
+          }
+          return;
+        }
+
+        const slideRect = slide.getBoundingClientRect();
+        const issues = [];
+        const essentials = slide.querySelectorAll("[data-essential='true']");
+
+        essentials.forEach((el) => {
+          el.removeAttribute("data-overflow");
+          el.removeAttribute("data-unsafe");
+          const rect = relativeRect(el.getBoundingClientRect(), slideRect);
+
+          if (rect.left < safe.left || rect.top < safe.top || rect.right > safe.right || rect.bottom > safe.bottom) {
+            el.setAttribute("data-unsafe", "true");
+            issues.push(`Unsafe zone: ${el.dataset.name || el.className}`);
+          }
+
+          const style = window.getComputedStyle(el);
+          const lineHeight = parseFloat(style.lineHeight);
+          if (el.scrollHeight > el.clientHeight + Math.max(2, lineHeight * 0.08) || el.scrollWidth > el.clientWidth + 2) {
+            el.setAttribute("data-overflow", "true");
+            issues.push(`Overflow: ${el.dataset.name || el.className}`);
+          }
+        });
+
+        const essentialRects = Array.from(essentials).map((el) => ({
+          name: el.dataset.name || el.className,
+          rect: relativeRect(el.getBoundingClientRect(), slideRect)
+        }));
+
+        for (let i = 0; i < essentialRects.length; i += 1) {
+          for (let j = i + 1; j < essentialRects.length; j += 1) {
+            if (overlaps(essentialRects[i].rect, essentialRects[j].rect)) {
+              issues.push(`Overlap: ${essentialRects[i].name} <> ${essentialRects[j].name}`);
+            }
+          }
+        }
+
+        const report = slide.querySelector(".guide-report");
+        if (report) {
+          if (issues.length) {
+            report.textContent = `QA WARN\n${issues.join("\n")}`;
+          } else {
+            report.textContent = "QA PASS\nAll essential content is within the safe zone and readable.";
+          }
+        }
+      });
+    };
+
+    window.addEventListener("load", () => {
+      if (qaMode) {
+        runQa();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "mobile-optimization-agent-kit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local QA and performance toolkit for mobile web optimization",
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "test:mobile": "playwright test",
+    "test:mobile:headed": "playwright test --headed",
+    "audit:lhci": "lhci autorun --config=./lighthouserc.cjs"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.54.1",
+    "lighthouse": "^12.8.2",
+    "web-vitals": "^5.1.0"
+  }
+}

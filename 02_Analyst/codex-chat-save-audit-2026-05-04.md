@@ -2,7 +2,10 @@
 title: Codex Chat Save Audit - 2026-05-04
 description: Full-vault save sweep covering study-asset backfills and structural cleanup
 last_updated: 2026-05-04
-status: current
+status: historical
+note_role: audit
+audit_family: codex-chat-save-audit
+audit_role: archived
 tags:
   - codex
   - save

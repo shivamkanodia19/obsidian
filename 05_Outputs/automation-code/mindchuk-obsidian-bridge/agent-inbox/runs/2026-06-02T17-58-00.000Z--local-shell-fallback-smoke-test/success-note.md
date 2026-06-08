@@ -1,0 +1,3 @@
+PASS
+C:\Users\shiva\obsidian\05_Outputs\automation-code\mindchuk-obsidian-bridge\agent-inbox\runs\2026-06-02T17-58-00.000Z--local-shell-fallback-smoke-test
+The fallback pipeline works as expected.

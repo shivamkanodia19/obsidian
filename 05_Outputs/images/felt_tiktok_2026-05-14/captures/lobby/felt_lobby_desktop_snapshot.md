@@ -1,0 +1,45 @@
+- generic [ref=e2] [box=0,0,1440,1200]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1168,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e64] [box=0,0,1440,1200]:
+    - banner [ref=e65] [box=0,0,1440,57]:
+      - generic [ref=e67] [box=40,10,343,36]:
+        - link "FELT" [ref=e68] [cursor=pointer] [box=40,10,68,36]:
+          - /url: /
+        - navigation [ref=e69] [box=140,14,242,28]:
+          - link "Home" [ref=e70] [cursor=pointer] [box=140,14,59,28]:
+            - /url: /
+          - link "Play with friends" [ref=e71] [cursor=pointer] [box=205,14,115,28]:
+            - /url: /lobby
+          - link "Train" [ref=e72] [cursor=pointer] [box=326,14,56,28]:
+            - /url: /training
+    - main [ref=e73] [box=170,57,1100,1143]:
+      - generic [ref=e74] [box=186,89,1068,82]:
+        - generic [ref=e75] [box=186,89,608,82]:
+          - paragraph [ref=e76] [box=186,89,608,16]: Friends first
+          - heading "Your tables" [level=1] [ref=e77] [box=186,108,608,36]
+          - paragraph [ref=e78] [box=186,150,608,20]: Host a private game, or jump in with a code someone sent you. Everything runs on play chips — never cash.
+        - button "Refresh" [ref=e79] [cursor=pointer] [box=1150,89,104,44]:
+          - img [ref=e80] [box=1162,104,14,14]
+          - generic [ref=e85] [box=1182,103,59,16]: Refresh
+      - generic [ref=e86] [box=186,194,1068,111]:
+        - button "Host Start a new table You'll get an invite code to share" [ref=e87] [cursor=pointer] [box=186,194,528,111]:
+          - generic [ref=e88] [box=203,216,160,67]:
+            - generic [ref=e89] [box=203,216,160,17]: Host
+            - paragraph [ref=e90] [box=203,237,160,28]: Start a new table
+            - paragraph [ref=e91] [box=203,267,160,16]: You'll get an invite code to share
+          - img [ref=e93] [box=665,240,20,20]
+        - generic [ref=e94] [box=726,194,528,111]:
+          - generic [ref=e95] [box=747,215,486,17]: Have a code?
+          - generic [ref=e96] [box=747,240,486,44]:
+            - textbox "Paste invite code" [ref=e98] [box=747,240,415,44]
+            - button "Join" [disabled] [ref=e99] [box=1170,240,63,44]
+      - generic [ref=e101] [box=186,337,1068,315]:
+        - img [ref=e103] [box=708,402,24,24]
+        - generic [ref=e108] [box=528,458,384,82]:
+          - paragraph [ref=e109] [box=528,458,384,28]: Nothing open yet
+          - paragraph [ref=e110] [box=528,494,384,46]: Start a table for your crew, or ask a friend for their invite code and paste it above.
+        - generic [ref=e111] [box=591,559,258,44]:
+          - button "Host a table" [ref=e112] [cursor=pointer] [box=591,559,123,44]
+          - button "I have a code" [ref=e113] [cursor=pointer] [box=722,559,126,44]

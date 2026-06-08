@@ -1,55 +1,50 @@
 # ClinicalHours Market Research (2026-04)
 
-**Purpose:** McKinsey-level understanding of target customers and email outreach optimization  
-**Status:** In Progress (agents running)  
-**Last Updated:** 2026-04-16
+**Purpose:** durable research hub for customer understanding and outreach strategy  
+**Status:** partial coverage; this page now separates existing notes from planned follow-ups  
+**Last Updated:** 2026-05-12
 
-## Research Areas
+## Existing Notes
 
-### 1. Clinic-Side Market Understanding
-- [[clinic_decision_makers.md|Decision-Makers & Org Structure]]
-- [[clinic_workflows.md|Current Volunteer Management Workflows]]
-- [[clinic_pain_points.md|Pain Points & Friction]]
-- [[clinic_budget.md|Budget & Pricing Sensitivity]]
-- [[clinic_alternatives.md|Competitive Alternatives]]
-- [[clinic_compliance.md|Regulatory & Compliance Context]]
-- [[clinic_typology.md|Clinic Typology & Market Segments]]
+### Clinic-Side Market Understanding
+- [[clinic_decision_makers|Decision-Makers & Org Structure]]
+- [[clinic_pain_points|Pain Points & Friction]]
+- [[clinic_data_model|Clinic Data Model]]
 
-### 2. Student-Side Market Understanding
-- [[student_motivations.md|Why Students Volunteer]]
-- [[student_barriers.md|Barriers to Finding Opportunities]]
-- [[student_platforms.md|Current Tools & Platforms]]
-- [[student_selection.md|Clinic Selection Criteria]]
-- [[student_value_prop.md|ClinicalHours Value to Students]]
+### Email Outreach Optimization
+- [[cold_email_best_practices|Cold Email Best Practices for Nonprofits]]
 
-### 3. Email Outreach Optimization
-- [[contact_finding_strategies.md|Contact Finding & Databases]]
-- [[cold_email_best_practices.md|Cold Email Best Practices for Nonprofits]]
-- [[clinic_specific_angles.md|Clinic-Specific Email Angles]]
-- [[follow_up_sequences.md|Follow-Up Sequences & Cadence]]
-- [[optimization_metrics.md|Metrics & Benchmarks]]
-- [[personalization_frameworks.md|Personalization & A/B Testing]]
+### Folder Navigation
+- [[_index|Folder Index]]
+- [[RESEARCH_STATUS|Research Status]]
 
-## Key Findings (To Be Updated)
+## Planned Follow-Ups
 
-### Clinic Market Opportunity
-- TAM: $1.2-2.4M (200-300 clinics in US, DFW focus)
-- Ideal customer: 15-100 volunteer clinics, nonprofit
-- Pricing: $1,200/year standard tier
-- Pilot: 1 clinic (BCS FHC)
+These topics were part of the original research plan, but they do not yet have standalone notes in this folder:
 
-### Go-To-Market Priority (DFW)
-1. **Tier 1 - Immediate:** Mercy Clinic Friends (140+ volunteers), Julia's Center (60+), Community Health (60+), EPIC Medical (62+)
-2. **Tier 2 - Secondary:** ICNA Relief, Agape, Arlington Free, Open Arms Health
+### Clinic-Side Market Understanding
+- Current volunteer-management workflows
+- Budget and pricing sensitivity
+- Competitive alternatives
+- Regulatory and compliance context
+- Clinic typology and market segments
 
-## Integration with Email Outreach System
+### Student-Side Market Understanding
+- Why students volunteer
+- Barriers to finding opportunities
+- Current tools and platforms
+- Clinic selection criteria
+- ClinicalHours value to students
 
-This research informs:
-- **Contact finding strategy** (who to target, how to find them)
-- **Email personalization** (which pain points resonate, clinic-specific angles)
-- **Follow-up cadence** (decision-making timeline, budget approval cycles)
-- **Sales process** (champion identification, stakeholder mapping)
+### Outreach Optimization
+- Contact-finding strategies and databases
+- Clinic-specific email angles
+- Follow-up sequences and cadence
+- Metrics and benchmarks
+- Personalization and A/B testing frameworks
 
----
+## Current Durable Takeaways
 
-**Next:** Consolidate research → Design email outreach agentic system → Deploy
+- The strongest existing coverage is clinic-side pain, decision-maker mapping, and nonprofit cold-email practice.
+- This folder is better treated as a staged research backlog than a complete market dossier.
+- DFW clinic prioritization and TAM framing now live more concretely in [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04]] and related ClinicalHours strategy notes.

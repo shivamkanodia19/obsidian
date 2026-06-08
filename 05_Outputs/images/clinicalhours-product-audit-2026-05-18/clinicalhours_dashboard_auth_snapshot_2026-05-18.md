@@ -1,0 +1,63 @@
+- generic [ref=e2] [box=0,0,1425,1939]:
+  - region "Notifications (F8)" [box=0,0,1425,0]:
+    - list [box=1005,1568,420,32]
+  - region "Notifications alt+T" [box=0,0,1425,0]
+  - generic [ref=e42] [box=0,0,1425,1939]:
+    - navigation [ref=e43] [box=0,0,1425,81]:
+      - generic [ref=e45] [box=36,0,1352,80]:
+        - link "ClinicalHours ClinicalHours" [ref=e46] [cursor=pointer] [box=36,24,153,32]:
+          - /url: /
+          - img "ClinicalHours" [ref=e47] [box=36,24,32,32]
+          - generic [ref=e48] [box=76,26,113,28]: ClinicalHours
+        - generic [ref=e49] [box=1073,32,315,16]:
+          - link "Home" [ref=e205] [cursor=pointer] [box=1073,32,40,16]:
+            - /url: /
+          - link "Map" [ref=e206] [cursor=pointer] [box=1137,32,30,16]:
+            - /url: /map
+          - link "Contact" [ref=e207] [cursor=pointer] [box=1191,32,62,16]:
+            - /url: /contact
+          - link "Login / Sign Up" [ref=e208] [cursor=pointer] [box=1277,32,112,16]:
+            - /url: /auth
+    - main [ref=e57] [box=12,0,1400,1478]:
+      - generic [ref=e59] [box=28,96,1368,444]:
+        - generic [ref=e60] [box=68,230,748,176]:
+          - heading "Welcome back, there!" [level=1] [ref=e209] [box=68,230,748,80]
+          - paragraph [ref=e63] [box=68,322,448,24]: Track your clinical journey and find new opportunities.
+          - generic [ref=e64] [box=68,370,748,36]
+        - generic [ref=e211] [box=856,152,500,332]:
+          - generic [ref=e212] [box=856,152,500,300]
+          - generic [ref=e240] [box=856,466,500,6]
+      - link "BCS Free Health Clinic Featured College Station, TX · Free community health clinic · Now accepting volunteers" [ref=e79] [cursor=pointer] [box=28,564,1368,74]:
+        - /url: /opportunities/bcs-free-health-clinic
+        - generic [ref=e80] [box=49,581,492,40]:
+          - img [ref=e82] [box=59,591,20,20]
+          - generic [ref=e86] [box=101,583,440,36]
+        - img [ref=e91] [box=1362,593,16,16]
+      - generic [ref=e93] [box=28,670,1368,745]:
+        - generic [ref=e101] [box=28,670,1368,36]:
+          - heading "Your Dashboard" [level=2] [ref=e102] [box=28,674,137,28]
+          - generic [ref=e103] [box=1091,670,305,36]
+        - generic [ref=e113] [box=28,738,1368,122]:
+          - generic [ref=e114] [box=28,738,330,122]
+          - generic [ref=e122] [box=374,738,330,122]
+          - generic [ref=e130] [box=720,738,330,122]
+          - generic [ref=e138] [box=1066,738,330,122]
+        - generic [ref=e147] [box=28,899,1368,114]:
+          - generic [ref=e148] [box=28,899,1368,36]
+          - generic [ref=e151] [box=28,951,1368,62]: No applications yet.
+        - generic [ref=e152] [box=28,1053,1368,250]:
+          - heading "Tracked Opportunities" [level=2] [ref=e153] [box=28,1053,1368,28]
+          - generic [ref=e154] [box=28,1097,1368,206]
+        - generic [ref=e157] [box=28,1342,1368,72]:
+          - generic [ref=e158] [box=28,1342,1368,36]
+          - paragraph [ref=e161] [box=28,1394,1368,20]: No reflections yet. Log experience entries with notes to see them here.
+    - contentinfo [ref=e162] [box=0,1478,1425,461]:
+      - generic [ref=e163] [box=12,1479,1400,444]:
+        - generic [ref=e164] [box=36,1559,1352,132]:
+          - generic [ref=e165] [box=36,1559,302,132]
+          - generic [ref=e168] [box=386,1559,302,132]
+          - generic [ref=e175] [box=736,1559,302,132]
+          - generic [ref=e184] [box=1086,1559,302,132]
+        - generic [ref=e201] [box=36,1771,1352,72]:
+          - paragraph [ref=e202] [box=36,1804,1352,16]: © 2026 ClinicalHours. All rights reserved.
+          - paragraph [ref=e203] [box=36,1828,1352,15]

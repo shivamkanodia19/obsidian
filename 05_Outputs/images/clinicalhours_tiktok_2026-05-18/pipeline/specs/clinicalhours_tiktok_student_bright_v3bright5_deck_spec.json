@@ -1,0 +1,58 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_bright_v3bright5",
+  "canonical": false,
+  "superseded_by": "clinicalhours_tiktok_student_bright_v3bright7",
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_auth_v3bright.html",
+  "export_suffix": "v3bright5",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "headline": "Finding clinical hours still feels random.",
+      "subtext": "Too many students still piece it together from tabs, school docs, screenshots, and whatever clinic site they can find.",
+      "hero_asset": "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "headline": "9,512 openings. One map.",
+      "subtext": "The best student proof is the national map: one screen that instantly makes the search feel bigger and easier.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "headline": "See the clinic before you click.",
+      "subtext": "Preview-style proof feels useful fast: a featured clinic card plus a real dashboard view beats another abstract promise.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "support_assets": [
+        "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "role": "documentation_direction",
+      "headline": "Search, save, track, log.",
+      "subtext": "The account should feel like the next step after discovery, not a second system you have to learn from scratch.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "support_assets": [
+        "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+        "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "headline": "Browse as guest. Sign in when ready.",
+      "subtext": "That is a better close for cold traffic: let people explore first, then create an account when saving progress actually feels valuable.",
+      "hero_asset": "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png",
+      "support_assets": []
+    }
+  ]
+}

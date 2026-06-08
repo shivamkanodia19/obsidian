@@ -1,0 +1,86 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_bright_v3bright7",
+  "canonical": true,
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_auth_v3bright.html",
+  "export_suffix": "v3bright7",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "copy_style_hard_fail": {
+    "reject_if_contains": [
+      "why this works",
+      "better story",
+      "calm close",
+      "best student proof",
+      "real search flow",
+      "visual payoff",
+      "cold traffic",
+      "in-feed",
+      "abstract promise"
+    ],
+    "reject_if_meta_marketing_language": true
+  },
+  "screenshot_text_hard_fail": {
+    "reject_if_raw_hero_asset_matches": [
+      "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+      "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png"
+    ],
+    "reject_if_empty_state_is_hero": true
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "visible_role_label": "start",
+      "headline": "Finding clinical hours still feels random.",
+      "subtext": "Tabs, school docs, screenshots, and random clinic pages still pass for a search process.",
+      "hero_asset": "captures/derived/clinicalhours_map_tall_controls_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "visible_role_label": "map",
+      "headline": "9,512 openings. One map.",
+      "subtext": "Instead of hunting page by page, you can scan real openings in one place.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "visible_role_label": "preview",
+      "headline": "See the clinic before you click.",
+      "subtext": "A featured card gives you the location, fit, and next step in one glance.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_hero_auth_live_v2.png",
+      "support_assets": [
+        "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "role": "documentation_direction",
+      "visible_role_label": "account",
+      "headline": "Search, save, track, log.",
+      "subtext": "The account keeps discovery and hours together instead of splitting them across tools.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_journal_toolbar_tile_v2.png",
+        "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "visible_role_label": "browse",
+      "headline": "Browse first. Sign in later.",
+      "subtext": "Start with the map, then make an account when you want to save and track.",
+      "hero_asset": "captures/derived/clinicalhours_auth_actions_focus_v2.png",
+      "support_assets": []
+    }
+  ]
+}

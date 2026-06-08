@@ -1,0 +1,78 @@
+{
+  "schema_version": "felt_tiktok/candidate_deck_spec/v1",
+  "spec_id": "felt_tiktok_v5_reference_deck",
+  "campaign": "felt_tiktok_slideshow",
+  "recipient_email": "shivamkanodia77@gmail.com",
+  "template_family": "felt_v5_premium_dark",
+  "required_context_files": [
+    "02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md",
+    "02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric-2026-05-16.md",
+    "05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md"
+  ],
+  "render": {
+    "enabled": true,
+    "run_qa": true,
+    "generate_qa_shots": false
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "intended_role": "friction",
+      "eyebrow": "01 FRICTION",
+      "headline": "Game night needs one home.",
+      "subtext": "Private tables, join codes, and practice finally live in one place.",
+      "hero_source": "captures/home/felt_home_desktop_clean_1440x1400_v5.png",
+      "support_sources": [
+        "captures/home/felt_home_mobile_clean_430x932_v5.png"
+      ],
+      "style_profile": "premium_dark_restrained"
+    },
+    {
+      "slide_number": 2,
+      "intended_role": "simplification",
+      "eyebrow": "02 SIMPLIFICATION",
+      "headline": "One code. Whole crew in.",
+      "subtext": "Host it, share it, paste it, rejoin it.",
+      "hero_source": "captures/lobby/felt_lobby_mobile_430x932_v5.png",
+      "support_sources": [
+        "captures/lobby/felt_lobby_desktop_1440x1200_v5.png"
+      ],
+      "style_profile": "premium_dark_restrained"
+    },
+    {
+      "slide_number": 3,
+      "intended_role": "operational_proof",
+      "eyebrow": "03 REAL USE",
+      "headline": "You can read the room.",
+      "subtext": "Turn state, stacks, and the next action stay clear mid-hand.",
+      "hero_source": "captures/guided/felt_guided_live_desktop_1440x1400_v5.png",
+      "support_sources": [],
+      "style_profile": "premium_dark_restrained"
+    },
+    {
+      "slide_number": 4,
+      "intended_role": "mastery",
+      "eyebrow": "04 MASTERY",
+      "headline": "Train spots. Review leaks.",
+      "subtext": "Spot trainer and session review make progress visible.",
+      "hero_source": "captures/training/felt_training_desktop_1440x1400_v5.png",
+      "support_sources": [
+        "captures/guided/felt_guided_table_feedback.png"
+      ],
+      "style_profile": "premium_dark_restrained"
+    },
+    {
+      "slide_number": 5,
+      "intended_role": "return",
+      "eyebrow": "05 RETURN",
+      "headline": "Your crew gets a home base.",
+      "subtext": "Invite-only tables and practice reps give people a reason to return.",
+      "hero_source": "captures/home/felt_home_mobile_clean_430x932_v5.png",
+      "support_sources": [],
+      "style_profile": "premium_dark_restrained"
+    }
+  ]
+}

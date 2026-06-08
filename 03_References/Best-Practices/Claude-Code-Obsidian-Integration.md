@@ -5,7 +5,7 @@ source: GitHub research (AgriciDaniel/claude-obsidian, az9713/claude-code-obsidi
 relevance: obsidian, claude-code, workflow, vault-integration
 version: 1.0
 tested_in: wave-4-outreach
-last_updated: 2026-04-15
+last_updated: 2026-05-11
 ---
 
 # Claude Code + Obsidian Integration — Best Practices
@@ -166,23 +166,24 @@ relevance: [comma-separated keywords]
 
 ## Automation Rules (What Claude Should Do)
 
-### /save Workflow
-1. Read new Source files
-2. Synthesize to Analyst folder
-3. Create/update all folder indexes
-4. Update memory (new projects/feedback)
-5. Log conflicts if Source contradicts Analyst
-6. Archive old history (>6 months)
+### /save-audit Workflow
+Treat `/save-audit` as the vault-facing contract with two internal phases.
 
-**Claude MUST do all organization; user never organizes.**
+Save phase:
+1. Read the relevant new Source or working context
+2. Synthesize durable reasoning into Analyst or Outputs
+3. Create or update the nearest useful folder indexes
+4. Update memory, task cards, or run logs when the work is substantial
+5. Log conflicts if new material contradicts prior Analyst state
 
-### /audit Workflow
-1. Scan vault structure
-2. Auto-fix structural issues (orphaned folders, duplicates, misplaced files)
-3. Report critical issues only (broken wikilinks, misplaced reference data)
-4. Move stale memories (>6 months) to archive
+Audit phase:
+1. Scan vault structure and top entrypoints
+2. Auto-fix safe structural issues such as missing indexes for active folders
+3. Surface broken or brittle links for review
+4. Keep major hub pages lean by moving long history into dedicated logs
+5. Move stale memories (>6 months) to archive when appropriate
 
-**Claude MUST auto-cleanup; user only reviews critical issues.**
+**Claude should handle organization proactively, but keep index pages as navigators rather than giant histories.**
 
 ---
 

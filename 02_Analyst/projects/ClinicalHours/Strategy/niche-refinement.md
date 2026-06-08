@@ -3,8 +3,8 @@ title: ClinicalHours Niche Refinement & Competitive Positioning
 project: clinicalhours
 strategic: true
 status: stable
-origin_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
-last_synced_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+origin_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
+last_synced_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
 last_updated: 2026-04-15
 tags: [clinicalhours, strategy, competitors, positioning, niche]
 ---
@@ -59,10 +59,10 @@ tags: [clinicalhours, strategy, competitors, positioning, niche]
 
 ## Related Files
 
-- [[../../Outreach/DFW-Strategy.md]] — DFW clinic outreach execution
-- [[../../Outreach/DFW-Clinic-Research-Checklist.md]] — Research framework for clinic discovery
-- [[../../Outreach/Clinic-Target-List-2026-04.md]] — Current DFW clinic targets
-- [[../../Market/DFW-Clinic-Market-Analysis-2026-04.md]] — Market analysis (TAM, pricing)
+- [[02_Analyst/projects/ClinicalHours/Outreach/DFW-Strategy]] — DFW clinic outreach execution
+- [[02_Analyst/projects/ClinicalHours/Outreach/DFW-Clinic-Research-Checklist]] — Research framework for clinic discovery
+- [[02_Analyst/projects/ClinicalHours/Outreach/Clinic-Target-List-2026-04]] — Current DFW clinic targets
+- [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04]] — Market analysis (TAM, pricing)
 
 ## Next Actions
 
@@ -78,4 +78,4 @@ tags: [clinicalhours, strategy, competitors, positioning, niche]
 
 ## History
 
-[2026-04-15] Created from [[01_Source/clinicalhours/clinic outreach.md]]. Source clarified positioning (marketplace → agency) and identified competitors (Volgistics, VSYS). Added strategic questions to guide next phase of niche refinement.
+[2026-04-15] Created from [[01_Source/projects/ClinicalHours/clinic outreach.md]]. Source clarified positioning (marketplace → agency) and identified competitors (Volgistics, VSYS). Added strategic questions to guide next phase of niche refinement.

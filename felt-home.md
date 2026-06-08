@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e6]: ♠ Felt
+        - generic [ref=e7]:
+          - link "Log in" [ref=e8] [cursor=pointer]:
+            - /url: /auth/login
+          - link "Sign up" [ref=e10] [cursor=pointer]:
+            - /url: /auth/sign-up
+    - main [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: ♠
+        - heading "Felt" [level=1] [ref=e15]
+        - paragraph [ref=e16]: Play cards sharper.
+        - paragraph [ref=e17]: Play-money poker and blackjack. Private tables, AI opponents, strategy coaching. No real money involved.
+      - generic [ref=e18]:
+        - link "♠ Poker No-Limit Texas Hold'em. Play AI opponents, practice your decisions, or run a private table with friends. AI opponents with distinct styles Decision training & coaching Private tables with friends Enter Poker Hub →" [ref=e19] [cursor=pointer]:
+          - /url: /poker
+          - generic [ref=e20]: ♠
+          - heading "Poker" [level=2] [ref=e21]
+          - paragraph [ref=e22]: No-Limit Texas Hold'em. Play AI opponents, practice your decisions, or run a private table with friends.
+          - list [ref=e23]
+          - text: Enter Poker Hub →
+        - link "♦ Blackjack Fast solo sessions, basic strategy coaching, or private friend tables. Quick reps, sharp decisions. Solo sessions against the dealer Basic strategy training Private friend tables Enter Blackjack Hub →" [ref=e30] [cursor=pointer]:
+          - /url: /blackjack
+          - generic [ref=e31]: ♦
+          - heading "Blackjack" [level=2] [ref=e32]
+          - paragraph [ref=e33]: Fast solo sessions, basic strategy coaching, or private friend tables. Quick reps, sharp decisions.
+          - list [ref=e34]
+          - text: Enter Blackjack Hub →
+      - paragraph [ref=e41]: Play-money only · No real-money gambling · Virtual chips have no real-world value · 18+
+  - alert [ref=e42]

@@ -1,0 +1,64 @@
+- generic [ref=e2] [box=0,0,1440,1600]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1568,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e7] [box=0,0,1440,1600]:
+    - navigation [ref=e8] [box=0,0,1440,81]:
+      - generic [ref=e10] [box=44,0,1352,80]:
+        - link "ClinicalHours ClinicalHours" [ref=e11] [cursor=pointer] [box=44,24,153,32]:
+          - /url: /
+          - img "ClinicalHours" [ref=e12] [box=44,24,32,32]
+          - generic [ref=e13] [box=84,26,113,28]: ClinicalHours
+        - generic [ref=e14] [box=1081,32,315,16]:
+          - link "Home" [ref=e15] [cursor=pointer] [box=1081,32,40,16]:
+            - /url: /
+          - link "Map" [ref=e16] [cursor=pointer] [box=1145,32,30,16]:
+            - /url: /map
+          - link "Contact" [ref=e17] [cursor=pointer] [box=1199,32,62,16]:
+            - /url: /contact
+          - link "Login / Sign Up" [ref=e18] [cursor=pointer] [box=1284,32,112,16]:
+            - /url: /auth
+    - main [ref=e19] [box=20,0,1400,1139]:
+      - generic [ref=e20] [box=36,96,1368,60]:
+        - heading "ClinicalHours Journal" [level=1] [ref=e21] [box=36,96,1368,32]
+        - paragraph [ref=e22] [box=36,132,1368,24]: Log clinical hours, write reflections, and track your progress.
+      - generic [ref=e23] [box=36,188,1368,443]:
+        - generic [ref=e24] [box=36,188,1368,90]:
+          - generic [ref=e25] [box=36,188,330,90]:
+            - img [ref=e27] [box=67,223,20,20]
+            - generic [ref=e30] [box=113,209,65,48]
+          - generic [ref=e33] [box=382,188,330,90]:
+            - img [ref=e35] [box=413,223,20,20]
+            - generic [ref=e37] [box=459,209,97,48]
+        - generic [ref=e40] [box=36,310,1368,36]:
+          - heading "Activity Log" [level=2] [ref=e41] [box=36,314,101,28]
+          - generic [ref=e42] [box=925,310,479,36]:
+            - generic [ref=e43] [box=925,310,180,36]
+            - combobox [ref=e48] [cursor=pointer] [box=1117,310,160,36]
+            - button "Log Hours" [ref=e53] [cursor=pointer] [box=1289,310,115,36]
+        - generic [ref=e54] [box=36,370,1368,262]:
+          - img [ref=e55] [box=700,434,40,40]
+          - paragraph [ref=e58] [box=37,486,1366,24]: No hours logged yet. Start tracking!
+          - button "Log Your First Hours" [ref=e59] [cursor=pointer] [box=625,526,191,40]:
+            - img [box=641,538,16,16]
+            - text: Log Your First Hours
+    - contentinfo [ref=e60] [box=0,1139,1440,461]:
+      - generic [ref=e61] [box=20,1140,1400,444]:
+        - generic [ref=e62] [box=44,1220,1352,132]:
+          - generic [ref=e63] [box=44,1220,302,132]:
+            - generic [ref=e64] [box=44,1220,302,28]: ClinicalHours
+            - paragraph [ref=e65] [box=44,1272,302,46]: Empowering pre-med students to find and secure clinical opportunities.
+          - generic [ref=e66] [box=394,1220,302,132]:
+            - heading "Quick Links" [level=3] [ref=e67] [box=394,1220,302,16]
+            - list [ref=e68] [box=394,1260,302,56]
+          - generic [ref=e73] [box=744,1220,302,132]:
+            - heading "Resources" [level=3] [ref=e74] [box=744,1220,302,16]
+            - list [ref=e75] [box=744,1260,302,92]
+          - generic [ref=e82] [box=1094,1220,302,132]:
+            - heading "Connect" [level=3] [ref=e83] [box=1094,1220,302,16]
+            - list [ref=e84] [box=1094,1260,302,60]
+        - generic [ref=e99] [box=44,1432,1352,72]:
+          - paragraph [ref=e100] [box=44,1465,1352,16]: © 2026 ClinicalHours. All rights reserved.
+          - paragraph [ref=e101] [box=44,1489,1352,15]:
+            - link "Logos provided by Logo.dev" [ref=e102] [cursor=pointer] [box=653,1490,135,12]:
+              - /url: https://logo.dev

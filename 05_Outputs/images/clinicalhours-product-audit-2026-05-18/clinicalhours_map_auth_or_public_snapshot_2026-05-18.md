@@ -1,0 +1,53 @@
+- generic [ref=e2] [box=0,0,1440,1600]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1568,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e7] [box=0,0,1440,1600]:
+    - generic [ref=e8] [box=0,0,1440,1600]:
+      - region "Map" [ref=e9] [box=0,0,1440,1600]
+      - generic [box=0,0,1440,0]:
+        - generic [ref=e10] [box=1398,10,32,96]:
+          - button "Zoom in" [ref=e11] [cursor=pointer] [box=1398,10,32,32]
+          - button "Zoom out" [ref=e13] [cursor=pointer] [box=1398,42,32,32]
+          - button "Reset bearing to north" [ref=e15] [box=1398,74,32,32]
+        - link "Mapbox homepage" [ref=e18] [cursor=pointer] [box=6,1571,88,23]:
+          - /url: https://www.mapbox.com/
+    - generic [ref=e20] [box=642,768,157,64]:
+      - img [ref=e21] [box=701,765,38,38]
+      - paragraph [ref=e23] [box=642,812,157,20]: Loading opportunities...
+    - navigation [ref=e24] [box=0,0,1440,81]:
+      - generic [ref=e26] [box=44,0,1352,80]:
+        - link "ClinicalHours ClinicalHours" [ref=e27] [cursor=pointer] [box=44,24,153,32]:
+          - /url: /
+          - img "ClinicalHours" [ref=e28] [box=44,24,32,32]
+          - generic [ref=e29] [box=84,26,113,28]: ClinicalHours
+        - generic [ref=e30] [box=1081,32,315,16]:
+          - link "Home" [ref=e31] [cursor=pointer] [box=1081,32,40,16]:
+            - /url: /
+          - link "Map" [ref=e32] [cursor=pointer] [box=1145,32,30,16]:
+            - /url: /map
+          - link "Contact" [ref=e33] [cursor=pointer] [box=1199,32,62,16]:
+            - /url: /contact
+          - link "Login / Sign Up" [ref=e34] [cursor=pointer] [box=1284,32,112,16]:
+            - /url: /auth
+    - generic [ref=e36] [box=660,87,120,29]: 0 opportunities
+    - generic [ref=e37] [box=16,112,288,340]:
+      - button "Controls" [ref=e38] [cursor=pointer] [box=17,113,286,44]:
+        - generic [ref=e39] [box=33,125,57,20]: Controls
+        - img [ref=e40] [box=271,127,16,16]
+      - generic [ref=e42] [box=17,157,286,294]:
+        - generic [ref=e43] [box=33,157,254,36]:
+          - button "All" [ref=e44] [cursor=pointer] [box=35,159,125,32]
+          - button "Saved" [ref=e47] [box=160,159,125,32]
+        - generic [ref=e50] [box=33,213,254,38]:
+          - img [ref=e51] [box=45,225,14,14]
+          - textbox "Search hospitals..." [ref=e54] [box=33,213,254,38]
+        - generic [ref=e55] [box=33,270,254,20]:
+          - generic [ref=e56] [box=33,272,106,16]: Show All Hospitals
+          - button [ref=e57] [cursor=pointer] [box=251,270,36,20]
+        - button "Drop Pin" [ref=e60] [cursor=pointer] [box=33,310,254,34]:
+          - img [ref=e61] [box=126,320,14,14]
+          - text: Drop Pin
+        - generic [ref=e64] [box=33,364,254,71]:
+          - paragraph [ref=e65] [box=33,373,254,15]: Legend
+          - generic [ref=e66] [box=33,396,254,39]

@@ -1,0 +1,6 @@
+Write `success-note.md` in the run directory saying:
+
+- `PASS`
+- the watcher processed this task automatically
+
+Do not use shell commands and do not modify files outside the run directory.

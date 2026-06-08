@@ -1,74 +1,53 @@
 ---
 title: References Index
-description: Shared knowledge base — frameworks, tools, patterns I discover
+description: Shared knowledge base for reusable frameworks, tools, patterns, and best practices
 type: index
-last_updated: 2026-04-14
+last_updated: 2026-05-12
 ---
 
 # References
 
-Curated knowledge built from my learnings across sessions. Everything is sourced (real URLs, authors, tools). Use these in Analyst output or your own work.
+Curated reusable knowledge built from previous work. This layer should strengthen future reasoning, writing, research, outreach, and operations work without duplicating project-specific decisions.
 
----
+## Folders
 
-## 📂 Folders
+- [[Best-Practices/_index]] - vault-operation and workflow guidance worth reusing
+- [[Frameworks/_index]] - reusable mental models, routing rules, and operating procedures
+- [[Patterns/_index]] - recurring strategies across domains
+- [[Tools/_index]] - software, SaaS, and utility notes
+- [[Voice-Style/_index]] - writing and tone guidance
 
-- **`/Tools/`** — Software, SaaS, utilities I discover (with setup guidance)
-- **`/Frameworks/`** — Reusable mental models and processes
-- **`/Skills/`** — Claude Code skills I've explored (with tips + patterns)
-- **`/Patterns/`** — Recurring strategies across domains (sales, email, product, etc.)
+## How References Work
 
----
+What belongs here:
+- New tools and how to use them
+- Frameworks or processes learned from research
+- Patterns that appear across multiple sessions
+- Best practices that improve future agent output quality
 
-## 🔗 How References Work
+What links here:
+- Analyst files can cite References in body text when explaining why they did something
+- Reference notes should cite real sources when the claim is external
+- Bidirectional wikilinks between Analyst and References are encouraged
 
-**What goes here:**
-- New tool I discover + how to use it
-- Framework or process I learn from research
-- Pattern that appears across multiple sessions
-- Skill documentation or best practices
+What does not go here:
+- Personal decisions or live project state
+- Finished deliverables
+- Unsourced speculation
 
-**What links here:**
-- Analyst files cite References in body text when explaining why they did something
-- References cite real sources (URLs, authors, tools, research)
-- Bidirectional wikilinks: Analyst ↔ References
+## High-Value Current References
 
-**What doesn't go here:**
-- Your personal decisions (→ Analyst)
-- Your writing/outputs (→ Source)
-- Unsourced speculation (must be sourced)
+- [[Frameworks/task-routing-policy]] - route tasks by stakes, complexity, and context needs
+- [[Frameworks/reviewer-loop-policy]] - default review loop for higher-stakes non-development work
+- [[Frameworks/Cold-Email-Optimization]] - value-first outreach framework
+- [[Patterns/Recipient-Psychology]] - scan behavior and response-friction patterns
+- [[Best-Practices/Claude-Code-Obsidian-Integration]] - vault-specific operating guidance
+- [[Voice-Style/Shivam-Voice-Pattern]] - user-approved writing guardrails; simple words, clear logic, and anti-boilerplate essay rules
 
-**Example flow (with Iteration):**
-1. I discover copywriting principles while working on your Wave 3 emails
-2. I save the framework to `03_References/Frameworks/Cold-Email-Optimization.md` (with real sources) — **v1.0**
-3. Your Analyst file (`email-optimization-strategy.md`) links to it in frontmatter + body
-4. You apply it to Wave 2 → I test results, find what works better
-5. I iterate: improve the framework with new insights → **v1.1**
-6. Next session, I reference the improved v1.1 (not re-learning, but building on learnings)
-7. Each cycle: framework compounds, improves toward what actually works
+## Maintenance Rule
 
-**Result:** References aren't static checklists. They're living frameworks that evolve based on real usage.
-
----
-
-## 📊 Active References by Domain
-
-### Internship Outreach
-- [[Frameworks/Cold-Email-Optimization]] — Recipient-first positioning, specific CTAs, <70 words
-- [[Patterns/Recipient-Psychology]] — Why long emails fail, 20-second scan rule, self-focus trap
-- [[Tools/Email-Verification]] — Hunter, Tomba, RocketReach workflow for CEO emails (20 companies in 2 hours)
-
----
-
-## History
-
-[2026-04-14] References folder created as shared knowledge base. First entries from Wave 3 cold email optimization work.
+This page should stay short. If a section starts turning into a running log, move that detail into the relevant child index or reference note.
 
 ## New Files
 
-- 📂 [[Best-Practices/_index|Best-Practices/]] — Best Practices Index
-- 📂 [[Frameworks/_index|Frameworks/]] — Frameworks Index
-- 📂 [[Patterns/_index|Patterns/]] — Patterns Index
-- 📂 [[Tools/_index|Tools/]] — Tools Index
-- 📂 [[Voice-Style/_index|Voice-Style/]] — Voice Style Index
-- [[template-iterations]] — Template showing the standard Iterations section format for all Reference files
+- [[template-iterations]] - Template showing the standard Iterations section format for all Reference files

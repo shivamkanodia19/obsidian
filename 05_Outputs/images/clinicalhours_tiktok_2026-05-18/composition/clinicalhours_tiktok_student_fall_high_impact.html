@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClinicalHours TikTok Carousel - Student Fall High Impact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #162037;
+      --ink-soft: #53627d;
+      --ink-mute: #7a8697;
+      --paper: #f4efe7;
+      --paper-warm: #f8f1e7;
+      --paper-cool: #e9effa;
+      --paper-mint: #e5f1ea;
+      --paper-sunset: #f7e4d8;
+      --navy: #20304d;
+      --blue: #5a7cff;
+      --cyan: #62b9dc;
+      --mint: #63b996;
+      --coral: #ff8662;
+      --gold: #d9ad5b;
+      --lavender: #8f92df;
+      --shadow: 0 24px 60px rgba(22, 32, 55, 0.11);
+      --soft-shadow: 0 14px 34px rgba(22, 32, 55, 0.08);
+      --safe-left: 72px;
+      --safe-right: 1008px;
+      --safe-top: 72px;
+      --safe-bottom: 1708px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      padding: 64px 48px 120px;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f6f1e9, #f2eee7);
+    }
+
+    body.export-mode {
+      width: 1080px;
+      height: 1920px;
+      padding: 0;
+      overflow: hidden;
+      background: #fffaf2;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      align-items: center;
+    }
+
+    body.export-mode .wrap {
+      display: block;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 30px 84px rgba(22, 32, 50, 0.12);
+    }
+
+    body.export-mode .slide {
+      box-shadow: none;
+    }
+
+    .slide[hidden] {
+      display: none;
+    }
+
+    .slide::before,
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .slide::before {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+      z-index: 0;
+    }
+
+    .slide::after {
+      background: none;
+      z-index: 0;
+    }
+
+    .route-overlay {
+      display: none;
+    }
+
+    .slide-1 {
+      background:
+        radial-gradient(circle at 86% 6%, rgba(214, 225, 247, 0.95) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 80% 82%, rgba(247, 223, 209, 0.9) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 10% 84%, rgba(220, 239, 233, 0.85) 0 18%, transparent 18.3%),
+        linear-gradient(180deg, #f5f0e8 0%, #f3efe6 100%);
+    }
+
+    .slide-2 {
+      background:
+        radial-gradient(circle at 84% 7%, rgba(216, 226, 247, 0.95) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 74% 82%, rgba(247, 226, 212, 0.9) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 16% 87%, rgba(248, 233, 159, 0.6) 0 18%, transparent 18.3%),
+        linear-gradient(180deg, #f4efe7 0%, #f2ede5 100%);
+    }
+
+    .slide-3 {
+      background:
+        radial-gradient(circle at 84% 6%, rgba(216, 226, 247, 0.95) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 86% 15%, rgba(246, 220, 209, 0.86) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 10% 88%, rgba(221, 238, 233, 0.8) 0 18%, transparent 18.3%),
+        linear-gradient(180deg, #f5f0e8 0%, #f3eee5 100%);
+    }
+
+    .slide-4 {
+      background:
+        radial-gradient(circle at 10% 82%, rgba(221, 238, 233, 0.86) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 84% 10%, rgba(216, 226, 247, 0.92) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 74% 82%, rgba(247, 226, 212, 0.84) 0 18%, transparent 18.3%),
+        linear-gradient(180deg, #f4efe8 0%, #f2eee6 100%);
+    }
+
+    .slide-5 {
+      background:
+        radial-gradient(circle at 84% 6%, rgba(216, 226, 247, 0.95) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 84% 18%, rgba(246, 220, 209, 0.82) 0 18%, transparent 18.3%),
+        radial-gradient(circle at 10% 88%, rgba(248, 233, 159, 0.56) 0 18%, transparent 18.3%),
+        linear-gradient(180deg, #f5f0e8 0%, #f2eee6 100%);
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 24% 24%, rgba(16, 24, 38, 0.06) 0 0.6px, transparent 0.7px),
+        radial-gradient(circle at 72% 62%, rgba(16, 24, 38, 0.05) 0 0.6px, transparent 0.7px);
+      background-size: 18px 18px, 22px 22px;
+      mix-blend-mode: multiply;
+      opacity: 0.08;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .guide-safe,
+    .guide-bottom,
+    .guide-report {
+      display: none;
+    }
+
+    body.qa-mode .guide-safe,
+    body.qa-mode .guide-bottom,
+    body.qa-mode .guide-report {
+      display: block;
+    }
+
+    .guide-safe {
+      position: absolute;
+      left: var(--safe-left);
+      top: var(--safe-top);
+      width: calc(var(--safe-right) - var(--safe-left));
+      height: calc(var(--safe-bottom) - var(--safe-top));
+      border: 2px dashed rgba(63, 124, 255, 0.68);
+      border-radius: 28px;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .guide-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: var(--safe-bottom);
+      bottom: 0;
+      background: rgba(255, 95, 95, 0.08);
+      border-top: 1px dashed rgba(255, 95, 95, 0.5);
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .guide-report {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 56px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(16, 24, 38, 0.12);
+      background: rgba(255, 255, 255, 0.9);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--ink);
+      white-space: pre-wrap;
+      z-index: 21;
+    }
+
+    body.qa-mode [data-essential="true"] {
+      outline: 2px solid rgba(45, 212, 161, 0.9);
+      outline-offset: 4px;
+    }
+
+    body.qa-mode [data-overflow="true"],
+    body.qa-mode [data-unsafe="true"] {
+      outline-color: rgba(255, 95, 95, 0.9);
+    }
+
+    .chrome {
+      position: absolute;
+      left: 78px;
+      right: 80px;
+      top: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .brand-lock {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: conic-gradient(from 210deg, var(--coral), var(--cyan), var(--lavender), var(--coral));
+      box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.82);
+    }
+
+    .brand {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .progress {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(22, 37, 66, 0.1);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .progress-track {
+      display: flex;
+      gap: 7px;
+    }
+
+    .progress-track span {
+      width: 18px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(22, 37, 66, 0.14);
+    }
+
+    .slide-1 .progress-track span:nth-child(1),
+    .slide-2 .progress-track span:nth-child(-n+2),
+    .slide-3 .progress-track span:nth-child(-n+3),
+    .slide-4 .progress-track span:nth-child(-n+4),
+    .slide-5 .progress-track span:nth-child(-n+5) {
+      background: linear-gradient(90deg, var(--coral), var(--blue));
+    }
+
+    .progress-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      color: var(--navy);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      position: absolute;
+      left: 80px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(22, 37, 66, 0.1);
+      box-shadow: none;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy);
+      z-index: 10;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--coral), var(--gold));
+      box-shadow: 0 0 0 5px rgba(255, 202, 87, 0.18);
+    }
+
+    .headline {
+      position: absolute;
+      left: 80px;
+      margin: 0;
+      padding-bottom: 20px;
+      width: 560px;
+      font-family: "Sora", sans-serif;
+      font-size: 92px;
+      font-weight: 800;
+      line-height: 0.97;
+      letter-spacing: -0.085em;
+      color: var(--ink);
+      text-wrap: balance;
+      z-index: 10;
+    }
+
+    .subtext {
+      position: absolute;
+      left: 82px;
+      margin: 0;
+      width: 520px;
+      font-size: 30px;
+      line-height: 1.14;
+      letter-spacing: -0.05em;
+      color: var(--ink-soft);
+      z-index: 10;
+    }
+
+    .accent-line {
+      position: absolute;
+      height: 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 202, 87, 0.84), rgba(255, 134, 98, 0.92));
+      filter: blur(0.1px);
+      opacity: 0.85;
+      z-index: 9;
+    }
+
+    .proof-card,
+    .note-card,
+    .info-card,
+    .tile {
+      position: absolute;
+      z-index: 6;
+    }
+
+    .callout {
+      position: absolute;
+    }
+
+    .proof-card {
+      overflow: hidden;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .proof-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 30%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .proof-screen {
+      position: absolute;
+      inset: 12px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #0b1018;
+      z-index: 1;
+    }
+
+    .proof-screen img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.04) brightness(1.02);
+    }
+
+    .contain img {
+      object-fit: contain;
+      background: #0b1018;
+    }
+
+    .crop-top img {
+      object-position: 50% 16%;
+    }
+
+    .crop-right img {
+      object-position: 82% 50%;
+    }
+
+    .crop-left img {
+      object-position: 18% 50%;
+    }
+
+    .note-card,
+    .info-card,
+    .tile {
+      border-radius: 24px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .note-card {
+      padding: 24px 26px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+    }
+
+    .note-card strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .note-card span {
+      display: block;
+      font-size: 30px;
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .info-card {
+      padding: 22px 24px;
+      background: rgba(22, 37, 66, 0.94);
+      color: #f7fbff;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 8;
+    }
+
+    .info-card strong {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #91d9ff;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #f7fbff;
+      font-weight: 600;
+    }
+
+    .chip-stack {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      z-index: 7;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 64px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      border: 1px solid rgba(22, 37, 66, 0.08);
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--ink);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .chip.blue {
+      background: rgba(63, 124, 255, 0.12);
+      color: #1f4eea;
+    }
+
+    .chip.coral {
+      background: rgba(255, 125, 89, 0.14);
+      color: #cf512d;
+    }
+
+    .chip.mint {
+      background: rgba(45, 212, 161, 0.14);
+      color: #0b9169;
+    }
+
+    .chip.gold {
+      background: rgba(255, 202, 87, 0.18);
+      color: #a96d00;
+    }
+
+    .badge {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--soft-shadow);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      z-index: 9;
+    }
+
+    .badge strong {
+      font-family: "Sora", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--ink);
+    }
+
+    .callout {
+      position: absolute;
+      padding: 18px 20px;
+      border-radius: 20px;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--soft-shadow);
+      font-size: 22px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      font-weight: 700;
+      z-index: 8;
+    }
+
+    .callout::after {
+      display: none;
+    }
+
+    .tile {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(22, 37, 66, 0.08);
+    }
+
+    .tile-screen {
+      position: absolute;
+      inset: 14px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #0b1018;
+    }
+
+    .tile-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.05) contrast(1.05) brightness(1.03);
+    }
+
+    .tile-label {
+      position: absolute;
+      left: 22px;
+      bottom: 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      z-index: 3;
+    }
+
+    .cta-card {
+      position: absolute;
+      padding: 30px 30px 34px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+
+    .cta-kicker {
+      display: block;
+      margin-bottom: 14px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .cta-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 58px;
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+    }
+
+    .cta-copy {
+      margin: 16px 0 0;
+      font-size: 28px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: var(--ink-soft);
+    }
+
+    .action-row {
+      position: absolute;
+      display: flex;
+      gap: 16px;
+      z-index: 10;
+    }
+
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 72px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .action.primary {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .action.secondary {
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink);
+      border: 1px solid rgba(22, 37, 66, 0.08);
+    }
+
+    .planner-card,
+    .check-panel,
+    .save-rail,
+    .final-note {
+      position: absolute;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--shadow);
+      z-index: 9;
+    }
+
+    .planner-card {
+      padding: 24px 24px 26px;
+    }
+
+    .planner-card h3,
+    .check-panel h3,
+    .save-rail h3,
+    .final-note strong {
+      margin: 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .planner-card p,
+    .check-panel p,
+    .save-rail p,
+    .final-note p {
+      margin: 10px 0 0;
+      font-size: 23px;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      color: var(--ink-soft);
+    }
+
+    .planner-list,
+    .check-list,
+    .save-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .planner-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .planner-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+    }
+
+    .planner-list li::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, var(--coral), var(--gold));
+      box-shadow: 0 0 0 5px rgba(255, 202, 87, 0.16);
+      flex: 0 0 auto;
+    }
+
+    .check-list,
+    .save-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .check-list li,
+    .save-list li {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid rgba(22, 37, 66, 0.08);
+    }
+
+    .check-list li:first-child,
+    .save-list li:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .check-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(70, 119, 202, 0.12);
+      color: #2851d8;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .check-copy strong {
+      display: block;
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+
+    .check-copy span {
+      display: block;
+      margin-top: 4px;
+      font-size: 16px;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      color: var(--ink-soft);
+    }
+
+    .search-tile {
+      position: absolute;
+      overflow: hidden;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(22, 37, 66, 0.06);
+      box-shadow: var(--soft-shadow);
+      z-index: 9;
+    }
+
+    .search-tile .proof-screen {
+      inset: 10px;
+      border-radius: 14px;
+    }
+
+    .final-note {
+      padding: 16px 18px 18px;
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .slide-1 .eyebrow { top: 170px; }
+    .slide-1 .headline { top: 244px; width: 470px; font-size: 92px; }
+    .slide-1 .accent-line { left: 82px; top: 612px; width: 250px; }
+    .slide-1 .subtext { top: 650px; width: 492px; font-size: 28px; padding-bottom: 10px; }
+    .slide-1 .planner-card { right: 84px; top: 318px; width: 272px; }
+    .slide-1 .hero-proof { left: 72px; top: 926px; width: 936px; height: 336px; transform: rotate(0deg); }
+    .slide-1 .hero-proof .proof-screen { inset: 12px; border-radius: 22px; }
+    .slide-1 .hero-proof .proof-screen img { object-position: 34% 50%; }
+    .slide-1 .search-tile { left: 82px; top: 1186px; width: 432px; height: 112px; transform: rotate(0deg); }
+    .slide-1 .search-tile .proof-screen img { object-fit: contain; object-position: 50% 50%; background: #101010; }
+    .slide-1 .badge { left: 86px; top: 1360px; }
+    .slide-1 .note-a { right: 84px; top: 1434px; width: 324px; transform: rotate(0deg); }
+
+    .slide-2 .eyebrow { top: 170px; }
+    .slide-2 .headline { left: 80px; top: 248px; width: 420px; font-size: 82px; color: var(--ink); }
+    .slide-2 .accent-line { left: 82px; top: 470px; width: 246px; background: linear-gradient(90deg, rgba(98, 185, 220, 0.9), rgba(99, 185, 150, 0.88)); }
+    .slide-2 .subtext { left: 82px; top: 512px; width: 486px; font-size: 28px; color: var(--ink-soft); padding-bottom: 10px; }
+    .slide-2 .map-proof { left: 68px; top: 918px; width: 944px; height: 436px; border-radius: 28px; background: rgba(255, 255, 255, 0.95); }
+    .slide-2 .map-proof .proof-screen { inset: 14px; border-radius: 22px; }
+    .slide-2 .map-proof .proof-screen img { object-position: 48% 48%; }
+    .slide-2 .badge { left: 82px; top: 1286px; z-index: 9; }
+    .slide-2 .callout-a { right: 84px; top: 1492px; max-width: 264px; }
+    .slide-2 .callout-b { left: 82px; top: 1468px; max-width: 320px; }
+
+    .slide-3 .eyebrow { top: 170px; }
+    .slide-3 .hero-proof { left: 68px; top: 404px; width: 944px; height: 430px; transform: rotate(0deg); z-index: 7; }
+    .slide-3 .hero-proof .proof-screen { inset: 14px; border-radius: 22px; }
+    .slide-3 .headline { top: 950px; width: 440px; font-size: 86px; }
+    .slide-3 .accent-line { left: 82px; top: 1250px; width: 250px; }
+    .slide-3 .subtext { top: 1302px; width: 472px; font-size: 28px; padding-bottom: 10px; }
+    .slide-3 .check-panel { right: 84px; top: 1088px; width: 304px; }
+    .slide-3 .info-a { display: none; }
+    .slide-3 .support-proof { display: none; }
+
+    .slide-4 .eyebrow { top: 170px; }
+    .slide-4 .headline { top: 244px; width: 484px; font-size: 82px; }
+    .slide-4 .accent-line { left: 82px; top: 540px; width: 250px; background: linear-gradient(90deg, rgba(99, 185, 150, 0.92), rgba(98, 185, 220, 0.88)); }
+    .slide-4 .subtext { top: 580px; width: 456px; font-size: 28px; padding-bottom: 10px; }
+    .slide-4 .hero-proof { left: 68px; top: 810px; width: 560px; height: 620px; transform: rotate(0deg); z-index: 7; }
+    .slide-4 .hero-proof .proof-screen { inset: 14px; border-radius: 22px; background: linear-gradient(180deg, rgba(15, 19, 30, 0.98), rgba(9, 13, 22, 0.99)); }
+    .slide-4 .save-rail { right: 84px; top: 782px; width: 336px; padding: 24px 24px 26px; }
+    .slide-4 .info-b { display: none; }
+
+    .slide-5 .eyebrow { top: 170px; }
+    .slide-5 .headline { top: 244px; width: 540px; font-size: 84px; }
+    .slide-5 .accent-line { left: 82px; top: 618px; width: 250px; }
+    .slide-5 .subtext { top: 656px; width: 500px; font-size: 29px; padding-bottom: 10px; }
+    .slide-5 .cta-card { left: 80px; top: 1014px; width: 486px; padding-bottom: 38px; }
+    .slide-5 .cta-title { font-size: 54px; }
+    .slide-5 .cta-copy { font-size: 22px; line-height: 1.14; }
+    .slide-5 .auth-proof { right: 84px; top: 1000px; width: 404px; height: 320px; transform: rotate(0deg); }
+    .slide-5 .auth-proof .proof-screen { inset: 14px; border-radius: 22px; background: linear-gradient(180deg, rgba(18, 24, 38, 0.95), rgba(12, 17, 27, 0.98)); }
+    .slide-5 .final-note { left: 82px; top: 1368px; width: 306px; }
+    .slide-5 .action-row { left: 82px; top: 1490px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="slide slide-1" data-slide="1">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <svg class="route-overlay" viewBox="0 0 1080 1920" aria-hidden="true">
+        <defs>
+          <linearGradient id="route-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e77c60" />
+            <stop offset="55%" stop-color="#d1a85f" />
+            <stop offset="100%" stop-color="#3d78d8" />
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="264" cy="1088" r="82"></circle>
+        <circle class="halo" cx="786" cy="1182" r="96"></circle>
+        <path d="M 150 1106 C 250 1036, 358 1004, 474 1038 S 700 1188, 848 1278" stroke="url(#route-gradient-1)"></path>
+        <path class="secondary" d="M 172 1216 C 298 1168, 456 1170, 632 1258 S 844 1424, 918 1518" stroke="url(#route-gradient-1)"></path>
+        <circle cx="164" cy="1110" r="18" stroke="#e77c60"></circle>
+        <circle cx="508" cy="1056" r="18" stroke="#d1a85f"></circle>
+        <circle cx="848" cy="1278" r="18" stroke="#3d78d8"></circle>
+      </svg>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">01 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-1-eyebrow">01 Search</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-1-headline">Don't let fall start in ten tabs.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-1-subtext">Start with one search page before classes, orgs, and shifts crowd the week.</p>
+      <div class="planner-card">
+        <h3>fall fills fast</h3>
+        <p>Search once before the rest of the semester gets loud.</p>
+        <ul class="planner-list">
+          <li>class schedules</li>
+          <li>club fairs</li>
+          <li>job shifts</li>
+        </ul>
+      </div>
+      <div class="proof-card hero-proof" data-proof="true" data-name="slide-1-hero-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_opportunity_header_focus_v1.png" alt="ClinicalHours opportunities page showing the search start for nearby clinical opportunities" />
+        </div>
+      </div>
+      <div class="proof-card search-tile">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_opportunity_search_focus_v1.png" alt="ClinicalHours search bar with a typed opportunity query" />
+        </div>
+      </div>
+      <div class="badge"><strong>one search page</strong> beats ten open tabs</div>
+      <div class="note-card note-a">
+        <strong>better start</strong>
+        <span>Search first. Sort the rest later.</span>
+      </div>
+    </section>
+
+    <section class="slide slide-2" data-slide="2">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <svg class="route-overlay" viewBox="0 0 1080 1920" aria-hidden="true">
+        <defs>
+          <linearGradient id="route-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3d78d8" />
+            <stop offset="52%" stop-color="#4db4d2" />
+            <stop offset="100%" stop-color="#3cb58f" />
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="830" cy="670" r="92"></circle>
+        <circle class="halo" cx="232" cy="1468" r="72"></circle>
+        <path d="M 866 664 C 790 760, 700 818, 594 840 S 358 904, 222 980" stroke="url(#route-gradient-2)"></path>
+        <path class="secondary" d="M 266 1504 C 388 1468, 524 1424, 666 1350 S 860 1206, 914 1086" stroke="url(#route-gradient-2)"></path>
+        <circle cx="866" cy="664" r="18" stroke="#3d78d8"></circle>
+        <circle cx="602" cy="840" r="18" stroke="#4db4d2"></circle>
+        <circle cx="230" cy="980" r="18" stroke="#3cb58f"></circle>
+      </svg>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">02 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-2-eyebrow">02 Scan</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-2-headline">Start with the map.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-2-subtext">It is easier to narrow after you see where the search already has real volume.</p>
+      <div class="badge"><strong>9,512</strong> opportunities in one view</div>
+      <div class="proof-card map-proof" data-proof="true" data-name="slide-2-map-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_map_focus_v1.png" alt="ClinicalHours opportunity map" />
+        </div>
+      </div>
+      <div class="callout callout-a">Filter after a zone looks promising.</div>
+      <div class="callout callout-b">Start where the search already has real volume.</div>
+    </section>
+
+    <section class="slide slide-3" data-slide="3">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <svg class="route-overlay" viewBox="0 0 1080 1920" aria-hidden="true">
+        <defs>
+          <linearGradient id="route-gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e77c60" />
+            <stop offset="48%" stop-color="#d1a85f" />
+            <stop offset="100%" stop-color="#3d78d8" />
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="266" cy="884" r="84"></circle>
+        <circle class="halo" cx="708" cy="1220" r="104"></circle>
+        <path d="M 262 932 C 396 932, 496 944, 586 994 S 728 1122, 792 1220" stroke="url(#route-gradient-3)"></path>
+        <path class="secondary" d="M 214 1266 C 340 1272, 498 1294, 658 1360 S 830 1450, 914 1492" stroke="url(#route-gradient-3)"></path>
+        <circle cx="262" cy="932" r="18" stroke="#e77c60"></circle>
+        <circle cx="592" cy="998" r="18" stroke="#d1a85f"></circle>
+        <circle cx="792" cy="1220" r="18" stroke="#3d78d8"></circle>
+      </svg>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">03 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-3-eyebrow">03 Check</div>
+      <div class="proof-card hero-proof contain" data-proof="true" data-name="slide-3-hero-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_opportunity_houston_result_focus_v1.png" alt="ClinicalHours search result for Houston Methodist Hospital with location, add to tracker, and More Info" />
+        </div>
+      </div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-3-headline">Check one lead before you click.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-3-subtext">City, type, and the next link should make sense fast.</p>
+      <div class="check-panel">
+        <h3>check fast</h3>
+        <ul class="check-list">
+          <li>
+            <span class="check-mark">01</span>
+            <div class="check-copy">
+              <strong>city</strong>
+              <span>Make sure the lead is actually where you want it.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-mark">02</span>
+            <div class="check-copy">
+              <strong>type</strong>
+              <span>Know what kind of clinic you are opening.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-mark">03</span>
+            <div class="check-copy">
+              <strong>more info</strong>
+              <span>Open the next tab only when it looks real.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide slide-4" data-slide="4">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <svg class="route-overlay" viewBox="0 0 1080 1920" aria-hidden="true">
+        <defs>
+          <linearGradient id="route-gradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3cb58f" />
+            <stop offset="50%" stop-color="#4db4d2" />
+            <stop offset="100%" stop-color="#3d78d8" />
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="864" cy="708" r="84"></circle>
+        <circle class="halo" cx="280" cy="1588" r="68"></circle>
+        <path d="M 868 714 C 804 824, 742 924, 666 1032 S 496 1268, 404 1370" stroke="url(#route-gradient-4)"></path>
+        <path class="secondary" d="M 246 1608 C 372 1562, 540 1520, 674 1480 S 854 1416, 934 1368" stroke="url(#route-gradient-4)"></path>
+        <circle cx="868" cy="714" r="18" stroke="#3cb58f"></circle>
+        <circle cx="606" cy="1098" r="18" stroke="#4db4d2"></circle>
+        <circle cx="404" cy="1370" r="18" stroke="#3d78d8"></circle>
+      </svg>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">04 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-4-eyebrow">04 Save</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-4-headline">Keep the next step with the lead.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-4-subtext">Sign in once you want the lead, details, and app link together.</p>
+      <div class="proof-card hero-proof contain" data-proof="true" data-name="slide-4-hero-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_houston_save_panel_focus_v1.png" alt="ClinicalHours details card for Houston Methodist Hospital with save to dashboard and find app link actions" />
+        </div>
+      </div>
+      <div class="save-rail">
+        <h3>what the card keeps</h3>
+        <p>Use the account when it actually saves a step.</p>
+        <ul class="save-list">
+          <li>
+            <span class="check-mark">01</span>
+            <div class="check-copy">
+              <strong>saved lead</strong>
+              <span>Keep the match in view for later.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-mark">02</span>
+            <div class="check-copy">
+              <strong>details</strong>
+              <span>Reopen the same card without searching again.</span>
+            </div>
+          </li>
+          <li>
+            <span class="check-mark">03</span>
+            <div class="check-copy">
+              <strong>find app link</strong>
+              <span>Move to the next step without texting yourself.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide slide-5" data-slide="5">
+      <div class="grain"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <svg class="route-overlay" viewBox="0 0 1080 1920" aria-hidden="true">
+        <defs>
+          <linearGradient id="route-gradient-5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8d90cf" />
+            <stop offset="52%" stop-color="#3d78d8" />
+            <stop offset="100%" stop-color="#e77c60" />
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="276" cy="1204" r="92"></circle>
+        <circle class="halo" cx="804" cy="846" r="90"></circle>
+        <path d="M 238 1200 C 386 1116, 514 1042, 626 966 S 754 876, 836 850" stroke="url(#route-gradient-5)"></path>
+        <path class="secondary" d="M 228 1416 C 360 1440, 524 1458, 690 1440 S 860 1404, 944 1362" stroke="url(#route-gradient-5)"></path>
+        <circle cx="238" cy="1200" r="18" stroke="#8d90cf"></circle>
+        <circle cx="628" cy="966" r="18" stroke="#3d78d8"></circle>
+        <circle cx="836" cy="850" r="18" stroke="#e77c60"></circle>
+      </svg>
+      <div class="chrome">
+        <div class="brand-lock">
+          <span class="brand-mark"></span>
+          <div class="brand">ClinicalHours</div>
+        </div>
+        <div class="progress">
+          <div class="progress-track"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="progress-label">05 / 05</div>
+        </div>
+      </div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-5-eyebrow">05 Ready</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-5-headline">Browse now. Sign in when it helps.</h1>
+      <div class="accent-line"></div>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-5-subtext">Start as a guest, then sign in once you want to save the search or log hours.</p>
+      <div class="proof-card auth-proof" data-proof="true" data-name="slide-5-auth-proof">
+        <div class="proof-screen">
+          <img src="../captures/derived/clinicalhours_auth_guest_browse_focus_v2.png" alt="ClinicalHours account actions focused on browse as guest and sign in with email" />
+        </div>
+      </div>
+      <div class="cta-card" data-essential="true" data-text="true" data-name="slide-5-cta-card">
+        <span class="cta-kicker">student flow</span>
+        <h2 class="cta-title">Start at<br />clinicalhours.org</h2>
+        <p class="cta-copy">Browse as guest first. Sign in to save the search or log your first shift.</p>
+      </div>
+      <div class="final-note">
+        <strong>guest first</strong>
+        <p>No account needed to look around first.</p>
+      </div>
+      <div class="action-row" data-essential="true" data-text="true" data-name="slide-5-actions">
+        <div class="action primary">Browse opportunities</div>
+        <div class="action secondary">Sign in when ready</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const exportMode = params.get("export") === "1";
+    const qaMode = params.get("qa") === "1";
+    const slideParam = params.get("slide");
+
+    if (exportMode) {
+      document.body.classList.add("export-mode");
+    }
+
+    if (qaMode) {
+      document.body.classList.add("qa-mode");
+    }
+
+    if (slideParam) {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.dataset.slide !== slideParam) {
+          slide.remove();
+        }
+      });
+    }
+
+    const safe = {
+      left: 72,
+      right: 1008,
+      top: 72,
+      bottom: 1708
+    };
+
+    const overlaps = (a, b) => {
+      return !(a.right <= b.left || a.left >= b.right || a.bottom <= b.top || a.top >= b.bottom);
+    };
+
+    const relativeRect = (rect, origin) => ({
+      left: rect.left - origin.left,
+      top: rect.top - origin.top,
+      right: rect.right - origin.left,
+      bottom: rect.bottom - origin.top,
+      width: rect.width,
+      height: rect.height
+    });
+
+    const runQa = () => {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.hidden) {
+          const hiddenReport = slide.querySelector(".guide-report");
+          if (hiddenReport) {
+            hiddenReport.textContent = "QA SKIP\nHidden in current export.";
+          }
+          return;
+        }
+
+        const slideRect = slide.getBoundingClientRect();
+        const issues = [];
+        const essentials = slide.querySelectorAll("[data-essential='true']");
+
+        essentials.forEach((el) => {
+          el.removeAttribute("data-overflow");
+          el.removeAttribute("data-unsafe");
+          const rect = relativeRect(el.getBoundingClientRect(), slideRect);
+
+          if (rect.left < safe.left || rect.top < safe.top || rect.right > safe.right || rect.bottom > safe.bottom) {
+            el.setAttribute("data-unsafe", "true");
+            issues.push(`Unsafe zone: ${el.dataset.name || el.className}`);
+          }
+
+          const style = window.getComputedStyle(el);
+          const lineHeight = parseFloat(style.lineHeight);
+          if (el.scrollHeight > el.clientHeight + Math.max(2, lineHeight * 0.08) || el.scrollWidth > el.clientWidth + 2) {
+            el.setAttribute("data-overflow", "true");
+            issues.push(`Overflow: ${el.dataset.name || el.className}`);
+          }
+        });
+
+        const essentialRects = Array.from(essentials).map((el) => ({
+          name: el.dataset.name || el.className,
+          rect: relativeRect(el.getBoundingClientRect(), slideRect)
+        }));
+
+        for (let i = 0; i < essentialRects.length; i += 1) {
+          for (let j = i + 1; j < essentialRects.length; j += 1) {
+            if (overlaps(essentialRects[i].rect, essentialRects[j].rect)) {
+              issues.push(`Overlap: ${essentialRects[i].name} <> ${essentialRects[j].name}`);
+            }
+          }
+        }
+
+        const report = slide.querySelector(".guide-report");
+        if (report) {
+          if (issues.length) {
+            report.textContent = `QA WARN\n${issues.join("\n")}`;
+          } else {
+            report.textContent = "QA PASS\nAll essential content is within the safe zone and readable.";
+          }
+        }
+      });
+    };
+
+    window.addEventListener("load", () => {
+      if (qaMode) {
+        runQa();
+      }
+    });
+  </script>
+</body>
+</html>

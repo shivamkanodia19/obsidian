@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Deck Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "deck_id",
+    "campaign",
+    "run_id",
+    "slide_asset_ids",
+    "role_order"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "slide_asset_ids": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "role_order": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_context_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

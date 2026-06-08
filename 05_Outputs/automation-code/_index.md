@@ -1,22 +1,19 @@
 ---
 title: Automation Code
 description: Scripts for LinkedIn, Gmail, Kalshi, and other automation workflows
-last_updated: 2026-05-06
+last_updated: 2026-06-02
 ---
 
 # Automation Code
 
-Python scripts and small data bundles for automation workflows.
+Scripts and small data bundles used to support automation workflows.
 
 ## Scripts
 
-- **linkedin-outreach-agent.py** - LinkedIn outreach agent (connection and messaging automation)
-- **linkedin-safe-connect.py** - Safe LinkedIn connection script (rate-limited approach)
-- **linkedin-auto-connect.py** - LinkedIn auto-connect script
-- **gmail-extract-oauth.py** - Gmail OAuth token extraction for automation
-- **[[kalshi-backtest/_index|kalshi-backtest/]]** - Kalshi temperature backtest script and paired Austin weather dataset
+- [[kalshi-backtest/_index]] - Kalshi backtest script and paired weather dataset
+- [[mindchuk-obsidian-bridge/_index]] - Two-way bridge between MindChuk and this vault, including a phone-to-agent inbox
+- [[robinhood-trading-cockpit/_index]] - Vault-native guarded trading cockpit with proposals, risk checks, approvals, and mock execution
 
-## Notes
+## Rule
 
-- Review scripts for security and rate-limiting before deployment
-- OAuth credentials should be stored securely, not in the vault
+Keep sensitive credentials out of the vault and document setup assumptions near the script when needed.

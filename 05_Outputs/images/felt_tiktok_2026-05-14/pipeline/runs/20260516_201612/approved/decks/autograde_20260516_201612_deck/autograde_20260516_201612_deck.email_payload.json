@@ -1,0 +1,15 @@
+﻿{
+    "schema_version":  "felt_tiktok/email_payload/v1",
+    "deck_id":  "autograde_20260516_201612_deck",
+    "to":  "shivamkanodia77@gmail.com",
+    "subject":  "Felt TikTok deck approved - autograde_20260516_201612",
+    "body_markdown":  "Approved Felt TikTok deck: autograde_20260516_201612_deck\n\n- Campaign: felt_tiktok_slideshow\n- Run ID: 20260516_201612\n- Deck score: 5\n- Slide statuses: approved deck attached for review\n\nStrategy context used:\n- 02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md\n- 02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md\n- 02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md\n- 02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md\n- 02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric-2026-05-16.md\n- 05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md",
+    "attachment_files":  [
+                             "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\felt_tiktok_2026-05-14\\exports\\\\autograde_20260516_201612\\felt_tiktok_slide_1_autograde_20260516_201612.png",
+                             "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\felt_tiktok_2026-05-14\\exports\\\\autograde_20260516_201612\\felt_tiktok_slide_2_autograde_20260516_201612.png",
+                             "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\felt_tiktok_2026-05-14\\exports\\\\autograde_20260516_201612\\felt_tiktok_slide_3_autograde_20260516_201612.png",
+                             "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\felt_tiktok_2026-05-14\\exports\\\\autograde_20260516_201612\\felt_tiktok_slide_4_autograde_20260516_201612.png",
+                             "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\felt_tiktok_2026-05-14\\exports\\\\autograde_20260516_201612\\felt_tiktok_slide_5_autograde_20260516_201612.png"
+                         ],
+    "emailed_at":  null
+}

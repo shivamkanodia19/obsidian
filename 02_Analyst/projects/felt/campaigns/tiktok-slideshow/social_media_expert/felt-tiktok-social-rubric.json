@@ -1,0 +1,375 @@
+{
+  "rubric_id": "felt_tiktok_social_v1",
+  "campaign": "felt_tiktok_slideshow",
+  "last_updated": "2026-05-16",
+  "source_notes": [
+    "02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md",
+    "02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md",
+    "05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md"
+  ],
+  "required_context_files": [
+    "02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md",
+    "02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md",
+    "05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md"
+  ],
+  "future_agent_rules": [
+    "Read required_context_files before generating or revising slides.",
+    "Prefer real Felt captures and local composition over fully synthetic UI generation for proof slides.",
+    "Use the markdown rubric for qualitative reasoning and the JSON rubric for machine scoring."
+  ],
+  "scale": {
+    "1": "fail",
+    "2": "weak",
+    "3": "needs_revision",
+    "4": "pass",
+    "5": "strong_pass"
+  },
+  "hard_fail_rules": {
+    "copy": {
+      "banned_terms": [
+        "real money",
+        "win money",
+        "cash out",
+        "cash prize",
+        "cash prizes",
+        "beat the casino",
+        "make better bets",
+        "gamble smarter",
+        "jackpot",
+        "hot streak",
+        "bet big",
+        "double down",
+        "print money",
+        "stack cash",
+        "run it up",
+        "big win"
+      ]
+    },
+    "imagery": {
+      "reject_if_visible": [
+        "fabricated ui",
+        "broken flow",
+        "signed-out state",
+        "error state as hero proof",
+        "casino-neon energy",
+        "flying chips or jackpot imagery"
+      ]
+    },
+    "truthfulness": {
+      "real_ui_only": true,
+      "do_not_overstate_capabilities": true
+    },
+    "technical": {
+      "required_width": 1080,
+      "required_height": 1920,
+      "safe_zone_required": true,
+      "no_text_overflow": true,
+      "no_text_proof_overlap": true,
+      "no_browser_chrome": true
+    }
+  },
+  "language_preferences": {
+    "preferred_terms": [
+      "home",
+      "code",
+      "room",
+      "crew",
+      "train",
+      "return",
+      "private tables",
+      "invite-only",
+      "play chips only",
+      "training mode",
+      "review decisions",
+      "practice tough spots"
+    ],
+    "positioning_phrases": [
+      "private tables with friends",
+      "play-money only",
+      "no real-money gambling",
+      "no cash prizes",
+      "virtual chips have no real-world value"
+    ]
+  },
+  "slide_roles": [
+    {
+      "order": 1,
+      "role": "friction",
+      "job": "name the mess and create a clean curiosity gap",
+      "must_signal": [
+        "recognition",
+        "tension",
+        "curiosity"
+      ],
+      "best_proof": [
+        "home or organization state that suggests order is possible"
+      ],
+      "avoid": [
+        "generic better poker claims",
+        "busy table chaos as the hero proof"
+      ]
+    },
+    {
+      "order": 2,
+      "role": "simplification",
+      "job": "resolve the tension fast and prove setup is light",
+      "must_signal": [
+        "relief",
+        "clarity",
+        "easy activation"
+      ],
+      "best_proof": [
+        "code or join flow",
+        "host or rejoin proof",
+        "one-screen lobby clarity"
+      ],
+      "avoid": [
+        "ease claims with no visible setup proof"
+      ]
+    },
+    {
+      "order": 3,
+      "role": "operational_proof",
+      "job": "prove the product stays legible in actual use",
+      "must_signal": [
+        "control",
+        "competence",
+        "real-use credibility"
+      ],
+      "best_proof": [
+        "visible turn state",
+        "visible stacks or blinds",
+        "room structure"
+      ],
+      "avoid": [
+        "tiny real-use crops that hide the actual state"
+      ]
+    },
+    {
+      "order": 4,
+      "role": "mastery",
+      "job": "show Felt helps users sharpen decisions",
+      "must_signal": [
+        "improvement",
+        "feedback",
+        "usefulness"
+      ],
+      "best_proof": [
+        "trainer ui",
+        "feedback ui",
+        "session review or coaching surface"
+      ],
+      "avoid": [
+        "vague play smarter claims with weak proof"
+      ]
+    },
+    {
+      "order": 5,
+      "role": "return",
+      "job": "make return feel social, credible, and natural",
+      "must_signal": [
+        "invitation",
+        "belonging",
+        "return intent"
+      ],
+      "best_proof": [
+        "clean home or return surface",
+        "private table continuity",
+        "practice adjacency"
+      ],
+      "avoid": [
+        "sales pressure",
+        "urgency without product reason"
+      ]
+    }
+  ],
+  "slide_scoring": {
+    "weights": {
+      "compliance": 0.3,
+      "message_clarity": 0.2,
+      "product_led_proof": 0.25,
+      "visual_restraint": 0.15,
+      "technical_export": 0.1
+    },
+    "criteria": {
+      "compliance": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "product-led framing",
+          "no real-money or profit framing",
+          "no casino tropes",
+          "truthful ui state",
+          "non-exploitative tone"
+        ],
+        "derived_from": [
+          "felt-marketing-plan-2026-05-14",
+          "felt_tiktok_compliance_qa_checklist"
+        ]
+      },
+      "message_clarity": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "one dominant idea",
+          "headline carries the slide quickly",
+          "meaning is obvious in about 2 seconds",
+          "subtext supports instead of rescuing the slide"
+        ],
+        "derived_from": [
+          "felt-tiktok-slideshow-research-master-brief-2026-05-15",
+          "felt-tiktok-slideshow-retention-strategy-2026-05-15"
+        ]
+      },
+      "product_led_proof": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "screenshot clearly proves the claim",
+          "hero proof asset is legible",
+          "support crops add explanatory value",
+          "proof is stronger than styling"
+        ],
+        "derived_from": [
+          "felt-tiktok-slideshow-research-master-brief-2026-05-15",
+          "felt_tiktok_compliance_qa_checklist"
+        ]
+      },
+      "visual_restraint": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "premium dark stage",
+          "controlled contrast",
+          "sparse gold accents",
+          "felt green used for continuity and competence",
+          "clear eye path from headline to proof"
+        ],
+        "derived_from": [
+          "felt-tiktok-slideshow-research-master-brief-2026-05-15",
+          "felt-tiktok-slideshow-retention-strategy-2026-05-15"
+        ]
+      },
+      "technical_export": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "1080 x 1920 export",
+          "sharp text",
+          "no clipping",
+          "safe-zone compliance",
+          "no text overflow",
+          "no text/proof overlap",
+          "no browser chrome"
+        ],
+        "derived_from": [
+          "felt_tiktok_compliance_qa_checklist",
+          "felt_tiktok_carousel.html",
+          "render_felt_tiktok_carousel.ps1"
+        ]
+      }
+    },
+    "approval_rule": {
+      "all_hard_fail_rules_must_pass": true,
+      "minimum_weighted_score": 4.2,
+      "minimum_category_score": 4,
+      "required_role_match": true
+    },
+    "revise_rule": {
+      "minimum_weighted_score": 3.0,
+      "maximum_weighted_score_exclusive": 4.2
+    },
+    "reject_rule": {
+      "weighted_score_below": 3.0,
+      "or_any_hard_fail": true,
+      "or_role_mismatch": true
+    }
+  },
+  "deck_assembly": {
+    "slides_per_deck": 5,
+    "required_role_order": [
+      "friction",
+      "simplification",
+      "operational_proof",
+      "mastery",
+      "return"
+    ],
+    "use_only_slide_approved_assets": true,
+    "prefer_one_hero_proof_asset": true,
+    "max_support_crops_per_slide": 2,
+    "do_not_repeat_adjacent_hero_state": true,
+    "do_not_repeat_adjacent_emotional_job": true,
+    "strongest_cta_should_live_on_final_slide": true
+  },
+  "deck_scoring": {
+    "weights": {
+      "role_coverage_and_order": 0.2,
+      "narrative_flow": 0.25,
+      "visual_variety": 0.15,
+      "proof_progression": 0.2,
+      "return_and_cta_credibility": 0.2
+    },
+    "criteria": {
+      "role_coverage_and_order": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "all five required roles are present",
+          "role order is correct",
+          "each slide belongs in its assigned slot"
+        ]
+      },
+      "narrative_flow": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "slide 1 creates curiosity",
+          "slide 2 pays it off quickly",
+          "slide 3 proves control",
+          "slide 4 proves improvement",
+          "slide 5 gives a believable reason to return"
+        ]
+      },
+      "visual_variety": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "the deck feels like one system",
+          "slides are not near-duplicates",
+          "layout rhythm changes enough to preserve attention"
+        ]
+      },
+      "proof_progression": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "proof gets more specific as the deck progresses",
+          "the viewer feels they are going deeper into the product",
+          "no slide exists only for decoration"
+        ]
+      },
+      "return_and_cta_credibility": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "final slide closes with calm invitation",
+          "group return logic is visible",
+          "cta does not sound like paid-ad desperation"
+        ]
+      }
+    },
+    "approval_rule": {
+      "all_roles_present_in_order": true,
+      "minimum_weighted_score": 4.3,
+      "minimum_category_score": 4,
+      "all_slides_already_slide_approved": true
+    }
+  },
+  "email_release": {
+    "send_when": [
+      "deck_status == approved",
+      "all_five_slides_status == approved",
+      "emailed_at == null"
+    ],
+    "do_not_send_when": [
+      "any_slide_status != approved",
+      "deck_score < 4.3",
+      "required_role_order_not_met",
+      "emailed_at != null"
+    ]
+  }
+}

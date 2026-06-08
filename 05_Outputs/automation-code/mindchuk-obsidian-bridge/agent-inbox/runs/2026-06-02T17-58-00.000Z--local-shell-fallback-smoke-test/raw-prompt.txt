@@ -1,0 +1,7 @@
+Run exactly one shell command to print the current working directory. Then write `success-note.md` in the run directory. The success note must include:
+
+- the line `PASS`
+- the printed working directory
+- one sentence confirming the fallback pipeline works
+
+Do not modify any files outside the run directory.

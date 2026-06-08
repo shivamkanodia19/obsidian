@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Pipeline Run Summary",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "campaign",
+    "version_suffix",
+    "slide_results",
+    "deck_result"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "string"
+    },
+    "version_suffix": {
+      "type": "string"
+    },
+    "slide_results": {
+      "type": "array"
+    },
+    "deck_result": {
+      "type": "object"
+    },
+    "email_payload_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,18 +1,18 @@
 ---
 title: TAMU Mechanics Final Patterns - 2026-04-30
 project: academics
-strategic: true
-status: stable
-origin_dump: null
-last_synced_dump: null
+strategic: false
+status: current
+origin_dump: "[[01_Source/academics/tamu_mech_finals/analysis]]"
+last_synced_dump: "[[01_Source/academics/tamu_mech_finals/analysis]]"
 conflict_detected: false
-last_updated: 2026-05-03
+last_updated: 2026-05-28
 tags: [academics, physics, tamu, mechanics, finals]
 ---
 
 # TAMU Mechanics Final Patterns - 2026-04-30
 
-Source artifact: [[tamu_mech_finals/analysis]]
+Source artifact: [[01_Source/academics/tamu_mech_finals/analysis]]
 
 ## Summary
 

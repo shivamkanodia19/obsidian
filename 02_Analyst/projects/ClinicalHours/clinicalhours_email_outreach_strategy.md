@@ -2,8 +2,8 @@
 title: ClinicalHours Email Outreach Strategy
 project: clinicalhours
 status: execution-ready
-origin_dump: [[01_Source/clinicalhours/clinic outreach.md]]
-last_synced_dump: [[01_Source/clinicalhours/clinic outreach.md]]
+origin_dump: [[01_Source/projects/ClinicalHours/clinic outreach.md]]
+last_synced_dump: [[01_Source/projects/ClinicalHours/clinic outreach.md]]
 last_updated: 2026-04-19
 tags: [clinicalhours, sales, outreach, strategy]
 ---
@@ -195,4 +195,3 @@ Metrics Dashboard (response rates, conversion, optimization insights)
 - **Time:** 2-4 weeks to build systematic outreach, then 1-2 hours/week to manage
 - **Automation:** Leverage existing agent infrastructure + new agentic components
 - **Manual effort:** Email review before sending, meeting scheduling, initial calls
-

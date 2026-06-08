@@ -185,7 +185,7 @@ Hi James, I can build a project tracking dashboard for your $112M bond portfolio
 
 Before you send:
 
-- [ ] Verify emails (check against [[../../../contacts/verified-contacts]])
+- [ ] Verify emails (check against [[02_Analyst/career/internships/contacts/verified-contacts]])
 - [ ] Personalize [Name] in greeting
 - [ ] Phone number in signature (already filled: 214-470-0598)
 - [ ] Send timing: Tuesday-Thursday, 9am-11am or 2pm-4pm

@@ -1,0 +1,1 @@
+Generate some clinicalhours images. Use the exisiting system in the vault (obsidian). Keep each slide concise this time, dont use as many words, be more impactful and less distracting. Again, use whats in the vault as guidance AGENT

@@ -1,0 +1,27 @@
+{
+  "refinement": {
+    "exitCode": 1,
+    "ok": false,
+    "sandbox": "read-only",
+    "commandCount": 0,
+    "failedCommandCount": 0
+  },
+  "execution": {
+    "exitCode": 1,
+    "ok": false,
+    "sandbox": "workspace-write",
+    "usedDangerFallback": false,
+    "commandCount": 0,
+    "failedCommandCount": 0,
+    "encounteredWindowsSandboxRefresh": false
+  },
+  "exitCode": 1,
+  "ok": false,
+  "finalStatus": "failed",
+  "resultKind": "failed",
+  "startedAt": "2026-06-02T18:30:18.763Z",
+  "completedAt": "2026-06-02T18:30:36.286Z",
+  "sourceMessageId": "blocked-note-authority-smoke-test",
+  "processingFile": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\processing\\2026-06-02T18-33-00.000Z--blocked-note-authority-smoke-test.md",
+  "runDir": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\runs\\2026-06-02T18-33-00.000Z--blocked-note-authority-smoke-test--attempt-2026-06-02T18-30-18-763Z"
+}

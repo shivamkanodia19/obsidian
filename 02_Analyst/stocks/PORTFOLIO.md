@@ -3,6 +3,7 @@ title: Stock Portfolio Management
 project: stocks
 strategic: true
 status: active
+scope: stocks/portfolio-strategy
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
@@ -12,9 +13,9 @@ tags: [stocks, portfolio, robinhood, investing]
 
 # Stock Portfolio Management
 
-**Last Updated:** April 21, 2026 | **Current Source of Truth:** [[PORTFOLIO-SNAPSHOT-2026-04-21.md]]
+**Last Updated:** April 21, 2026 | **Latest Known Portfolio-State Note:** [[PORTFOLIO-REFRESH-2026-04-29.md]] | **Original Snapshot:** [[PORTFOLIO-SNAPSHOT-2026-04-21.md]]
 
-**Current visible invested value from Robinhood screenshot:** ~$816.37. Prior buying power in this note was $40.48, so total account value may be roughly $856-$862 if that cash remains. The older holdings table below is preserved as historical context and is superseded by the dated snapshot.
+**Current visible invested value from Robinhood screenshot:** ~$816.37. Prior buying power in this note was $40.48, so total account value may be roughly $856-$862 if that cash remains. The older holdings table below is preserved as historical context and is superseded by the dated snapshot and refresh notes.
 
 **Latest Decision Update:** Use [[STOCK-ADVICE-PROTOCOL]] for all future recommendations: Yahoo Finance first for latest quote/data/news, then current filings and primary context. Current recommendation: do not add more today; raise cash first; trim LMT toward ~28-30% before April 23 earnings if day-trade/PDT rules and spreads allow; treat CAR as a squeeze trade, not a core holding; hold ASML/TSM/USO; do not add to STM/TSLA/COF before their near-term earnings events.
 

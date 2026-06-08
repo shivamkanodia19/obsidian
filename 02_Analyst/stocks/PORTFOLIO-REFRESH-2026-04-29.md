@@ -3,16 +3,19 @@ title: Portfolio Refresh - 2026-04-29
 project: stocks
 strategic: true
 status: current
+scope: stocks/portfolio-state
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
 last_updated: 2026-04-29
+as_of: 2026-04-29
+canonical: true
 tags: [stocks, portfolio, investing, refresh]
 ---
 
 # Portfolio Refresh - 2026-04-29
 
-Status: live portfolio refresh using the 2026-04-21 Robinhood snapshot as the working holdings record and closing-price checks after the U.S. session on Wednesday, April 29, 2026.
+Status: latest known portfolio-state note in the vault, using the 2026-04-21 Robinhood snapshot as the working holdings record and closing-price checks after the U.S. session on Wednesday, April 29, 2026.
 
 ## Data Note
 

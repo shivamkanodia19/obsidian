@@ -1,0 +1,94 @@
+- generic [ref=e2] [box=0,0,1440,1200]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1168,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e3] [box=0,0,1440,1200]:
+    - banner [ref=e4] [box=0,0,1440,45]:
+      - generic [ref=e6] [box=36,4,128,36]:
+        - link "FELT" [ref=e7] [cursor=pointer] [box=36,8,45,28]:
+          - /url: /
+        - button "Open navigation menu" [ref=e8] [cursor=pointer] [box=93,4,72,36]:
+          - img [ref=e9] [box=104,15,14,14]
+          - generic [ref=e10] [box=124,14,30,16]: Menu
+    - main [ref=e11] [box=170,45,1100,1155]:
+      - generic [ref=e12] [box=186,85,1068,127]:
+        - link "Back home" [ref=e13] [cursor=pointer] [box=186,87,77,16]:
+          - /url: /
+          - img [ref=e14] [box=186,88,14,14]
+          - text: Back home
+        - paragraph [ref=e16] [box=186,122,1068,16]: Practice mode
+        - heading "Train smarter" [level=1] [ref=e17] [box=186,141,1068,40]
+        - paragraph [ref=e18] [box=186,189,672,23]: Run spot drills, play a coached AI session, then see what to tighten up — all with zero stakes.
+      - navigation [ref=e19] [box=186,236,1068,49]:
+        - button "Spot Trainer" [ref=e20] [cursor=pointer] [box=186,236,126,36]:
+          - img [ref=e21] [box=200,247,14,14]
+          - text: Spot Trainer
+        - button "Guided Live Game" [ref=e25] [cursor=pointer] [box=320,236,164,36]:
+          - img [ref=e26] [box=334,247,14,14]
+          - text: Guided Live Game
+        - button "Session Review" [ref=e28] [cursor=pointer] [box=492,236,141,36]:
+          - img [ref=e29] [box=506,247,14,14]
+          - text: Session Review
+      - generic [ref=e32] [box=186,309,1068,41]:
+        - generic [ref=e33] [box=186,315,210,28]:
+          - img [ref=e34] [box=186,321,16,16]
+          - heading "Spot trainer" [level=2] [ref=e38] [box=210,315,116,28]
+          - generic [ref=e39] [box=338,318,58,21]: Active
+        - generic [ref=e40] [box=1146,309,108,41]:
+          - generic [ref=e41] [box=1146,309,44,41]:
+            - generic [ref=e42] [box=1164,313,8,20]: "0"
+            - generic [ref=e43] [box=1157,335,23,9]: Hands
+          - generic [ref=e44] [box=1196,309,58,41]:
+            - generic [ref=e45] [box=1217,313,17,20]: 0%
+            - generic [ref=e46] [box=1207,335,36,9]: Accuracy
+      - paragraph [ref=e47] [box=186,365,1068,20]: Pick a seat. You'll see random hands — choose fold, call, or raise and get instant feedback.
+      - generic [ref=e48] [box=186,409,1068,239]:
+        - button "UTG Train → Under the Gun First to act preflop. Tightest range." [ref=e49] [cursor=pointer] [box=186,409,349,115]:
+          - generic [ref=e50] [box=203,426,316,36]:
+            - generic [ref=e51] [box=203,426,66,36]: UTG
+            - generic [ref=e52] [box=470,444,48,16]: Train →
+          - generic [ref=e53] [box=203,470,316,37]:
+            - generic [ref=e54] [box=203,470,316,20]: Under the Gun
+            - generic [ref=e55] [box=203,492,316,15]: First to act preflop. Tightest range.
+        - button "MP Train → Middle Position A few players still to act. Stay disciplined." [ref=e56] [cursor=pointer] [box=545,409,349,115]:
+          - generic [ref=e57] [box=562,426,316,36]:
+            - generic [ref=e58] [box=562,426,48,36]: MP
+            - generic [ref=e59] [box=830,444,48,16]: Train →
+          - generic [ref=e60] [box=562,470,316,37]:
+            - generic [ref=e61] [box=562,470,316,20]: Middle Position
+            - generic [ref=e62] [box=562,492,316,15]: A few players still to act. Stay disciplined.
+        - button "CO Train → Cutoff Late position — open up your range." [ref=e63] [cursor=pointer] [box=905,409,349,115]:
+          - generic [ref=e64] [box=921,426,316,36]:
+            - generic [ref=e65] [box=921,426,45,36]: CO
+            - generic [ref=e66] [box=1189,444,48,16]: Train →
+          - generic [ref=e67] [box=921,470,316,37]:
+            - generic [ref=e68] [box=921,470,316,20]: Cutoff
+            - generic [ref=e69] [box=921,492,316,15]: Late position — open up your range.
+        - button "BTN Train → Button Best seat at the table. Maximum aggression." [ref=e70] [cursor=pointer] [box=186,534,349,115]:
+          - generic [ref=e71] [box=203,551,316,36]:
+            - generic [ref=e72] [box=203,551,65,36]: BTN
+            - generic [ref=e73] [box=470,569,48,16]: Train →
+          - generic [ref=e74] [box=203,595,316,37]:
+            - generic [ref=e75] [box=203,595,316,20]: Button
+            - generic [ref=e76] [box=203,617,316,15]: Best seat at the table. Maximum aggression.
+        - button "SB Train → Small Blind Out of position postflop. Raise or fold." [ref=e77] [cursor=pointer] [box=545,534,349,115]:
+          - generic [ref=e78] [box=562,551,316,36]:
+            - generic [ref=e79] [box=562,551,39,36]: SB
+            - generic [ref=e80] [box=830,569,48,16]: Train →
+          - generic [ref=e81] [box=562,595,316,37]:
+            - generic [ref=e82] [box=562,595,316,20]: Small Blind
+            - generic [ref=e83] [box=562,617,316,15]: Out of position postflop. Raise or fold.
+        - button "BB Train → Big Blind Already invested. Defend selectively." [ref=e84] [cursor=pointer] [box=905,534,349,115]:
+          - generic [ref=e85] [box=921,551,316,36]:
+            - generic [ref=e86] [box=921,551,42,36]: BB
+            - generic [ref=e87] [box=1189,569,48,16]: Train →
+          - generic [ref=e88] [box=921,595,316,37]:
+            - generic [ref=e89] [box=921,595,316,20]: Big Blind
+            - generic [ref=e90] [box=921,617,316,15]: Already invested. Defend selectively.
+      - button "Session Review Open → Play a few Guided Live Game hands to unlock your performance review." [ref=e91] [cursor=pointer] [box=186,673,1068,90]:
+        - generic [ref=e92] [box=203,690,1034,28]:
+          - generic [ref=e93] [box=203,690,137,28]:
+            - img [ref=e94] [box=203,696,16,16]
+            - heading "Session Review" [level=3] [ref=e97] [box=227,690,113,28]
+          - generic [ref=e98] [box=1206,696,32,16]: Open →
+        - paragraph [ref=e99] [box=203,730,1034,16]: Play a few Guided Live Game hands to unlock your performance review.

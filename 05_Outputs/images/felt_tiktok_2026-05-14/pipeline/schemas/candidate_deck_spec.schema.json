@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Candidate Deck Spec",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_id",
+    "campaign",
+    "slides"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "spec_id": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "string"
+    },
+    "recipient_email": {
+      "type": "string"
+    },
+    "template_family": {
+      "type": "string"
+    },
+    "required_context_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "render": {
+      "type": "object"
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "slide_number",
+          "intended_role",
+          "headline",
+          "subtext",
+          "hero_source",
+          "support_sources",
+          "style_profile"
+        ],
+        "properties": {
+          "slide_number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "intended_role": {
+            "type": "string"
+          },
+          "eyebrow": {
+            "type": "string"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "hero_source": {
+            "type": "string"
+          },
+          "support_sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "style_profile": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

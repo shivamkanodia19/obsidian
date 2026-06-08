@@ -1,0 +1,27 @@
+{
+  "refinement": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "read-only",
+    "commandCount": 1,
+    "failedCommandCount": 1
+  },
+  "execution": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "danger-full-access",
+    "usedDangerFallback": true,
+    "commandCount": 2,
+    "failedCommandCount": 0,
+    "encounteredWindowsSandboxRefresh": false
+  },
+  "exitCode": 0,
+  "ok": true,
+  "finalStatus": "completed",
+  "resultKind": "completed_with_fallback",
+  "startedAt": "2026-06-02T22:20:34.935Z",
+  "completedAt": "2026-06-02T22:22:26.222Z",
+  "sourceMessageId": "local-autonomy-smoke-test",
+  "processingFile": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\processing\\2026-06-02T22-20-00.000Z--local-autonomy-smoke-test.md",
+  "runDir": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\runs\\2026-06-02T22-20-00.000Z--local-autonomy-smoke-test--attempt-2026-06-02T22-20-34-935Z"
+}

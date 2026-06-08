@@ -1,0 +1,83 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_fall_high_impact_v1",
+  "canonical": false,
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_fall_high_impact.html",
+  "export_suffix": "v10fallimpact",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "copy_style_hard_fail": {
+    "reject_if_contains": [
+      "why this works",
+      "better story",
+      "calm close",
+      "best student proof",
+      "real search flow",
+      "visual payoff",
+      "cold traffic",
+      "in-feed",
+      "abstract promise"
+    ],
+    "reject_if_meta_marketing_language": true
+  },
+  "screenshot_text_hard_fail": {
+    "reject_if_raw_hero_asset_matches": [
+      "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+      "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png"
+    ],
+    "reject_if_empty_state_is_hero": true
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "visible_role_label": "search",
+      "headline": "Don't let fall start in ten tabs.",
+      "subtext": "Start with one search page before classes, orgs, and shifts crowd the week.",
+      "hero_asset": "captures/derived/clinicalhours_opportunity_header_focus_v1.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_opportunity_search_focus_v1.png"
+      ]
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "visible_role_label": "map",
+      "headline": "Start with the map.",
+      "subtext": "It is easier to narrow after you see where the search already has real volume.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "visible_role_label": "check",
+      "headline": "Check one lead before you click.",
+      "subtext": "City, type, and the next link should make sense fast.",
+      "hero_asset": "captures/derived/clinicalhours_opportunity_houston_result_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "follow_through",
+      "visible_role_label": "save",
+      "headline": "Keep the next step with the lead.",
+      "subtext": "Sign in once you want the lead, details, and app link together.",
+      "hero_asset": "captures/derived/clinicalhours_houston_save_panel_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "visible_role_label": "ready",
+      "headline": "Browse now. Sign in when it helps.",
+      "subtext": "Start as a guest, then sign in once you want to save the search or log hours.",
+      "hero_asset": "captures/derived/clinicalhours_auth_guest_browse_focus_v2.png",
+      "support_assets": []
+    }
+  ]
+}

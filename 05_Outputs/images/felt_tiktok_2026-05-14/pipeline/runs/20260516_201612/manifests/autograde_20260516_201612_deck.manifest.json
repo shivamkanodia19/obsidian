@@ -1,0 +1,31 @@
+﻿{
+    "schema_version":  "felt_tiktok/deck_manifest/v1",
+    "deck_id":  "autograde_20260516_201612_deck",
+    "campaign":  "felt_tiktok_slideshow",
+    "run_id":  "20260516_201612",
+    "spec_id":  "felt_tiktok_v5_reference_deck",
+    "slide_asset_ids":  [
+                            "autograde_20260516_201612_slide_01",
+                            "autograde_20260516_201612_slide_02",
+                            "autograde_20260516_201612_slide_03",
+                            "autograde_20260516_201612_slide_04",
+                            "autograde_20260516_201612_slide_05"
+                        ],
+    "role_order":  [
+                       "friction",
+                       "simplification",
+                       "operational_proof",
+                       "mastery",
+                       "return"
+                   ],
+    "version_suffix":  "autograde_20260516_201612",
+    "required_context_files":  [
+                                   "02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md",
+                                   "02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md",
+                                   "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md",
+                                   "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md",
+                                   "02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric-2026-05-16.md",
+                                   "05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md"
+                               ],
+    "created_at":  "2026-05-16T20:16:37.7544046-05:00"
+}

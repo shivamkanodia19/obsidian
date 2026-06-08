@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Deck Grade",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "deck_id",
+    "status",
+    "scores",
+    "weighted_score"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "revise",
+        "rejected"
+      ]
+    },
+    "scores": {
+      "type": "object"
+    },
+    "weighted_score": {
+      "type": "number"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

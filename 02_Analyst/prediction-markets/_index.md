@@ -1,12 +1,30 @@
 ---
+description: "Navigation hub for prediction markets"
 title: Prediction Markets Index
 project: prediction-markets
 strategic: true
+scope: prediction-markets/nba-workflow
 status: active
+agent_context: true
+surface_in_root: true
+current_focus:
+  - use the NBA framework only when estimated edge beats price after risk and fees
+  - keep the Kalshi validation log current when live contract reasoning changes
+active_tasks:
+  - price contracts with skepticism instead of betting because an outcome feels likely
+  - separate same-day memo work from reusable framework rules
+prompt_context:
+  - "[[02_Analyst/prediction-markets/NBA-MARKET-FRAMEWORK]]"
+  - "[[02_Analyst/prediction-markets/kalshi-validation-log]]"
+definition_of_done:
+  - contract reasoning includes market price, injury/news context, and pass discipline
+  - framework rules stay distinct from date-specific memos
+blocked_by:
+  - no-bet discipline fails if the market price is not compared against estimated probability
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
-last_updated: 2026-05-03
+last_updated: 2026-05-21
 tags: [prediction-markets, nba, betting, research]
 ---
 
@@ -15,6 +33,7 @@ tags: [prediction-markets, nba, betting, research]
 ## Active Framework
 
 - [[NBA-MARKET-FRAMEWORK]] - research stack, agent debate template, and bankroll rules for NBA contracts
+- [[kalshi-validation-log]] - Kalshi Austin high-temp validation log and contract reasoning notes
 
 ## Daily Memos
 

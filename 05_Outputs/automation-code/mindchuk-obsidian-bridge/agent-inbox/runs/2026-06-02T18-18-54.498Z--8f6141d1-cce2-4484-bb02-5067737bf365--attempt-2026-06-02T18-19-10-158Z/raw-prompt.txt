@@ -1,0 +1,7 @@
+Write `success-note.md` in the run directory. The note must include:
+
+- the line `PASS`
+- one sentence saying the remote MindChuk bridge and runner path worked
+- the current working directory
+
+Use at most one shell command, do not modify files outside the run directory, and keep the result short.

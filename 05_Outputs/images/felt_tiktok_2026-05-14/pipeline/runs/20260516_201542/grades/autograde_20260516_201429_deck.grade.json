@@ -1,0 +1,18 @@
+﻿{
+    "schema_version":  "felt_tiktok/deck_grade/v1",
+    "deck_id":  "autograde_20260516_201429_deck",
+    "run_id":  "20260516_201542",
+    "status":  "revise",
+    "scores":  {
+                   "role_coverage_and_order":  5,
+                   "narrative_flow":  4,
+                   "visual_variety":  5,
+                   "proof_progression":  4,
+                   "return_and_cta_credibility":  5
+               },
+    "weighted_score":  4.55,
+    "reasons":  [
+                    "not_all_slides_approved"
+                ],
+    "graded_at":  "2026-05-16T20:15:42.6453405-05:00"
+}

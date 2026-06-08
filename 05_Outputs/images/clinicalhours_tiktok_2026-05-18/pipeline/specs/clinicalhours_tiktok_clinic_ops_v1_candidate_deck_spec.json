@@ -1,0 +1,57 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_clinic_ops_v1",
+  "canonical": true,
+  "lane": "clinic_ops_primary",
+  "evidence_tier": "product_surface",
+  "proof_access": "public_site",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "headline": "Clinic ops still run by hand.",
+      "subtext": "One coordinator is still juggling forms, folders, forwarded emails, and expiration dates.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_problem_section_live.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "unification",
+      "headline": "One place. Fewer handoffs.",
+      "subtext": "ClinicalHours shows how applications, onboarding steps, and status can live in one workflow.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_hero_section_live.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_platform_applications_live.png"
+      ]
+    },
+    {
+      "slide_number": 3,
+      "role": "workflow_proof",
+      "headline": "Credential review leaves the inbox.",
+      "subtext": "Document review becomes visible instead of getting buried in email.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_hipaa_live.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "control",
+      "headline": "Status stays visible.",
+      "subtext": "Coordinators can see what is complete, what is expiring, and what still needs action.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_status_live.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_trust_signals_live.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "headline": "See the workflow live.",
+      "subtext": "Request a demo when you want applications, onboarding steps, and status in one place.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_mobile_430x932_live.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_platform_applications_live.png"
+      ]
+    }
+  ]
+}

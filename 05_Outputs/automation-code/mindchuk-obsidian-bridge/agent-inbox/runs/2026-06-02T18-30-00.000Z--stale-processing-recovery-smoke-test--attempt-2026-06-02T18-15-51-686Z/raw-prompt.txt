@@ -1,0 +1,7 @@
+Run exactly one shell command to print the current working directory. Then write `success-note.md` in the run directory. The note must include:
+
+- the line `PASS`
+- one sentence saying the stale processing task was recovered successfully
+- the printed working directory
+
+Do not modify any files outside the run directory.

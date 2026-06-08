@@ -1,0 +1,1 @@
+Do not perform any real work. Instead, immediately write `blocker-note.md` in the run directory explaining that this is an intentional blocked-classification smoke test. Do not write `success-note.md`.

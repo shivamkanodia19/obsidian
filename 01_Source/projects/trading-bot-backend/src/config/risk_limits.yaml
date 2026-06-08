@@ -1,0 +1,36 @@
+# Deterministic risk limits — enforced in code, not by LLM agents.
+# Edit carefully. These are not preferences; they are hard gates.
+
+account:
+  max_daily_loss_dollars: 50.0
+  max_open_positions: 5
+  max_allocation_per_trade_percent: 10.0  # % of paper account per trade
+
+trade:
+  max_trade_risk_dollars: 25.0           # max you can lose on a single trade
+  reject_market_orders: true
+  max_spread_percent: 3.0                # reject if bid/ask spread > this %
+  min_liquidity_threshold: 100           # min daily volume or open interest units
+  max_thesis_age_minutes: 60             # reject if research is older than this
+
+asset_classes:
+  allow_equities: true
+  allow_options: false                   # disabled until V2+
+  allow_crypto: false                    # disabled until explicitly enabled
+  allow_prediction_markets: true         # Kalshi
+  allow_futures: false
+
+execution:
+  allow_live_trading: true               # ENABLED 2026-06-07 — Shivam authorized
+  require_manual_confirmation: true
+  allowed_brokers:
+    - paper
+    - kalshi_demo
+    - robinhood_mcp
+    - kalshi_production
+  # robinhood_live and kalshi_production are intentionally absent
+
+risk_score_thresholds:
+  approve_below: 40        # risk_score 0-100; approve if below this
+  warn_between: [40, 70]   # warn user but allow manual override
+  reject_above: 70         # auto-reject above this

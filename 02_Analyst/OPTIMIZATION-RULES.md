@@ -1,219 +1,110 @@
 # Vault Optimization Rules
 
-**How `/save` and `/audit` keep context lean and findable.**
+How `/save-audit` keeps context lean, navigable, and useful for future agents.
 
 ## Core Principle
 
-**Atomic synthesis, not incremental bloat.**
+Atomic synthesis, not incremental bloat.
 
-Every `/save` call reads new Source, synthesizes to Analyst, updates Memory, optimizes structure. One call maintains the entire vault in lean state.
+The vault exists to improve agent reasoning, writing, research, outreach, planning, and decision support. Save behavior should preserve that value without turning hub pages into logs.
 
-## `/save [topic]` Workflow
+## Public Contract
 
-**Syntax:** `/save FEDVT` or `/save internships` or `/save clinicalhours`
+Use `/save-audit` as the vault-facing command.
 
-**What it does:**
+- `context-save` can preserve session state.
+- `/save-audit` is what updates the vault itself.
 
-1. **Detect new Source files** in `/01_Source/[topic]/` (even if multiple dumps uploaded)
-2. **Synthesize to Analyst:**
-   - Reads all new Source files in that project
-   - Creates/updates relevant `/02_Analyst/` files
-   - Links all claims back to Source via wikilinks
-   - Adds frontmatter: `origin_dump`, `last_synced_dump`, `references`
-3. **Handle conflicts** (when new Source contradicts old Analyst decision):
-   - Move old content to `## History [YYYY-MM-DD]` in Analyst file
-   - Log conflict to `.vault-conflicts` with old vs. new states
-   - Set `conflict_detected: true` flag on file (non-blocking)
-4. **Update Memory:**
-   - Create `memory/project_[topic].md` if new project
-   - Update existing project memory with current status
-   - Create `memory/feedback_[topic].md` if new feedback discovered
-   - Add/update one-liner in `MEMORY.md`
-5. **Create/update indexes:**
-   - Every new folder gets `_index.md` with navigation
-   - All parent folders updated to reflect new files
-6. **Archive old history:**
-   - History sections >6 months → move to `/04_Archive/[project]_history.md`
-   - Keeps active Analyst files lean
+Think of `/save-audit` as two internal phases:
 
-**Result:** Single `/save` call = full synthesis, conflict resolution, memory updates, organization.
+1. Save phase: preserve durable reasoning, outputs, and project state.
+2. Audit phase: keep structure, links, and `_index.md` files healthy.
 
-## `/audit` Workflow
+## Save Phase
 
-**Syntax:** `/audit`
+The save phase should:
 
-**What it does:**
+1. Read only the relevant new source or working context.
+2. Update the canonical Analyst or Output note instead of duplicating it.
+3. Update the nearest useful `_index.md` files.
+4. If the nearest relevant index has `agent_context: true`, treat its frontmatter as the default prompt brief and keep `current_focus`, `active_tasks`, `prompt_context`, and `definition_of_done` current.
+   Use `surface_in_root: true` only on primary hubs that belong in the root Analyst router.
+5. Record a standalone task card or run log only when the work is substantial, high-stakes, reusable, or cross-project.
+6. Add a vault-level save note only when the work really changes navigation or closes a chat-coverage gap.
 
-1. **Scan vault structure:**
-   - Find orphaned folders (no files, only index)
-   - Find duplicates (same content in multiple places)
-   - Find misplaced files (wrong folder for content)
-   - Find broken wikilinks
-   - Find missing indexes
-2. **Auto-fix structural issues:**
-   - Delete orphaned folders (empty)
-   - Consolidate duplicates (delete redundant version, keep authoritative copy)
-   - Move misplaced files to correct folder
-   - Create missing indexes
-   - Repair broken wikilinks (flag ones that need manual review)
-3. **Report critical issues only:**
-   - Never report naming/depth/cosmetic issues
-   - Only flag: broken links, misplaced content, orphaned data
-   - Suggest fixes; don't ask permission (structural fixes are safe)
-4. **Memory cleanup:**
-   - Archive stale memories (>6 months, status=complete)
-   - Surface unreviewed conflicts at session start
-   - Remove unreachable memories (referenced but not found)
+## Audit Phase
 
-**Result:** Vault stays structurally sound. Critical issues surfaced. You focus on work, not maintenance.
+The audit phase should:
 
-## Optimization Principles
+1. Check `INDEX.md` and `CLAUDE.md` for clarity and freshness.
+2. Check the top hubs:
+   - `02_Analyst/_index.md`
+   - `03_References/_index.md`
+   - `05_Outputs/_index.md`
+3. Check active child indexes in Analyst, References, and Outputs.
+4. Surface broken links and stale aliases.
+5. Create missing `_index.md` files when a folder is active enough to need navigation.
+6. Avoid noisy archive-only findings unless they affect active wayfinding.
 
-### 1. One Concept Per File
+## Contradiction Hygiene
 
-**In Analyst:**
-- One project, one file (not bundled projects in one file)
-- One decision, one conflict log entry
-- One research area, one Research file
+- Do not leave two notes looking equally current for the same scope.
+- Update the canonical note first; downgrade the losing note to `snapshot`, `historical`, or `superseded`.
+- If the winner is unclear, log the disagreement in `.vault-conflicts` with `awaiting_review` or `pending_validation`.
+- Keep the nearest `_index.md` explicit about which notes are current, historical, or draft.
+- Use [[CONTRADICTION-PROTOCOL.md]] when a folder has multiple plausible state notes.
+- Use [[TASK-CONTEXT-PROTOCOL.md]] when a topic needs prompt-ready task state without spawning a separate task card.
+- Keep audit notes historical. Use audit-specific metadata instead of letting them masquerade as current project truth.
 
-**In Memory:**
-- One feedback rule per file
-- One project per file
-- One reference per file
+## Index Rules
 
-**Benefit:** Fast searching, easy updating, no unnecessary re-reading.
+### Main Hubs Stay Lean
 
-### 2. Lean Indexes (Max 200 Lines)
+- `02_Analyst/_index.md` is a hub, not a diary.
+- `03_References/_index.md` is a map of reusable knowledge, not a running discovery log.
+- `05_Outputs/_index.md` is a router to deliverables, not an inventory of every artifact.
 
-**MEMORY.md stays <200 lines:**
-- One-liners only
-- Old entries archived when list gets long
-- Keywords enable grep-based relevance
-- First file loaded in every session
+### Put History Elsewhere
 
-**Analyst `_index.md` stays <100 lines:**
-- Navigation only
-- Quick reference
-- Links to detailed files
+- Long narrative history goes in `02_Analyst/activity-log.md`, task-level run logs, or project notes.
+- Save-audit notes belong in `02_Analyst/codex-chat-save-audit-YYYY-MM-DD.md` when they represent real vault-wide audit coverage.
 
-**Benefit:** Fast session bootstraps, no context bloat.
+### Child Index Standard
 
-### 3. History Moves, Not Deletes
+Each useful `_index.md` should answer three questions fast:
 
-**Old content lifecycle:**
+1. What is this folder for?
+2. Which files matter first?
+3. What is the next layer down?
 
-- **Active:** File body contains current state
-- **Stale (not in use):** Move to `## History [YYYY-MM-DD]` with context
-- **Very old (>6 months):** `/save` moves History to `/04_Archive/`
-- **Queried later:** Archive files are still searchable
+If an index cannot answer those questions in under a minute, it needs cleanup.
 
-**Benefit:** You can trace decisions over time; active files stay lean.
+## Link Hygiene
 
-### 4. Frontmatter Tells the Story
+- Prefer vault-root-relative wikilinks like `[[02_Analyst/projects/ClinicalHours/_index]]`.
+- Avoid leading-slash links like `[[/02_Analyst/...]]`.
+- Avoid fragile relative traversal like `[[../...]]` when a stable root-relative link is clearer.
 
-**Analyst files frontmatter:**
-```yaml
-origin_dump: [[01_Source/...]]  # Where did this synthesis come from?
-last_synced_dump: [[01_Source/...]]  # Latest Source incorporated
-conflict_detected: true/false  # Any decision conflicts?
-last_updated: YYYY-MM-DD  # When did I last touch this?
-```
+## Context Hygiene
 
-**Benefit:** I know which Source files to re-read, which conflicts need review, how fresh the info is.
+- Load indexes before deep files.
+- Load only the smallest sufficient context first.
+- Pull deeper files on demand.
+- Do not copy entire conversation history into hub pages.
+- If an index has `agent_context: true`, load its frontmatter before digging into deeper notes.
 
-**Memory files frontmatter:**
-```yaml
-relevance: [keywords]  # How do I find this in future sessions?
-status: active|paused|complete  # Is this still load-bearing?
-created: YYYY-MM-DD  # How old is this?
-```
+## Operational Heuristics
 
-**Benefit:** I grep by keywords, prioritize active memories, archive completed ones.
+- If work changes a single project, update that project index first.
+- If work changes a whole domain, update the domain index.
+- If work changes vault-wide navigation or policy, update the root files and top hubs.
+- If an index starts turning into a log, split the log out immediately.
 
-### 5. Wikilinks = Traceability
+## What Success Looks Like
 
-**Every claim links back:**
-- `According to [[01_Source/fedvt/...]], X is true` (cites your source)
-- `See [[03_References/...]] for framework` (cites discovery)
-- `Related: [[02_Analyst/related_file.md]]` (cross-references)
+A fresh agent should be able to:
 
-**Benefit:** I can trace any conclusion back to where it came from. You can verify claims.
-
-## Context Bloat Prevention
-
-**What causes bloat:**
-- Loading all MEMORY.md entries (should load only relevant ones)
-- Loading full Analyst files when I only need frontmatter
-- Preloading skill files (should invoke on-demand)
-- Keeping History in active files >6 months
-- Creating unnecessary intermediate files
-
-**How we prevent it:**
-
-| Problem | Solution | Owned By |
-|---------|----------|----------|
-| Full MEMORY load | Load one-liners only, grep for keywords | `/save` automation |
-| Frontmatter slows reads | Read frontmatter-only first, load full file if needed | My workflow |
-| Skill bloat | Invoke on-demand, never preload | My behavior |
-| Old History clogs | `/save` auto-archives History >6 months | `/save` automation |
-| Orphaned files | `/audit` finds + deletes orphaned content | `/audit` automation |
-
-**Result:** Sessions stay fast. Context loads in seconds, not minutes.
-
-## Token Efficiency Checklist
-
-- [ ] `/save` runs automatically after major work (feature complete, section done, research finished)
-- [ ] `/audit` runs weekly to catch structural bloat
-- [ ] MEMORY.md stays <200 lines (old entries archived)
-- [ ] Analyst frontmatter is current (last_updated recent)
-- [ ] No orphaned folders (every folder has files + index)
-- [ ] No broken wikilinks (audit catches these)
-- [ ] History >6 months is archived (not in active files)
-- [ ] Source files are never edited (immutable guarantee)
-
-## When to Run Commands
-
-**`/save [topic]`** after:
-- Adding new Source files to that project
-- Major section/feature completion
-- Multiple dumps uploaded at once
-
-**`/audit`** periodically:
-- Weekly if high-volume work
-- After large refactors
-- Before running important analysis
-
-**`/compact`** to signal:
-- Section/paper complete
-- Research phase finished
-- Feature implemented and tested
-
-## Example Optimization Over Time
-
-**Day 1:** Initial FEDVT research
-- You upload 5 Source files
-- I synthesize to Analyst
-- `/save FEDVT` reads all 5, creates cohesive structure
-- Memory created: project_fedvt.md
-
-**Week 1:** FEDVT progressing
-- You add Methods section
-- I update Analyst file
-- `/save FEDVT` incorporates new Source
-- History moves old content
-- Memory updated: project_fedvt.md (status = in_progress)
-
-**Month 1:** FEDVT research phase complete
-- You signal `/compact`
-- `/save FEDVT` archives old History
-- Memory updated: project_fedvt.md (status = methods_complete)
-
-**Later:** New project in unrelated domain
-- `/save [NewProject]` creates fresh space
-- Old FEDVT memory remains loaded, but isn't intrusive
-- New memory files created only for new project
-- Context stays clean
-
----
-
-**Philosophy:** Optimization is automatic. You work; `/save` and `/audit` maintain the vault. No manual cleanup needed.
+- orient from `INDEX.md` and `CLAUDE.md`
+- enter the right domain from the top Analyst, References, or Outputs hub
+- find the right subfolder from its `_index.md`
+- understand the current task state without rereading unrelated history

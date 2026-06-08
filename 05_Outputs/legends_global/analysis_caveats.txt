@@ -1,0 +1,6 @@
+Analysis caveats:
+- store_zone is the preferred location dimension for submission-ready analysis.
+- store_id appears in all five store zones, so it does not behave like a fixed physical location identifier.
+- transaction calendar date is the preferred event-level time grain.
+- game_id appears across many dates within a season and should not be treated as a unique event key for date-based analysis.
+- transaction hours are concentrated between 00:00 and 03:00, so time-of-day analysis is likely synthetic and not submission-ready.

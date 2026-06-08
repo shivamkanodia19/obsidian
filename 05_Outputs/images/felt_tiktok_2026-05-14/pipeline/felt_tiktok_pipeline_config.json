@@ -1,0 +1,28 @@
+{
+  "schema_version": "felt_tiktok/pipeline_config/v1",
+  "campaign": "felt_tiktok_slideshow",
+  "default_recipient_email": "shivamkanodia77@gmail.com",
+  "email_mode": "agent_gmail_draft_or_send",
+  "project_root_relative": "05_Outputs/images/felt_tiktok_2026-05-14",
+  "render_script_relative": "05_Outputs/images/felt_tiktok_2026-05-14/composition/render_felt_tiktok_carousel.ps1",
+  "rubric_json_relative": "02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric.json",
+  "rubric_markdown_relative": "02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric-2026-05-16.md",
+  "minimum_slide_score": 4.2,
+  "minimum_deck_score": 4.3,
+  "required_context_files": [
+    "02_Analyst/projects/felt/strategy/felt-marketing-plan-2026-05-14.md",
+    "02_Analyst/projects/felt/strategy/felt-attraction-retention-strategy-2026-05-14.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-research-master-brief-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/felt-tiktok-slideshow-retention-strategy-2026-05-15.md",
+    "02_Analyst/projects/felt/campaigns/tiktok-slideshow/social_media_expert/felt-tiktok-social-rubric-2026-05-16.md",
+    "05_Outputs/images/felt_tiktok_2026-05-14/docs/qa/felt_tiktok_compliance_qa_checklist.md"
+  ],
+  "future_agent_rules": [
+    "Always read required_context_files before generating or revising slides.",
+    "Prefer real Felt captures and local composition over fully synthetic UI generation.",
+    "Treat the social rubric JSON as the machine policy and the markdown rubric as the human reasoning layer.",
+    "Only prepare an email payload after a deck passes deck-level approval.",
+    "Treat this Felt implementation as a reusable reference pattern that may later be adapted for ClinicalHours marketing.",
+    "Do not assume Felt is the only long-term home for this automation system."
+  ]
+}

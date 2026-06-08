@@ -1,0 +1,29 @@
+﻿{
+    "schema_version":  "felt_tiktok/slide_grade/v1",
+    "asset_id":  "autograde_20260516_201328_slide_03",
+    "run_id":  "20260516_201328",
+    "status":  "approved",
+    "hard_gates":  {
+                       "dimensions_ok":  true,
+                       "render_qa_passed":  true,
+                       "banned_language_ok":  true,
+                       "truthful_sources_ok":  true,
+                       "role_fit_ok":  true
+                   },
+    "scores":  {
+                   "compliance":  5,
+                   "message_clarity":  5,
+                   "product_led_proof":  5,
+                   "visual_restraint":  5,
+                   "technical_export":  5
+               },
+    "weighted_score":  5,
+    "reasons":  [
+
+                ],
+    "grader_notes":  [
+                         "Role keyword matches: room, turn, stacks, action, clear",
+                         "Hero or support proof path aligns with the intended role."
+                     ],
+    "graded_at":  "2026-05-16T20:13:54.4239552-05:00"
+}

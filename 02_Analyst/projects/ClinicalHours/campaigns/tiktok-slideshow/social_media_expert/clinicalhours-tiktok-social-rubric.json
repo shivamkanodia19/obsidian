@@ -1,0 +1,253 @@
+{
+  "rubric_id": "clinicalhours_tiktok_social_v1",
+  "campaign": "clinicalhours_tiktok_slideshow",
+  "last_updated": "2026-05-29",
+  "source_notes": [
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-research-master-brief-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-retention-strategy-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/Strategy/ClinicalHours-Product-Map.md",
+    "02_Analyst/projects/ClinicalHours/clinicalhours-experiment-log-framing-2026-05-07.md",
+    "05_Outputs/images/clinicalhours_tiktok_2026-05-18/docs/qa/clinicalhours_tiktok_compliance_qa_checklist.md"
+  ],
+  "required_context_files": [
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-research-master-brief-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-retention-strategy-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/Strategy/ClinicalHours-Product-Map.md",
+    "02_Analyst/projects/ClinicalHours/clinicalhours-experiment-log-framing-2026-05-07.md",
+    "05_Outputs/images/clinicalhours_tiktok_2026-05-18/docs/qa/clinicalhours_tiktok_compliance_qa_checklist.md"
+  ],
+  "future_agent_rules": [
+    "Read required_context_files before generating or revising slides.",
+    "When working directly with Shivam on a new ClinicalHours slide request, ask what content or topic the slides should cover before choosing a lane.",
+    "If the topic answer is still ambiguous, ask one short follow-up about the audience or CTA.",
+    "Pick one lane before writing copy or choosing proof assets.",
+    "Prefer real ClinicalHours captures and local composition over synthetic UI generation for proof slides.",
+    "Generated support imagery is allowed only when it stays secondary to truthful proof and does not imply product capability.",
+    "If the visible asset cannot support the claim, weaken the claim.",
+    "Do not invent hybrid evidence_tier strings. Store claim strength in evidence_tier and screenshot visibility in proof_access."
+  ],
+  "allowed_evidence_tiers": [
+    "validated_pilot",
+    "product_surface",
+    "market_hypothesis"
+  ],
+  "allowed_proof_access": [
+    "public_site",
+    "authenticated_preview",
+    "mixed_public_and_authenticated_preview"
+  ],
+  "scale": {
+    "1": "fail",
+    "2": "weak",
+    "3": "needs_revision",
+    "4": "pass",
+    "5": "strong_pass"
+  },
+  "hard_fail_rules": {
+    "copy": {
+      "banned_terms": [
+        "guaranteed admission",
+        "guaranteed admissions",
+        "guaranteed placement",
+        "guaranteed hours",
+        "guaranteed staffing",
+        "instant compliance",
+        "fully HIPAA certified",
+        "all clinics use this",
+        "every clinic",
+        "100% compliant"
+      ]
+    },
+    "imagery": {
+      "reject_if_visible": [
+        "fabricated ui",
+        "generated support imagery used as claim-bearing proof",
+        "patient-identifiable data",
+        "fake partner logos",
+        "fake notifications",
+        "homepage placeholder zero stats as proof",
+        "browser chrome"
+      ]
+    },
+    "truthfulness": {
+      "real_ui_only": true,
+      "hero_proof_must_be_real_capture_on_claim_slides": true,
+      "generated_support_imagery_secondary_only": true,
+      "do_not_overstate_capabilities": true,
+      "do_not_mix_evidence_tiers_without_labeling": true
+    },
+    "technical": {
+      "required_width": 1080,
+      "required_height": 1920,
+      "safe_zone_required": true,
+      "no_text_overflow": true,
+      "no_text_proof_overlap": true,
+      "no_browser_chrome": true
+    }
+  },
+  "allowed_lanes": [
+    "clinic_ops_primary",
+    "student_discovery_secondary",
+    "two_sided_network_explainer"
+  ],
+  "lane_templates": {
+    "clinic_ops_primary": {
+      "required_role_order": [
+        "friction",
+        "unification",
+        "workflow_proof",
+        "control",
+        "activation"
+      ]
+    },
+    "student_discovery_secondary": {
+      "required_role_order": [
+        "friction",
+        "discovery",
+        "simplification",
+        "documentation_direction",
+        "activation"
+      ]
+    }
+  },
+  "slide_scoring": {
+    "weights": {
+      "truth_and_compliance": 0.3,
+      "message_clarity": 0.2,
+      "product_led_proof": 0.25,
+      "visual_restraint": 0.15,
+      "technical_export": 0.1
+    },
+    "criteria": {
+      "truth_and_compliance": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "claim matches evidence tier",
+          "truthful ui state",
+          "no PHI",
+          "no fake or unsourced quantitative proof",
+          "no medical-compliance overclaim"
+        ]
+      },
+      "message_clarity": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "one dominant idea",
+          "lane is obvious",
+          "meaning is obvious in about 2 seconds",
+          "subtext supports instead of rescuing"
+        ]
+      },
+      "product_led_proof": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "hero proof asset clearly supports the claim",
+          "support crop adds explanatory value",
+          "generated support imagery, if present, stays secondary to real proof",
+          "proof is stronger than styling"
+        ]
+      },
+      "visual_restraint": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "calm healthcare-infrastructure tone",
+          "clinical blue and green used purposefully",
+          "clear eye path from headline to proof"
+        ]
+      },
+      "technical_export": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "1080 x 1920 export",
+          "sharp text",
+          "safe-zone compliance",
+          "no text overflow",
+          "no text/proof overlap"
+        ]
+      }
+    },
+    "approval_rule": {
+      "all_hard_fail_rules_must_pass": true,
+      "minimum_weighted_score": 4.2,
+      "minimum_category_score": 4,
+      "required_role_match": true,
+      "required_lane_match": true
+    },
+    "revise_rule": {
+      "minimum_weighted_score": 3.0,
+      "maximum_weighted_score_exclusive": 4.2
+    },
+    "reject_rule": {
+      "weighted_score_below": 3.0,
+      "or_any_hard_fail": true,
+      "or_role_mismatch": true,
+      "or_lane_mismatch": true
+    }
+  },
+  "deck_assembly": {
+    "slides_per_deck": 5,
+    "use_only_slide_approved_assets": true,
+    "prefer_one_hero_proof_asset": true,
+    "max_support_crops_per_slide": 2,
+    "do_not_repeat_adjacent_hero_state": true,
+    "strongest_cta_should_live_on_final_slide": true
+  },
+  "deck_scoring": {
+    "weights": {
+      "role_coverage_and_order": 0.2,
+      "narrative_flow": 0.25,
+      "visual_variety": 0.15,
+      "proof_progression": 0.2,
+      "cta_credibility": 0.2
+    },
+    "criteria": {
+      "role_coverage_and_order": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "all five required roles are present",
+          "role order is correct",
+          "each slide belongs in its assigned slot"
+        ]
+      },
+      "narrative_flow": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "slide 1 names the pain",
+          "slide 2 resolves it structurally",
+          "slide 3 proves a workflow",
+          "slide 4 proves control or trust",
+          "slide 5 offers a believable next step"
+        ]
+      },
+      "visual_variety": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "the deck feels like one system",
+          "slides are not near-duplicates",
+          "layout rhythm changes enough to preserve attention"
+        ]
+      },
+      "proof_progression": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "proof gets more specific as the deck progresses",
+          "the viewer feels they are going deeper into the product",
+          "no slide exists only for decoration"
+        ]
+      },
+      "cta_credibility": {
+        "minimum_to_pass": 4,
+        "signals": [
+          "final slide closes calmly",
+          "cta matches the declared lane",
+          "no fake urgency"
+        ]
+      }
+    },
+    "approval_rule": {
+      "minimum_weighted_score": 4.3,
+      "minimum_category_score": 4,
+      "all_slides_already_slide_approved": true
+    }
+  }
+}

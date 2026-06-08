@@ -1,0 +1,55 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_clinic_expiring_clearances_v1",
+  "canonical": false,
+  "lane": "clinic_ops_primary",
+  "evidence_tier": "product_surface",
+  "proof_access": "public_site",
+  "composition_source": "composition/clinicalhours_tiktok_clinic_expiring_clearances.html",
+  "export_suffix": "v4expiry",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "headline": "Renewals disappear quietly.",
+      "subtext": "Expiration dates slip across inboxes, folders, and coordinator memory until someone has to scramble.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_problem_section_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "unification",
+      "headline": "One place for clearance status.",
+      "subtext": "Onboarding steps and clearance work stay visible together instead of scattering across inboxes.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_0_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "workflow_proof",
+      "headline": "Missing credentials stop hiding.",
+      "subtext": "When a clearance case is pending, the missing document is easier to spot and follow up.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_1_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "control",
+      "headline": "See expiring before it's urgent.",
+      "subtext": "Live status makes complete, expiring, and overdue items visible before the scramble starts.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_2_live_recapture.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "headline": "Keep renewals in one place.",
+      "subtext": "Request a demo if your clinic wants renewal status and follow-up in one place.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_mobile_430x932_live.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_trust_section_live_recapture_v2.png"
+      ]
+    }
+  ]
+}

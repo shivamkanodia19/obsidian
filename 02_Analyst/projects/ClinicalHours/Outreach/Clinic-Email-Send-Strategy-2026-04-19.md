@@ -2,8 +2,8 @@
 title: ClinicalHours Clinic Email Send Strategy (2026-04-19)
 project: clinicalhours
 status: execution-ready
-origin_dump: [[01_Source/clinicalhours/clinic outreach.md]]
-last_synced_dump: [[01_Source/clinicalhours/clinic outreach.md]]
+origin_dump: [[01_Source/projects/ClinicalHours/clinic outreach.md]]
+last_synced_dump: [[01_Source/projects/ClinicalHours/clinic outreach.md]]
 last_updated: 2026-04-19
 tags: [clinicalhours, sales, outreach, email, strategy, execution]
 ---
@@ -189,4 +189,3 @@ clinicalhours.org | 214-470-0598
 - [[email-template-final-2026-04-19.md]] — Master template
 - [[generated-emails-revised-sample.md]] — Sample emails with template applied
 - [[clinicalhours_email_outreach_strategy.md]] — Overall strategy + research inputs
-

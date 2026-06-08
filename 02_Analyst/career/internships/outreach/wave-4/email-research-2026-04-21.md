@@ -3,8 +3,8 @@ title: Wave 4 Founder Email Research - 2026-04-21
 project: internships
 strategic: true
 status: stable
-origin_dump: [[01_Source/internships/wave-4-email-research-2026-04-21.md]]
-last_synced_dump: [[01_Source/internships/wave-4-email-research-2026-04-21.md]]
+origin_dump: [[01_Source/career/internships/wave-4-email-research-2026-04-21.md]]
+last_synced_dump: [[01_Source/career/internships/wave-4-email-research-2026-04-21.md]]
 conflict_detected: false
 last_updated: 2026-04-21
 tags: [internship, wave-4, founder-outreach, email-research, dfw-startups]
@@ -12,7 +12,7 @@ tags: [internship, wave-4, founder-outreach, email-research, dfw-startups]
 
 # Wave 4 Founder Email Research - 2026-04-21
 
-Source: [[01_Source/internships/wave-4-email-research-2026-04-21.md]]
+Source: [[01_Source/career/internships/wave-4-email-research-2026-04-21.md]]
 
 ## Synthesis
 

@@ -1,0 +1,27 @@
+{
+  "refinement": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "read-only",
+    "commandCount": 0,
+    "failedCommandCount": 0
+  },
+  "execution": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "danger-full-access",
+    "usedDangerFallback": true,
+    "commandCount": 1,
+    "failedCommandCount": 0,
+    "encounteredWindowsSandboxRefresh": false
+  },
+  "exitCode": 0,
+  "ok": true,
+  "finalStatus": "completed",
+  "resultKind": "completed_with_fallback",
+  "startedAt": "2026-06-02T18:15:51.686Z",
+  "completedAt": "2026-06-02T18:17:46.413Z",
+  "sourceMessageId": "stale-processing-recovery-smoke-test",
+  "processingFile": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\processing\\2026-06-02T18-30-00.000Z--stale-processing-recovery-smoke-test.md",
+  "runDir": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\runs\\2026-06-02T18-30-00.000Z--stale-processing-recovery-smoke-test--attempt-2026-06-02T18-15-51-686Z"
+}

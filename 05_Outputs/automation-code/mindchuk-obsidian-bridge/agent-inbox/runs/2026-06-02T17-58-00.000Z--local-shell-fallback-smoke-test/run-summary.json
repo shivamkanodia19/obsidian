@@ -1,0 +1,20 @@
+{
+  "refinement": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "read-only"
+  },
+  "execution": {
+    "exitCode": 0,
+    "ok": true,
+    "sandbox": "danger-full-access",
+    "usedDangerFallback": true
+  },
+  "exitCode": 0,
+  "ok": true,
+  "startedAt": "2026-06-02T18:00:43.099Z",
+  "completedAt": "2026-06-02T18:02:38.213Z",
+  "sourceMessageId": "local-shell-fallback-smoke-test",
+  "processingFile": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\processing\\2026-06-02T17-58-00.000Z--local-shell-fallback-smoke-test.md",
+  "runDir": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\runs\\2026-06-02T17-58-00.000Z--local-shell-fallback-smoke-test"
+}
