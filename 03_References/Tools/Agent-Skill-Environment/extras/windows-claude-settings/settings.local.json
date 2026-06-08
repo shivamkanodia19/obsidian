@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.ascension.org)",
+      "WebFetch(domain:healthcare.ascension.org)",
+      "Bash(awk -F',' '$7==\"TX\" {print $1 \"|\" $6 \"|\" $9}' \"/c/Users/shiva/obsidian/01_Source/clinicalhours/Asc Clnicals - Sheet1 \\(1\\).csv\")",
+      "Bash(awk -F',' '$7==\"TX\" {count++} END {print count}' \"/c/Users/shiva/obsidian/01_Source/clinicalhours/Asc Clnicals - Sheet1 \\(1\\).csv\")",
+      "WebFetch(domain:www.yendo.com)",
+      "Bash(python3 gmail_follow_up_tool.py search)",
+      "PowerShell(pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client)",
+      "mcp__gmail__search_threads",
+      "mcp__gmail__list_drafts",
+      "Bash(python smart_followup_draft.py)",
+      "Bash(python cleanup_and_draft_named.py)",
+      "Bash(python followup_april21.py)"
+    ]
+  }
+}
