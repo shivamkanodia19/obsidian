@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Email Payload",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "deck_id",
+    "to",
+    "subject",
+    "body_markdown",
+    "attachment_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "body_markdown": {
+      "type": "string"
+    },
+    "attachment_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emailed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

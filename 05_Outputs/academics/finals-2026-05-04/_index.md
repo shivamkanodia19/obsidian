@@ -1,7 +1,7 @@
 ---
 title: Finals 2026-05-04 Outputs
 description: Final-exam study assets generated during the May 4 sprint
-last_updated: 2026-05-06
+last_updated: 2026-05-12
 ---
 
 # Finals 2026-05-04 Outputs
@@ -20,8 +20,6 @@ last_updated: 2026-05-06
 
 ## Source Packets
 
-- [[Final Exam Sample.pdf]]
-- [[Final Exam Review - Spring 2026 (2).pdf]]
 
 ## Build Helpers
 
@@ -30,3 +28,7 @@ last_updated: 2026-05-06
 - `cheatsheet-template.html`
 - `cheatsheet-print.css`
 - `2dvector-print.css`
+
+## New Files
+
+- [[2D Vector FRQ Cheat Sheet]] - 2D Vector FRQ Cheat Sheet

@@ -2,8 +2,8 @@
 title: Clinic Outreach Strategy Framework
 project: clinicalhours
 status: stable
-origin_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
-last_synced_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+origin_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
+last_synced_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
 last_updated: 2026-04-17
 tags: [clinicalhours, outreach, strategy, targeting, positioning]
 ---
@@ -221,4 +221,4 @@ Can we schedule 15 minutes this week to see if this fits your workflow?
 **Related:**
 - [[02_Analyst/projects/ClinicalHours/Outreach/Clinic-Target-List-2026-04]]
 - [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04]]
-- [[01_Source/internships/Summer-2026-Expanded-Plan]] (source framework from internship)
+- [[02_Analyst/career/internships/strategy/internship-goal|internship-goal]] (parallel planning frame from internship outreach work)

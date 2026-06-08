@@ -1,145 +1,79 @@
 ---
-title: Internship Search — Summer 2026
-description: Target company research, outreach strategy, and execution tracking
+title: Internship Search - Summer 2026
+description: Target research, outreach strategy, OA preparation, and execution tracking
 project: internships
-last_audited: 2026-04-21
-active_projects: [wave-3-optimized-emails, wave-4-outreach-expansion, wave-4-founder-email-research, internship-outreach-by-industry-output]
+scope: career/internships
+status: active
+agent_context: true
+surface_in_root: true
+current_focus:
+  - founder-direct exact-email batches and follow-up cleanup
+  - OA preparation for active application processes
+active_tasks:
+  - send or refine founder-direct outreach without reopening historical wave-4 assumptions
+  - keep the OA pipeline current for live application processes
+prompt_context:
+  - "[[02_Analyst/career/internships/outreach/_index]]"
+  - "[[02_Analyst/career/internships/outreach/wave-4-followups-2026-04-25]]"
+  - "[[02_Analyst/career/internships/strategy/email-optimization-strategy]]"
+definition_of_done:
+  - the next send queue or follow-up queue is explicit
+  - active OA prep items and blockers are explicit
+blocked_by:
+  - contact freshness and follow-up routing can drift if historical wave notes are treated as current
+last_audited: 2026-05-11
+last_updated: 2026-05-28
+active_projects:
+  - founder-direct-exact-email-batches
+  - followup-send-queue
+  - oa-pipeline
 drifted_files: []
 orphaned_dumps: []
 unreviewed_conflicts: []
-last_updated: 2026-04-21
 ---
 
 # Summer 2026 Internship Search
 
-Comprehensive research and outreach for AI Operations internship roles in DFW area.
+This folder is the operating hub for internship reasoning, campaign planning, outreach execution, and application prep.
 
-## 📂 Folders
+## Main Areas
 
-  - [[research/verified-research]] — Flower Mound Top 5 + extended research
-  - [[research/wave-4-company-list]] — DFW expansion discovery (50–70 companies across 6 industries)
-  - [[strategy/industry-frameworks]] — 6 industry-specific email templates + psychology
-  - [[strategy/expansion-playbook]] — 6-phase workflow for scaling to 50–70 companies
+- [[strategy/_index]] - positioning, frameworks, and outreach strategy
+- [[research/_index]] - company and market research that supports targeting
+- [[outreach/_index]] - actual campaign notes, founder-direct batches, and follow-up systems
+- [[contacts/_index]] - verified contacts and contact hygiene
+- [[assessments/_index]] - take-home assignments, cases, and completed assessment routing notes
 
-## 🎯 Strategy
+## Current Focus
 
-**Positioning:** Technical Operations Hire — position as builder/executor, not learner
+- Founder-direct expansion and exact-email batches
+- Wave 4 follow-up and send-queue cleanup
+- OA preparation for active application processes
 
-**Expansion Strategy:** Industry-specific email frameworks (6 industries) + rapid company discovery + template-based generation
+## OA Pipeline
 
-**Target Profile:**
-- Location: DFW metro (Dallas, Fort Worth, Arlington, Plano, Irving, Lewisville, Frisco, etc.)
-- Industries: Healthcare, Manufacturing, Logistics, Education, Government, Business Services
-- Non-tech companies with clear operational pain points
-- Non-technical founders (hire on capability, not credentials)
-- Companies with automation/efficiency problems solvable by AI
+| Company | Role | Platform | Status |
+|---|---|---|---|
+| IBM | Technology Sales Co-op | Knockri video | Active prep note saved |
+| McAfee | AI Intern | CoderPad | Active prep note saved |
 
-**Resources:**
-- **[[strategy/industry-frameworks]]** — 6 industry-specific email templates + positioning psychology
-- **[[strategy/expansion-playbook]]** — Company discovery + research workflow for 50–70 target companies
-- **[[strategy/email-optimization-strategy]]** — Core cold email framework (generic + variations)
+## Important Files
 
-**Top 5 Priority Targets (Verified Issues):**
-1. Cross Timbers Rehabilitation / Nexion Health — Staff scheduling + compliance
-2. IntelliCentrics — Automation + HR retention
-3. MI Windows & Doors — Production monitoring + document management
-4. Lewisville ISD — Enrollment forecasting + staffing pipeline
-5. Town of Flower Mound — Asset lifecycle + capital project tracking
+- [[outreach/wave-4-followups-2026-04-25]] - Gmail follow-up strategy and draft coverage
+- [[research/flower-mound-targets]] - early verified target set
+- [[strategy/email-optimization-strategy]] - cold-email optimization logic for this campaign
 
-## 📋 Execution Phases
+## Historical Assessment Artifacts
 
-**Wave 1 (Apr 15–17):** Aerolane, Pace, Work Shield
+- [[assessments/legends-merchandise-sales-assessment-2026-05-07]] - raw brief plus routed deliverable package for the Legends retail case
 
-**Wave 2 (Apr 21–25):** Prolucent, Kanarys, Amenities, StaffDNA, Veryable
+## Next Step Rule
 
-**Wave 3 (Apr 22–May 5):** Top 5 Flower Mound targets + secondary targets (custom emails based on verified issues)
-
-## 🎯 OA Pipeline (Active — 2026-04-24)
-
-| Company | Role | Platform | Deadline | Status |
-|---|---|---|---|---|
-| IBM | Technology Sales Co-op | Knockri (video) | ~2026-05-01 | Do FIRST |
-| McAfee | AI Intern | CoderPad (~1hr) | ~2026-04-27 | Do second |
-
-**IBM Knockri:** Behavioral video, 5 questions, 1 min prep / 3 min answer. AI scores transcript on STAR quality + sales competency keywords. Build 4 STAR stories before opening link. Test mic/camera night before.
-
-**McAfee CoderPad:** Python/ML eval ~1 hr. Expect EDA + classifier build + theory questions. Narrate every step. scikit-learn pipeline from memory. Don't skip EDA or over-rely on AI Assist.
-
-## 🎓 Formal Applications
-
-- Innovation WorkSpaces AI Operations (Contact: Valerie Gibson)
-- Owens Corning externship
-- ESL software/data science
-- Zachry Leadership Program (TAMU, deadline June 2026)
-
-## 📊 Campaign Metrics Target
-
-- By May 5: 1–2 calls booked
-- By May 15: 20–30 emails sent
-- Response rate target: 5–10%
-- Goal: 50–70 target companies by May 15
-
-## 📧 Wave 3 Outreach (Ready to Send)
-
-- **[[outreach/wave-3/optimized-emails]]** — READY TO SEND: Final optimized emails for top 5 targets (55-65 words, direct phone, writing style applied, strong CTAs)
-- **[[outreach/wave-3/draft-emails]]** — Reference: Original longer drafts for detailed context
-
-## 📦 User-Requested Output
-
-
----
-
-## 📧 Wave 4 Outreach (Multi-Industry Expansion — 30 Companies, 25 Tier 1 Ready)
-
-**Status (2026-04-16):** ✅ READY TO EXECUTE
-
-- **30 companies qualified** across 6 industries (Logistics 5, Healthcare 6, Education 6, Government 6, Manufacturing 3, Business Services 3)
-- **25 Tier 1 companies** (≥90% confidence) — ready to send immediately
-- **5 Tier 2 companies** (60-80% confidence) — pending LinkedIn DM validation
-- **All 30 problems regression-tested** against verified sources (Glassdoor, CMS, TEA, municipal bonds, news, SEC filings)
-
-**Key Files:**
-- **[[outreach/wave-4/READY-TO-SEND-5-EMAILS.md]]** — 5 emails ready NOW: Dallas (Tolbert), Flower Mound (Childers), Lewisville ISD (Rapp), Nexion Health (Kirley), IntelliCentrics (Sheehan)
-- **[[outreach/wave-4/COMPANY-TARGETS-VERIFIED.md]]** — All 30 companies with confidence levels + verification sources
-- **[[outreach/wave-4/VERIFIED-RESEARCH-DEEP-DIVE.md]]** — Full research backing each company's problem statement
-- **[[outreach/wave-4/TIER-1-RECOMMENDED-EMAILS.md]]** — 8 detailed email templates with Week 1 deliverables
-
-- **[[outreach/wave-4/email-research-2026-04-21.md]]** - latest founder-email research: Alto/Will Coleman verified; public-source founder email bottleneck documented
-
-## Next Actions
-
-**Wave 4 (30 Companies → Execute):**
-
-1. ✅ Company research complete (30 qualified, 25 Tier 1 + 5 Tier 2)
-2. ✅ Email templates created (value-first, psychology-informed, verified metrics)
-3. ⏳ **IMMEDIATE:** Start with 5 ready-to-send emails:
-   - Dallas (Tolbert) — highest visibility
-   - Flower Mound (Childers) — government, fast decision cycle
-   - Lewisville ISD (Rapp) — education, clear problem
-   - Nexion Health (Kirley) — healthcare, compliance focus
-   - IntelliCentrics (Sheehan) — healthcare, credentialing focus
-4. ⏳ Contact verification for remaining 20 (LinkedIn searches for missing contacts)
-5. ⏳ Track responses + follow-up sequences (Day 7 LinkedIn, Day 10 phone)
-6. ⏳ Document patterns for Wave 5 expansion (50-70 companies)
-
-**Resources:**
-- Master company list: `[[outreach/wave-4/COMPANY-TARGETS-VERIFIED.md]]`
-- Research backing: `[[outreach/wave-4/VERIFIED-RESEARCH-DEEP-DIVE.md]]`
-- Email templates: `[[outreach/wave-4/TIER-1-RECOMMENDED-EMAILS.md]]`
-- Task checklist: `[[outreach/wave-4/_index.md]]` — action items with timing
+Use this page to route into the right subfolder. Do not turn it into a running log of every draft batch.
 
 ## New Files
 
-- [[email-optimization-strategy]] — Cold Email Optimization Strategy
-- [[research/flower-mound-targets]] — Flower Mound AI Ops Target Companies
-- [[flower-mound-verified-research]] — Flower Mound AI Ops Research — Verified Issues & CEO Emails
-- [[verified-contacts-all-20]] — Verified Contacts — All 20 Targets
-- [[wave-3-draft-emails]] — Wave 3 Cold Emails — Top 5 Targets
-- [[wave-3-optimized-emails]] — Wave 3 Optimized Emails (Internship-Focused)
-
-## New Files
-
-- 📂 [[contacts/_index|contacts/]] — contacts
-- 📂 [[outreach/_index|outreach/]] — outreach
-- 📂 [[research/_index|research/]] — research
-- 📂 [[strategy/_index|strategy/]] — strategy
+- [[flower-mound-verified-research]] - Flower Mound AI Ops Research — Verified Issues & CEO Emails
+- [[verified-contacts-all-20]] - Verified Contacts — All 20 Targets
+- [[wave-3-draft-emails]] - Wave 3 Cold Emails — Top 5 Targets
+- [[wave-3-optimized-emails]] - Wave 3 Optimized Emails (Internship-Focused)

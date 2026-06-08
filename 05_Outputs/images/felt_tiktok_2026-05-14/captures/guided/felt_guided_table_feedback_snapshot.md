@@ -1,0 +1,159 @@
+- generic [ref=e2] [box=0,0,1440,1200]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1168,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e127] [box=0,0,1440,1200]:
+    - banner [ref=e129] [box=0,0,1440,45]:
+      - generic [ref=e131] [box=36,4,128,36]:
+        - link "FELT" [ref=e132] [cursor=pointer] [box=36,8,45,28]:
+          - /url: /
+        - button "Open navigation menu" [ref=e133] [cursor=pointer] [box=93,4,72,36]:
+          - img [ref=e134] [box=104,15,14,14]
+          - generic [ref=e135] [box=124,14,30,16]: Menu
+    - heading "Felt — Texas Hold'em Table" [level=1] [ref=e136] [box=-1,-1,1,1]
+    - generic [ref=e138] [box=0,45,1440,29]:
+      - heading "Solo • Guided AI (5/10)" [level=2] [ref=e140] [box=12,49,128,20]
+      - generic [ref=e141] [box=1271,50,157,17]:
+        - generic [ref=e142] [box=1271,50,53,17]:
+          - text: Seated
+          - generic [ref=e143] [box=1304,51,20,14]: 3/6
+        - generic [ref=e144] [box=1336,50,59,17]:
+          - text: Blinds
+          - generic [ref=e145] [box=1369,51,26,14]: 5/10
+        - generic [ref=e146] [box=1407,50,21,17]: Flop
+    - main [ref=e147] [box=0,74,1440,1126]:
+      - generic [ref=e148] [box=0,74,1440,852]:
+        - generic [ref=e150] [box=130,88,1180,814]:
+          - generic [ref=e301] [box=272,177,897,635]:
+            - generic [box=282,188,876,614]:
+              - generic [box=677,479,86,32]: FELT
+          - generic [box=580,400,280,173]:
+            - generic [box=669,400,102,43]:
+              - generic [box=681,419,23,16]: Pot
+              - generic [box=709,406,50,32]: 1,452
+            - generic [box=580,456,280,118]:
+              - generic [box=580,456,48,118]:
+                - generic [box=580,453,48,122]:
+                  - generic [box=580,480,48,68]:
+                    - generic [box=580,480,48,68]:
+                      - generic [box=588,489,31,23]: "6"
+                      - generic [box=599,512,10,31]: ♦
+                      - generic [box=613,543,6,23]: "6"
+                  - generic [box=580,453,6,122]:
+                    - generic [box=538,453,48,68]:
+                      - generic [box=559,478,7,17]: F
+              - generic [box=638,456,48,118]:
+                - generic [box=638,453,48,122]:
+                  - generic [box=638,480,48,68]:
+                    - generic [box=638,480,48,68]:
+                      - generic [box=646,489,31,23]: "2"
+                      - generic [box=655,512,13,31]: ♣
+                      - generic [box=671,543,6,23]: "2"
+                  - generic [box=638,453,6,122]:
+                    - generic [box=596,453,48,68]:
+                      - generic [box=617,478,7,17]: F
+              - generic [box=696,456,48,118]:
+                - generic [box=696,453,48,122]:
+                  - generic [box=696,480,48,68]:
+                    - generic [box=696,480,48,68]:
+                      - generic [box=704,489,31,23]: "9"
+                      - generic [box=713,512,13,31]: ♣
+                      - generic [box=729,543,6,23]: "9"
+                  - generic [box=696,453,6,122]:
+                    - generic [box=654,453,48,68]:
+                      - generic [box=675,478,7,17]: F
+          - generic [ref=e305] [box=409,550,23,20]: "447"
+          - generic [ref=e309] [box=432,322,23,20]: "975"
+          - generic [ref=e162] [box=646,737,148,86]:
+            - generic [ref=e164] [box=656,744,94,13]:
+              - generic [ref=e165] [box=656,744,29,13]: YOU
+              - generic [ref=e166] [box=689,744,13,13]: D
+              - generic [ref=e167] [box=706,744,44,13]: Your Turn
+            - generic [ref=e168] [box=656,761,129,54]:
+              - generic [ref=e170] [box=656,770,36,36]: YO
+              - generic [ref=e171] [box=700,761,85,54]:
+                - generic [ref=e172] [box=700,761,85,23]: you
+                - generic [ref=e173] [box=700,784,85,31]: "990"
+          - generic [ref=e175] [box=124,503,200,81]:
+            - generic [ref=e176] [box=124,503,116,81]:
+              - generic [ref=e178] [box=134,511,85,13]:
+                - generic [ref=e179] [box=134,511,24,13]: SB
+                - generic [ref=e180] [box=162,511,17,13]: SB
+                - generic [ref=e181] [box=183,511,36,13]: Waiting
+              - generic [ref=e182] [box=134,527,97,50]:
+                - generic [ref=e184] [box=134,538,28,28]: RR
+                - generic [ref=e185] [box=170,527,61,50]:
+                  - generic [ref=e186] [box=170,527,61,23]: river_rat
+                  - generic [ref=e187] [box=170,550,61,26]: "543"
+            - generic [ref=e188] [box=246,519,78,50]:
+              - generic [ref=e192] [box=261,535,7,17]: F
+              - generic [ref=e196] [box=303,535,7,17]: F
+          - generic [ref=e198] [box=113,137,200,81]:
+            - generic [ref=e199] [box=113,137,116,81]:
+              - generic [ref=e201] [box=122,144,85,13]:
+                - generic [ref=e202] [box=122,144,24,13]: BB
+                - generic [ref=e203] [box=150,144,17,13]: BB
+                - generic [ref=e204] [box=171,144,36,13]: Waiting
+              - generic [ref=e205] [box=122,161,97,50]:
+                - generic [ref=e207] [box=122,172,28,28]: DU
+                - generic [ref=e208] [box=158,161,61,50]:
+                  - generic [ref=e209] [box=158,161,61,23]: dial_up
+                  - generic [ref=e210] [box=158,184,61,26]: "15"
+            - generic [ref=e211] [box=235,152,78,50]:
+              - generic [ref=e215] [box=249,169,7,17]: F
+              - generic [ref=e219] [box=291,169,7,17]: F
+          - generic "Seat 4 — open" [ref=e221] [box=674,109,92,39]:
+            - generic [ref=e222] [box=688,117,65,12]: Open Seat
+            - generic [ref=e223] [box=718,131,4,10]: "4"
+          - generic "Seat 5 — open" [ref=e225] [box=1186,152,83,51]:
+            - generic [ref=e226] [box=1200,159,55,24]: Open Seat
+            - generic [ref=e227] [box=1225,185,4,10]: "5"
+          - generic "Seat 6 — open" [ref=e229] [box=1170,524,92,39]:
+            - generic [ref=e230] [box=1183,532,65,12]: Open Seat
+            - generic [ref=e231] [box=1214,546,4,10]: "6"
+        - generic [ref=e278] [box=1084,740,340,170]:
+          - generic [ref=e279] [box=1097,753,314,111]:
+            - generic [ref=e280] [box=1097,753,285,111]:
+              - generic [ref=e281] [box=1097,753,285,20]: ❌ Bad Pot Odds Call
+              - generic [ref=e282] [box=1097,775,285,16]: "You: Call · Recommended: Fold"
+              - generic [ref=e283] [box=1097,793,285,17]: "Grade: Mistake · Concept: range"
+              - generic [ref=e284] [box=1097,812,285,16]: "EV: -3.8 BB"
+              - generic [ref=e285] [box=1097,832,285,32]: Marginal offsuit hands become dominated in limped multiway pots.
+            - button "Dismiss coach card" [ref=e286] [cursor=pointer] [box=1390,753,22,22]:
+              - img [ref=e287] [box=1394,758,12,12]
+          - generic [ref=e290] [box=1097,872,314,25]:
+            - button "Why?" [ref=e291] [cursor=pointer] [box=1097,872,48,25]
+            - button "Review" [ref=e292] [cursor=pointer] [box=1153,872,59,25]
+        - button "Open hand history" [ref=e232] [cursor=pointer] [box=1396,82,36,36]:
+          - img [ref=e233] [box=1406,92,16,16]
+          - generic [ref=e237] [box=1414,99,1,1]: History
+      - generic [ref=e239] [box=12,933,1416,68]:
+        - generic [ref=e240] [box=617,933,102,68]:
+          - generic [ref=e243] [box=617,933,48,68]:
+            - generic [ref=e244] [box=625,941,31,23]: T
+            - generic [ref=e245] [box=634,964,13,31]: ♣
+            - generic [ref=e246] [box=650,995,6,23]: T
+          - generic [ref=e249] [box=671,933,48,68]:
+            - generic [ref=e250] [box=679,941,31,23]: K
+            - generic [ref=e251] [box=689,964,12,31]: ♥
+            - generic [ref=e252] [box=704,995,6,23]: K
+        - generic [ref=e253] [box=735,947,88,40]:
+          - generic [ref=e254] [box=747,952,65,9]: You hold
+          - generic [ref=e255] [box=747,961,65,20]: King high
+      - generic [ref=e256] [box=0,1007,1440,193]:
+        - button "Hand Review Timeline Show" [ref=e258] [cursor=pointer] [box=8,1012,1424,44]:
+          - generic [ref=e259] [box=17,1026,145,16]: Hand Review Timeline
+          - generic [ref=e260] [box=1388,1026,35,16]: Show
+        - generic [ref=e261] [box=0,1061,1440,139]:
+          - paragraph [ref=e312] [box=28,1069,266,24]: dial_up bet 975. Call 975 to stay in.
+          - generic [ref=e313] [box=0,1100,1440,26]:
+            - generic [ref=e314] [box=1271,1104,70,18]: Stack 990
+            - generic [ref=e315] [box=1357,1104,71,18]: Pot 1,452
+          - generic [ref=e316] [box=0,1126,1440,68]:
+            - button "✕ Fold" [ref=e317] [cursor=pointer] [box=10,1136,465,48]
+            - button "Call 975" [ref=e318] [cursor=pointer] [box=487,1136,465,48]:
+              - generic [ref=e319] [box=683,1148,38,24]: Call
+              - generic [ref=e320] [box=729,1148,28,24]: "975"
+            - button "All-In 990" [ref=e321] [cursor=pointer] [box=965,1136,465,48]:
+              - generic [ref=e322] [box=1150,1148,58,24]: All-In
+              - generic [ref=e323] [box=1216,1148,28,24]: "990"

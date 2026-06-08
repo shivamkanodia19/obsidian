@@ -177,7 +177,7 @@ Busy executives scan cold emails in <20 seconds. Decision points:
 ## Related References
 
 - [[Frameworks/Cold-Email-Optimization]]
-- [[Patterns/Response-Rate-Psychology]]
+- [[03_References/Patterns/Response-Rate-Psychology]]
 - [[Tools/Email-Verification]]
 
 ---

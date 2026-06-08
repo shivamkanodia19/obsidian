@@ -2,7 +2,10 @@
 title: Codex Chat Save Audit - 2026-05-06
 description: Save audit for prompt-engineering sessions and vault cleanup on 2026-05-06
 last_updated: 2026-05-06
-status: current
+status: historical
+note_role: audit
+audit_family: codex-chat-save-audit
+audit_role: archived
 tags:
   - codex
   - save

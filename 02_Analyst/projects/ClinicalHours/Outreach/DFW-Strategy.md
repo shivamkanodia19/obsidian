@@ -3,8 +3,8 @@ title: DFW Clinic Outreach Strategy
 project: clinicalhours
 strategic: true
 status: in-progress
-origin_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
-last_synced_dump: "[[01_Source/clinicalhours/clinic outreach.md]]"
+origin_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
+last_synced_dump: "[[01_Source/projects/ClinicalHours/clinic outreach.md]]"
 last_updated: 2026-04-15
 description: Detailed outreach plan for Dallas-Fort Worth tier 1 free clinics targeting Mercy Clinic Friends, Julia's Center, Community Health, EPIC Medical
 ---
@@ -239,6 +239,6 @@ description: Detailed outreach plan for Dallas-Fort Worth tier 1 free clinics ta
 
 ## Resources
 
-- [[Competitive Positioning Matrix]] (from concurrent research agent)
-- [[TAM/SAM/SOM Analysis]] (from concurrent research agent)
-- [[ClinicalHours Product Map]] (from concurrent codebase mapping agent)
+- [[02_Analyst/projects/ClinicalHours/Market/Competitive-Analysis-Free-Clinic-Space#Competitive Positioning: ClinicalHours|Competitive Positioning Matrix]] (competitive posture for free clinics)
+- [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04#TAM & Revenue Potential (DFW Focus)|TAM/SAM/SOM Analysis]] (DFW market sizing and revenue framing)
+- [[02_Analyst/projects/ClinicalHours/Strategy/ClinicalHours-Product-Map|ClinicalHours Product Map]] (current wedge map and workflow scope)

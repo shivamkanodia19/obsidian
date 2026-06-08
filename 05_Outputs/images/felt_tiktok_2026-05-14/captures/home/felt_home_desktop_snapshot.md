@@ -1,0 +1,48 @@
+- generic [box=0,0,1425,1200]:
+  - generic [box=0,0,1425,1200]:
+    - list [box=1020,1168,420,32]
+    - region "Notifications alt+T" [box=0,0,1425,0]
+    - generic [box=0,0,1425,1200]:
+      - banner [box=0,0,1425,57]:
+        - generic [box=13,0,1400,56]
+      - heading [level=1] [box=-1,-1,1,1]: Felt — Play poker with friends
+      - main [box=253,57,920,1143]:
+        - generic [box=273,97,880,398]
+        - link [box=273,535,880,153]:
+          - /url: /lobby
+        - generic [box=273,709,880,189]
+        - paragraph [box=273,938,880,16]: Play chips only · No real money · No gambling
+  - dialog "Poker nights, without the noise" [ref=e4] [box=464,250,512,700]:
+    - generic [ref=e6] [box=489,271,438,76]:
+      - generic [ref=e7] [box=489,271,438,16]: Welcome
+      - heading "Poker nights, without the noise" [level=2] [ref=e8] [box=489,290,438,32]
+      - paragraph [ref=e9] [box=489,326,438,20]: Private tables, invite codes, and play chips — here's how people use Felt.
+    - generic [ref=e10] [box=465,383,510,340]:
+      - generic [ref=e11] [box=489,399,462,77]:
+        - img [ref=e13] [box=512,420,16,16]
+        - generic [ref=e18] [box=550,410,389,55]
+      - generic [ref=e21] [box=489,488,462,59]:
+        - img [ref=e23] [box=512,509,16,16]
+        - generic [ref=e26] [box=550,499,349,37]
+      - generic [ref=e29] [box=489,559,462,77]:
+        - img [ref=e31] [box=512,580,16,16]
+        - generic [ref=e34] [box=550,570,389,55]
+      - generic [ref=e37] [box=489,648,462,59]:
+        - img [ref=e39] [box=512,668,16,16]
+        - generic [ref=e43] [box=550,658,369,37]
+    - generic [ref=e46] [box=465,739,510,158]:
+      - button "Lobby Play with friends" [active] [ref=e47] [cursor=pointer] [box=489,755,225,57]:
+        - generic [ref=e48] [box=502,766,38,16]: Lobby
+        - generic [ref=e49] [box=502,784,102,18]: Play with friends
+      - button "Home Practice vs AI" [ref=e50] [cursor=pointer] [box=726,755,225,57]:
+        - generic [ref=e51] [box=739,766,34,16]: Home
+        - generic [ref=e52] [box=739,784,83,18]: Practice vs AI
+      - button "Training Preflop trainer" [ref=e53] [cursor=pointer] [box=489,824,462,57]:
+        - generic [ref=e54] [box=502,835,55,16]: Training
+        - generic [ref=e55] [box=502,852,90,18]: Preflop trainer
+    - generic [ref=e56] [box=465,913,510,37]:
+      - button "Maybe later" [ref=e57] [cursor=pointer] [box=489,923,62,16]
+      - button "Don't show again" [ref=e58] [cursor=pointer] [box=863,923,89,16]
+    - button "Close" [ref=e59] [cursor=pointer] [box=930,267,30,30]:
+      - img [ref=e60] [box=936,273,16,16]
+      - generic [ref=e63] [box=943,288,1,1]: Close

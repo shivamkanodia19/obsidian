@@ -1,0 +1,86 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_real_leads_v1",
+  "canonical": false,
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_real_leads.html",
+  "export_suffix": "v6realleads",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "copy_style_hard_fail": {
+    "reject_if_contains": [
+      "why this works",
+      "better story",
+      "calm close",
+      "best student proof",
+      "real search flow",
+      "visual payoff",
+      "cold traffic",
+      "in-feed",
+      "abstract promise"
+    ],
+    "reject_if_meta_marketing_language": true
+  },
+  "screenshot_text_hard_fail": {
+    "reject_if_raw_hero_asset_matches": [
+      "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+      "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png"
+    ],
+    "reject_if_empty_state_is_hero": true
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "visible_role_label": "trust",
+      "headline": "Old lists feel risky.",
+      "subtext": "Students still juggle old pages and word of mouth.",
+      "hero_asset": "captures/home/clinicalhours_home_our_story_live_2026-05-29.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "visible_role_label": "map",
+      "headline": "Use one live map.",
+      "subtext": "The map puts the search in one place instead of another stack of tabs.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "visible_role_label": "live",
+      "headline": "Check if the clinic is active.",
+      "subtext": "A real clinic card shows the place and that it is accepting volunteers now.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_hero_auth_live_v2.png",
+      "support_assets": [
+        "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "role": "documentation_direction",
+      "visible_role_label": "trust",
+      "headline": "Know why it feels more credible.",
+      "subtext": "The product story names the exact pain students already recognize: outdated lists, word of mouth, and no clear way to know what was real.",
+      "hero_asset": "captures/home/clinicalhours_home_our_story_live_2026-05-29.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_dashboard_welcome_panel_v1.png",
+        "captures/derived/clinicalhours_auth_actions_focus_v2.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "visible_role_label": "start",
+      "headline": "Browse first. Commit later.",
+      "subtext": "Start with the map now, then sign in when the search feels worth keeping.",
+      "hero_asset": "captures/auth/clinicalhours_auth_live_2026-05-29.png",
+      "support_assets": []
+    }
+  ]
+}

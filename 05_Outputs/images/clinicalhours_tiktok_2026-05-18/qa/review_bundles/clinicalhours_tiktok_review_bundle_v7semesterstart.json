@@ -1,0 +1,64 @@
+﻿{
+    "schemaVersion":  "clinicalhours_tiktok/review_bundle/v1",
+    "generatedAt":  "2026-06-01T23:07:45.4386760-05:00",
+    "versionSuffix":  "v7semesterstart",
+    "htmlFile":  "clinicalhours_tiktok_student_semester_start.html",
+    "htmlPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\composition\\clinicalhours_tiktok_student_semester_start.html",
+    "outputDir":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart",
+    "qaScreenshotDir":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots",
+    "runQa":  true,
+    "generatedQaShots":  true,
+    "copyAuditProfile":  "bright_student",
+    "slides":  [
+                   {
+                       "slide":  1,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart\\clinicalhours_tiktok_slide_1_v7semesterstart.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=1\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=1\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nAll essential content is within the safe zone and readable.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_1_v7semesterstart.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  2,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart\\clinicalhours_tiktok_slide_2_v7semesterstart.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=2\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=2\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nAll essential content is within the safe zone and readable.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_2_v7semesterstart.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  3,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart\\clinicalhours_tiktok_slide_3_v7semesterstart.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=3\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=3\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nAll essential content is within the safe zone and readable.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_3_v7semesterstart.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  4,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart\\clinicalhours_tiktok_slide_4_v7semesterstart.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=4\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=4\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nAll essential content is within the safe zone and readable.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_4_v7semesterstart.png",
+                       "width":  null,
+                       "height":  null
+                   },
+                   {
+                       "slide":  5,
+                       "exportPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\exports\\\\v7semesterstart\\clinicalhours_tiktok_slide_5_v7semesterstart.png",
+                       "exportUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=5\u0026export=1",
+                       "qaUrl":  "file:///C:/Users/shiva/obsidian/05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/clinicalhours_tiktok_student_semester_start.html?slide=5\u0026export=1\u0026qa=1",
+                       "qaReport":  "QA PASS\r\nAll essential content is within the safe zone and readable.",
+                       "qaScreenshotPath":  "C:\\Users\\shiva\\obsidian\\05_Outputs\\images\\clinicalhours_tiktok_2026-05-18\\qa\\\\screenshots\\_qa_slide_5_v7semesterstart.png",
+                       "width":  null,
+                       "height":  null
+                   }
+               ]
+}

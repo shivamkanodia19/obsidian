@@ -1,0 +1,38 @@
+{
+  "account_id": "mock-agentic-001",
+  "buying_power_usd": 400.0,
+  "currency": "USD",
+  "orders": [
+    {
+      "filled_at": "2026-06-07T16:19:33-05:00",
+      "limit_price": 42.0,
+      "notional_usd": 50.0,
+      "order_id": "MOCK-20260607T161933-IBIT",
+      "quantity": 1.190476,
+      "status": "filled",
+      "ticker": "IBIT"
+    }
+  ],
+  "positions": [
+    {
+      "avg_price": 186.0,
+      "last_price": 188.1,
+      "quantity": 0.25,
+      "ticker": "QQQM"
+    },
+    {
+      "avg_price": 42.0,
+      "last_price": 42.05,
+      "quantity": 1.190476,
+      "ticker": "IBIT"
+    }
+  ],
+  "quotes": {
+    "IBIT": 42.05,
+    "MSTR": 1825.0,
+    "NVDA": 950.0,
+    "QQQM": 188.1,
+    "SPY": 529.8
+  },
+  "updated_at": "2026-06-07T16:19:33-05:00"
+}

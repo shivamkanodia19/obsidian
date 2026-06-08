@@ -1,0 +1,97 @@
+- generic [active] [box=0,0,1440,1200]:
+  - generic [box=0,0,1440,1200]:
+    - list [box=1020,1168,420,32]
+    - region "Notifications alt+T" [box=0,0,1440,0]
+    - generic [box=0,0,1440,1200]:
+      - banner [box=0,0,1440,57]:
+        - generic [box=20,0,1400,56]:
+          - generic [box=40,10,343,36]:
+            - link [box=40,10,68,36]:
+              - /url: /
+              - text: FELT
+            - navigation [box=140,14,242,28]:
+              - link [box=140,14,59,28]:
+                - /url: /
+                - text: Home
+              - link [box=205,14,115,28]:
+                - /url: /lobby
+                - text: Play with friends
+              - link [box=326,14,56,28]:
+                - /url: /training
+                - text: Train
+      - main [box=170,57,1100,1143]:
+        - generic [box=186,89,1068,82]:
+          - generic [box=186,89,608,82]:
+            - paragraph [box=186,89,608,16]: Friends first
+            - heading [level=1] [box=186,108,608,36]: Your tables
+            - paragraph [box=186,150,608,20]: Host a private game, or jump in with a code someone sent you. Everything runs on play chips — never cash.
+          - button [box=1150,89,104,44]:
+            - img [box=1162,104,14,14]
+            - generic [box=1182,103,59,16]: Refresh
+        - generic [box=186,194,1068,111]:
+          - button [box=186,194,528,111]:
+            - generic [box=203,216,160,67]:
+              - generic [box=203,216,160,17]: Host
+              - paragraph [box=203,237,160,28]: Start a new table
+              - paragraph [box=203,267,160,16]: You'll get an invite code to share
+            - generic [box=653,228,44,44]:
+              - img [box=665,240,20,20]
+          - generic [box=726,194,528,111]:
+            - generic [box=747,215,486,17]: Have a code?
+            - generic [box=747,240,486,44]:
+              - generic [box=747,240,415,44]:
+                - textbox [box=747,240,415,44]:
+                  - /placeholder: Paste invite code
+              - button [disabled] [box=1170,240,63,44]: Join
+        - paragraph [box=186,337,1068,38]: You're signed out. Please sign in again to continue.
+        - generic [box=186,391,1068,315]:
+          - generic [box=186,391,1068,315]:
+            - generic [box=692,439,56,56]:
+              - img [box=708,455,24,24]
+            - generic [box=528,511,384,82]:
+              - paragraph [box=528,511,384,28]: Nothing open yet
+              - paragraph [box=528,547,384,46]: Start a table for your crew, or ask a friend for their invite code and paste it above.
+            - generic [box=591,613,258,44]:
+              - button [box=591,613,123,44]: Host a table
+              - button [box=722,613,126,44]: I have a code
+  - dialog "Create a table" [ref=e115] [box=1056,0,384,1200]:
+    - heading "Create a table" [level=2] [ref=e117] [box=1081,26,334,32]
+    - generic [ref=e118] [box=1081,78,334,538]:
+      - generic [ref=e119] [box=1081,78,334,58]:
+        - generic [ref=e120] [box=1081,78,334,17]: Table Name
+        - textbox "Friday Night" [ref=e121] [box=1081,101,334,35]
+      - generic [ref=e122] [box=1081,156,334,67]:
+        - generic [ref=e123] [box=1081,156,334,17]: Format
+        - generic [ref=e124] [box=1081,179,334,44]:
+          - button "Full Ring (6)" [ref=e125] [cursor=pointer] [box=1081,179,163,44]
+          - button "Heads Up (2)" [ref=e126] [cursor=pointer] [box=1252,179,163,44]
+      - generic [ref=e127] [box=1081,243,334,83]:
+        - generic [ref=e128] [box=1081,243,334,17]:
+          - generic [ref=e129] [box=1081,243,44,17]: Blinds
+          - generic [ref=e130] [box=1386,243,28,16]: 5/10
+        - slider [ref=e136] [box=1161,260,20,20]
+        - generic [ref=e137] [box=1081,282,334,44]:
+          - button "1/2" [ref=e138] [cursor=pointer] [box=1081,282,24,44]
+          - button "5/10" [ref=e139] [cursor=pointer] [box=1148,282,29,44]
+          - button "25/50" [ref=e140] [cursor=pointer] [box=1219,282,33,44]
+          - button "50/100" [ref=e141] [cursor=pointer] [box=1294,282,37,44]
+          - button "100/200" [ref=e142] [cursor=pointer] [box=1373,282,41,44]
+      - generic [ref=e143] [box=1081,346,334,136]:
+        - generic [ref=e144] [box=1081,346,334,17]: Buy-in Rules
+        - generic [ref=e145] [box=1081,371,334,25]:
+          - button "Casual" [ref=e146] [cursor=pointer] [box=1081,371,106,25]
+          - button "Deep" [ref=e147] [cursor=pointer] [box=1195,371,106,25]
+          - button "Custom" [ref=e148] [cursor=pointer] [box=1309,371,106,25]
+        - generic [ref=e149] [box=1081,404,334,59]:
+          - generic [ref=e150] [box=1081,404,106,16]: Minimum Buy-In
+          - generic [ref=e151] [box=1195,404,106,16]: Maximum Buy-In
+          - generic [ref=e152] [box=1309,404,106,16]: Default Buy-In
+          - spinbutton [ref=e153] [box=1081,428,106,35]: "200"
+          - spinbutton [ref=e154] [box=1195,428,106,35]: "1000"
+          - spinbutton [ref=e155] [box=1309,428,106,35]: "1000"
+        - paragraph [ref=e156] [box=1081,467,334,16]: Players can join with any amount between the minimum and maximum.
+      - button "Create Table" [ref=e157] [cursor=pointer] [box=1080,501,334,44]
+      - paragraph [ref=e163] [box=1081,566,334,50]: Could not create table. Check console logs and Supabase function errors.
+    - button "Close" [ref=e158] [cursor=pointer] [box=1395,18,27,27]:
+      - img [ref=e159] [box=1401,23,16,16]
+      - generic [ref=e162] [box=1408,38,1,1]: Close

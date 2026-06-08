@@ -1,0 +1,77 @@
+- generic [ref=e2] [box=0,0,390,844]:
+  - region "Notifications (F8)" [box=0,0,390,0]:
+    - list [box=0,0,390,32]
+  - region "Notifications alt+T" [box=0,0,390,0]
+  - generic [ref=e3] [box=0,0,390,844]:
+    - heading "Felt — Texas Hold'em Table" [level=1] [ref=e4] [box=-1,-1,1,1]
+    - button "Open table settings" [ref=e6] [cursor=pointer] [box=342,6,36,44]:
+      - img [ref=e7] [box=359,20,2,16]
+    - main [ref=e10] [box=0,58,390,786]:
+      - generic [ref=e13] [box=8,64,374,652]:
+        - generic [ref=e15] [box=8,64,374,569]:
+          - article [ref=e18] [box=127,541,137,60]:
+            - generic [ref=e20] [box=134,547,58,12]: YOUR TURN
+            - generic [ref=e21] [box=134,562,121,33]:
+              - generic [ref=e22] [box=134,565,28,28]: YO
+              - generic [ref=e23] [box=168,562,87,33]:
+                - paragraph [ref=e24] [box=168,562,87,16]: you
+                - generic [ref=e26] [box=168,580,12,16]: 1K
+          - article [ref=e28] [box=-3,326,105,89]:
+            - generic [box=3,332,94,25]:
+              - generic [box=34,332,15,20]:
+                - generic [box=34,332,15,20]:
+                  - generic [box=38,333,7,17]: F
+              - generic [box=51,332,15,20]:
+                - generic [box=51,332,15,20]:
+                  - generic [box=55,333,7,17]: F
+            - generic [ref=e30] [box=5,360,31,12]: WAIT
+            - generic [ref=e31] [box=5,376,90,33]:
+              - generic [ref=e32] [box=5,379,28,28]: RR
+              - generic [ref=e33] [box=39,376,56,33]:
+                - paragraph [ref=e34] [box=39,376,56,16]: river_rat
+                - generic [ref=e36] [box=39,394,18,16]: "228"
+          - article [ref=e38] [box=-3,192,105,89]:
+            - generic [box=3,198,94,25]:
+              - generic [box=34,198,15,20]:
+                - generic [box=34,198,15,20]:
+                  - generic [box=38,199,7,17]: F
+              - generic [box=51,198,15,20]:
+                - generic [box=51,198,15,20]:
+                  - generic [box=55,199,7,17]: F
+            - generic [ref=e40] [box=5,227,31,12]: WAIT
+            - generic [ref=e41] [box=5,242,90,33]:
+              - generic [ref=e42] [box=5,245,28,28]: DU
+              - generic [ref=e43] [box=39,242,56,33]:
+                - paragraph [ref=e44] [box=39,242,56,16]: dial_up
+                - generic [ref=e46] [box=39,260,24,16]: 2.8K
+          - article [ref=e48] [box=143,183,105,29]:
+            - generic [ref=e50] [box=171,190,49,14]: Seat Open
+          - article [ref=e52] [box=288,222,105,29]:
+            - generic [ref=e54] [box=316,230,49,14]: Seat Open
+          - article [ref=e56] [box=288,356,105,29]:
+            - generic [ref=e58] [box=316,363,49,14]: Seat Open
+          - generic [ref=e60] [box=195,315,59,24]:
+            - generic [ref=e61] [box=205,321,20,14]: Pot
+            - generic [ref=e62] [box=231,318,13,16]: "15"
+          - generic [box=38,358,315,25]:
+            - generic [box=150,364,91,18]:
+              - paragraph [box=159,367,73,13]: 5-10 · Blinds 5/10
+        - generic [ref=e71] [box=149,647,92,60]:
+          - generic [ref=e73] [box=149,647,42,60]:
+            - generic [ref=e74] [box=158,656,25,25]: "3"
+            - generic [ref=e75] [box=164,680,13,34]: ♥
+            - generic [ref=e76] [box=176,715,7,25]: "3"
+          - generic [ref=e78] [box=199,647,42,60]:
+            - generic [ref=e79] [box=208,656,25,25]: "9"
+            - generic [ref=e80] [box=214,680,12,34]: ♠
+            - generic [ref=e81] [box=226,715,7,25]: "9"
+      - generic [ref=e82] [box=0,708,390,136]:
+        - button "Hand Review Timeline" [ref=e84] [cursor=pointer] [box=8,715,374,44]
+        - generic [ref=e85] [box=0,766,390,78]:
+          - paragraph [ref=e87] [box=8,770,374,17]: Preflop
+          - generic [ref=e88] [box=0,789,390,68]:
+            - button "✕ Fold" [ref=e89] [cursor=pointer] [box=8,795,121,52]
+            - button "Call 10" [ref=e90] [cursor=pointer] [box=134,794,121,52]:
+              - generic [ref=e91] [box=181,805,26,16]: Call
+              - generic [ref=e92] [box=187,823,15,13]: "10"
+            - button "▲ Raise" [ref=e93] [cursor=pointer] [box=262,795,121,52]

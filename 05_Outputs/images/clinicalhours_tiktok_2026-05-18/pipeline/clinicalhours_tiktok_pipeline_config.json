@@ -1,0 +1,117 @@
+{
+  "schema_version": "clinicalhours_tiktok/pipeline_config/v1",
+  "campaign": "clinicalhours_tiktok_slideshow",
+  "project_root_relative": "05_Outputs/images/clinicalhours_tiktok_2026-05-18",
+  "render_script_relative": "05_Outputs/images/clinicalhours_tiktok_2026-05-18/composition/render_clinicalhours_tiktok_carousel.ps1",
+  "review_bundle_dir_relative": "05_Outputs/images/clinicalhours_tiktok_2026-05-18/qa/review_bundles",
+  "rubric_json_relative": "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/social_media_expert/clinicalhours-tiktok-social-rubric.json",
+  "rubric_markdown_relative": "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/social_media_expert/clinicalhours-tiktok-social-rubric-2026-05-18.md",
+  "minimum_slide_score": 4.2,
+  "minimum_deck_score": 4.3,
+  "iteration_policy": {
+    "mode": "required_until_pass_or_retire",
+    "do_not_ship_on_first_clean_render": true,
+    "minimum_revision_rounds_before_ship": 1,
+    "max_revision_rounds_before_forced_branch_decision": 6,
+    "plateau_rule": {
+      "max_consecutive_rounds_without_material_improvement": 2,
+      "required_action": "reframe_or_retire_branch"
+    },
+    "required_passes": [
+      "copy_audit",
+      "layout_qa",
+      "fresh_context_judge_consensus",
+      "builder_synthesis_repair"
+    ]
+  },
+  "fresh_context_judge_policy": {
+    "required_judges": 2,
+    "independence_rule": "Each judge must review from a fresh context using the review bundle, exported visuals, QA artifacts, rubric, and required context files, without seeing prior judge findings before submitting an initial verdict.",
+    "required_inputs": [
+      "review_bundle",
+      "required_context_files",
+      "rubric_json_relative",
+      "rubric_markdown_relative",
+      "latest_export_pngs",
+      "latest_qa_screenshots",
+      "declared_lane",
+      "declared_evidence_tier",
+      "declared_proof_access"
+    ],
+    "required_outputs": [
+      "slide_scores",
+      "deck_score",
+      "hard_fail_flags",
+      "keep_revise_retire_decision",
+      "top_truth_risk",
+      "top_persuasion_risk",
+      "must_fix_items"
+    ],
+    "approval_rule": {
+      "minimum_slide_score": 4.2,
+      "minimum_deck_score": 4.3,
+      "minimum_judges_marking_pass": 2,
+      "allow_ship_with_unresolved_must_fix_items": false
+    }
+  },
+  "required_context_files": [
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-research-master-brief-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/campaigns/tiktok-slideshow/clinicalhours-tiktok-slideshow-retention-strategy-2026-05-18.md",
+    "02_Analyst/projects/ClinicalHours/Strategy/ClinicalHours-Product-Map.md",
+    "02_Analyst/projects/ClinicalHours/clinicalhours-experiment-log-framing-2026-05-07.md",
+    "05_Outputs/images/clinicalhours_tiktok_2026-05-18/docs/qa/clinicalhours_tiktok_compliance_qa_checklist.md",
+    "05_Outputs/images/clinicalhours_tiktok_2026-05-18/docs/playbooks/clinicalhours_tiktok_student_marketing_sequence_and_copy_audit_2026-05-19.md",
+    "05_Outputs/images/clinicalhours_tiktok_2026-05-18/docs/playbooks/clinicalhours_visual_iteration_loop_v1_2026-05-31.md"
+  ],
+  "future_agent_rules": [
+    "Always read required_context_files before generating or revising slides.",
+    "When working directly with Shivam on a new ClinicalHours slide request, ask what content or topic the slides should cover before choosing a lane.",
+    "If the answer is still ambiguous, ask one short follow-up about audience or CTA.",
+    "Pick one lane before writing copy or choosing proof assets.",
+    "Prefer real ClinicalHours captures and local composition over synthetic UI generation for proof slides.",
+    "Treat the social rubric JSON as the machine policy and the markdown rubric as the human reasoning layer.",
+    "Treat copy audit failures and weak screenshot-text states as ship blockers, not cosmetic nits.",
+    "Do not invent hybrid evidence_tier strings. Store claim strength in evidence_tier and screenshot visibility in proof_access.",
+    "Do not ship a branch on the first clean render; force at least one fresh-context judge loop before approval.",
+    "Use at least two independent fresh-context judges who only see the approved review bundle and required context files before writing their initial verdicts.",
+    "If a branch stops improving materially across two consecutive repair rounds, reframe or retire it instead of polishing weak proof."
+  ],
+  "tool_preferences": {
+    "truthful_proof_capture": [
+      "Browser",
+      "Chrome",
+      "Computer Use"
+    ],
+    "layout_exploration": [
+      "local_html_composition",
+      "Figma"
+    ],
+    "support_imagery_only": [
+      "image_gen"
+    ],
+    "visual_review": [
+      "view_image",
+      "qa_screenshots",
+      "review_bundle"
+    ],
+    "publishing_after_approval": [
+      "Zernio API",
+      "Zernio MCP when installed"
+    ]
+  },
+  "publishing_policy": {
+    "publish_only_after_deck_approval": true,
+    "default_zernio_mode": "draft_or_schedule",
+    "track_branch_suffix_in_post_metadata": true
+  ],
+  "allowed_evidence_tiers": [
+    "validated_pilot",
+    "product_surface",
+    "market_hypothesis"
+  ],
+  "allowed_proof_access": [
+    "public_site",
+    "authenticated_preview",
+    "mixed_public_and_authenticated_preview"
+  ]
+}

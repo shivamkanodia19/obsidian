@@ -1,0 +1,55 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_clinic_onboarding_visibility_v1",
+  "canonical": false,
+  "lane": "clinic_ops_primary",
+  "evidence_tier": "product_surface",
+  "proof_access": "public_site",
+  "composition_source": "composition/clinicalhours_tiktok_clinic_onboarding_visibility.html",
+  "export_suffix": "v4onboard",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "headline": "Onboarding gets lost in the chase.",
+      "subtext": "Forms, forwarded emails, and reminder notes make it hard to tell who is ready.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_problem_section_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "unification",
+      "headline": "One queue. Fewer blind spots.",
+      "subtext": "Applications and onboarding steps stay visible together instead of splitting across inboxes.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_0_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "workflow_proof",
+      "headline": "Pending docs become visible.",
+      "subtext": "When a case is missing a credential, the next action is easier to spot.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_1_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "control",
+      "headline": "Compliant. Expiring. Overdue.",
+      "subtext": "Live status makes it easier to see who is ready now and who still needs action.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_2_live_recapture.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "headline": "Keep onboarding status visible.",
+      "subtext": "Request a demo if your clinic wants one place for onboarding follow-up.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_mobile_430x932_live.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_trust_section_live_recapture_v2.png"
+      ]
+    }
+  ]
+}

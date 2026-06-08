@@ -2,7 +2,10 @@
 title: Codex Chat Save Audit - 2026-04-29
 description: Audit of meaningful Codex chats after the 2026-04-23 audit pass
 last_updated: 2026-04-29
-status: current
+status: historical
+note_role: audit
+audit_family: codex-chat-save-audit
+audit_role: archived
 tags:
   - codex
   - save

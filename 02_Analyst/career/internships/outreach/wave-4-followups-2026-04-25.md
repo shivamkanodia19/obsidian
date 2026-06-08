@@ -98,5 +98,5 @@ User to customize per company context if needed.
 ## Related Work
 
 - [[career/internships/_index]] — Full internship strategy + OA pipeline
-- [[career/internships/outreach/wave-4]] — Wave 4 outreach execution (30 companies, contact finding, sending workflow)
-- [[02_Analyst/projects/ClinicalHours]] — Parallel cold outreach system (60+ clinic emails) using similar smart filtering
+- [[02_Analyst/career/internships/outreach/wave-4/_index|Wave 4]] — Wave 4 outreach execution (30 companies, contact finding, sending workflow)
+- [[02_Analyst/projects/ClinicalHours/_index|ClinicalHours]] — Parallel cold outreach system (60+ clinic emails) using similar smart filtering

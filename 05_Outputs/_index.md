@@ -1,68 +1,59 @@
 ---
 title: Outputs Index
-description: User-requested deliverables organized by project/type
-last_updated: 2026-05-06
+description: User-requested deliverables organized by project and output type
+last_updated: 2026-05-21
 ---
 
 # Outputs Index
 
-Organized deliverables only. Files in this folder are user-requested and ready for sharing/presentation.
+Organized deliverables live here. Complex project folders can also keep the captures, QA notes, or pipeline files needed to reproduce or audit the deliverable, as long as the folder stays self-contained and clearly indexed.
 
----
+## Organized by Type
 
-## 📂 Organized by Type
+### [[trading-bot/_index]] 🔴 LIVE
+Claude Code-native trading system. Robinhood Agentic Account connected, live trading enabled.
+Read `trading-bot/CLAUDE.md` before doing anything. Kalshi pending credentials.
 
-### [[academics/]]
-Study outputs, printable review packets, and exam-prep deliverables
-- Final-exam cheat sheets, FRQ guides, and source packets from the 2026-05-04 study sprint
-- Last updated: 2026-05-06
+### [[academics/_index]]
+Study outputs, printable review packets, and exam-prep deliverables.
 
-### [[resumes/]]
-Target-specific resume versions for internship applications
-- 6 resume variants (Quality Engineering, Corporate Development, Sales, Security/Design/Technology)
-- Last updated: 2026-04-15
+### [[resumes/_index]]
+Target-specific resume versions for internship applications.
 
-### [[email-campaigns/]]
-Complete email outreach campaigns (drafts, optimizations, frameworks)
-- **Wave 3:** 20 companies, ready to send (Apr 22-24)
-- **Wave 4:** 30-company multi-industry expansion (25 Tier 1 ready, 5 Tier 2 pending)
-- **Wave 5-18:** Founder/direct-contact internship expansion, Homebase meeting prep, and Gmail draft batches through Texas growth-company, enterprise ops software, public-sector SaaS, industrial, fintech, deeptech, route-heavy platform, strategic workflow-platform, ops-infrastructure, healthcare workforce/access, and healthcare admin/platform targets
-- **Frameworks:** Value-first optimization, psychology principles, contact routing
-- Last updated: 2026-04-23
+### [[email-campaigns/_index]]
+Outreach campaigns, founder-direct draft batches, and messaging frameworks.
 
-### [[system-designs/]]
-Architecture and workflow design documentation
-- ClinicalHours agentic outreach system
-- Automation setup + SAFE framework notes
-- Last updated: 2026-04-15
+### [[images/_index]]
+Image-heavy deliverables, capture packs, slideshow systems, and QA exports.
 
-### [[research-analysis/]]
-Completed research writeups
-- Feedlot economics + budget visualization (FEDVT)
-- Dairy farm scenario analysis (conventional vs. robotic)
-- Last updated: 2026-04-15
+### [[system-designs/_index]]
+Architecture notes, workflow designs, and build briefs.
 
-### [[automation-code/]]
-Python scripts for automation workflows
-- LinkedIn outreach agent + safe connect scripts
-- Kalshi backtest script + weather dataset bundle
-- Gmail OAuth extraction script
-- Last updated: 2026-04-15
+### [[research-analysis/_index]]
+Completed research writeups, executive summaries, and analysis packages.
 
----
+### [[automation-code/_index]]
+Scripts and small data bundles used to support automation workflows.
 
-## 📋 Rules
+## Rules
 
-- **Only explicit requests:** Files in 05_Outputs exist only when you ask for them
-- **Organization by intent:** Grouped by project type (resumes, campaigns, designs, research, automation)
-- **Ready to share:** All outputs are organized, complete, and shareable
-- **No assumption files:** Nothing auto-generated; everything you requested
+- Files in `05_Outputs` should exist because you explicitly asked for them.
+- Child `_index.md` files should point to the real deliverables inside each folder.
+- For complex output systems, keep `final` or `export` surfaces obvious and push work traces into clearly named subfolders instead of mixing everything at the top level.
+- This page should stay short and route you to the right output area fast.
 
----
+## Related Vault Files
 
-## 🔗 Related Vault Files
+- [[02_Analyst/career/internships/_index]] - internship strategy and send queues
+- [[02_Analyst/projects/ClinicalHours/_index]] - ClinicalHours reasoning and strategy
+- [[02_Analyst/research/FEDVT/_index]] - FEDVT research context
+- [[03_References/Frameworks/Cold-Email-Optimization]] - outreach methodology
 
-- **Internship Research:** [[/02_Analyst/career/internships/_index]]
-- **ClinicalHours Project:** [[/02_Analyst/projects/ClinicalHours/_index]]
-- **FEDVT Research:** [[/02_Analyst/research/FEDVT/_index]]
-- **Email Methodology:** [[/03_References/Frameworks/Cold-Email-Optimization]]
+## Folder Hubs
+
+- [[legends_global/_index|legends_global/]] - Navigation hub for legends global
+- [[images/_index|images/]] - Navigation hub for images
+
+## New Files
+
+- [[slides/_index|slides/]] - Navigation hub for slides

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>felt.bet TikTok Carousel v6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #060505;
+      --bg-soft: #12100d;
+      --panel: rgba(14, 11, 9, 0.9);
+      --panel-border: rgba(247, 237, 220, 0.08);
+      --ink: #f6eddf;
+      --mist: #d3c4ae;
+      --muted: #a1917a;
+      --gold: #dfbc61;
+      --gold-soft: rgba(223, 188, 97, 0.18);
+      --green: #1c6c58;
+      --green-bright: #2c9376;
+      --green-soft: rgba(44, 147, 118, 0.2);
+      --cream-edge: rgba(255, 250, 242, 0.12);
+      --safe-left: 72px;
+      --safe-right: 1008px;
+      --safe-top: 72px;
+      --safe-bottom: 1708px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      padding: 64px 48px 120px;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(223, 188, 97, 0.12), transparent 24%),
+        radial-gradient(circle at 84% 22%, rgba(44, 147, 118, 0.16), transparent 28%),
+        linear-gradient(180deg, #0a0907, #040303 66%);
+    }
+
+    body.export-mode {
+      width: 1080px;
+      height: 1920px;
+      padding: 0;
+      overflow: hidden;
+      background: #040303;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      align-items: center;
+    }
+
+    body.export-mode .wrap {
+      display: block;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 76% 18%, rgba(223, 188, 97, 0.12), transparent 24%),
+        radial-gradient(circle at 18% 86%, rgba(44, 147, 118, 0.16), transparent 26%),
+        linear-gradient(180deg, #120f0c 0%, #070606 66%, #050404 100%);
+      border: 1px solid rgba(223, 188, 97, 0.08);
+      box-shadow: 0 42px 120px rgba(0, 0, 0, 0.46);
+    }
+
+    body.export-mode .slide {
+      border: none;
+      box-shadow: none;
+    }
+
+    .slide[hidden] {
+      display: none;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 24%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.022), transparent 28%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+      background-size: 132px 132px;
+      mask-image: radial-gradient(circle at 52% 38%, rgba(0, 0, 0, 0.96), transparent 80%);
+      opacity: 0.05;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.08) 0 0.7px, transparent 0.8px),
+        radial-gradient(circle at 74% 62%, rgba(255, 255, 255, 0.07) 0 0.6px, transparent 0.7px),
+        linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.014));
+      background-size: 18px 18px, 22px 22px, 100% 100%;
+      mix-blend-mode: soft-light;
+      opacity: 0.14;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .edge-ribbon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 118px;
+      background: linear-gradient(180deg, rgba(44, 147, 118, 0.12), rgba(44, 147, 118, 0.02));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .edge-ribbon.left {
+      left: 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .edge-ribbon.right {
+      right: 0;
+      border-left: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .glow {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(132px);
+      opacity: 0.82;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .glow.gold {
+      background: rgba(223, 188, 97, 0.32);
+    }
+
+    .glow.green {
+      background: rgba(44, 147, 118, 0.3);
+    }
+
+    .guide-safe,
+    .guide-bottom,
+    .guide-report {
+      display: none;
+    }
+
+    body.qa-mode .guide-safe,
+    body.qa-mode .guide-bottom,
+    body.qa-mode .guide-report {
+      display: block;
+    }
+
+    .guide-safe {
+      position: absolute;
+      left: var(--safe-left);
+      top: var(--safe-top);
+      width: calc(var(--safe-right) - var(--safe-left));
+      height: calc(var(--safe-bottom) - var(--safe-top));
+      border: 2px dashed rgba(223, 188, 97, 0.55);
+      border-radius: 28px;
+      z-index: 15;
+      pointer-events: none;
+    }
+
+    .guide-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: var(--safe-bottom);
+      bottom: 0;
+      background: rgba(255, 72, 72, 0.08);
+      border-top: 1px dashed rgba(255, 72, 72, 0.5);
+      z-index: 15;
+      pointer-events: none;
+    }
+
+    .guide-report {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 56px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(10, 9, 8, 0.9);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--ink);
+      white-space: pre-wrap;
+      z-index: 16;
+    }
+
+    body.qa-mode [data-essential="true"] {
+      outline: 2px solid rgba(44, 147, 118, 0.72);
+      outline-offset: 4px;
+    }
+
+    body.qa-mode [data-overflow="true"],
+    body.qa-mode [data-unsafe="true"] {
+      outline-color: rgba(255, 95, 95, 0.9);
+    }
+
+    .chrome {
+      position: absolute;
+      top: 84px;
+      left: 80px;
+      right: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .brand {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.34em;
+      color: var(--gold);
+    }
+
+    .slide-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 118px;
+      height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(223, 188, 97, 0.18);
+      background: rgba(13, 11, 10, 0.82);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      color: var(--ink);
+    }
+
+    .brand-rule {
+      position: absolute;
+      top: 148px;
+      left: 80px;
+      width: 324px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(223, 188, 97, 0.72), rgba(223, 188, 97, 0));
+      z-index: 10;
+    }
+
+    .eyebrow {
+      position: absolute;
+      left: 80px;
+      display: inline-flex;
+      align-items: center;
+      height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(223, 188, 97, 0.18);
+      background: rgba(13, 11, 10, 0.74);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #efcf89;
+      z-index: 10;
+    }
+
+    .headline {
+      position: absolute;
+      left: 80px;
+      margin: 0;
+      padding-bottom: 16px;
+      width: 520px;
+      font-family: "Sora", sans-serif;
+      font-size: 86px;
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      color: var(--ink);
+      z-index: 10;
+      text-wrap: balance;
+    }
+
+    .subtext {
+      position: absolute;
+      left: 82px;
+      margin: 0;
+      padding-bottom: 10px;
+      width: 430px;
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      color: var(--mist);
+      z-index: 10;
+    }
+
+    .proof-shell,
+    .phone-shell,
+    .detail-shell,
+    .cta-card {
+      position: absolute;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(30, 26, 22, 0.82), rgba(11, 9, 8, 0.98)),
+        rgba(11, 9, 8, 0.98);
+      border: 1px solid var(--panel-border);
+      box-shadow: 0 26px 78px rgba(0, 0, 0, 0.4);
+      z-index: 5;
+    }
+
+    .proof-shell {
+      padding: 18px;
+      border-radius: 36px;
+    }
+
+    .phone-shell {
+      padding: 16px;
+      border-radius: 44px;
+    }
+
+    .detail-shell {
+      padding: 14px;
+      border-radius: 30px;
+    }
+
+    .proof-shell::before,
+    .phone-shell::before,
+    .detail-shell::before,
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), transparent 24%, transparent 60%, rgba(0, 0, 0, 0.22));
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .proof-shell::after,
+    .phone-shell::after,
+    .detail-shell::after,
+    .cta-card::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: inherit;
+      background: rgba(12, 10, 9, 0.96);
+      z-index: 1;
+    }
+
+    .screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 8, 7, 0.02), rgba(10, 8, 7, 0.16));
+      pointer-events: none;
+    }
+
+    .screen img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(1.01) contrast(1.03);
+    }
+
+    .screen.fade-bottom::after {
+      background: linear-gradient(180deg, rgba(10, 8, 7, 0.02) 0%, rgba(10, 8, 7, 0.06) 52%, rgba(10, 8, 7, 0.3) 72%, rgba(10, 8, 7, 0.96) 100%);
+    }
+
+    .metric-pill {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      height: 54px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(223, 188, 97, 0.24);
+      background: rgba(11, 9, 8, 0.86);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .metric-pill span {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: #efcf89;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .metric-pill strong {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .cta-card {
+      padding: 22px 24px 26px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(15, 13, 11, 0.94), rgba(9, 8, 7, 0.98)),
+        rgba(9, 8, 7, 0.98);
+      z-index: 10;
+    }
+
+    .cta-label {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #efcf89;
+      text-transform: uppercase;
+    }
+
+    .cta-url {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Sora", sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -0.07em;
+      color: var(--ink);
+    }
+
+    .cta-url span:last-child {
+      color: var(--gold);
+    }
+
+    .cta-copy {
+      margin: 12px 0 0;
+      font-size: 22px;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      color: var(--mist);
+    }
+
+    .slide-1 .edge-ribbon {
+      right: 0;
+    }
+
+    .slide-1 .glow-a {
+      width: 440px;
+      height: 440px;
+      left: -110px;
+      top: 140px;
+    }
+
+    .slide-1 .glow-b {
+      width: 520px;
+      height: 520px;
+      right: 10px;
+      top: 1060px;
+    }
+
+    .slide-1 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-1 .headline {
+      top: 262px;
+      width: 680px;
+      font-size: 80px;
+    }
+
+    .slide-1 .subtext {
+      top: 582px;
+      width: 470px;
+    }
+
+    .slide-1 .hero-wide {
+      left: 78px;
+      top: 776px;
+      width: 900px;
+      height: 712px;
+    }
+
+    .slide-1 .hero-wide img {
+      object-position: 50% 28%;
+    }
+
+    .slide-1 .support-stack {
+      right: 92px;
+      top: 1190px;
+      width: 258px;
+      height: 406px;
+      transform: rotate(-4deg);
+      z-index: 7;
+    }
+
+    .slide-1 .support-stack img {
+      object-position: 50% 74%;
+    }
+
+    .slide-2 .edge-ribbon {
+      left: 0;
+    }
+
+    .slide-2 .glow-a {
+      width: 430px;
+      height: 430px;
+      left: 0;
+      top: 1140px;
+    }
+
+    .slide-2 .glow-b {
+      width: 540px;
+      height: 540px;
+      right: 24px;
+      top: 420px;
+    }
+
+    .slide-2 .eyebrow {
+      top: 186px;
+      left: 562px;
+    }
+
+    .slide-2 .headline {
+      top: 260px;
+      left: 560px;
+      width: 402px;
+      font-size: 78px;
+    }
+
+    .slide-2 .subtext {
+      top: 518px;
+      left: 562px;
+      width: 348px;
+    }
+
+    .slide-2 .hero-desktop {
+      left: 304px;
+      top: 852px;
+      width: 708px;
+      height: 430px;
+      z-index: 6;
+    }
+
+    .slide-2 .hero-desktop img {
+      object-position: 50% 16%;
+    }
+
+    .slide-2 .support-phone {
+      left: 78px;
+      top: 438px;
+      width: 274px;
+      height: 842px;
+      transform: rotate(-3deg);
+      z-index: 7;
+    }
+
+    .slide-2 .support-phone img {
+      object-position: 50% 22%;
+    }
+
+    .slide-3 .glow-a {
+      width: 560px;
+      height: 560px;
+      left: -80px;
+      top: 220px;
+    }
+
+    .slide-3 .glow-b {
+      width: 640px;
+      height: 640px;
+      right: -40px;
+      top: 1060px;
+    }
+
+    .slide-3 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-3 .headline {
+      top: 258px;
+      width: 620px;
+      font-size: 74px;
+    }
+
+    .slide-3 .subtext {
+      top: 514px;
+      width: 428px;
+    }
+
+    .slide-3 .hero-pano {
+      left: 56px;
+      top: 624px;
+      width: 968px;
+      height: 954px;
+      z-index: 6;
+    }
+
+    .slide-3 .hero-pano img {
+      object-position: 50% 54%;
+    }
+
+    .slide-4 .edge-ribbon {
+      left: 0;
+    }
+
+    .slide-4 .glow-a {
+      width: 520px;
+      height: 520px;
+      left: 12px;
+      top: 1180px;
+    }
+
+    .slide-4 .glow-b {
+      width: 520px;
+      height: 520px;
+      right: 22px;
+      top: 520px;
+    }
+
+    .slide-4 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-4 .headline {
+      top: 258px;
+      width: 540px;
+      font-size: 74px;
+    }
+
+    .slide-4 .subtext {
+      top: 566px;
+      width: 430px;
+    }
+
+    .slide-4 .hero-train {
+      left: 78px;
+      top: 704px;
+      width: 924px;
+      height: 676px;
+    }
+
+    .slide-4 .hero-train img {
+      object-position: 50% 22%;
+    }
+
+    .slide-4 .feedback-detail {
+      right: 86px;
+      top: 1172px;
+      width: 458px;
+      height: 318px;
+      z-index: 7;
+    }
+
+    .slide-4 .feedback-detail img {
+      object-position: 84% 74%;
+    }
+
+    .slide-5 .edge-ribbon {
+      right: 0;
+    }
+
+    .slide-5 .glow-a {
+      width: 580px;
+      height: 580px;
+      left: -40px;
+      top: 1220px;
+    }
+
+    .slide-5 .glow-b {
+      width: 520px;
+      height: 520px;
+      right: 34px;
+      top: 520px;
+    }
+
+    .slide-5 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-5 .headline {
+      top: 262px;
+      width: 496px;
+      font-size: 78px;
+    }
+
+    .slide-5 .subtext {
+      top: 594px;
+      width: 394px;
+      font-size: 28px;
+    }
+
+    .slide-5 .hero-phone {
+      right: 64px;
+      top: 376px;
+      width: 426px;
+      height: 1256px;
+    }
+
+    .slide-5 .hero-phone img {
+      object-position: 50% 47%;
+    }
+
+    .slide-5 .cta-card {
+      left: 80px;
+      bottom: 224px;
+      width: 390px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="slide slide-1" data-slide="1">
+      <div class="noise"></div>
+      <div class="edge-ribbon right"></div>
+      <div class="glow gold glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+
+      <div class="chrome">
+        <div class="brand">FELT.BET</div>
+        <div class="slide-count">01 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-1-eyebrow">01 FRICTION</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-1-headline">Game night<br />needs one<br />home.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-1-subtext">Private tables, join codes, and practice finally live in one place.</p>
+
+      <div class="proof-shell hero-wide" data-proof="true" data-name="slide-1-hero-wide">
+        <div class="screen">
+          <img src="../captures/home/felt_home_desktop_clean_1440x1400_v5.png" alt="Felt home desktop screenshot" />
+        </div>
+      </div>
+
+      <div class="detail-shell support-stack" data-proof="true" data-name="slide-1-support-stack">
+        <div class="screen">
+          <img src="../captures/home/felt_home_mobile_clean_430x932_v5.png" alt="Felt home mobile screenshot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-2" data-slide="2">
+      <div class="noise"></div>
+      <div class="edge-ribbon left"></div>
+      <div class="glow green glow-a"></div>
+      <div class="glow gold glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+
+      <div class="chrome">
+        <div class="brand">FELT.BET</div>
+        <div class="slide-count">02 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-2-eyebrow">02 SIMPLIFICATION</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-2-headline">Host it.<br />Join by code.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-2-subtext">The lobby keeps both paths in one clean screen.</p>
+
+      <div class="phone-shell support-phone" data-proof="true" data-name="slide-2-support-phone">
+        <div class="screen">
+          <img src="../captures/lobby/felt_lobby_mobile_430x932_v6.png" alt="Felt lobby mobile screenshot" />
+        </div>
+      </div>
+
+      <div class="proof-shell hero-desktop" data-proof="true" data-name="slide-2-hero-desktop">
+        <div class="screen">
+          <img src="../captures/lobby/felt_lobby_desktop_1440x1200_v6.png" alt="Felt lobby desktop screenshot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-3" data-slide="3">
+      <div class="noise"></div>
+      <div class="glow gold glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+
+      <div class="chrome">
+        <div class="brand">FELT.BET</div>
+        <div class="slide-count">03 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-3-eyebrow">03 REAL USE</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-3-headline">Stacks.<br />Board.<br />Next move.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-3-subtext">Mid-hand state stays clear once action starts.</p>
+
+      <div class="proof-shell hero-pano" data-proof="true" data-name="slide-3-hero-pano">
+        <div class="screen">
+          <img src="../captures/guided/felt_guided_live_desktop_1440x1400_v5.png" alt="Felt guided live table desktop screenshot" />
+        </div>
+      </div>
+
+    </section>
+
+    <section class="slide slide-4" data-slide="4">
+      <div class="noise"></div>
+      <div class="edge-ribbon left"></div>
+      <div class="glow green glow-a"></div>
+      <div class="glow gold glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+
+      <div class="chrome">
+        <div class="brand">FELT.BET</div>
+        <div class="slide-count">04 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-4-eyebrow">04 MASTERY</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-4-headline">Train spots.<br />See the leak.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-4-subtext">Drills and review call out what to tighten next.</p>
+
+      <div class="proof-shell hero-train" data-proof="true" data-name="slide-4-hero-train">
+        <div class="screen">
+          <img src="../captures/training/felt_training_desktop_review_1440x1200_v6.png" alt="Felt training desktop screenshot" />
+        </div>
+      </div>
+
+      <div class="detail-shell feedback-detail" data-proof="true" data-name="slide-4-feedback-detail">
+        <div class="screen">
+          <img src="../captures/guided/felt_guided_table_feedback.png" alt="Felt coaching feedback screenshot" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-5" data-slide="5">
+      <div class="noise"></div>
+      <div class="edge-ribbon right"></div>
+      <div class="glow green glow-a"></div>
+      <div class="glow gold glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+
+      <div class="chrome">
+        <div class="brand">FELT.BET</div>
+        <div class="slide-count">05 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-5-eyebrow">05 RETURN</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-5-headline">Table night or<br />quick reps.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-5-subtext">Open a lobby with your crew, or sharpen up between sessions.</p>
+
+      <div class="phone-shell hero-phone" data-proof="true" data-name="slide-5-hero-phone">
+        <div class="screen">
+          <img src="../captures/home/felt_home_mobile_clean_430x932_v5.png" alt="Felt home mobile screenshot" />
+        </div>
+      </div>
+
+      <div class="cta-card" data-essential="true" data-text="true" data-name="slide-5-cta-card">
+        <span class="cta-label">See the product</span>
+        <div class="cta-url">
+          <span>felt.bet</span>
+          <span>&rarr;</span>
+        </div>
+        <p class="cta-copy">Private tables. Quick drills.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const slideParam = params.get("slide");
+      const exportMode = params.get("export") === "1";
+      const qaMode = params.get("qa") === "1";
+
+      if (slideParam) {
+        document.querySelectorAll(".slide").forEach((slide) => {
+          slide.hidden = slide.dataset.slide !== slideParam;
+        });
+      }
+
+      if (exportMode) {
+        document.body.classList.add("export-mode");
+      }
+
+      if (qaMode) {
+        document.body.classList.add("qa-mode");
+      }
+
+      function overlaps(a, b) {
+        return !(
+          a.right <= b.left ||
+          a.left >= b.right ||
+          a.bottom <= b.top ||
+          a.top >= b.bottom
+        );
+      }
+
+      function relativeRect(rect, rootRect) {
+        return {
+          left: rect.left - rootRect.left,
+          top: rect.top - rootRect.top,
+          right: rect.right - rootRect.left,
+          bottom: rect.bottom - rootRect.top,
+          width: rect.width,
+          height: rect.height
+        };
+      }
+
+      function auditSlides() {
+        const safe = {
+          left: 72,
+          top: 72,
+          right: 1008,
+          bottom: 1708
+        };
+
+        document.querySelectorAll(".slide").forEach((slide) => {
+          if (slide.hidden) {
+            return;
+          }
+          const report = [];
+          const slideRect = slide.getBoundingClientRect();
+          const textEls = Array.from(slide.querySelectorAll("[data-text='true']"));
+          const proofEls = Array.from(slide.querySelectorAll("[data-proof='true']"));
+
+          slide.querySelectorAll("[data-essential='true']").forEach((el) => {
+            el.removeAttribute("data-overflow");
+            el.removeAttribute("data-unsafe");
+
+            const rect = relativeRect(el.getBoundingClientRect(), slideRect);
+            const name = el.dataset.name || el.className;
+            const overflowX = el.scrollWidth > el.clientWidth + 1;
+            const overflowY = el.scrollHeight > el.clientHeight + 1;
+            const unsafe =
+              rect.left < safe.left ||
+              rect.top < safe.top ||
+              rect.right > safe.right ||
+              rect.bottom > safe.bottom;
+
+            if (overflowX || overflowY) {
+              el.dataset.overflow = "true";
+              report.push("overflow: " + name);
+            }
+
+            if (unsafe) {
+              el.dataset.unsafe = "true";
+              report.push("unsafe-zone: " + name);
+            }
+          });
+
+          for (let i = 0; i < textEls.length; i += 1) {
+            for (let j = i + 1; j < textEls.length; j += 1) {
+              const a = textEls[i];
+              const b = textEls[j];
+              const ra = relativeRect(a.getBoundingClientRect(), slideRect);
+              const rb = relativeRect(b.getBoundingClientRect(), slideRect);
+              if (overlaps(ra, rb)) {
+                report.push("text-overlap: " + (a.dataset.name || a.className) + " x " + (b.dataset.name || b.className));
+              }
+            }
+          }
+
+          textEls.forEach((textEl) => {
+            const textRect = relativeRect(textEl.getBoundingClientRect(), slideRect);
+            proofEls.forEach((proofEl) => {
+              const proofRect = relativeRect(proofEl.getBoundingClientRect(), slideRect);
+              if (overlaps(textRect, proofRect)) {
+                report.push("asset-overlap: " + (textEl.dataset.name || textEl.className) + " x " + (proofEl.dataset.name || proofEl.className));
+              }
+            });
+          });
+
+          const reportEl = slide.querySelector(".guide-report");
+          reportEl.textContent = report.length
+            ? "QA WARN\n" + report.join("\n")
+            : "QA PASS\nNo text overflow or safe-zone violations.";
+        });
+      }
+
+      window.addEventListener("load", () => {
+        auditSlides();
+      });
+    })();
+  </script>
+</body>
+</html>

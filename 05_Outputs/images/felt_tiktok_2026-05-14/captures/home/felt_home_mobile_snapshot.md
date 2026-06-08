@@ -1,0 +1,57 @@
+- generic [ref=e2] [box=0,0,390,1235]:
+  - region "Notifications (F8)" [box=0,0,390,0]:
+    - list [box=0,0,390,32]
+  - region "Notifications alt+T" [box=0,0,390,0]
+  - generic [ref=e3] [box=0,0,390,1235]:
+    - banner [ref=e4] [box=0,0,390,93]:
+      - link "FELT" [ref=e7] [cursor=pointer] [box=12,12,52,24]:
+        - /url: /
+      - navigation [ref=e8] [box=0,48,390,44]:
+        - link "Home" [ref=e9] [cursor=pointer] [box=8,56,52,29]:
+          - /url: /
+        - link "Play with friends" [ref=e10] [cursor=pointer] [box=64,56,104,29]:
+          - /url: /lobby
+        - link "Train" [ref=e11] [cursor=pointer] [box=172,56,50,29]:
+          - /url: /training
+    - heading "Felt — Play poker with friends" [level=1] [ref=e12] [box=-1,-1,1,1]
+    - main [ref=e13] [box=0,93,390,1143]:
+      - generic [ref=e14] [box=12,113,366,400]:
+        - paragraph [ref=e15] [box=12,113,366,16]: Private tables
+        - generic [ref=e16] [box=12,136,366,48]: FELT
+        - paragraph [ref=e17] [box=12,196,366,74]: The friend-group table. No strangers — just your people, a code, and a clean run of hands.
+        - generic [ref=e18] [box=12,287,366,27]:
+          - generic [ref=e19] [box=69,287,135,27]:
+            - img [ref=e20] [box=80,293,14,14]
+            - text: Private & invite-only
+          - generic [ref=e22] [box=212,287,109,27]:
+            - img [ref=e23] [box=223,293,14,14]
+            - text: Play chips only
+        - generic [ref=e25] [box=12,333,366,180]:
+          - generic [ref=e26] [box=29,350,333,14]: First time here?
+          - paragraph [ref=e27] [box=29,372,333,68]: Start a private table and share the code, or practice against AI at your own speed. Nothing here is real money — it's all play chips.
+          - button "Got it, hide this" [ref=e28] [cursor=pointer] [box=29,452,148,44]
+      - link "Recommended Play with friends Host a table, share one invite code, and keep the room between people you actually know. Open lobby" [ref=e29] [cursor=pointer] [box=12,545,366,204]:
+        - /url: /lobby
+        - generic [ref=e30] [box=33,566,325,163]:
+          - generic [ref=e31] [box=33,566,325,107]:
+            - img [ref=e33] [box=47,580,28,28]
+            - generic [ref=e38] [box=105,566,253,107]
+          - generic [ref=e42] [box=33,688,134,40]:
+            - text: Open lobby
+            - img [ref=e43] [box=130,700,16,16]
+      - generic [ref=e45] [box=12,765,366,402]:
+        - link "Join with a code Already have a code from a friend? Jump straight to the lobby and paste it. Go to join field" [ref=e46] [cursor=pointer] [box=12,765,366,153]:
+          - /url: /lobby#invite-code
+          - generic [ref=e47] [box=33,786,325,80]:
+            - img [ref=e49] [box=38,798,20,20]
+            - generic [ref=e52] [box=75,786,283,80]
+          - generic [ref=e55] [box=33,877,325,20]: Go to join field
+        - generic [ref=e56] [box=12,934,366,233]:
+          - generic [ref=e57] [box=33,955,325,80]:
+            - img [ref=e59] [box=37,967,20,20]
+            - generic [ref=e62] [box=74,955,283,80]
+          - generic [ref=e65] [box=33,1051,325,96]:
+            - button "Set up AI table" [ref=e66] [cursor=pointer] [box=33,1051,325,44]
+            - link "Preflop trainer" [ref=e70] [cursor=pointer] [box=33,1103,325,44]:
+              - /url: /training
+      - paragraph [ref=e75] [box=12,1199,366,16]: Play chips only · No real money · No gambling

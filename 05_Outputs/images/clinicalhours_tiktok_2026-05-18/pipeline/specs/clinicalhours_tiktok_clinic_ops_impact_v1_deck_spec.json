@@ -1,0 +1,55 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_clinic_ops_impact_v1",
+  "canonical": false,
+  "lane": "clinic_ops_primary",
+  "evidence_tier": "product_surface",
+  "proof_access": "public_site",
+  "composition_source": "composition/clinicalhours_tiktok_clinic_ops_impact.html",
+  "export_suffix": "v9impactops",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "status_visibility",
+      "headline": "Renewals stop hiding.",
+      "subtext": "Complete, expiring, and overdue stay on one board.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_2_live_recapture.png",
+      "support_assets": [
+        "captures/enterprise/clinicalhours_enterprise_outputs_section_live_recapture_v2.png"
+      ]
+    },
+    {
+      "slide_number": 2,
+      "role": "queue_visibility",
+      "headline": "See the next applicant fast.",
+      "subtext": "Match, reviewed, and team stay in one queue.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_supply_live.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "workflow_proof",
+      "headline": "Missing docs surface early.",
+      "subtext": "One case shows what still blocks clearance.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_1_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "audit_readiness",
+      "headline": "Audit proof stays ready.",
+      "subtext": "Exports and audit trails stay inside the workflow.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_outputs_section_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 5,
+      "role": "trust_close",
+      "headline": "Built for healthcare first.",
+      "subtext": "HIPAA alignment, NPPES checks, and audit logs are not add-ons.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_trust_section_live_recapture_v2.png",
+      "support_assets": []
+    }
+  ]
+}

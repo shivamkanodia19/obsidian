@@ -1,0 +1,72 @@
+- generic [ref=e2] [box=0,0,1425,8530]:
+  - region "Notifications (F8)" [box=0,0,1425,0]:
+    - list [box=1005,2168,420,32]
+  - region "Notifications alt+T" [box=0,0,1425,0]
+  - generic [ref=e7] [box=0,0,1425,8530]:
+    - banner [ref=e8] [box=0,0,1425,56]:
+      - generic [ref=e11] [box=72,0,1280,56]:
+        - link "ClinicalHours ClinicalHours" [ref=e12] [cursor=pointer] [box=112,18,114,20]:
+          - /url: /enterprise
+        - navigation [ref=e15] [box=1032,12,280,33]
+    - generic [ref=e28] [box=112,931,634,355]:
+      - paragraph [ref=e30] [box=112,931,634,17]: For healthcare facilities
+      - heading "Workforce operations for safety-net clinics." [level=1] [ref=e31] [box=112,975,634,136]:
+        - generic [ref=e32] [box=112,970,634,146]
+      - paragraph [ref=e39] [box=112,1135,448,72]: ClinicalHours is the operating system for the people who keep community health clinics running. Onboarding, credentialing, compliance, and supply — in one place.
+      - generic [ref=e41] [box=112,1243,634,42]:
+        - button "Request a demo" [ref=e42] [cursor=pointer] [box=112,1243,200,42]
+        - link "See how it works" [ref=e45] [cursor=pointer] [box=324,1243,196,42]:
+          - /url: "#problem"
+    - generic [ref=e47] [box=328,2344,768,500]:
+      - heading "Free clinics run on volunteer labor. Software was built for everyone else." [level=2] [ref=e49] [box=328,2360,768,80]
+      - generic [ref=e50] [box=328,2480,768,364]:
+        - paragraph [ref=e52] [box=328,2496,768,112]: 0+ free and charitable clinics serve over 0 million patients a year. They don't run on full-time staff. They run on rotating part-time clinicians, physician volunteers, and pre-health student labor — a workforce that turns over constantly and arrives without uniform credentials, training, or onboarding.
+        - paragraph [ref=e54] [box=328,2636,768,112]: Every one of those workers needs HIPAA training, current immunizations, BLS certification, background checks, and license verification before they touch a patient. Today the clinic coordinator manages all of it — manually — across spreadsheets, paper folders, and forwarded emails. One person, hundreds of expiration dates, no audit trail.
+        - paragraph [ref=e56] [box=328,2776,768,84]: And before any of that matters, most clinics simply can't find enough workers to credential in the first place. The supply problem is upstream of the compliance problem, and nothing in the existing healthcare software stack solves either.
+    - separator [ref=e57] [box=0,2988,1425,1]
+    - generic [ref=e59] [box=136,3133,1152,2311]:
+      - generic [ref=e60] [box=136,3133,768,81]:
+        - paragraph [ref=e62] [box=136,3149,768,17]: The platform
+        - heading "One platform. Every workforce operation." [level=2] [ref=e64] [box=136,3189,768,40]
+      - generic [ref=e65] [box=136,3325,1152,2119]:
+        - generic [ref=e66] [box=136,3325,1152,398]
+        - generic [ref=e142] [box=136,3899,1152,398]
+        - generic [ref=e198] [box=136,4473,1152,398]
+        - generic [ref=e268] [box=136,5047,1152,398]
+    - separator [ref=e349] [box=0,5588,1425,1]
+    - generic [ref=e351] [box=328,5733,768,598]:
+      - paragraph [ref=e353] [box=328,5749,768,17]: Outputs
+      - heading "What ClinicalHours produces" [level=2] [ref=e355] [box=328,5790,768,40]
+      - list [ref=e356] [box=328,5870,768,462]:
+        - listitem [ref=e357] [box=328,5886,768,76]
+        - listitem [ref=e361] [box=328,5962,768,77]
+        - listitem [ref=e365] [box=328,6039,768,77]
+        - listitem [ref=e369] [box=328,6116,768,77]
+        - listitem [ref=e373] [box=328,6193,768,77]
+        - listitem [ref=e377] [box=328,6270,768,77]
+    - separator [ref=e381] [box=0,6475,1425,1]
+    - generic [ref=e383] [box=200,6620,1024,346]:
+      - heading "Built for healthcare from day one" [level=2] [ref=e385] [box=200,6636,672,40]
+      - generic [ref=e386] [box=200,6724,1024,178]:
+        - generic [ref=e387] [box=201,6741,340,176]
+        - generic [ref=e392] [box=542,6741,340,176]
+        - generic [ref=e399] [box=883,6741,340,176]
+      - generic [ref=e405] [box=200,6966,1024,17]: SOC 2 Type II in progress
+    - separator [ref=e407] [box=0,7110,1425,1]
+    - generic [ref=e409] [box=328,7255,768,268]:
+      - heading "Built by people who've worked the front desk" [level=2] [ref=e411] [box=328,7271,768,80]
+      - paragraph [ref=e413] [box=328,7399,768,140]: "ClinicalHours was built by a team of pre-health and computer science students from Texas A&M who spent enough time inside free clinics to see, firsthand, how badly software fails the organizations that serve the uninsured. The product reflects that perspective: every screen exists because we watched a coordinator do something on paper that should have taken seconds."
+    - separator [ref=e414] [box=0,7667,1425,1]
+    - generic [ref=e416] [box=328,7844,768,209]:
+      - heading "Ready to see it?" [level=2] [ref=e417] [box=336,7844,753,59]
+      - button "Request a demo" [ref=e419] [cursor=pointer] [box=601,7968,224,49]:
+        - generic [ref=e420] [box=637,7984,132,17]: Request a demo
+        - img [ref=e421] [box=776,7986,12,12]
+      - paragraph [ref=e425] [box=328,8048,768,20]:
+        - text: Or email us directly at
+        - link "enterprise@clinicalhours.org" [ref=e426] [cursor=pointer] [box=691,8050,190,17]:
+          - /url: mailto:enterprise@clinicalhours.org
+    - contentinfo [ref=e427] [box=0,8228,1425,302]:
+      - generic [ref=e428] [box=72,8229,1280,301]:
+        - generic [ref=e429] [box=112,8293,1200,86]
+        - generic [ref=e437] [box=112,8426,1200,40]: © 2026 ClinicalHours. All rights reserved.

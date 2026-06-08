@@ -3,8 +3,8 @@ title: Internship Goal & Role Targets
 project: internships
 strategic: false
 status: stable
-origin_dump: "[[01_Source/internships/Internship goal.md]]"
-last_synced_dump: "[[01_Source/internships/Internship goal.md]]"
+origin_dump: "[[01_Source/career/internships/Internship goal.md]]"
+last_synced_dump: "[[01_Source/career/internships/Internship goal.md]]"
 last_updated: 2026-04-15
 tags: [internship, positioning, roles, strategy]
 ---
@@ -48,11 +48,11 @@ Reasoning: Direct outreach to 50-70 local companies provides broader exposure th
 
 ## Resume
 
-Resume attached in `/01_Source/internships/` folder.
+Resume attached in `/01_Source/career/internships/` folder.
 
 ## Sourced From
 
-[[01_Source/internships/Internship goal.md]] (updated 2026-04-15)
+[[01_Source/career/internships/Internship goal.md]] (updated 2026-04-15)
 3. Track responses + follow-ups
 
 **Medium-term (Weeks 3–6):**
@@ -66,5 +66,5 @@ Resume attached in `/01_Source/internships/` folder.
 
 - [[expansion-playbook]] — Company discovery + research workflow for scaling
 - [[industry-frameworks]] — 6 industry-specific email templates + psychology
-- [[outreach/wave-3/]] — Wave 3 top 5 emails ready to send
-- [[outreach/wave-4/]] — Wave 4 multi-industry expansion in progress
+- [[02_Analyst/career/internships/outreach/wave-3/_index|Wave 3]] — Wave 3 top 5 emails ready to send
+- [[02_Analyst/career/internships/outreach/wave-4/_index|Wave 4]] — Wave 4 multi-industry expansion in progress

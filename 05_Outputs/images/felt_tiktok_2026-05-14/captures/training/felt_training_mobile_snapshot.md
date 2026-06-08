@@ -1,0 +1,102 @@
+- generic [ref=e2] [box=0,0,430,1377]:
+  - region "Notifications (F8)" [box=0,0,430,0]:
+    - list [box=0,0,430,32]
+  - region "Notifications alt+T" [box=0,0,430,0]
+  - generic [ref=e3] [box=0,0,430,1377]:
+    - banner [ref=e4] [box=0,0,430,41]:
+      - generic [ref=e6] [box=8,4,82,32]:
+        - link "FELT" [ref=e7] [cursor=pointer] [box=8,11,39,18]:
+          - /url: /
+        - button "Open navigation menu" [ref=e8] [cursor=pointer] [box=55,4,36,32]:
+          - img [ref=e9] [box=66,13,14,14]
+    - main [ref=e10] [box=0,41,430,1336]:
+      - generic [ref=e11] [box=16,65,398,146]:
+        - link "Back home" [ref=e12] [cursor=pointer] [box=16,67,77,16]:
+          - /url: /
+          - img [ref=e13] [box=16,68,14,14]
+          - text: Back home
+        - paragraph [ref=e15] [box=16,102,398,16]: Practice mode
+        - heading "Train smarter" [level=1] [ref=e16] [box=16,121,398,36]
+        - paragraph [ref=e17] [box=16,165,398,46]: Run spot drills, play a coached AI session, then see what to tighten up — all with zero stakes.
+      - navigation [ref=e18] [box=16,235,398,85]:
+        - button "Spot Trainer" [ref=e19] [cursor=pointer] [box=16,235,115,32]:
+          - img [ref=e20] [box=30,244,14,14]
+          - text: Spot Trainer
+        - button "Guided Live Game" [ref=e24] [cursor=pointer] [box=139,235,147,32]:
+          - img [ref=e25] [box=153,244,14,14]
+          - text: Guided Live Game
+        - button "Session Review" [ref=e27] [cursor=pointer] [box=16,275,128,32]:
+          - img [ref=e28] [box=30,284,14,14]
+          - text: Session Review
+      - generic [ref=e31] [box=16,343,398,41]:
+        - generic [ref=e32] [box=16,350,210,28]:
+          - img [ref=e33] [box=16,356,16,16]
+          - heading "Spot trainer" [level=2] [ref=e37] [box=40,350,116,28]
+          - generic [ref=e38] [box=168,353,58,21]: Active
+        - generic [ref=e39] [box=307,343,108,41]:
+          - generic [ref=e40] [box=307,343,44,41]:
+            - generic [ref=e41] [box=325,348,8,20]: "0"
+            - generic [ref=e42] [box=318,370,23,9]: Hands
+          - generic [ref=e43] [box=357,343,58,41]:
+            - generic [ref=e44] [box=377,348,17,20]: 0%
+            - generic [ref=e45] [box=368,370,36,9]: Accuracy
+      - paragraph [ref=e46] [box=16,400,398,40]: Pick a seat. You'll see random hands — choose fold, call, or raise and get instant feedback.
+      - generic [ref=e47] [box=16,464,398,738]:
+        - button "UTG Train → Under the Gun First to act preflop. Tightest range." [ref=e48] [cursor=pointer] [box=16,464,398,115]:
+          - generic [ref=e49] [box=33,481,365,36]:
+            - generic [ref=e50] [box=33,481,66,36]: UTG
+            - generic [ref=e51] [box=349,499,48,16]: Train →
+          - generic [ref=e52] [box=33,525,365,37]:
+            - generic [ref=e53] [box=33,525,365,20]: Under the Gun
+            - generic [ref=e54] [box=33,547,365,15]: First to act preflop. Tightest range.
+        - button "MP Train → Middle Position A few players still to act. Stay disciplined." [ref=e55] [cursor=pointer] [box=16,589,398,115]:
+          - generic [ref=e56] [box=33,606,365,36]:
+            - generic [ref=e57] [box=33,606,48,36]: MP
+            - generic [ref=e58] [box=349,624,48,16]: Train →
+          - generic [ref=e59] [box=33,650,365,37]:
+            - generic [ref=e60] [box=33,650,365,20]: Middle Position
+            - generic [ref=e61] [box=33,672,365,15]: A few players still to act. Stay disciplined.
+        - button "CO Train → Cutoff Late position — open up your range." [ref=e62] [cursor=pointer] [box=16,713,398,115]:
+          - generic [ref=e63] [box=33,730,365,36]:
+            - generic [ref=e64] [box=33,730,45,36]: CO
+            - generic [ref=e65] [box=349,749,48,16]: Train →
+          - generic [ref=e66] [box=33,774,365,37]:
+            - generic [ref=e67] [box=33,774,365,20]: Cutoff
+            - generic [ref=e68] [box=33,796,365,15]: Late position — open up your range.
+        - button "BTN Train → Button Best seat at the table. Maximum aggression." [ref=e69] [cursor=pointer] [box=16,838,398,115]:
+          - generic [ref=e70] [box=33,855,365,36]:
+            - generic [ref=e71] [box=33,855,65,36]: BTN
+            - generic [ref=e72] [box=349,873,48,16]: Train →
+          - generic [ref=e73] [box=33,899,365,37]:
+            - generic [ref=e74] [box=33,899,365,20]: Button
+            - generic [ref=e75] [box=33,921,365,15]: Best seat at the table. Maximum aggression.
+        - button "SB Train → Small Blind Out of position postflop. Raise or fold." [ref=e76] [cursor=pointer] [box=16,963,398,115]:
+          - generic [ref=e77] [box=33,980,365,36]:
+            - generic [ref=e78] [box=33,980,39,36]: SB
+            - generic [ref=e79] [box=349,998,48,16]: Train →
+          - generic [ref=e80] [box=33,1024,365,37]:
+            - generic [ref=e81] [box=33,1024,365,20]: Small Blind
+            - generic [ref=e82] [box=33,1046,365,15]: Out of position postflop. Raise or fold.
+        - button "BB Train → Big Blind Already invested. Defend selectively." [ref=e83] [cursor=pointer] [box=16,1088,398,115]:
+          - generic [ref=e84] [box=33,1104,365,36]:
+            - generic [ref=e85] [box=33,1104,42,36]: BB
+            - generic [ref=e86] [box=349,1123,48,16]: Train →
+          - generic [ref=e87] [box=33,1148,365,37]:
+            - generic [ref=e88] [box=33,1148,365,20]: Big Blind
+            - generic [ref=e89] [box=33,1170,365,15]: Already invested. Defend selectively.
+      - button "Session Review Open → Decision error rate 100% Weak pos BTN Weak street preflop" [ref=e90] [cursor=pointer] [box=16,1226,398,126]:
+        - generic [ref=e91] [box=33,1243,365,28]:
+          - generic [ref=e92] [box=33,1243,137,28]:
+            - img [ref=e93] [box=33,1249,16,16]
+            - heading "Session Review" [level=3] [ref=e96] [box=57,1243,113,28]
+          - generic [ref=e97] [box=366,1249,32,16]: Open →
+        - generic [ref=e98] [box=33,1283,365,53]:
+          - generic [ref=e99] [box=33,1283,116,53]:
+            - generic [ref=e100] [box=42,1290,99,17]: Decision error rate
+            - generic [ref=e101] [box=42,1309,99,20]: 100%
+          - generic [ref=e102] [box=157,1283,116,53]:
+            - generic [ref=e103] [box=166,1290,99,17]: Weak pos
+            - generic [ref=e104] [box=166,1309,99,20]: BTN
+          - generic [ref=e105] [box=281,1283,116,53]:
+            - generic [ref=e106] [box=290,1290,99,17]: Weak street
+            - generic [ref=e107] [box=290,1309,99,20]: preflop

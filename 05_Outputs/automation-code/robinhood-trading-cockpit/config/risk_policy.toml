@@ -1,0 +1,19 @@
+[limits]
+max_trade_size_usd = 75.0
+max_account_exposure_percent = 35.0
+max_single_ticker_exposure_percent = 15.0
+max_trades_per_day = 2
+
+[permissions]
+allow_market_orders = false
+allow_options = false
+allow_short_sales = false
+allow_after_hours = false
+require_initial_approval = true
+require_final_approval = true
+
+[hours]
+timezone = "America/Chicago"
+
+[lists]
+blocked_tickers = ["MSTR"]

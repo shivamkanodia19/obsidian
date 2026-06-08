@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Slide Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "campaign",
+    "run_id",
+    "spec_id",
+    "slide_number",
+    "intended_role",
+    "image_path",
+    "copy",
+    "proof_sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "spec_id": {
+      "type": "string"
+    },
+    "slide_number": {
+      "type": "integer"
+    },
+    "intended_role": {
+      "type": "string"
+    },
+    "image_path": {
+      "type": "string"
+    },
+    "copy": {
+      "type": "object",
+      "required": [
+        "eyebrow",
+        "headline",
+        "subtext"
+      ]
+    },
+    "proof_sources": {
+      "type": "object",
+      "required": [
+        "hero_source",
+        "support_sources"
+      ]
+    },
+    "required_context_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+Plain-English summary:
+This cleaned file keeps only the two assignment seasons: 2023 and 2024.
+Any row that originally had season = 2022 was removed rather than corrected.
+After removing those 2022 rows, duplicate transaction_id rows were removed by keeping one row per transaction_id.
+The final file was then standardized and sorted by season, transaction_date, and transaction_id.
+
+Source rows: 50000
+Cleaned rows: 49075
+Original unique transaction IDs: 49344
+Rows removed because original season was 2022: 276
+Rows removed due to duplicate transaction IDs: 649
+Rows involved in duplicate transaction ID collisions: 1290
+Cleaned unique transaction IDs: 49075
+Row count check: 50000 source rows - 276 removed 2022 rows - 649 removed duplicates = 49075 cleaned rows
+Why cleaned rows equal cleaned unique transaction IDs: after dropping the 2022 rows, transaction_id deduplication was the only remaining row-removal step.
+All other cleaning steps standardized values without dropping rows.
+Seasons after cleaning: 2023, 2024
+
+Transformations applied in order:
+1. Trimmed whitespace from text fields for consistent grouping.
+2. Parsed transaction_date and exported it in YYYY-MM-DD HH:MM:SS format.
+3. Removed 276 rows where the original season value was 2022 so the final dataset contains only the two assignment seasons.
+4. Standardized item_name values: Jersy -> Jersey and Keychain with trailing space -> Keychain.
+5. Added item_type based on item_name.
+6. Removed 649 duplicate rows by keeping one row per transaction_id.
+7. Sorted the final CSV by season, transaction_date, and transaction_id for readability.
+
+Item type mapping:
+- Cap: Headwear
+- Foam Finger: Novelty
+- Hoodie: Apparel
+- Jersey: Apparel
+- Keychain: Accessories
+- Mug: Drinkware
+- T-shirt: Apparel

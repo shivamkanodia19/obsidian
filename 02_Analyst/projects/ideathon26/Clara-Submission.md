@@ -3,8 +3,8 @@ title: Clara — AI Pre-Visit Intake System
 project: ideathon26
 strategic: false
 status: stable
-origin_dump: [[01_Source/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
-last_synced_dump: [[01_Source/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
+origin_dump: [[01_Source/projects/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
+last_synced_dump: [[01_Source/projects/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
 conflict_detected: false
 last_updated: 2026-04-18
 tags: [ideathon, healthcare, AI, intake, physician-workflow, product-tamu]
@@ -18,7 +18,7 @@ tags: [ideathon, healthcare, AI, intake, physician-workflow, product-tamu]
 
 Physicians spend ~30% of each appointment on intake paperwork instead of actual care. Everyone optimizes the during-visit experience. Nobody's optimized pre-visit. Clara moves intake upstream via AI, giving doctors back their time for patients.
 
-From [[01_Source/ideathon26/CLARA_RUBRIC_RESPONSES.md]]:
+From [[01_Source/projects/ideathon26/CLARA_RUBRIC_RESPONSES.md]]:
 > Clinicians interrupt patients every 18 seconds during visits because they're drowning in intake paperwork. Aryan saw his own family doctor working through lunch just to keep up.
 
 ---

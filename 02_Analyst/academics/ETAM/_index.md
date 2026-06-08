@@ -1,8 +1,12 @@
+---
+title: ETAM
+description: Historical pointer for ETAM essay work
+last_updated: 2026-05-11
+---
+
 # ETAM
 
 Historical pointer for ETAM essay work.
-
-Older Analyst notes still link here, so this folder remains as a stable navigation target even though the current active academics work is light.
 
 ## Current State
 

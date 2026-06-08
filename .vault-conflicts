@@ -8,7 +8,7 @@
 Old: [previous state]
 New: [current state]
 Dump: [[01_Source/Dumps/YYYY-MM-DD_slug]]
-Status: awaiting_review | acknowledged
+Status: awaiting_review | acknowledged | archived
 ```
 
 ### New Format (for agent contradictions, processed by /save)
@@ -22,7 +22,7 @@ Sources:
   - Old: [vault file location, version]
   - New: [agent exit log location]
 Exit Log: [[.claude/agent-exits/YYYY-MM-DD_agent_task.md]]
-Status: awaiting_review | resolved
+Status: awaiting_review | pending_validation | resolved | archived
 Recommendation: [How to resolve the contradiction]
 ```
 
@@ -33,9 +33,16 @@ Recommendation: [How to resolve the contradiction]
 - **Reasoning:** Why different (methodology changed, sample size grew, context was missing, etc.)
 - **Exit Log:** Link to the .claude/agent-exits file containing full context
 - **Status:**
+  - `pending_validation` - evidence exists, but more validation is needed before replacing the old finding
+  - `archived` - historical queue item moved out of active review
   - `awaiting_review` — Shivam needs to decide which is correct
   - `resolved` — Shivam has decided (add note: "Keeping old because..." or "Adopting new because...")
 - **Recommendation:** Suggested resolution path
+
+**Queue normalization rule:**
+- Open queue states: `awaiting_review`, `pending_validation`
+- Closed queue states: `resolved`, `archived`
+- Legacy notes that say `supported_by_example` should be treated as `resolved` with relationship type `support`, not as a separate queue state
 
 ### Conflict Log Usage
 
@@ -130,7 +137,7 @@ Reason: Shivam uploaded updated progress; count was higher. Updated memory file 
 **Sources:**
   - Framework: system_psychology_informed_cold_email.md (CTA placement guidelines)
   - New: .claude/agent-exits/2026-04-15_test-agent-1_psychology-cta-test.md (Lines 39-43)
-**Status:** supported_by_example (framework is correct, just underestimated effect magnitude)
+**Status:** resolved (relationship: support; framework is correct, just underestimated effect magnitude)
 **Recommendation:** Keep CTA placement at email end (framework correct). Add note to framework: "Binary choice CTA may generate 3-6 hour response times (faster than generic CTA baseline of 4-24 hours) due to reduced decision friction and constraint-based clarity. This is expected behavior and indicates psychology framework is working."
 **Next Validation:** Track response times on next 25 sends. Compare average response time (psychology CTA) vs. expected baseline (generic CTA). If psychology CTA avg response <6 hours, document as confirmed behavioral difference.
 

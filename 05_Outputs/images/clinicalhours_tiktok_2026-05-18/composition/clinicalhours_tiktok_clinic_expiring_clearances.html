@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClinicalHours TikTok Carousel - Expiring Clearances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --bg-soft: #eef6ff;
+      --panel: rgba(255, 255, 255, 0.95);
+      --panel-border: rgba(37, 99, 235, 0.14);
+      --ink: #0f172a;
+      --mist: #334155;
+      --muted: #64748b;
+      --blue: #2563eb;
+      --blue-soft: rgba(37, 99, 235, 0.1);
+      --green: #16a34a;
+      --green-soft: rgba(22, 163, 74, 0.1);
+      --red: #dc2626;
+      --red-soft: rgba(220, 38, 38, 0.1);
+      --safe-left: 72px;
+      --safe-right: 1008px;
+      --safe-top: 72px;
+      --safe-bottom: 1708px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      padding: 64px 48px 120px;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 8%, rgba(37, 99, 235, 0.14), transparent 26%),
+        radial-gradient(circle at 84% 14%, rgba(22, 163, 74, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8fbff, #eef6ff 68%, #fdfefe);
+    }
+
+    body.export-mode {
+      width: 1080px;
+      height: 1920px;
+      padding: 0;
+      overflow: hidden;
+      background: #f7fbff;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      align-items: center;
+    }
+
+    body.export-mode .wrap {
+      display: block;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(37, 99, 235, 0.12), transparent 24%),
+        radial-gradient(circle at 18% 88%, rgba(22, 163, 74, 0.12), transparent 24%),
+        linear-gradient(180deg, #fcfeff 0%, #f3f8ff 58%, #edf5ff 100%);
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      box-shadow: 0 32px 96px rgba(148, 163, 184, 0.22);
+    }
+
+    body.export-mode .slide {
+      border: none;
+      box-shadow: none;
+    }
+
+    .slide[hidden] {
+      display: none;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.68), transparent 28%),
+        linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent 28%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(37, 99, 235, 0.018) 1px, transparent 1px);
+      background-size: 128px 128px;
+      mask-image: radial-gradient(circle at 52% 38%, rgba(0, 0, 0, 0.9), transparent 80%);
+      opacity: 0.35;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 28% 18%, rgba(37, 99, 235, 0.08) 0 0.7px, transparent 0.8px),
+        radial-gradient(circle at 74% 62%, rgba(15, 23, 42, 0.06) 0 0.6px, transparent 0.7px),
+        linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.02));
+      background-size: 18px 18px, 22px 22px, 100% 100%;
+      mix-blend-mode: multiply;
+      opacity: 0.08;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .edge-ribbon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .edge-ribbon.left {
+      left: 0;
+      border-right: 1px solid rgba(37, 99, 235, 0.06);
+    }
+
+    .edge-ribbon.right {
+      right: 0;
+      border-left: 1px solid rgba(37, 99, 235, 0.06);
+    }
+
+    .edge-ribbon.blue {
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.01));
+    }
+
+    .edge-ribbon.green {
+      background: linear-gradient(180deg, rgba(22, 163, 74, 0.09), rgba(22, 163, 74, 0.01));
+    }
+
+    .edge-ribbon.red {
+      background: linear-gradient(180deg, rgba(220, 38, 38, 0.08), rgba(220, 38, 38, 0.01));
+    }
+
+    .glow {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(132px);
+      opacity: 0.45;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .glow.blue {
+      background: rgba(37, 99, 235, 0.18);
+    }
+
+    .glow.green {
+      background: rgba(22, 163, 74, 0.16);
+    }
+
+    .glow.red {
+      background: rgba(220, 38, 38, 0.12);
+    }
+
+    .guide-safe,
+    .guide-bottom,
+    .guide-report {
+      display: none;
+    }
+
+    body.qa-mode .guide-safe,
+    body.qa-mode .guide-bottom,
+    body.qa-mode .guide-report {
+      display: block;
+    }
+
+    .guide-safe {
+      position: absolute;
+      left: var(--safe-left);
+      top: var(--safe-top);
+      width: calc(var(--safe-right) - var(--safe-left));
+      height: calc(var(--safe-bottom) - var(--safe-top));
+      border: 2px dashed rgba(37, 99, 235, 0.58);
+      border-radius: 28px;
+      z-index: 15;
+      pointer-events: none;
+    }
+
+    .guide-bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: var(--safe-bottom);
+      bottom: 0;
+      background: rgba(255, 72, 72, 0.08);
+      border-top: 1px dashed rgba(255, 72, 72, 0.5);
+      z-index: 15;
+      pointer-events: none;
+    }
+
+    .guide-report {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 56px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(10, 9, 8, 0.9);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--ink);
+      white-space: pre-wrap;
+      z-index: 16;
+    }
+
+    body.qa-mode [data-essential="true"] {
+      outline: 2px solid rgba(20, 184, 122, 0.72);
+      outline-offset: 4px;
+    }
+
+    body.qa-mode [data-overflow="true"],
+    body.qa-mode [data-unsafe="true"] {
+      outline-color: rgba(255, 95, 95, 0.9);
+    }
+
+    .chrome {
+      position: absolute;
+      top: 84px;
+      left: 80px;
+      right: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .brand {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      color: #2563eb;
+      text-transform: uppercase;
+    }
+
+    .slide-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 122px;
+      height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      background: rgba(255, 255, 255, 0.9);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #0f172a;
+    }
+
+    .brand-rule {
+      position: absolute;
+      top: 148px;
+      left: 80px;
+      width: 330px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0.72), rgba(37, 99, 235, 0));
+      z-index: 10;
+    }
+
+    .eyebrow {
+      position: absolute;
+      left: 80px;
+      display: inline-flex;
+      align-items: center;
+      height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      background: rgba(255, 255, 255, 0.92);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: #2563eb;
+      z-index: 10;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      position: absolute;
+      left: 80px;
+      margin: 0;
+      padding-bottom: 16px;
+      width: 580px;
+      font-family: "Sora", sans-serif;
+      font-size: 78px;
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+      z-index: 10;
+      text-wrap: balance;
+    }
+
+    .subtext {
+      position: absolute;
+      left: 82px;
+      margin: 0;
+      padding-bottom: 10px;
+      width: 440px;
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      color: var(--mist);
+      z-index: 10;
+    }
+
+    .proof-shell,
+    .phone-shell,
+    .detail-shell,
+    .cta-card {
+      position: absolute;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 247, 255, 0.98)),
+        rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--panel-border);
+      box-shadow: 0 22px 56px rgba(148, 163, 184, 0.18);
+      z-index: 5;
+    }
+
+    .proof-shell {
+      padding: 18px;
+      border-radius: 36px;
+    }
+
+    .phone-shell {
+      padding: 16px;
+      border-radius: 44px;
+    }
+
+    .detail-shell {
+      padding: 14px;
+      border-radius: 30px;
+    }
+
+    .proof-shell::before,
+    .phone-shell::before,
+    .detail-shell::before,
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), transparent 26%, transparent 62%, rgba(37, 99, 235, 0.06));
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .proof-shell::after,
+    .phone-shell::after,
+    .detail-shell::after,
+    .cta-card::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: inherit;
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: inherit;
+      background: rgba(248, 250, 252, 0.98);
+      z-index: 1;
+    }
+
+    .screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(37, 99, 235, 0.05));
+      pointer-events: none;
+    }
+
+    .screen img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.03);
+    }
+
+    .screen.contain img {
+      object-fit: contain;
+      background: rgba(248, 250, 252, 0.98);
+    }
+
+    .screen.crop-bottom img {
+      object-position: 50% 74%;
+    }
+
+    .screen.crop-top img {
+      object-position: 50% 18%;
+    }
+
+    .screen.fade-bottom::after {
+      background: linear-gradient(180deg, rgba(8, 11, 18, 0.02) 0%, rgba(8, 11, 18, 0.06) 52%, rgba(8, 11, 18, 0.32) 72%, rgba(8, 11, 18, 0.96) 100%);
+    }
+
+    .cta-card {
+      padding: 22px 24px 26px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 255, 0.98)),
+        rgba(255, 255, 255, 0.98);
+      z-index: 10;
+    }
+
+    .cta-label {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: #2563eb;
+      text-transform: uppercase;
+    }
+
+    .cta-url {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      font-family: "Sora", sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      color: var(--ink);
+    }
+
+    .cta-url span:last-child {
+      color: #67a2ff;
+    }
+
+    .cta-copy {
+      margin: 12px 0 0;
+      font-size: 22px;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      color: var(--mist);
+    }
+
+    .slide-1 .glow-a {
+      width: 420px;
+      height: 420px;
+      left: -120px;
+      top: 120px;
+    }
+
+    .slide-1 .glow-b {
+      width: 500px;
+      height: 500px;
+      right: 20px;
+      top: 1120px;
+    }
+
+    .slide-1 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-1 .headline {
+      top: 252px;
+      width: 700px;
+      font-size: 74px;
+    }
+
+    .slide-1 .subtext {
+      top: 486px;
+      width: 500px;
+      font-size: 28px;
+    }
+
+    .slide-1 .hero-wide {
+      left: 78px;
+      top: 760px;
+      width: 924px;
+      height: 742px;
+    }
+
+    .slide-2 .glow-a {
+      width: 440px;
+      height: 440px;
+      right: -40px;
+      top: 70px;
+    }
+
+    .slide-2 .glow-b {
+      width: 380px;
+      height: 380px;
+      left: 50px;
+      top: 1210px;
+    }
+
+    .slide-2 .eyebrow {
+      top: 186px;
+    }
+
+    .slide-2 .headline {
+      top: 252px;
+      width: 430px;
+      font-size: 64px;
+    }
+
+    .slide-2 .subtext {
+      top: 474px;
+      width: 410px;
+    }
+
+    .slide-2 .hero-portrait {
+      left: 80px;
+      top: 810px;
+      width: 920px;
+      height: 568px;
+    }
+
+    .slide-3 .glow-a {
+      width: 420px;
+      height: 420px;
+      left: -90px;
+      top: 150px;
+    }
+
+    .slide-3 .glow-b {
+      width: 480px;
+      height: 480px;
+      right: -40px;
+      top: 980px;
+    }
+
+    .slide-3 .eyebrow {
+      top: 188px;
+    }
+
+    .slide-3 .headline {
+      top: 254px;
+      width: 640px;
+      font-size: 60px;
+    }
+
+    .slide-3 .subtext {
+      top: 414px;
+      width: 438px;
+    }
+
+    .slide-3 .hero-pano {
+      left: 80px;
+      top: 660px;
+      width: 920px;
+      height: 640px;
+    }
+
+    .slide-4 .glow-a {
+      width: 380px;
+      height: 380px;
+      right: 10px;
+      top: 130px;
+    }
+
+    .slide-4 .glow-b {
+      width: 420px;
+      height: 420px;
+      left: 20px;
+      top: 1100px;
+    }
+
+    .slide-4 .eyebrow {
+      top: 188px;
+    }
+
+    .slide-4 .headline {
+      top: 254px;
+      width: 420px;
+      font-size: 72px;
+    }
+
+    .slide-4 .subtext {
+      top: 454px;
+      width: 398px;
+    }
+
+    .slide-4 .hero-status {
+      left: 80px;
+      top: 760px;
+      width: 920px;
+      height: 568px;
+    }
+
+    .slide-4 .support-trust {
+      left: 80px;
+      top: 1080px;
+      width: 520px;
+      height: 248px;
+    }
+
+    .slide-5 .glow-a {
+      width: 420px;
+      height: 420px;
+      left: -80px;
+      top: 110px;
+    }
+
+    .slide-5 .glow-b {
+      width: 500px;
+      height: 500px;
+      right: -40px;
+      top: 980px;
+    }
+
+    .slide-5 .eyebrow {
+      top: 188px;
+    }
+
+    .slide-5 .headline {
+      top: 254px;
+      width: 520px;
+    }
+
+    .slide-5 .subtext {
+      top: 468px;
+      width: 430px;
+    }
+
+    .slide-5 .hero-phone {
+      right: 82px;
+      top: 780px;
+      width: 330px;
+      height: 690px;
+    }
+
+    .slide-5 .support-trust {
+      left: 82px;
+      top: 840px;
+      width: 482px;
+      height: 304px;
+    }
+
+    .slide-5 .cta-card {
+      left: 82px;
+      top: 1246px;
+      width: 460px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="slide slide-1" data-slide="1">
+      <div class="noise"></div>
+      <div class="edge-ribbon left red"></div>
+      <div class="glow red glow-a"></div>
+      <div class="glow blue glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand">ClinicalHours</div>
+        <div class="slide-count">01 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-1-eyebrow">01 Friction</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-1-headline">Renewals disappear<br />quietly.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-1-subtext">Expiration dates slip across inboxes, folders, and coordinator memory until someone has to scramble.</p>
+      <div class="proof-shell hero-wide" data-proof="true" data-name="slide-1-hero-wide">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_problem_section_live_recapture_v2.png" alt="ClinicalHours enterprise problem section" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-2" data-slide="2">
+      <div class="noise"></div>
+      <div class="edge-ribbon right blue"></div>
+      <div class="glow blue glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand">ClinicalHours</div>
+        <div class="slide-count">02 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-2-eyebrow">02 Unification</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-2-headline">One place for<br />clearance status.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-2-subtext">Onboarding steps and clearance work stay visible together instead of scattering across inboxes.</p>
+      <div class="proof-shell hero-portrait" data-proof="true" data-name="slide-2-hero-portrait">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_platform_figure_0_live_recapture_v2.png" alt="ClinicalHours applications workflow figure" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-3" data-slide="3">
+      <div class="noise"></div>
+      <div class="glow blue glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand">ClinicalHours</div>
+        <div class="slide-count">03 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-3-eyebrow">03 Workflow</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-3-headline">Missing credentials<br />stop hiding.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-3-subtext">When a clearance case is pending, the missing document is easier to spot and follow up.</p>
+      <div class="proof-shell hero-pano" data-proof="true" data-name="slide-3-hero-pano">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_platform_figure_1_live_recapture_v2.png" alt="ClinicalHours credentialing workflow figure" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-4" data-slide="4">
+      <div class="noise"></div>
+      <div class="edge-ribbon right green"></div>
+      <div class="glow blue glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand">ClinicalHours</div>
+        <div class="slide-count">04 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-4-eyebrow">04 Control</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-4-headline">See expiring<br />before it's urgent.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-4-subtext">Live status makes complete, expiring, and overdue items visible before the scramble starts.</p>
+      <div class="proof-shell hero-status" data-proof="true" data-name="slide-4-hero-status">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_platform_figure_2_live_recapture.png" alt="ClinicalHours live status workflow figure" />
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-5" data-slide="5">
+      <div class="noise"></div>
+      <div class="edge-ribbon left blue"></div>
+      <div class="glow blue glow-a"></div>
+      <div class="glow green glow-b"></div>
+      <div class="guide-safe"></div>
+      <div class="guide-bottom"></div>
+      <pre class="guide-report"></pre>
+      <div class="chrome">
+        <div class="brand">ClinicalHours</div>
+        <div class="slide-count">05 / 05</div>
+      </div>
+      <div class="brand-rule"></div>
+      <div class="eyebrow" data-essential="true" data-text="true" data-name="slide-5-eyebrow">05 Activation</div>
+      <h1 class="headline" data-essential="true" data-text="true" data-name="slide-5-headline">Keep renewals<br />in one place.</h1>
+      <p class="subtext" data-essential="true" data-text="true" data-name="slide-5-subtext">Request a demo if your clinic wants renewal status and follow-up in one place.</p>
+      <div class="detail-shell support-trust" data-proof="true" data-name="slide-5-support-trust">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_trust_section_live_recapture_v2.png" alt="ClinicalHours trust section with audit and verification language" />
+        </div>
+      </div>
+      <div class="phone-shell hero-phone" data-proof="true" data-name="slide-5-hero-phone">
+        <div class="screen contain">
+          <img src="../captures/enterprise/clinicalhours_enterprise_mobile_430x932_live.png" alt="ClinicalHours enterprise mobile page" />
+        </div>
+      </div>
+      <div class="cta-card" data-essential="true" data-text="true" data-name="slide-5-cta-card">
+        <span class="cta-label">Request a demo</span>
+        <div class="cta-url">
+          <span>clinicalhours.org</span>
+          <span>/enterprise</span>
+        </div>
+        <p class="cta-copy">Renewal status in one place.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const exportMode = params.get("export") === "1";
+    const qaMode = params.get("qa") === "1";
+    const slideParam = params.get("slide");
+
+    if (exportMode) {
+      document.body.classList.add("export-mode");
+    }
+
+    if (qaMode) {
+      document.body.classList.add("qa-mode");
+    }
+
+    if (slideParam) {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.dataset.slide !== slideParam) {
+          slide.remove();
+        }
+      });
+    }
+
+    const safe = {
+      left: 72,
+      right: 1008,
+      top: 72,
+      bottom: 1708
+    };
+
+    const overlaps = (a, b) => {
+      return !(a.right <= b.left || a.left >= b.right || a.bottom <= b.top || a.top >= b.bottom);
+    };
+
+    const relativeRect = (rect, origin) => ({
+      left: rect.left - origin.left,
+      top: rect.top - origin.top,
+      right: rect.right - origin.left,
+      bottom: rect.bottom - origin.top,
+      width: rect.width,
+      height: rect.height
+    });
+
+    const runQa = () => {
+      document.querySelectorAll(".slide").forEach((slide) => {
+        if (slide.hidden) {
+          const hiddenReport = slide.querySelector(".guide-report");
+          if (hiddenReport) {
+            hiddenReport.textContent = "QA SKIP\nHidden in current export.";
+          }
+          return;
+        }
+
+        const slideRect = slide.getBoundingClientRect();
+        const proofEls = Array.from(slide.querySelectorAll("[data-proof='true']"));
+        const textEls = Array.from(slide.querySelectorAll("[data-essential='true']"));
+        const report = [];
+
+        textEls.forEach((el) => {
+          el.removeAttribute("data-overflow");
+          el.removeAttribute("data-unsafe");
+        });
+
+        textEls.forEach((el) => {
+          const name = el.dataset.name || el.className;
+          const rect = relativeRect(el.getBoundingClientRect(), slideRect);
+          const overflow = el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1;
+          const unsafe =
+            rect.left < safe.left ||
+            rect.top < safe.top ||
+            rect.right > safe.right ||
+            rect.bottom > safe.bottom;
+
+          if (overflow) {
+            el.dataset.overflow = "true";
+            report.push("overflow: " + name);
+          }
+
+          if (unsafe) {
+            el.dataset.unsafe = "true";
+            report.push("unsafe-zone: " + name);
+          }
+        });
+
+        textEls.forEach((textEl) => {
+          const textRect = relativeRect(textEl.getBoundingClientRect(), slideRect);
+          proofEls.forEach((proofEl) => {
+            const proofRect = relativeRect(proofEl.getBoundingClientRect(), slideRect);
+            if (overlaps(textRect, proofRect)) {
+              report.push("asset-overlap: " + (textEl.dataset.name || textEl.className) + " x " + (proofEl.dataset.name || proofEl.className));
+            }
+          });
+        });
+
+        const reportEl = slide.querySelector(".guide-report");
+        reportEl.textContent = report.length
+          ? "QA WARN\n" + report.join("\n")
+          : "QA PASS\nNo text overflow or safe-zone violations.";
+      });
+    };
+
+    window.addEventListener("load", runQa);
+  </script>
+</body>
+</html>

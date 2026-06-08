@@ -1,0 +1,44 @@
+# Explicit allowlist of tradeable assets in V0.
+# Adding an asset here does NOT make it tradeable — risk engine still applies.
+# Remove an asset to hard-block it regardless of any agent output.
+
+equities:
+  - ticker: LMT
+    name: Lockheed Martin
+    notes: existing portfolio position
+  - ticker: ASML
+    name: ASML Holding
+    notes: existing portfolio position
+  - ticker: TSM
+    name: Taiwan Semiconductor
+    notes: existing portfolio position
+  - ticker: V
+    name: Visa Inc
+    notes: existing portfolio position
+  - ticker: CRDO
+    name: Credo Technology
+    notes: existing portfolio position
+  - ticker: ONDS
+    name: Ondas Holdings
+    notes: existing portfolio position
+  - ticker: SPY
+    name: SPDR S&P 500 ETF
+    notes: broad market reference
+  - ticker: QQQ
+    name: Invesco QQQ ETF
+    notes: broad market reference
+
+# Kalshi market series to watch (series ticker prefixes)
+# Full market IDs fetched dynamically from Kalshi API
+kalshi_series:
+  - series: FED-RATES
+    notes: Fed funds rate decisions
+  - series: INFL
+    notes: CPI / inflation markets
+  - series: RECESSION
+    notes: recession probability markets
+  - series: NASDAQ
+    notes: Nasdaq level markets
+
+# Crypto: empty in V0. Add only after explicit enable in risk_limits.yaml
+crypto: []

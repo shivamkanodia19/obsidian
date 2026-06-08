@@ -2,17 +2,19 @@
 title: Portfolio Snapshot - 2026-04-21
 project: stocks
 strategic: true
-status: current
+status: snapshot
+scope: stocks/portfolio-state
 origin_dump: null
 last_synced_dump: null
 conflict_detected: false
 last_updated: 2026-04-21
+as_of: 2026-04-21
 tags: [stocks, portfolio, robinhood, screenshot]
 ---
 
 # Portfolio Snapshot - 2026-04-21
 
-Status: current source of truth from Robinhood screenshot.
+Status: original Robinhood screenshot snapshot. Use [[PORTFOLIO-REFRESH-2026-04-29]] for the latest known portfolio-state note in the vault.
 Context: User invested in everything today except LMT, ASML, USO, and TSM.
 
 ## Visible Invested Value

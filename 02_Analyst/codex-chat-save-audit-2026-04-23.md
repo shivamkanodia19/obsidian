@@ -2,7 +2,10 @@
 title: Codex Chat Save Audit - 2026-04-23
 description: Audit of top-level Codex chats in the Obsidian workspace and their save coverage
 last_updated: 2026-04-23
-status: current
+status: historical
+note_role: audit
+audit_family: codex-chat-save-audit
+audit_role: archived
 tags:
   - codex
   - save

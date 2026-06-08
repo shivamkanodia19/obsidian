@@ -180,7 +180,7 @@ Avoid:
 
 ## Related References
 
-- [[Patterns/Response-Rate-Psychology]]
+- [[03_References/Patterns/Response-Rate-Psychology]]
 - [[Tools/Email-Verification]]
 - [[Patterns/Recipient-Psychology]]
 

@@ -1,36 +1,45 @@
 ---
 title: Research Projects
-description: Academic and domain-specific research initiatives
-last_updated: 2026-04-15
+description: Academic and domain-specific research initiatives with separate homes for market, design, and analysis work
+last_updated: 2026-05-21
 ---
 
 # Research Index
 
 All research projects and analyses under `/02_Analyst/research/`.
 
-- **[[crypto/_index]]** - Crypto investigations, scam screening, and token risk analysis
+## Primary Research Tracks
 
-## 📂 Active Research
+- [[FEDVT/_index]] - feedlot economics and market-structure research
+- [[dairy farms/_index]] - dairy systems analysis tied to the current source naming
+- [[crypto/_index]] - crypto investigations, scam screening, and token risk analysis
 
-- **[[FEDVT/_index]]** — Feedlot economics & market structure (TAMU research) [[01_Source/research/fedvt]]
-- **[[dairy farms/_index]]** — Dairy farm systems comparison (conventional vs. robotic) [[01_Source/research/dairy farms]]
+## ClinicalHours Research Split
 
-## 🎓 Organization
+- [[ClinicalHours/_index]] - slide comments, design review, and presentation-adjacent research notes
+- [[clinicalhours_market_research/_index]] - market sizing, clinic landscape, and wedge-validation notes
 
-Each research project has:
-- **_index.md** — Navigation, status, key findings, next steps
-- **Analysis files** — Detailed research outputs and syntheses
+## Naming Note
 
-## 📊 Cross-Project Patterns
+- `dairy farms/` is the canonical dairy research folder.
+- `ClinicalHours/` and `clinicalhours_market_research/` serve different purposes, so both remain valid.
 
-Both FEDVT and Dairy Farms research involve:
-- Agricultural economics analysis
-- System dynamics modeling
-- Resource usage optimization (water, energy, land)
-- Operational vs. technological trade-offs
+## Organization
+
+Each research project should have:
+- `_index.md` for navigation, status, key findings, and next steps
+- analysis files for detailed synthesis
+- links back to relevant source material when appropriate
+
+## Cross-Project Patterns
+
+FEDVT and dairy work both involve:
+- agricultural economics analysis
+- system dynamics modeling
+- resource-usage optimization
+- operational versus technological trade-offs
 
 ## New Files
 
-- 📂 [[ClinicalHours/_index|ClinicalHours/]] — ClinicalHours
-- 📂 [[clinicalhours_market_research/_index|clinicalhours_market_research/]] — clinicalhours_market_research
-- 📂 [[dairy-farms/_index|dairy-farms/]] — dairy-farms
+- [[dairy farms/project-status]] - active dairy project status and next-step routing
+- [[dairy farms/scenario-stress-analysis]] - dairy resilience and bottleneck stress-test analysis

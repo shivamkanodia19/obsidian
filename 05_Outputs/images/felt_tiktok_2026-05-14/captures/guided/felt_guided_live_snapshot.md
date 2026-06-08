@@ -1,0 +1,69 @@
+- generic [ref=e2] [box=0,0,1440,1200]:
+  - region "Notifications (F8)" [box=0,0,1440,0]:
+    - list [box=1020,1168,420,32]
+  - region "Notifications alt+T" [box=0,0,1440,0]
+  - generic [ref=e3] [box=0,0,1440,1200]:
+    - banner [ref=e4] [box=0,0,1440,45]:
+      - generic [ref=e6] [box=36,4,128,36]:
+        - link "FELT" [ref=e7] [cursor=pointer] [box=36,8,45,28]:
+          - /url: /
+        - button "Open navigation menu" [ref=e8] [cursor=pointer] [box=93,4,72,36]:
+          - img [ref=e9] [box=104,15,14,14]
+          - generic [ref=e10] [box=124,14,30,16]: Menu
+    - main [ref=e11] [box=170,45,1100,1155]:
+      - generic [ref=e12] [box=186,85,1068,127]:
+        - link "Back home" [ref=e13] [cursor=pointer] [box=186,87,77,16]:
+          - /url: /
+          - img [ref=e14] [box=186,88,14,14]
+          - text: Back home
+        - paragraph [ref=e16] [box=186,122,1068,16]: Practice mode
+        - heading "Train smarter" [level=1] [ref=e17] [box=186,141,1068,40]
+        - paragraph [ref=e18] [box=186,189,672,23]: Run spot drills, play a coached AI session, then see what to tighten up — all with zero stakes.
+      - navigation [ref=e19] [box=186,236,1068,49]:
+        - button "Spot Trainer" [ref=e20] [cursor=pointer] [box=186,236,126,36]:
+          - img [ref=e21] [box=200,247,14,14]
+          - text: Spot Trainer
+        - button "Guided Live Game" [active] [ref=e25] [cursor=pointer] [box=320,236,164,36]:
+          - img [ref=e26] [box=334,247,14,14]
+          - text: Guided Live Game
+        - button "Session Review" [ref=e28] [cursor=pointer] [box=492,236,141,36]:
+          - img [ref=e29] [box=506,247,14,14]
+          - text: Session Review
+      - generic [ref=e100] [box=186,309,1068,421]:
+        - generic [ref=e101] [box=211,333,1018,28]:
+          - img [ref=e102] [box=211,337,20,20]
+          - heading "Guided live game" [level=2] [ref=e104] [box=239,333,164,28]
+        - paragraph [ref=e105] [box=211,377,1018,23]: Full hands vs AI with coaching on key preflop spots. Your decisions feed into session review — perfect when you want table rhythm without the lobby.
+        - generic [ref=e106] [box=211,416,1018,229]:
+          - generic [ref=e107] [box=224,429,993,17]: Practice Stack
+          - generic [ref=e108] [box=224,454,993,26]:
+            - generic [ref=e109] [box=224,454,492,26]: Starting Stack
+            - spinbutton [ref=e110] [box=724,454,492,26]: "1000"
+          - generic [ref=e111] [box=224,488,993,26]:
+            - generic [ref=e112] [box=224,488,492,26]: Blinds
+            - generic [ref=e113] [box=724,488,492,26]:
+              - spinbutton [ref=e114] [box=724,488,242,26]: "5"
+              - spinbutton [ref=e115] [box=974,488,242,26]: "10"
+          - generic [ref=e116] [box=224,521,993,24]:
+            - generic [ref=e117] [box=224,521,492,24]: Players
+            - combobox [ref=e118] [box=724,521,492,24]:
+              - option "2" [box=0,0,0,0]
+              - option "3" [selected] [box=0,0,0,0]
+              - option "4" [box=0,0,0,0]
+              - option "5" [box=0,0,0,0]
+              - option "6" [box=0,0,0,0]
+          - generic [ref=e119] [box=224,553,993,24]:
+            - generic [ref=e120] [box=224,553,492,24]: AI Difficulty
+            - combobox [ref=e121] [box=724,553,492,24]:
+              - option "Beginner" [box=0,0,0,0]
+              - option "Standard" [selected] [box=0,0,0,0]
+              - option "Tough" [box=0,0,0,0]
+          - generic [ref=e122] [box=224,585,993,24]:
+            - generic [ref=e123] [box=224,585,492,24]: Coaching Level
+            - combobox [ref=e124] [box=724,585,492,24]:
+              - option "Off" [box=0,0,0,0]
+              - option "Light" [box=0,0,0,0]
+              - option "Full" [selected] [box=0,0,0,0]
+          - paragraph [ref=e125] [box=224,617,993,16]: Guided AI uses unlimited practice chips only. No cashier, ledger, or settlement tracking.
+        - link "Start Guided Session →" [ref=e126] [cursor=pointer] [box=211,662,199,43]:
+          - /url: /table?guided=1&players=3&stack=1000&sb=5&bb=10&difficulty=standard&coaching=full

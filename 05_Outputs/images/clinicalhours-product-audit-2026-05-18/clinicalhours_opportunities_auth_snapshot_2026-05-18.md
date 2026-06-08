@@ -1,0 +1,27 @@
+- generic [ref=e2] [box=0,0,1044,710]:
+  - region "Notifications (F8)" [box=0,0,1044,0]:
+    - list [box=624,678,420,32]
+  - region "Notifications alt+T" [box=0,0,1044,0]
+  - generic [ref=e5] [box=0,0,1044,710]:
+    - link "Back to Home" [ref=e7] [cursor=pointer] [box=24,24,117,20]:
+      - /url: /
+      - img [ref=e8] [box=24,26,16,16]
+      - generic [ref=e10] [box=48,24,93,20]: Back to Home
+    - generic [ref=e11] [box=298,38,448,635]:
+      - generic [ref=e12] [box=331,71,382,76]:
+        - generic [ref=e13] [box=331,71,382,48]:
+          - img "ClinicalHours" [ref=e14] [box=421,71,48,48]
+          - heading "ClinicalHours" [level=1] [ref=e15] [box=481,79,143,32]
+        - paragraph [ref=e16] [box=331,127,382,20]: Your journey to clinical experience starts here
+      - generic [ref=e17] [box=331,171,382,96]:
+        - button "Continue with Google" [ref=e18] [cursor=pointer] [box=331,171,382,48]:
+          - img [box=424,187,16,16]
+          - text: Continue with Google
+        - button "Browse as guest →" [ref=e19] [cursor=pointer] [box=331,231,382,36]
+      - generic [ref=e21] [box=454,283,137,16]: or sign in with email
+      - generic [ref=e22] [box=331,316,382,324]:
+        - tablist [ref=e23] [box=331,316,382,40]:
+          - tab "Sign In" [selected] [ref=e24] [cursor=pointer] [box=335,320,187,32]
+          - tab "Sign Up" [ref=e25] [cursor=pointer] [box=522,320,187,32]
+        - tabpanel "Sign In" [ref=e26] [box=331,380,382,260]:
+          - generic [ref=e27] [box=331,380,382,260]

@@ -18,7 +18,7 @@ Adapted from Summer 2026 internship cold email framework. Each clinic target inc
 - **Email Angle**: "Running 140+ volunteers on spreadsheets. We built ClinicalHours to replace that chaos."
 - **Contact**: Volunteer coordinator (check jobs page or volunteer@mercyclinicfriends.org)
 - **Status**: Ready to contact
-- **Link**: [[02_Analyst/projects/ClinicalHours/Market/Mercy-Clinic-Friends]]
+- **Link**: [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04#1. Mercy Clinic Friends|Mercy Clinic Friends]]
 
 ### Julia's Center for Families (Dallas) — 60+ volunteers
 - **Personalization Hook**: Pregnancy/family services = need consistent, vetted volunteer corps
@@ -27,7 +27,7 @@ Adapted from Summer 2026 internship cold email framework. Each clinic target inc
 - **Email Angle**: "Volunteers are the backbone of your clinics. We make sure you're not losing them to scheduling chaos."
 - **Contact**: Program director or volunteer coordinator
 - **Status**: Ready to contact
-- **Link**: [[02_Analyst/projects/ClinicalHours/Market/Julias-Center-for-Families]]
+- **Link**: [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04#2. Julia's Center for Families|Julia's Center for Families]]
 
 ### Community Health of Greater Dallas — 60+ volunteers
 - **Personalization Hook**: Multi-location coordination = unique complexity pain
@@ -36,7 +36,7 @@ Adapted from Summer 2026 internship cold email framework. Each clinic target inc
 - **Email Angle**: "Multi-location volunteer management is hard. We make it simple."
 - **Contact**: Volunteer coordinator or operations manager
 - **Status**: Ready to contact
-- **Link**: [[02_Analyst/projects/ClinicalHours/Market/Community-Health-Greater-Dallas]]
+- **Link**: [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04#3. Community Health of Greater Dallas|Community Health of Greater Dallas]]
 
 ### EPIC Medical Care (Arlington) — 62+ volunteers
 - **Personalization Hook**: 24/7 emergency medicine = need flexible, reliable volunteer scheduling
@@ -45,7 +45,7 @@ Adapted from Summer 2026 internship cold email framework. Each clinic target inc
 - **Email Angle**: "Emergency clinics run 24/7. Your volunteer coordination shouldn't be manual."
 - **Contact**: Volunteer coordinator or clinic director
 - **Status**: Ready to contact
-- **Link**: [[02_Analyst/projects/ClinicalHours/Market/EPIC-Medical-Care]]
+- **Link**: [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04#4. EPIC Medical Care|EPIC Medical Care]]
 
 ---
 
@@ -126,5 +126,5 @@ clinicalhours.org | 214-470-0598
 
 **Related:**
 - [[02_Analyst/projects/ClinicalHours/Strategy/Clinic-Outreach-Strategy-Framework]]
-- [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis]]
+- [[02_Analyst/projects/ClinicalHours/Market/DFW-Clinic-Market-Analysis-2026-04]]
 - [[02_Analyst/projects/ClinicalHours/Outreach/Outreach-Tracker]]

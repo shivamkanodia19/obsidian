@@ -1,0 +1,51 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_clinic_ops_concise_v1",
+  "canonical": false,
+  "lane": "clinic_ops_primary",
+  "evidence_tier": "product_surface",
+  "proof_access": "public_site",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "headline": "Clinic ops still run by hand.",
+      "subtext": "Forms, inboxes, and expirations still land on one coordinator.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_problem_section_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "unification",
+      "headline": "Put the queue in one place.",
+      "subtext": "Applications, onboarding, and status stop splitting apart.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_0_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "workflow_proof",
+      "headline": "Missing docs stop hiding.",
+      "subtext": "Credential review becomes visible fast.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_1_live_recapture_v2.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 4,
+      "role": "control",
+      "headline": "See what needs action.",
+      "subtext": "Complete, expiring, and overdue stay in view.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_platform_figure_2_live_recapture.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "headline": "Run follow-up in one place.",
+      "subtext": "Request the demo when the clinic is ready.",
+      "hero_asset": "captures/enterprise/clinicalhours_enterprise_mobile_430x932_live.png",
+      "support_assets": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "refinement": {
+    "exitCode": 1,
+    "ok": false,
+    "sandbox": "read-only",
+    "commandCount": 0,
+    "failedCommandCount": 0
+  },
+  "execution": {
+    "exitCode": 1,
+    "ok": false,
+    "sandbox": "workspace-write",
+    "usedDangerFallback": false,
+    "commandCount": 0,
+    "failedCommandCount": 0,
+    "encounteredWindowsSandboxRefresh": false
+  },
+  "exitCode": 1,
+  "ok": false,
+  "finalStatus": "failed",
+  "resultKind": "blocked_or_failed",
+  "startedAt": "2026-06-02T18:38:48.220Z",
+  "completedAt": "2026-06-02T18:39:06.908Z",
+  "sourceMessageId": "c00d4ec9-b8d8-4510-a9c5-350bf828683b",
+  "processingFile": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\processing\\2026-06-02T18-38-32.885Z--c00d4ec9-b8d8-4510-a9c5-350bf828683b.md",
+  "runDir": "C:\\Users\\shiva\\obsidian\\05_Outputs\\automation-code\\mindchuk-obsidian-bridge\\agent-inbox\\runs\\2026-06-02T18-38-32.885Z--c00d4ec9-b8d8-4510-a9c5-350bf828683b--attempt-2026-06-02T18-38-48-220Z"
+}

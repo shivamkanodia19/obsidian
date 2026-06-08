@@ -1,0 +1,20 @@
+{
+  "asset_type": "equity",
+  "confidence": "medium",
+  "created_at": "2026-06-07T16:19:33-05:00",
+  "direction": "buy",
+  "invalidation": "Cancel if the setup turns into a chase or if BTC thesis changes before execution.",
+  "limit_price": 42.0,
+  "order_session": "regular",
+  "order_type": "limit",
+  "position_size_usd": 50.0,
+  "proposal_id": "TP-20260607T161933-IBIT",
+  "requires_final_approval": true,
+  "requires_initial_approval": true,
+  "source_note": "02_Analyst/stocks/agentic-trading/_index.md",
+  "status": "drafted",
+  "strategy_tag": "vault-demo",
+  "thesis": "Small starter position for a BTC-linked ETF while keeping single-trade risk capped.",
+  "ticker": "IBIT",
+  "time_horizon": "2-10 days"
+}

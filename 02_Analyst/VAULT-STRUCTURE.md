@@ -48,6 +48,7 @@ Your vault is built in three layers, each with a different purpose. Together the
 - My synthesis of your Source files
 - Your outputs, decisions, progress
 - Synthesis of your work + learnings applied to you
+- Project and topic `_index.md` files that can act as prompt-ready task briefs
 
 **Who uses it:**
 - Me (write here, remember across sessions)
@@ -64,6 +65,22 @@ Your vault is built in three layers, each with a different purpose. Together the
 origin_dump: [[01_Source/...]]  # Where this came from
 last_synced_dump: [[01_Source/...]]  # Latest source incorporated
 references: [[[03_References/...]]]  # Frameworks used
+```
+
+**Operational index schema (when an index should guide prompts directly):**
+```yaml
+project: clinicalhours
+scope: projects/clinicalhours
+status: active
+agent_context: true
+current_focus:
+  - [live focus]
+active_tasks:
+  - [current task]
+prompt_context:
+  - "[[02_Analyst/...]]"
+definition_of_done:
+  - [observable success]
 ```
 
 **Why it matters:**

@@ -2,8 +2,8 @@
 title: Clinical Hours Market Data — Clinic Inventory (Apr 2026)
 project: clinicalhours
 status: stable
-origin_dump: [[01_Source/clinicalhours/Asc Clnicals - Sheet1 (1).csv]]
-last_synced_dump: [[01_Source/clinicalhours/Asc Clnicals - Sheet1 (1).csv]]
+origin_dump: [[01_Source/projects/ClinicalHours/Asc Clnicals - Sheet1 (1).csv]]
+last_synced_dump: [[01_Source/projects/ClinicalHours/Asc Clnicals - Sheet1 (1).csv]]
 last_updated: 2026-04-19
 tags: [market-research, clinic-inventory, competitor-intelligence]
 ---
@@ -14,7 +14,7 @@ tags: [market-research, clinic-inventory, competitor-intelligence]
 
 Ascension-affiliated outpatient clinic network data (338K CSV). Contains facility names, locations, contact info, facility types. Focused on Ascension Michigan market (Grand Blanc region).
 
-**Source:** [[01_Source/clinicalhours/Asc Clnicals - Sheet1 (1).csv]]
+**Source:** [[01_Source/projects/ClinicalHours/Asc Clnicals - Sheet1 (1).csv]]
 
 ## Key Fields
 

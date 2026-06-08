@@ -1,0 +1,273 @@
+{
+  "overall_2023_revenue": 2760512.34,
+  "overall_2024_revenue": 2773821.11,
+  "overall_growth_pct": 0.004821123168752051,
+  "top_category_growth": [
+    {
+      "item_type": "T-shirt",
+      "2023 Revenue": 344612.57,
+      "2024 Revenue": 355971.79,
+      "2023 Units": 8616,
+      "2024 Units": 8908,
+      "2023 Transactions": 3430,
+      "2024 Transactions": 3566,
+      "Revenue Growth $": 11359.219999999972,
+      "Revenue Growth %": 0.032962291538001454,
+      "Unit Growth %": 0.03389043639740019,
+      "2024 Share %": 0.12833264146583698,
+      "2023 Sales / Txn": 100.47013702623907,
+      "2024 Sales / Txn": 99.82383342680875,
+      "Sales / Txn Growth %": -0.0064327930523429
+    },
+    {
+      "item_type": "Jersey",
+      "2023 Revenue": 1041025.47,
+      "2024 Revenue": 1046984.54,
+      "2023 Units": 8673,
+      "2024 Units": 8727,
+      "2023 Transactions": 3486,
+      "2024 Transactions": 3519,
+      "Revenue Growth $": 5959.070000000065,
+      "Revenue Growth %": 0.005724230743365144,
+      "Unit Growth %": 0.006226219301279867,
+      "2024 Share %": 0.3774520772898725,
+      "2023 Sales / Txn": 298.6303700516351,
+      "2024 Sales / Txn": 297.5233134413186,
+      "Sales / Txn Growth %": -0.003707113278951235
+    },
+    {
+      "item_type": "Mug",
+      "2023 Revenue": 176974.36,
+      "2024 Revenue": 181289.89,
+      "2023 Units": 8864,
+      "2024 Units": 9052,
+      "2023 Transactions": 3585,
+      "2024 Transactions": 3659,
+      "Revenue Growth $": 4315.530000000028,
+      "Revenue Growth %": 0.024385057812894573,
+      "Unit Growth %": 0.021209386281588527,
+      "2024 Share %": 0.0653574555858795,
+      "2023 Sales / Txn": 49.36523291492329,
+      "2024 Sales / Txn": 49.546294069417876,
+      "Sales / Txn Growth %": 0.003667786897848302
+    }
+  ],
+  "bottom_category_growth": [
+    {
+      "item_type": "Keychain",
+      "2023 Revenue": 90104.13,
+      "2024 Revenue": 89711.54,
+      "2023 Units": 8979,
+      "2024 Units": 9012,
+      "2023 Transactions": 3610,
+      "2024 Transactions": 3629,
+      "Revenue Growth $": -392.59000000001106,
+      "Revenue Growth %": -0.004357069981143047,
+      "Unit Growth %": 0.0036752422318744316,
+      "2024 Share %": 0.03234222267491503,
+      "2023 Sales / Txn": 24.959592797783934,
+      "2024 Sales / Txn": 24.720732984293193,
+      "Sales / Txn Growth %": -0.009569860190665747
+    },
+    {
+      "item_type": "Hoodie",
+      "2023 Revenue": 662928.82,
+      "2024 Revenue": 659584.35,
+      "2023 Units": 8844,
+      "2024 Units": 8800,
+      "2023 Transactions": 3490,
+      "2024 Transactions": 3552,
+      "Revenue Growth $": -3344.469999999972,
+      "Revenue Growth %": -0.0050449911047765195,
+      "Unit Growth %": -0.00497512437810943,
+      "2024 Share %": 0.2377890728504838,
+      "2023 Sales / Txn": 189.95095128939826,
+      "2024 Sales / Txn": 185.69379222972972,
+      "Sales / Txn Growth %": -0.022411885967249412
+    },
+    {
+      "item_type": "Cap",
+      "2023 Revenue": 313197.7,
+      "2024 Revenue": 307673.03,
+      "2023 Units": 8963,
+      "2024 Units": 8780,
+      "2023 Transactions": 3605,
+      "2024 Transactions": 3519,
+      "Revenue Growth $": -5524.669999999984,
+      "Revenue Growth %": -0.01763956121005994,
+      "Unit Growth %": -0.020417271003012383,
+      "2024 Share %": 0.11092028569931822,
+      "2023 Sales / Txn": 86.8786962552011,
+      "2024 Sales / Txn": 87.43194941744815,
+      "Sales / Txn Growth %": 0.006368110780828218
+    }
+  ],
+  "top_zone_growth": [
+    {
+      "store_zone": "Lower Concourse",
+      "2023 Revenue": 542048.04,
+      "2024 Revenue": 563860.39,
+      "2023 Units": 12103,
+      "2024 Units": 12288,
+      "2023 Transactions": 4854,
+      "2024 Transactions": 4996,
+      "Revenue Growth $": 21812.349999999977,
+      "Revenue Growth %": 0.04024062147701879,
+      "Unit Growth %": 0.015285466413285986,
+      "2024 Share %": 0.2032792915041302,
+      "2023 Sales / Txn": 111.67038318912238,
+      "2024 Sales / Txn": 112.86236789431545,
+      "Sales / Txn Growth %": 0.01067413463760003
+    },
+    {
+      "store_zone": "Main Concourse",
+      "2023 Revenue": 558567.91,
+      "2024 Revenue": 565950.1,
+      "2023 Units": 12345,
+      "2024 Units": 12581,
+      "2023 Transactions": 4971,
+      "2024 Transactions": 5012,
+      "Revenue Growth $": 7382.189999999944,
+      "Revenue Growth %": 0.013216280183371065,
+      "Unit Growth %": 0.019117051437829158,
+      "2024 Share %": 0.20403266020280594,
+      "2023 Sales / Txn": 112.36530074431704,
+      "2024 Sales / Txn": 112.91901436552274,
+      "Sales / Txn Growth %": 0.004927799040610026
+    }
+  ],
+  "bottom_zone_growth": [
+    {
+      "store_zone": "Upper Deck",
+      "2023 Revenue": 550873.02,
+      "2024 Revenue": 546913.4,
+      "2023 Units": 12448,
+      "2024 Units": 12380,
+      "2023 Transactions": 4980,
+      "2024 Transactions": 5035,
+      "Revenue Growth $": -3959.6199999999953,
+      "Revenue Growth %": -0.0071878996724145106,
+      "Unit Growth %": -0.005462724935732632,
+      "2024 Share %": 0.197169672560463,
+      "2023 Sales / Txn": 110.61707228915662,
+      "2024 Sales / Txn": 108.62232373386297,
+      "Sales / Txn Growth %": -0.018032917650173563
+    },
+    {
+      "store_zone": "Outfield",
+      "2023 Revenue": 552944.09,
+      "2024 Revenue": 548535.6,
+      "2023 Units": 12375,
+      "2024 Units": 12360,
+      "2023 Transactions": 4962,
+      "2024 Transactions": 4994,
+      "Revenue Growth $": -4408.489999999991,
+      "Revenue Growth %": -0.007972759054174827,
+      "Unit Growth %": -0.00121212121212122,
+      "2024 Share %": 0.19775449758546254,
+      "2023 Sales / Txn": 111.43572954453849,
+      "2024 Sales / Txn": 109.83892671205446,
+      "Sales / Txn Growth %": -0.01432936131894591
+    },
+    {
+      "store_zone": "Club Level",
+      "2023 Revenue": 556079.28,
+      "2024 Revenue": 548561.62,
+      "2023 Units": 12457,
+      "2024 Units": 12518,
+      "2023 Transactions": 4957,
+      "2024 Transactions": 4963,
+      "Revenue Growth $": -7517.660000000033,
+      "Revenue Growth %": -0.01351904354357536,
+      "Unit Growth %": 0.004896845147306816,
+      "2024 Share %": 0.19776387814713833,
+      "2023 Sales / Txn": 112.18060923945936,
+      "2024 Sales / Txn": 110.53024783397139,
+      "Sales / Txn Growth %": -0.014711645949124108
+    }
+  ],
+  "best_zone_category_moves": [
+    {
+      "store_zone": "Lower Concourse",
+      "item_type": "Jersey",
+      "2023 Revenue": 205249.67,
+      "2024 Revenue": 229689.19,
+      "Growth $": 24439.51999999999,
+      "Growth %": 0.11907215246679814
+    },
+    {
+      "store_zone": "Lower Concourse",
+      "item_type": "T-shirt",
+      "2023 Revenue": 64669.45,
+      "2024 Revenue": 72095.91,
+      "Growth $": 7426.460000000006,
+      "Growth %": 0.11483722221234305
+    },
+    {
+      "store_zone": "Upper Deck",
+      "item_type": "Hoodie",
+      "2023 Revenue": 128169.59,
+      "2024 Revenue": 133835.9,
+      "Growth $": 5666.309999999998,
+      "Growth %": 0.04420947277743492
+    },
+    {
+      "store_zone": "Outfield",
+      "item_type": "T-shirt",
+      "2023 Revenue": 67008.2,
+      "2024 Revenue": 71905.42,
+      "Growth $": 4897.220000000001,
+      "Growth %": 0.07308389122525294
+    },
+    {
+      "store_zone": "Main Concourse",
+      "item_type": "T-shirt",
+      "2023 Revenue": 67764.08,
+      "2024 Revenue": 70021.97,
+      "Growth $": 2257.8899999999994,
+      "Growth %": 0.03331986503764228
+    }
+  ],
+  "worst_zone_category_moves": [
+    {
+      "store_zone": "Outfield",
+      "item_type": "Jersey",
+      "2023 Revenue": 209614.41,
+      "2024 Revenue": 200859.95,
+      "Growth $": -8754.459999999992,
+      "Growth %": -0.041764590516462974
+    },
+    {
+      "store_zone": "Lower Concourse",
+      "item_type": "Hoodie",
+      "2023 Revenue": 133941.18,
+      "2024 Revenue": 126084.47,
+      "Growth $": -7856.709999999992,
+      "Growth %": -0.05865791237616391
+    },
+    {
+      "store_zone": "Upper Deck",
+      "item_type": "Jersey",
+      "2023 Revenue": 202752.66,
+      "2024 Revenue": 195038.67,
+      "Growth $": -7713.989999999991,
+      "Growth %": -0.03804630725929803
+    },
+    {
+      "store_zone": "Club Level",
+      "item_type": "Cap",
+      "2023 Revenue": 68743.72,
+      "2024 Revenue": 62953.55,
+      "Growth $": -5790.169999999998,
+      "Growth %": -0.0842283484222267
+    },
+    {
+      "store_zone": "Club Level",
+      "item_type": "Jersey",
+      "2023 Revenue": 204923.99,
+      "2024 Revenue": 200900.48,
+      "Growth $": -4023.50999999998,
+      "Growth %": -0.019634158011465508
+    }
+  ]
+}

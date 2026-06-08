@@ -2,8 +2,8 @@
 title: Clara — Pre-Visit AI Intake System (Ideathon 2026)
 project: ideathon26
 status: active
-origin_dump: [[01_Source/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
-last_synced_dump: [[01_Source/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
+origin_dump: [[01_Source/projects/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
+last_synced_dump: [[01_Source/projects/ideathon26/CLARA_RUBRIC_RESPONSES.md]]
 last_updated: 2026-04-19
 tags: [ideathon, product, ai-healthcare, pre-visit, intake]
 ---

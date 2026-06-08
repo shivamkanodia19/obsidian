@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Felt TikTok Slide Grade",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "status",
+    "hard_gates",
+    "scores",
+    "weighted_score"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "revise",
+        "rejected"
+      ]
+    },
+    "hard_gates": {
+      "type": "object"
+    },
+    "scores": {
+      "type": "object"
+    },
+    "weighted_score": {
+      "type": "number"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "grader_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

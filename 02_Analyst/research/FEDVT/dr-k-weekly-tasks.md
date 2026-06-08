@@ -18,7 +18,7 @@ Research direction and deliverables from Dr. Kaniyamattam for feedlot economics 
 **Task:** Create a write-up explaining how a typical budget was converted to a scalable cost-profit visualization tool showing distribution of costs (feeder cattle, feed, vet costs, etc.)
 
 **Status:** Complete  
-**File:** [[../..//05_Outputs/feedlot-economics-budget-visualization-writeup.md]]
+**File:** [[05_Outputs/research-analysis/feedlot-economics-budget-visualization-writeup]]
 
 **Context:** The feedlot economics tool transforms static spreadsheet budgets into a dynamic, parameterized system that scales across different operation sizes. The visualization uses multi-tab dashboards (Input, Production, Income, Breakeven Analysis, Operations, Investment) to decompose costs and show relationships between input variables and profitability.
 

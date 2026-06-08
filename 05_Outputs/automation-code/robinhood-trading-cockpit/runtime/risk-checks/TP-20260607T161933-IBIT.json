@@ -1,0 +1,60 @@
+{
+  "account_value_usd": 497.02,
+  "checks": [
+    {
+      "detail": "asset type is equity",
+      "name": "asset-type",
+      "passed": true
+    },
+    {
+      "detail": "direction is buy",
+      "name": "direction",
+      "passed": true
+    },
+    {
+      "detail": "order type is limit",
+      "name": "order-type",
+      "passed": true
+    },
+    {
+      "detail": "session is regular",
+      "name": "session",
+      "passed": true
+    },
+    {
+      "detail": "ticker is IBIT",
+      "name": "blocked-ticker",
+      "passed": true
+    },
+    {
+      "detail": "trade size 50.00 vs limit 75.00",
+      "name": "trade-size",
+      "passed": true
+    },
+    {
+      "detail": "buying power is 450.00",
+      "name": "buying-power",
+      "passed": true
+    },
+    {
+      "detail": "filled trades today 0 vs limit 2",
+      "name": "trades-today",
+      "passed": true
+    },
+    {
+      "detail": "projected total exposure 19.52% vs limit 35.00%",
+      "name": "account-exposure",
+      "passed": true
+    },
+    {
+      "detail": "projected IBIT exposure 10.06% vs limit 15.00%",
+      "name": "single-ticker-exposure",
+      "passed": true
+    }
+  ],
+  "projected_ticker_exposure_percent": 10.06,
+  "projected_total_exposure_percent": 19.52,
+  "proposal_id": "TP-20260607T161933-IBIT",
+  "ran_at": "2026-06-07T16:19:33-05:00",
+  "status": "pass"
+}

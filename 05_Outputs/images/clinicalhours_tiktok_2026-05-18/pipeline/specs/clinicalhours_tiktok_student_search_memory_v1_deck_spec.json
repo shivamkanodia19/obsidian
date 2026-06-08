@@ -1,0 +1,86 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_search_memory_v1",
+  "canonical": false,
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_search_memory.html",
+  "export_suffix": "v4memory",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "copy_style_hard_fail": {
+    "reject_if_contains": [
+      "why this works",
+      "better story",
+      "calm close",
+      "best student proof",
+      "real search flow",
+      "visual payoff",
+      "cold traffic",
+      "in-feed",
+      "abstract promise"
+    ],
+    "reject_if_meta_marketing_language": true
+  },
+  "screenshot_text_hard_fail": {
+    "reject_if_raw_hero_asset_matches": [
+      "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+      "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png"
+    ],
+    "reject_if_empty_state_is_hero": true
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "visible_role_label": "memory",
+      "headline": "Found clinics. Lost track?",
+      "subtext": "Tabs, screenshots, and saved links do not remember what mattered.",
+      "hero_asset": "captures/derived/clinicalhours_map_tall_controls_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "visible_role_label": "map",
+      "headline": "Search once. Stay oriented.",
+      "subtext": "One map gives the search a cleaner place to start.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "visible_role_label": "preview",
+      "headline": "Check fit before clicking.",
+      "subtext": "A clinic preview helps the next tab earn its place.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_dashboard_welcome_panel_v1.png"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "role": "documentation_direction",
+      "visible_role_label": "track",
+      "headline": "No place to save it?",
+      "subtext": "Save clinics, track opportunities, and log hours in one place.",
+      "hero_asset": "captures/derived/clinicalhours_dashboard_records_band_v1.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_journal_controls_band_v1.png",
+        "captures/derived/clinicalhours_journal_prompt_focus_v1.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "visible_role_label": "start",
+      "headline": "Browse first. Save when ready.",
+      "subtext": "Browse the map first. Sign in when you want to keep your place.",
+      "hero_asset": "captures/derived/clinicalhours_auth_guest_actions_v1.png",
+      "support_assets": []
+    }
+  ]
+}

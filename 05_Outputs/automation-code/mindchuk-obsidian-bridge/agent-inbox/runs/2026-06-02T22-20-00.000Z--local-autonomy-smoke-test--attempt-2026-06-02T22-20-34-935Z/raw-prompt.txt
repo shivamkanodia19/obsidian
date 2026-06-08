@@ -1,0 +1,1 @@
+Write exactly `AUTONOMY_TEST_OK` as the final answer. Also write `success-note.md` in the run directory confirming the test passed.

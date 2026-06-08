@@ -1,0 +1,32 @@
+{
+  "raw_row_count": 50000,
+  "clean_row_count": 49724,
+  "season_counts_raw": {
+    "2022": 276,
+    "2023": 24724,
+    "2024": 25000
+  },
+  "excluded_rows": 276,
+  "excluded_reason": "Excluded malformed 2022 rows because the case asks for two full seasons and those rows use 2023 game IDs.",
+  "item_name_standardization": {
+    "strip_whitespace": true,
+    "rename_map": {
+      "Jersy": "Jersey"
+    },
+    "raw_item_values": [
+      "Cap",
+      "Foam Finger",
+      "Hoodie",
+      "Jersey",
+      "Jersy",
+      "Keychain",
+      "Keychain ",
+      "Mug",
+      "T-shirt"
+    ]
+  },
+  "store_id_stability_issue": {
+    "stores_with_multiple_zones": 20,
+    "note": "store_id is not stable across zones, so location analysis uses store_zone."
+  }
+}

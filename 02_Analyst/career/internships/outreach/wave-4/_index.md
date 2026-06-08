@@ -1,31 +1,48 @@
-# wave-4
+---
+title: Internship Outreach Wave 4
+description: Multi-industry outreach expansion with inventory, drafts, and action items
+last_updated: 2026-05-20
+---
 
-## 📬 Follow-ups (2026-04-25)
+# Wave 4
 
-- [[wave-4-followups-2026-04-25]] — 8 drafts ready (Bowdark, FieldPulse, Go High Level, G3 Tech, Denco); OAuth Gmail integration complete
+This folder is the historical wave-4 campaign cluster. For the current May founder-direct work, start from [[02_Analyst/career/internships/outreach/_index]] instead of assuming Wave 4 is still the live default queue.
 
-## Outreach Execution
+## Follow-Ups
 
-- [[COMPANY-TARGETS-VERIFIED]]
-- [[COMPLETE-INVENTORY]]
+- [[wave-4-followups-2026-04-25]] - Gmail follow-up strategy and draft coverage
+
+## Start Here
+
 - [[EXECUTE-NOW]]
-- [[FOUNDER-DIRECT-TIER-1]]
 - [[READY-TO-SEND-5-EMAILS]]
 - [[READY-TO-SEND-TIER-1]]
-- [[REWRITTEN-EMAILS-GROUNDED]]
+- [[COMPANY-TARGETS-VERIFIED]]
+- [[VERIFIED-RESEARCH-DEEP-DIVE]]
+
+## Planning and Iteration
+
+- [[COMPLETE-INVENTORY]]
+- [[FOUNDER-DIRECT-TIER-1]]
 - [[TIER-1-RECOMMENDED-EMAILS]]
 - [[TIER-2-VALIDATION-CHECKLIST]]
-- [[VERIFIED-RESEARCH-DEEP-DIVE]]
-- [[draft-emails]]
-- [[education-draft-emails]]
 - [[email-research-2026-04-21]]
 - [[expansion-roadmap]]
-- [[government-draft-emails]]
-- [[healthcare-draft-emails]]
 - [[sending-workflow]]
 - [[status]]
 - [[strategy-iteration]]
 
+## Draft Sets
+
+- [[draft-emails]]
+- [[education-draft-emails]]
+- [[government-draft-emails]]
+- [[healthcare-draft-emails]]
+
+## Action Items
+
+- [[ACTION-ITEMS/_index]]
+
 ## New Files
 
-- 📂 [[ACTION-ITEMS/_index|ACTION-ITEMS/]] — ACTION-ITEMS
+- [[REWRITTEN-EMAILS-GROUNDED]] - Rewritten Internship Outreach Emails — Grounded in ClinicalHours Proof

@@ -1,36 +1,30 @@
 ---
 title: Projects Index
-description: Navigation hub for all active and archived projects
-last_updated: 2026-04-21
+description: Navigation hub for active product, venture, and experiment work
+last_updated: 2026-05-14
 ---
 
 # Projects
 
-Central hub for all project work. Each project has its own folder with subfolders for strategy, operations, research, and results.
+Use this area for product and venture work that is not better treated as pure research or career operations.
 
-## 📂 Active Projects
+## Active Project Hubs
 
-- **[[ClinicalHours/_index]]** — Clinical hours marketplace (automation, market strategy, sales, operations)
-- **[[ideathon26/Clara-Submission]]** — Clara: AI pre-visit intake system (Product@TAMU Ideathon, General Track)
-- **[[keeper-clash/_index]]** - Browser webcam goalie game using CV hand tracking
-- **[[poker-app/_index]]** — Browser poker app; Phase 2 adds real-time multiplayer + persistent tables
-- **[[02_Analyst/research/FEDVT/_index]]** — Feedlot economics research and paper (analysis, introduction, sources)
+- [[ClinicalHours/_index]] - marketplace, outreach, workflow wedges, and validation
+- [[felt/_index]] - combined poker and blackjack product strategy under the Felt brand
+- [[ideathon26/_index]] - Clara and related ideation work
+- [[keeper-clash/_index]] - webcam goalie game concept and MVP framing
+- [[poker-app/_index]] - multiplayer poker product planning
 
-## 📋 Project Structure
+## Incubating Project Hubs
 
-Each project folder should contain:
-- `_index.md` — Project overview and navigation
-- Topic subfolders (Strategy/, Operations/, Research/, Sales/, etc.)
-- Topic-specific files
+- [[hvac-intake-qa/_index]] - parked AI-assisted HVAC intake audit and cold-outreach wedge worth revisiting if you want a lightweight B2B ops experiment
 
-## Quick Reference
+## Related Non-Project Work
 
-| Project | Status | Focus | Next |
-|---------|--------|-------|------|
-| ClinicalHours | Active | SaaS marketplace + agents | v4+ refinement |
-| Keeper Clash | Idea | Webcam CV goalie game | Build Penalty Rush MVP |
-| Poker App | Planning | Phase 2 multiplayer | Choose real-time sync stack |
-| FEDVT | In Progress | Academic paper | Draft finalization |
-| Internships | Active | Summer 2026 search | Wave 3 outreach |
+- [[02_Analyst/research/FEDVT/_index]] - research track that behaves more like an academic project
+- [[02_Analyst/career/internships/_index]] - recruiting operation with its own campaign structure
 
-- 📂 [[ideathon26/_index|ideathon26/]] — ideathon26
+## Rule
+
+If a folder becomes mostly research or mostly outreach operations, point to the better canonical area instead of duplicating it here.

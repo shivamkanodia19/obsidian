@@ -1,0 +1,86 @@
+{
+  "schema_version": "clinicalhours_tiktok/deck_spec/v1",
+  "spec_id": "clinicalhours_tiktok_student_first_path_v1",
+  "canonical": false,
+  "lane": "student_discovery_secondary",
+  "evidence_tier": "product_surface",
+  "proof_access": "mixed_public_and_authenticated_preview",
+  "composition_source": "composition/clinicalhours_tiktok_student_first_path.html",
+  "export_suffix": "v5firstpath",
+  "copy_audit_script": "composition/audit_clinicalhours_tiktok_copy.ps1",
+  "copy_style_hard_fail": {
+    "reject_if_contains": [
+      "why this works",
+      "better story",
+      "calm close",
+      "best student proof",
+      "real search flow",
+      "visual payoff",
+      "cold traffic",
+      "in-feed",
+      "abstract promise"
+    ],
+    "reject_if_meta_marketing_language": true
+  },
+  "screenshot_text_hard_fail": {
+    "reject_if_raw_hero_asset_matches": [
+      "captures/home/clinicalhours_home_mobile_430x932_live.png",
+      "captures/auth/clinicalhours_dashboard_overview_auth_live_v3.png",
+      "captures/auth/clinicalhours_journal_section_auth_live_v3.png",
+      "captures/auth/clinicalhours_auth_signin_card_auth_live_v3.png"
+    ],
+    "reject_if_empty_state_is_hero": true
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "friction",
+      "visible_role_label": "start",
+      "headline": "Start without guessing.",
+      "subtext": "Start with one clear step, not tabs and screenshots.",
+      "hero_asset": "captures/derived/clinicalhours_home_mobile_start_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 2,
+      "role": "discovery",
+      "visible_role_label": "map",
+      "headline": "Open the map first.",
+      "subtext": "A map is easier than reopening random pages and screenshots.",
+      "hero_asset": "captures/derived/clinicalhours_map_focus_v1.png",
+      "support_assets": []
+    },
+    {
+      "slide_number": 3,
+      "role": "simplification",
+      "visible_role_label": "preview",
+      "headline": "See the clinic before clicking.",
+      "subtext": "The card shows the clinic and next step before another tab opens.",
+      "hero_asset": "captures/auth/clinicalhours_dashboard_featured_card_auth_live_v3.png",
+      "support_assets": [
+        "captures/auth/clinicalhours_dashboard_hero_auth_live_v2.png"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "role": "documentation_direction",
+      "visible_role_label": "first log",
+      "headline": "Log your first hours here.",
+      "subtext": "The journal gives the first shift one place to log now and find later.",
+      "hero_asset": "captures/derived/clinicalhours_journal_cta_focus_v2.png",
+      "support_assets": [
+        "captures/derived/clinicalhours_journal_toolbar_tile_v2.png",
+        "captures/derived/clinicalhours_dashboard_welcome_panel_v1.png"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "role": "activation",
+      "visible_role_label": "browse",
+      "headline": "Browse now. Log when ready.",
+      "subtext": "Start with the map, then sign in when you want to save clinics and log hours.",
+      "hero_asset": "captures/derived/clinicalhours_auth_guest_actions_v1.png",
+      "support_assets": []
+    }
+  ]
+}

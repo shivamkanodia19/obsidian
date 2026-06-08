@@ -1,0 +1,98 @@
+- generic [ref=e2] [box=0,0,390,844]:
+  - region "Notifications (F8)" [box=0,0,390,0]:
+    - list [box=0,0,390,32]
+  - region "Notifications alt+T" [box=0,0,390,0]
+  - generic [ref=e3] [box=0,0,390,844]:
+    - heading "Felt — Texas Hold'em Table" [level=1] [ref=e4] [box=-1,-1,1,1]
+    - button "Open table settings" [ref=e6] [cursor=pointer] [box=342,6,36,44]:
+      - img [ref=e7] [box=359,20,2,16]
+    - main [ref=e10] [box=0,58,390,786]:
+      - generic [ref=e13] [box=8,64,374,652]:
+        - generic [ref=e15] [box=8,64,374,569]:
+          - article [ref=e18] [box=127,541,137,60]:
+            - generic [ref=e20] [box=134,547,58,12]: YOUR TURN
+            - generic [ref=e21] [box=134,562,121,33]:
+              - generic [ref=e22] [box=134,565,28,28]: YO
+              - generic [ref=e23] [box=168,562,87,33]:
+                - paragraph [ref=e24] [box=168,562,87,16]: you
+                - generic [ref=e26] [box=168,580,18,16]: "990"
+          - article [ref=e28] [box=-3,326,105,89]:
+            - generic [box=3,332,94,25]:
+              - generic [box=34,332,15,20]:
+                - generic [box=34,332,15,20]:
+                  - generic [box=38,333,7,17]: F
+              - generic [box=51,332,15,20]:
+                - generic [box=51,332,15,20]:
+                  - generic [box=55,333,7,17]: F
+            - generic [ref=e30] [box=5,360,31,12]: WAIT
+            - generic [ref=e31] [box=5,376,90,33]:
+              - generic [ref=e32] [box=5,379,28,28]: RR
+              - generic [ref=e33] [box=39,376,56,33]:
+                - paragraph [ref=e34] [box=39,376,56,16]: river_rat
+                - generic [ref=e36] [box=39,394,18,16]: "543"
+          - article [ref=e38] [box=-3,192,105,89]:
+            - generic [box=3,198,94,25]:
+              - generic [box=34,198,15,20]:
+                - generic [box=34,198,15,20]:
+                  - generic [box=38,199,7,17]: F
+              - generic [box=51,198,15,20]:
+                - generic [box=51,198,15,20]:
+                  - generic [box=55,199,7,17]: F
+            - generic [ref=e40] [box=5,227,31,12]: WAIT
+            - generic [ref=e41] [box=5,242,90,33]:
+              - generic [ref=e42] [box=5,245,28,28]: DU
+              - generic [ref=e43] [box=39,242,56,33]:
+                - paragraph [ref=e44] [box=39,242,56,16]: dial_up
+                - generic [ref=e46] [box=39,260,12,16]: "15"
+          - article [ref=e48] [box=143,183,105,29]:
+            - generic [ref=e50] [box=171,190,49,14]: Seat Open
+          - article [ref=e52] [box=288,222,105,29]:
+            - generic [ref=e54] [box=316,230,49,14]: Seat Open
+          - article [ref=e56] [box=288,356,105,29]:
+            - generic [ref=e58] [box=316,363,49,14]: Seat Open
+          - generic [ref=e60] [box=195,314,79,24]:
+            - generic [ref=e61] [box=205,321,20,14]: Pot
+            - generic [ref=e62] [box=231,318,34,16]: 1,452
+          - generic [ref=e64] [box=94,395,202,107]:
+            - generic [ref=e66] [box=94,394,41,108]:
+              - generic [ref=e68] [box=94,419,41,58]:
+                - generic [ref=e69] [box=101,426,28,16]: "6"
+                - generic [ref=e70] [box=111,441,7,20]: ♦
+                - generic [ref=e71] [box=124,462,4,16]: "6"
+              - generic [ref=e74] [box=75,414,7,17]: F
+            - generic [ref=e76] [box=137,394,41,108]:
+              - generic [ref=e78] [box=137,419,41,58]:
+                - generic [ref=e79] [box=143,426,28,16]: "2"
+                - generic [ref=e80] [box=153,441,9,20]: ♣
+                - generic [ref=e81] [box=167,462,4,16]: "2"
+              - generic [ref=e84] [box=117,414,7,17]: F
+            - generic [ref=e86] [box=180,394,41,108]:
+              - generic [ref=e88] [box=180,419,41,58]:
+                - generic [ref=e89] [box=186,426,28,16]: "9"
+                - generic [ref=e90] [box=196,441,9,20]: ♣
+                - generic [ref=e91] [box=210,462,4,16]: "9"
+              - generic [ref=e94] [box=160,414,7,17]: F
+          - generic [box=38,358,315,25]:
+            - generic [box=150,364,91,18]:
+              - paragraph [box=159,367,73,13]: 5-10 · Blinds 5/10
+        - generic [ref=e98] [box=149,647,92,60]:
+          - generic [ref=e100] [box=149,647,42,60]:
+            - generic [ref=e101] [box=158,656,25,25]: T
+            - generic [ref=e102] [box=163,680,14,34]: ♣
+            - generic [ref=e103] [box=176,715,7,25]: T
+          - generic [ref=e105] [box=199,647,42,60]:
+            - generic [ref=e106] [box=208,656,25,25]: K
+            - generic [ref=e107] [box=214,680,13,34]: ♥
+            - generic [ref=e108] [box=226,715,7,25]: K
+      - generic [ref=e109] [box=0,708,390,136]:
+        - button "Hand Review Timeline" [ref=e111] [cursor=pointer] [box=8,715,374,44]
+        - generic [ref=e112] [box=0,766,390,78]:
+          - paragraph [ref=e114] [box=8,770,374,17]: High Card
+          - generic [ref=e115] [box=0,789,390,68]:
+            - button "✕ Fold" [ref=e116] [cursor=pointer] [box=8,795,121,52]
+            - button "Call 975" [ref=e117] [cursor=pointer] [box=135,795,121,52]:
+              - generic [ref=e118] [box=182,806,26,16]: Call
+              - generic [ref=e119] [box=184,824,23,13]: "975"
+            - button "All-In 990" [ref=e120] [cursor=pointer] [box=262,795,121,52]:
+              - generic [ref=e121] [box=302,806,40,16]: All-In
+              - generic [ref=e122] [box=310,824,23,13]: "990"
