@@ -13,4 +13,5 @@ tags: [references, tools, index]
 
 # Tools Index
 
+- [[Agent-Skill-Environment/_index]] - portable Codex/Claude skill export for Mac setup
 - [[Email-Verification]] - email verification guidance
