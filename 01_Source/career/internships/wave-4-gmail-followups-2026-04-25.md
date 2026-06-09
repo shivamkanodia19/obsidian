@@ -10,11 +10,11 @@ Had Gmail MCP connected in Claude Code but authentication was broken (bearer tok
 ## Solution Implemented
 
 ### 1. Gmail OAuth Authentication
-- Extracted Google Cloud OAuth credentials from user
-  - Client ID: [REDACTED-GOOGLE-OAUTH-CLIENT-ID]
-  - Client Secret: [REDACTED-GOOGLE-OAUTH-CLIENT-SECRET]
+- Used locally stored Google Cloud OAuth credentials from the user
+  - Client ID: stored locally outside the repo
+  - Client Secret: stored locally outside the repo
 - Ran OAuth flow via browser (user approved)
-- Generated and saved token.json with refresh token
+- Generated and saved local `token.json` with refresh token
 - Result: Direct Python API access to Gmail
 
 ### 2. Smart Follow-up Identification

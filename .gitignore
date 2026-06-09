@@ -10,6 +10,11 @@ tmp/
 # Local project secrets and generated artifacts
 **/.env
 **/*.pem
+**/credentials.json
+**/credentials*.json
+**/client_secret*.json
+**/token.json
+**/*.apps.googleusercontent.com.json
 **/node_modules/
 **/__pycache__/
 **/*.pyc
