@@ -229,13 +229,17 @@ class KalshiClient(BrokerInterface):
 
         payload = {
             "ticker": ticket.asset_or_market,
-            "action": ticket.side.value,             # "yes" or "no"
+            "action": "buy",
+            "side": ticket.side.value,               # "yes" or "no"
             "type": ticket.order_type.value,         # "limit" or "market"
-            "count": ticket.quantity,                # number of contracts
+            "count": ticket.quantity,
             "client_order_id": ticket.id,
         }
         if price_cents is not None:
-            payload["yes_price"] = price_cents if ticket.side == OrderSide.YES else (100 - price_cents)
+            if ticket.side == OrderSide.YES:
+                payload["yes_price"] = price_cents
+            else:
+                payload["no_price"] = price_cents
 
         logger.info(f"Submitting Kalshi order: {payload}")
 
